@@ -1,4 +1,4 @@
-# Password-Manager
+# Password Manager
 
 A android app that take down the headace of remember passwords. It is open source solutions that help you in keep your passwords safe and secure in your own local storage without ever need to push you password to cloud.
 
