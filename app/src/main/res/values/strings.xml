@@ -1,7 +1,21 @@
 <resources>
 	<string name="app_name">Password Manager</string>
 
-	<!--    Permission-->
+	<!-- FAB -->
+	<string name="add_password">Add Password</string>
+
+	<!-- Permission -->
 	<string name="permission_granted">Permission Granted</string>
 	<string name="permission_denied">Permission Denied</string>
+
+	<!-- Toast -->
+	<string name="toast_success_add">Password created</string>
+	<string name="toast_success_delete">Success delete</string>
+
+	<!-- Dialog -->
+	<string name="dialog_title_delete">Delete password</string>
+	<string name="dialog_message_delete">Are you sure to delete this password?</string>
+	<string name="dialog_cancel">CANCEL</string>
+	<string name="dialog_delete">DELETE</string>
+
 </resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+	TODO:
+	 - Implementation of this ui layout in accordance with the design that has been prepared
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="16dp">
+
+	<TextView
+		android:id="@+id/tvUsername"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="16sp" />
+
+	<TextView
+		android:id="@+id/tvType"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="14sp" />
+
+	<TextView
+		android:id="@+id/tvCreatedAt"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="12sp" />
+</LinearLayout>
