@@ -14,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    
+    // Make window fullscreen
+    WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
 
     // Check and request permission when the app is first opened
     permissionsHandle = new Permissions(this);
