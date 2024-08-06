@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Password Manager</string>
+	<string name="app_name">Password Manager</string>
+
+	<!--    Permission-->
+	<string name="permission_granted">Permission Granted</string>
+	<string name="permission_denied">Permission Denied</string>
 </resources>
