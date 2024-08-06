@@ -5,7 +5,7 @@ plugins {
 android {
     compileSdk 33
     namespace "com.passwordmanager"
-	
+
     defaultConfig {
         applicationId "com.passwordmanager"
         minSdk 26
@@ -14,12 +14,23 @@ android {
         versionName "1.0"
     }
 
+    signingConfigs {
+        release {
+            storeFile file("passwordmanager.jks")
+            storePassword 'beMbDcv94lv3'
+            keyAlias 'passwordmanager'
+            keyPassword 'beMbDcv94lv3'
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -29,5 +40,4 @@ android {
 dependencies {
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.core:core:1.10.1'
 }
