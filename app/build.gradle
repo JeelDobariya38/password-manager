@@ -17,9 +17,9 @@ android {
     signingConfigs {
         release {
             storeFile file("passwordmanager.jks")
-            storePassword 'beMbDcv94lv3'
+            storePassword ''
             keyAlias 'passwordmanager'
-            keyPassword 'beMbDcv94lv3'
+            keyPassword ''
         }
     }
 
