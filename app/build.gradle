@@ -16,16 +16,33 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("passwordmanager.jks")
-            storePassword 'beMbDcv94lv3'
-            keyAlias 'passwordmanager'
-            keyPassword 'beMbDcv94lv3'
+            def keystorePropertiesFile = rootProject.file("keystore.properties")
+            if (keystorePropertiesFile.exists()) {
+                def keystoreProperties = new Properties()
+                keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+                
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+            }
+        }
+    }
+    
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            universalApk true
         }
     }
 
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+            if (rootProject.file("keystore.properties").exists()) {
+                signingConfig signingConfigs.release
+            }
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
