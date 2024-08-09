@@ -1,7 +1,14 @@
 <resources>
 	<string name="app_name">Password Manager</string>
-
-	<!--    Permission-->
+    
+    <!-- Main Activity -->
+    <string name="hint_domain">domain</string>
+    <string name="hint_username">username</string>
+    <string name="hint_password">password</string>
+    <string name="hint_notes">notes</string>
+    <string name="button_save">save</string>
+	
+    <!-- Permission -->
 	<string name="permission_granted">Permission Granted</string>
 	<string name="permission_denied">Permission Denied</string>
 </resources>
