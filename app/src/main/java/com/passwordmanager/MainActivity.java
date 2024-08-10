@@ -29,27 +29,17 @@ public class MainActivity extends AppCompatActivity {
     quitbtn = (Button)findViewById(R.id.quit_button);
     
     // Add event onclick listener
-    savepasswordbtn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent savepasswordintent = new Intent(MainActivity.this, SavePasswordActivity.class);
-            startActivity(savepasswordintent);
-        }
+    savepasswordbtn.setOnClickListener(v -> {
+        Intent savepasswordintent = new Intent(MainActivity.this, SavePasswordActivity.class);
+        startActivity(savepasswordintent);
     });
     
-    loadpasswordbtn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            // not implemented yet
-            return;
-        }
+    loadpasswordbtn.setOnClickListener(v -> {
+        Toast.makeText(this, "Yet left to make the feature!!", Toast.LENGTH_LONG).show();
     });
     
-    quitbtn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            finishAndRemoveTask();
-        }
+    quitbtn.setOnClickListener(v -> {
+        finishAndRemoveTask();
     });
     
     // Make window fullscreen
