@@ -1,12 +1,14 @@
 <resources>
 	<string name="app_name">Password Manager</string>
+    <string name="app_version">v0.1.0-Alpha</string>
     
     <!-- Main Activity -->
-    <string name="hint_domain">domain</string>
-    <string name="hint_username">username</string>
-    <string name="hint_password">password</string>
-    <string name="hint_notes">notes</string>
-    <string name="button_save">save</string>
+    <string name="text_savepassword_headline">Save Password</string>
+    <string name="hint_domain">Domain</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_notes">Notes</string>
+    <string name="button_save">Save Password</string>
 	
     <!-- Permission -->
 	<string name="permission_granted">Permission Granted</string>

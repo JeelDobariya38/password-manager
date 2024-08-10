@@ -1,6 +1,8 @@
 package com.passwordmanager;
 
 import android.os.Bundle;
+import android.content.Intent;
+import android.view.View;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,5 +39,10 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, getString(R.string.permission_denied), Toast.LENGTH_LONG).show();
       }
     }
+  }
+  
+  public void onClickSavePasswordBtn(View view) {
+      Intent savepasswordintent = new Intent(this, SavePasswordActivity.class);
+      startActivity(savepasswordintent);
   }
 }

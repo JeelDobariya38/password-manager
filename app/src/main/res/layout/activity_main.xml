@@ -5,79 +5,15 @@
 	android:layout_height="match_parent"
 	android:gravity="center"
     android:orientation="vertical"
-	tools:context=".MainActivity"
+	tools:context=".SavePasswordActivity"
     android:padding="4sp" >
     
-    <com.google.android.material.textfield.TextInputLayout
-		android:layout_width="match_parent"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-		android:layout_margin="4dp"
-		android:hint="@string/hint_domain">
-        
-        <com.google.android.material.textfield.TextInputEditText 
-            android:id="@+id/domain_text_input"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="text"
-            android:maxLines="1" />
-        
-    </com.google.android.material.textfield.TextInputLayout>
-
-	<com.google.android.material.textfield.TextInputLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-		android:hint="@string/hint_username">
-        
-        <com.google.android.material.textfield.TextInputEditText 
-            android:id="@+id/username_text_input"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="text"
-            android:maxLines="1" />
-        
-    </com.google.android.material.textfield.TextInputLayout>
-    
-    <com.google.android.material.textfield.TextInputLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-		android:hint="@string/hint_password">
-        
-        <com.google.android.material.textfield.TextInputEditText 
-            android:id="@+id/password_text_input"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textPassword"
-            android:maxLines="1" />
-        
-    </com.google.android.material.textfield.TextInputLayout>
-    
-    <com.google.android.material.textfield.TextInputLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-		android:hint="@string/hint_notes">
-        
-        <com.google.android.material.textfield.TextInputEditText 
-            android:id="@+id/notes_text_input"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="text"
-            android:maxLines="2" />
-        
-    </com.google.android.material.textfield.TextInputLayout>
-    
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/save_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_save" />
-        
-    </RelativeLayout>
+        android:text="@string/button_save"
+        android:textSize="14dp"
+        android:onClick="onClickSavePasswordBtn" />
     
 </LinearLayout>
