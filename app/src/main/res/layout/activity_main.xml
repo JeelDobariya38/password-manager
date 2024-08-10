@@ -8,12 +8,58 @@
 	tools:context=".SavePasswordActivity"
     android:padding="4sp" >
     
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/save_button"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_save"
-        android:textSize="14dp"
-        android:onClick="onClickSavePasswordBtn" />
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="16sp">
+        
+        <com.google.android.material.textview.MaterialTextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textSize="32dp" />
+        
+        <com.google.android.material.textview.MaterialTextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@string/app_version"
+            android:textAlignment="center"
+            android:textSize="12dp" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="16sp">
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_password_activity_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_save_password_activity"
+            android:textSize="14dp" />
+            
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/load_password_activity_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_load_password_activity"
+            android:textSize="14dp" />
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/quit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_quit"
+            android:textSize="14dp" />
+        
+    </LinearLayout>
     
 </LinearLayout>

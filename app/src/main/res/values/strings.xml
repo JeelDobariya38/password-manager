@@ -3,6 +3,11 @@
     <string name="app_version">v0.1.0-Alpha</string>
     
     <!-- Main Activity -->
+    <string name="button_save_password_activity">Save Password</string>
+    <string name="button_load_password_activity">Load Password</string>
+    <string name="button_quit">Quit</string>
+    
+    <!-- Save Password Activity -->
     <string name="text_savepassword_headline">Save Password</string>
     <string name="hint_domain">Domain</string>
     <string name="hint_username">Username</string>
