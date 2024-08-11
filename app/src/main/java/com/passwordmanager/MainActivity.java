@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
   
   // Inizalize all the local view based variables
   private void initalizeViewVariables() {
-    savepasswordbtn = (Button)findViewById(R.id.save_password_activity_button);
-    loadpasswordbtn = (Button)findViewById(R.id.load_password_activity_button);
-    quitbtn = (Button)findViewById(R.id.quit_button);
+    savepasswordbtn = findViewById(R.id.save_password_activity_button);
+    loadpasswordbtn = findViewById(R.id.load_password_activity_button);
+    quitbtn = findViewById(R.id.quit_button);
   }
   
   // Added all the onclick event listiners
