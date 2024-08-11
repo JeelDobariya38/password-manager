@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
     });
     
     loadpasswordbtn.setOnClickListener(v -> {
-        Toast.makeText(this, "Yet left to make the feature!!", Toast.LENGTH_LONG).show();
+        Intent loadpasswordintent = new Intent(MainActivity.this, LoadPasswordActivity.class);
+        startActivity(loadpasswordintent);
     });
     
     quitbtn.setOnClickListener(v -> {

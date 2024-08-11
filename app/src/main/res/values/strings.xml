@@ -9,6 +9,7 @@
     
     <!-- Save Password Activity -->
     <string name="text_savepassword_headline">Save Password</string>
+    <string name="text_loadpassword_headline">Load Password</string>
     <string name="hint_domain">Domain</string>
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
