@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
   
   // Inizalize all the local view based variables
   private void initalizeViewVariables() {
-    savepasswordbtn = findViewById(R.id.save_password_activity_button);
-    loadpasswordbtn = findViewById(R.id.load_password_activity_button);
+    savepasswordbtn = findViewById(R.id.save_password_btn);
+    loadpasswordbtn = findViewById(R.id.load_password_btn);
     quitbtn = findViewById(R.id.quit_button);
   }
   

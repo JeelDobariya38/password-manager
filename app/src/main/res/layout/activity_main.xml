@@ -57,7 +57,7 @@
       android:id="@+id/quit_button"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="@string/load_password_btn"
+      android:text="@string/quit_button_text"
       android:textSize="14dp" />
     </LinearLayout>
 </LinearLayout>
