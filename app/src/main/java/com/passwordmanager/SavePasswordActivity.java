@@ -33,11 +33,11 @@ public class SavePasswordActivity extends AppCompatActivity {
   
   // Inizalize all the local view based variables
   private void initalizeViewVariables() {
-    domainTextInput = findViewById(R.id.domain_text_input);
-    usernameTextInput = findViewById(R.id.username_text_input);
-    passwordTextInput = findViewById(R.id.password_text_input);
-    notesTextInput = findViewById(R.id.notes_text_input);
-    savepasswordbtn = findViewById(R.id.save_button);
+    domainTextInput = findViewById(R.id.input_domain);
+    usernameTextInput = findViewById(R.id.input_username);
+    passwordTextInput = findViewById(R.id.input_password);
+    notesTextInput = findViewById(R.id.input_notes);
+    savepasswordbtn = findViewById(R.id.save_password_btn);
   }
   
   // Added all the onclick event listiners

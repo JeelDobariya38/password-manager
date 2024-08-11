@@ -1,23 +1,25 @@
 <resources>
 	<string name="app_name">Password Manager</string>
-    <string name="app_version">v0.1.0-Alpha</string>
-    
-    <!-- Main Activity -->
-    <string name="button_save_password_activity">Save Password</string>
-    <string name="button_load_password_activity">Load Password</string>
-    <string name="button_quit">Quit</string>
-    
-    <!-- Save Password Activity -->
-    <string name="text_savepassword_headline">Save Password</string>
-    <string name="text_loadpassword_headline">Load Password</string>
-    <string name="hint_domain">Domain</string>
-    <string name="hint_username">Username</string>
-    <string name="hint_password">Password</string>
-    <string name="hint_notes">Notes</string>
-    <string name="button_save">Save Password</string>
-    <string name="load_button">Load Password</string>
-	
-    <!-- Permission -->
+  <string name="app_version">v0.1.0-Alpha</string>
+  
+  <!-- Main Activity -->
+  <string name="quit_button_text">Quit</string>
+  
+  <!-- Common in all Activity -->
+  <string name="hint_domain">Domain</string>
+  <string name="hint_username">Username</string>
+  <string name="hint_password">Password</string>
+  <string name="hint_notes">Notes</string>
+  <string name="save_password_button_text">Save Password</string>
+  <string name="load_password_button_text">Load Password</string>
+  
+  <!-- Load Password Activity -->
+  <string name="textview_loadpassword_headline">Load Password</string>
+  
+  <!-- Save Password Activity -->
+  <string name="textview_savepassword_headline">Save Password</string>
+
+  <!-- Permission -->
 	<string name="permission_granted">Permission Granted</string>
 	<string name="permission_denied">Permission Denied</string>
 </resources>

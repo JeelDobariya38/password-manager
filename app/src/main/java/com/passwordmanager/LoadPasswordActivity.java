@@ -32,9 +32,9 @@ public class LoadPasswordActivity extends AppCompatActivity {
   
   // Inizalize all the local view based variables
   private void initalizeViewVariables() {
-    domainTextInput = findViewById(R.id.domain_text_input);
-    usernameTextInput = findViewById(R.id.username_text_input);
-    loadpasswordbtn = findViewById(R.id.load_button);
+    domainTextInput = findViewById(R.id.input_domain);
+    usernameTextInput = findViewById(R.id.input_username);
+    loadpasswordbtn = findViewById(R.id.load_password_btn);
   }
   
   // Added all the onclick event listiners
