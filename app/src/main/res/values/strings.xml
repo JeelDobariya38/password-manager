@@ -15,6 +15,7 @@
     <string name="hint_password">Password</string>
     <string name="hint_notes">Notes</string>
     <string name="button_save">Save Password</string>
+    <string name="load_button">Load Password</string>
 	
     <!-- Permission -->
 	<string name="permission_granted">Permission Granted</string>

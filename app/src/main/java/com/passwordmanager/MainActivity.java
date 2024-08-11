@@ -2,13 +2,10 @@ package com.passwordmanager;
 
 import android.os.Bundle;
 import android.content.Intent;
-import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
-import com.passwordmanager.utils.Permissions;
+// import com.passwordmanager.utils.Permissions;
 
 public class MainActivity extends AppCompatActivity {
   
@@ -16,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
   private Button loadpasswordbtn;
   private Button quitbtn;
   
-  private Permissions permissionsHandle;
+  // private Permissions permissionsHandle;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +21,47 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
     
     // Initalizing the view elememts
+    initalizeViewVariables();
+    
+    // Add event onclick listener
+    addOnClickListenerOnButton();
+    
+    // Make window fullscreen
+    WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+    
+    /* Comment the code as permission is not need to write into app data dir.
+        // Check and request permission when the app is first opened
+        permissionsHandle = new Permissions(this);
+        if (!permissionsHandle.checkPermission()) permissionsHandle.requestPermission();
+    */
+  }
+
+  /* Comment the code as permission is not need to write into app data dir.
+      @Override
+      public void onRequestPermissionsResult(
+          int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == Permissions.PERMISSION_REQUEST_CODE) {
+          if (permissionsHandle.isPermissionGranted(grantResults)) {
+            // Permission has been granted
+            Toast.makeText(this, getString(R.string.permission_granted), Toast.LENGTH_LONG).show();
+          } else {
+            // Permission not granted
+            Toast.makeText(this, getString(R.string.permission_denied), Toast.LENGTH_LONG).show();
+          }
+        }
+      }
+  */
+  
+  // Inizalize all the local view based variables
+  private void initalizeViewVariables() {
     savepasswordbtn = (Button)findViewById(R.id.save_password_activity_button);
     loadpasswordbtn = (Button)findViewById(R.id.load_password_activity_button);
     quitbtn = (Button)findViewById(R.id.quit_button);
-    
-    // Add event onclick listener
+  }
+  
+  // Added all the onclick event listiners
+  private void addOnClickListenerOnButton() {
     savepasswordbtn.setOnClickListener(v -> {
         Intent savepasswordintent = new Intent(MainActivity.this, SavePasswordActivity.class);
         startActivity(savepasswordintent);
@@ -42,27 +75,5 @@ public class MainActivity extends AppCompatActivity {
     quitbtn.setOnClickListener(v -> {
         finishAndRemoveTask();
     });
-    
-    // Make window fullscreen
-    WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
-
-    // Check and request permission when the app is first opened
-    permissionsHandle = new Permissions(this);
-    if (!permissionsHandle.checkPermission()) permissionsHandle.requestPermission();
-  }
-
-  @Override
-  public void onRequestPermissionsResult(
-      int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    if (requestCode == Permissions.PERMISSION_REQUEST_CODE) {
-      if (permissionsHandle.isPermissionGranted(grantResults)) {
-        // Permission has been granted
-        Toast.makeText(this, getString(R.string.permission_granted), Toast.LENGTH_LONG).show();
-      } else {
-        // Permission not granted
-        Toast.makeText(this, getString(R.string.permission_denied), Toast.LENGTH_LONG).show();
-      }
-    }
   }
 }
