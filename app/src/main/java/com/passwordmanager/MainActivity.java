@@ -63,17 +63,17 @@ public class MainActivity extends AppCompatActivity {
   // Added all the onclick event listiners
   private void addOnClickListenerOnButton() {
     savepasswordbtn.setOnClickListener(v -> {
-        Intent savepasswordintent = new Intent(MainActivity.this, SavePasswordActivity.class);
-        startActivity(savepasswordintent);
+      Intent savepasswordintent = new Intent(MainActivity.this, SavePasswordActivity.class);
+      startActivity(savepasswordintent);
     });
     
     loadpasswordbtn.setOnClickListener(v -> {
-        Intent loadpasswordintent = new Intent(MainActivity.this, LoadPasswordActivity.class);
-        startActivity(loadpasswordintent);
+      Intent loadpasswordintent = new Intent(MainActivity.this, LoadPasswordActivity.class);
+      startActivity(loadpasswordintent);
     });
     
     quitbtn.setOnClickListener(v -> {
-        finishAndRemoveTask();
+      finishAndRemoveTask();
     });
   }
 }

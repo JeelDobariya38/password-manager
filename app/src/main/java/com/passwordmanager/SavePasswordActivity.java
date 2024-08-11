@@ -43,23 +43,23 @@ public class SavePasswordActivity extends AppCompatActivity {
   // Added all the onclick event listiners
   private void addOnClickListenerOnButton() {
     savepasswordbtn.setOnClickListener(v -> {
-        String domain = domainTextInput.getText().toString();
-        String username = usernameTextInput.getText().toString();
-        String password = passwordTextInput.getText().toString();
-        String notes = notesTextInput.getText().toString();
-        
-        Controller controller = new Controller(SavePasswordActivity.this);
-        
-        int res = controller.savePasswordEntity(domain, username, password, notes);
-        
-        if (res == -2) {
-            Toast.makeText(SavePasswordActivity.this, "please fill the form first!!", Toast.LENGTH_SHORT).show();
-        } 
-        else if (res == -1) {
-            Toast.makeText(SavePasswordActivity.this, "Failed: please try again!!", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(SavePasswordActivity.this, "Success: " + res, Toast.LENGTH_SHORT).show();
-        }
+      String domain = domainTextInput.getText().toString();
+      String username = usernameTextInput.getText().toString();
+      String password = passwordTextInput.getText().toString();
+      String notes = notesTextInput.getText().toString();
+      
+      Controller controller = new Controller(SavePasswordActivity.this);
+      
+      int res = controller.savePasswordEntity(domain, username, password, notes);
+      
+      if (res == -2) {
+        Toast.makeText(SavePasswordActivity.this, "please fill the form first!!", Toast.LENGTH_SHORT).show();
+      } 
+      else if (res == -1) {
+        Toast.makeText(SavePasswordActivity.this, "Failed: please try again!!", Toast.LENGTH_SHORT).show();
+      } else {
+        Toast.makeText(SavePasswordActivity.this, "Success: " + res, Toast.LENGTH_SHORT).show();
+      }
     });
   }
 }

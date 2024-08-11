@@ -40,18 +40,18 @@ public class LoadPasswordActivity extends AppCompatActivity {
   // Added all the onclick event listiners
   private void addOnClickListenerOnButton() {
     loadpasswordbtn.setOnClickListener(v -> {
-        String domain = domainTextInput.getText().toString();
-        String username = usernameTextInput.getText().toString();
-        
-        Controller controller = new Controller(LoadPasswordActivity.this);
-        
-        PasswordModel passwordmodel = controller.getPasswordByUsernameAndDomain(username, domain);
-        
-        if (passwordmodel == null) {
-            Toast.makeText(LoadPasswordActivity.this, "404: Not Found!!", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(LoadPasswordActivity.this, passwordmodel.toString(), Toast.LENGTH_LONG).show();
-        }
+      String domain = domainTextInput.getText().toString();
+      String username = usernameTextInput.getText().toString();
+      
+      Controller controller = new Controller(LoadPasswordActivity.this);
+      
+      PasswordModel passwordmodel = controller.getPasswordByUsernameAndDomain(username, domain);
+      
+      if (passwordmodel == null) {
+        Toast.makeText(LoadPasswordActivity.this, "404: Not Found!!", Toast.LENGTH_SHORT).show();
+      } else {
+        Toast.makeText(LoadPasswordActivity.this, passwordmodel.toString(), Toast.LENGTH_LONG).show();
+      }
     });
   }
 }
