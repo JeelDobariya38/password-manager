@@ -48,7 +48,7 @@ public class Controller {
         Cursor cursor = db.query(
                 MyDatabaseHelper.PASSWORDS_TABLE,
                 null,
-                selection
+                selection,
                 selectionArgs,
                 null, null, null);
 

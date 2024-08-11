@@ -37,6 +37,14 @@ android {
             universalApk true
         }
     }
+    
+    lintOptions {
+        // You can enable lint checking and provide a baseline file if needed:
+        // baseline file("lint-baseline.xml")
+
+        // To ensure that lint uses the lint.xml configuration
+        lintConfig rootProject.file("lint.xml")
+    }
 
     buildTypes {
         release {

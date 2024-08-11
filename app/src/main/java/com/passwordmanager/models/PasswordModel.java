@@ -1,4 +1,4 @@
-package com.passwordmanager.model;
+package com.passwordmanager.models;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
