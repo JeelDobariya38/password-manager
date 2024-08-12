@@ -10,6 +10,7 @@ import com.passwordmanager.utils.Controller;
 import com.passwordmanager.databinding.ActivitySavePasswordBinding;
 
 public class SavePasswordActivity extends AppCompatActivity {
+  private Controller controller;
   
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +33,7 @@ public class SavePasswordActivity extends AppCompatActivity {
       String password = binding.inputPassword.getText().toString();
       String notes = binding.inputNotes.getText().toString();
       
-      Controller controller = new Controller(SavePasswordActivity.this);
-      
+      controller = new Controller(SavePasswordActivity.this);
       int res = controller.savePasswordEntity(domain, username, password, notes);
       
       if (res == -2) {
