@@ -7,6 +7,7 @@ import androidx.core.view.WindowCompat;
 import android.view.LayoutInflater;
 
 import com.passwordmanager.R;
+import com.passwordmanager.utils.Controller;
 import com.passwordmanager.databinding.ActivityViewPasswordBinding;
 
 /*
@@ -52,8 +53,16 @@ public class ViewPasswordActivity extends AppCompatActivity {
     });
     
     binding.deletePasswordBtn.setOnClickListener(v -> {
-      // TODO: implement password delete logic.
-      Toast.makeText(ActivityViewPasswordBinding.this, "delete password feature under development", Toast.LENGTH_SHORT).show();
+      Controller controller = new Controller(ViewPasswordActivity.this);
+      int res = controller.deletePassword(passwordEnitityId);
+      
+      if (res == 1) {
+        Toast.makeText(ActivityViewPasswordBinding.this, getString(R.string.delete_sucess_msg), Toast.LENGTH_SHORT).show();
+        
+        finish();
+      } else {
+        Toast.makeText(ActivityViewPasswordBinding.this, getString(R.string.something_went_wrong_msg), Toast.LENGTH_SHORT).show();
+      }
     });
   }
 }

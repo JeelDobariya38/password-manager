@@ -136,7 +136,7 @@ public class Controller {
   }
 
   public int deletePassword(int id) {
-  // Return number of rows affected (should be 1 if the deletion is successful).
+    // Return number of rows affected (should be 1 if the deletion is successful).
 
     SQLiteDatabase db = dbHelper.getWritableDatabase();
     int rowsDeleted = db.delete(MyDatabaseHelper.PASSWORDS_TABLE, "id = ?", new String[]{String.valueOf(id)});
