@@ -37,6 +37,7 @@
     <activity android:name=".ui.SavePasswordActivity" />
     <activity android:name=".ui.LoadPasswordActivity" />
     <activity android:name=".ui.ViewPasswordActivity" />
+    <activity android:name=".ui.UpdatePasswordActivity" />
 	</application>
 
 </manifest>

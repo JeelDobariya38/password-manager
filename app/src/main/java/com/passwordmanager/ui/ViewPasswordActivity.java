@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 
 import com.passwordmanager.R;
 import com.passwordmanager.utils.Controller;
+import com.passwordmanager.models.PasswordModel;
 import com.passwordmanager.databinding.ActivityViewPasswordBinding;
 
 /*
@@ -17,44 +18,55 @@ import com.passwordmanager.databinding.ActivityViewPasswordBinding;
 
 public class ViewPasswordActivity extends AppCompatActivity {
   private int passwordEnitityId = 0;
+  private ActivityViewPasswordBinding binding;
+  private Controller controller;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    ActivityViewPasswordBinding binding = ActivityViewPasswordBinding.inflate(getLayoutInflater());
+    binding = ActivityViewPasswordBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
     
     Intent intent = getIntent();
-    passwordEnitityId = intent.getIntExtra("id", -1); // -1 is a invalid id.
+    passwordEnitityId = intent.getIntExtra("id", 1); // -1 is a invalid id.
 
     if (passwordEnitityId == -1) { //invalid enitity
       finish();
     }
     
-    // Put value in textviews
-    binding.tvDomain.setText(getString(R.string.domain_prefix) + "  " + intent.getStringExtra("domain"));
-    binding.tvUsername.setText(getString(R.string.username_prefix) + "  " + intent.getStringExtra("username"));
-    binding.tvPassword.setText(getString(R.string.password_prefix) + "  " + intent.getStringExtra("password"));
-    binding.tvNotes.setText(getString(R.string.notes_prefix) + "  " + intent.getStringExtra("notes"));
-    binding.tvCreatedAt.setText(getString(R.string.createdat_prefix) + "  " + intent.getStringExtra("createdat"));
-    binding.tvUpdatedAt.setText(getString(R.string.updatedat_prefix) + "  " + intent.getStringExtra("updatedat"));
+    controller = new Controller(ViewPasswordActivity.this);
+    
+    // Filling the textviews with data
+    // fillDataInTextview();
   
     // Add event onclick listener
-    addOnClickListenerOnButton(binding);
+    addOnClickListenerOnButton();
     
     // Make window fullscreen
     WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
   }
   
+  private void fillDataInTextview() {
+    PasswordModel passwordmodel = controller.getPasswordById(passwordEnitityId);
+    
+    binding.tvDomain.setText(getString(R.string.domain_prefix) + "  " + passwordmodel.getDomain());
+    binding.tvUsername.setText(getString(R.string.username_prefix) + "  " + passwordmodel.getUsername());
+    binding.tvPassword.setText(getString(R.string.password_prefix) + "  " + passwordmodel.getPassword());
+    binding.tvNotes.setText(getString(R.string.notes_prefix) + "  " + passwordmodel.getNotes());
+    binding.tvCreatedAt.setText(getString(R.string.createdat_prefix) + "  " + passwordmodel.getCreatedAt());
+    binding.tvUpdatedAt.setText(getString(R.string.updatedat_prefix) + "  " + passwordmodel.getUpdatedAt());
+  }
+  
   // Added all the onclick event listiners
-  private void addOnClickListenerOnButton(ActivityViewPasswordBinding binding) {
+  private void addOnClickListenerOnButton() {
     binding.updatePasswordBtn.setOnClickListener(v -> {
-      // TODO: implement password update logic.
-      Toast.makeText(ViewPasswordActivity.this, "update password feature under development", Toast.LENGTH_SHORT).show();
+      Intent viewpasswordintent = new Intent(ViewPasswordActivity.this, UpdatePasswordActivity.class);
+      viewpasswordintent.putExtra("id", passwordEnitityId);
+      startActivity(viewpasswordintent);
     });
     
     binding.deletePasswordBtn.setOnClickListener(v -> {
-      Controller controller = new Controller(ViewPasswordActivity.this);
+      controller = new Controller(ViewPasswordActivity.this);
       int res = controller.deletePassword(passwordEnitityId);
       
       if (res == 1) {
@@ -65,5 +77,11 @@ public class ViewPasswordActivity extends AppCompatActivity {
         Toast.makeText(ViewPasswordActivity.this, getString(R.string.something_went_wrong_msg), Toast.LENGTH_SHORT).show();
       }
     });
+  }
+  
+  @Override
+  protected void onResume() {
+    super.onResume();
+    fillDataInTextview();
   }
 }
