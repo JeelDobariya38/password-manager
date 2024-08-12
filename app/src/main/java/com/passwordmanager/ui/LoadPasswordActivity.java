@@ -1,11 +1,10 @@
 package com.passwordmanager.ui;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.passwordmanager.R;
 import com.passwordmanager.utils.Controller;
@@ -40,7 +39,16 @@ public class LoadPasswordActivity extends AppCompatActivity {
       if (passwordmodel == null) {
         Toast.makeText(LoadPasswordActivity.this, getString(R.string.not_found_error_message), Toast.LENGTH_SHORT).show();
       } else {
-        Toast.makeText(LoadPasswordActivity.this, passwordmodel.toString(), Toast.LENGTH_LONG).show();
+        // Toast.makeText(LoadPasswordActivity.this, passwordmodel.toString(), Toast.LENGTH_LONG).show();
+        Intent viewpasswordintent = new Intent(LoadPasswordActivity.this, ViewPasswordActivity.class);
+        viewpasswordintent.putExtra("id",        passwordmodel.getId());
+        viewpasswordintent.putExtra("domain",    passwordmodel.getDomain());
+        viewpasswordintent.putExtra("username",  passwordmodel.getUsername());
+        viewpasswordintent.putExtra("password",  passwordmodel.getPassword());
+        viewpasswordintent.putExtra("notes",     passwordmodel.getNotes());
+        viewpasswordintent.putExtra("createdat", passwordmodel.getCreatedAt());
+        viewpasswordintent.putExtra("updatedat", passwordmodel.getUpdatedAt());
+        startActivity(viewpasswordintent);
       }
     });
   }

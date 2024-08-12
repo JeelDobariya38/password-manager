@@ -2,7 +2,6 @@ package com.passwordmanager.ui;
 
 import android.os.Bundle;
 import android.content.Intent;
-import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 import android.view.LayoutInflater;

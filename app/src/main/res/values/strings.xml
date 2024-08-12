@@ -10,15 +10,29 @@
   <string name="hint_username">Username</string>
   <string name="hint_password">Password</string>
   <string name="hint_notes">Notes</string>
+  
   <string name="save_password_button_text">Save Password</string>
   <string name="load_password_button_text">Load Password</string>
+  <string name="update_password_button_text">Update Password</string>
+  <string name="delete_password_button_text">Delete Password</string>
   
   <!-- Load Password Activity -->
   <string name="textview_loadpassword_headline">Load Password</string>
   
   <!-- Save Password Activity -->
   <string name="textview_savepassword_headline">Save Password</string>
-
+  
+  <!-- Veiw Password Activity -->
+  <string name="textview_viewpassword_headline">View Password</string>
+  
+  <!-- Prefix & Suffix -->
+  <string name="domain_prefix">Domain: </string>
+  <string name="username_prefix">Username: </string>
+  <string name="password_prefix">Password: </string>
+  <string name="notes_prefix">Notes: </string>
+  <string name="createdat_prefix">CreatedAt: </string>
+  <string name="updatedat_prefix">UpdatedAt: </string>
+  
   <!-- Permission -->
 	<string name="permission_granted">Permission Granted</string>
 	<string name="permission_denied">Permission Denied</string>
