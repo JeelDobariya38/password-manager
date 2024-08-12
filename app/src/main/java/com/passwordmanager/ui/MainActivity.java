@@ -1,10 +1,12 @@
-package com.passwordmanager;
+package com.passwordmanager.ui;
 
 import android.os.Bundle;
 import android.content.Intent;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
+
+import com.passwordmanager.R;
 // import com.passwordmanager.utils.Permissions;
 
 public class MainActivity extends AppCompatActivity {

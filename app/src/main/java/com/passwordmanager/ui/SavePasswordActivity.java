@@ -1,4 +1,4 @@
-package com.passwordmanager;
+package com.passwordmanager.ui;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -7,6 +7,7 @@ import androidx.core.view.WindowCompat;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.passwordmanager.R;
 import com.passwordmanager.utils.Controller;
 
 public class SavePasswordActivity extends AppCompatActivity {
