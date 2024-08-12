@@ -5,6 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import com.passwordmanager.database.MyDatabaseHelper;
 import com.passwordmanager.models.PasswordModel;
 
@@ -109,7 +112,32 @@ public class Controller {
     db.close();
     return passwordModel;
   }
+  
+  public List<PasswordModel> getAllPasswords() {
+    List<PasswordModel> passwordList = new ArrayList<PasswordModel>();
+    SQLiteDatabase db = dbHelper.getReadableDatabase();
+    Cursor cursor = db.query(MyDatabaseHelper.PASSWORDS_TABLE, null, null, null, null, null, null);
 
+    if (cursor.moveToFirst()) {
+        do {
+            int id = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
+            String domain = cursor.getString(cursor.getColumnIndexOrThrow("domain"));
+            String username = cursor.getString(cursor.getColumnIndexOrThrow("username"));
+            String password = cursor.getString(cursor.getColumnIndexOrThrow("password"));
+            String notes = cursor.getString(cursor.getColumnIndexOrThrow("notes"));
+            String createdAt = cursor.getString(cursor.getColumnIndexOrThrow("createdat"));
+            String updatedAt = cursor.getString(cursor.getColumnIndexOrThrow("updatedat"));
+
+            PasswordModel passwordItem = new PasswordModel(id, domain, username, password, notes, createdAt, updatedAt);
+            passwordList.add(passwordItem);
+        } while (cursor.moveToNext());
+    }
+
+    cursor.close();
+    db.close();
+    
+    return passwordList;
+  }
 
   public int updatePassword(int id, String domain, String username, String password, String notes) {
     // Return -2 on empty parameter.
