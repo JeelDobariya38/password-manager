@@ -13,6 +13,10 @@ android {
         versionCode 1
         versionName "0.1.0-Alpha"
     }
+    
+    viewBinding {
+        enabled = true
+    }
 
     signingConfigs {
         release {

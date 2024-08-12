@@ -10,39 +10,28 @@ import android.widget.TextView;
 import com.passwordmanager.R;
 import com.passwordmanager.utils.Controller;
 import com.passwordmanager.models.PasswordModel;
+import com.passwordmanager.databinding.ActivityLoadPasswordBinding;
 
 public class LoadPasswordActivity extends AppCompatActivity {
-  private TextView domainTextInput;
-  private TextView usernameTextInput;
-  private Button loadpasswordbtn;
   
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_loadpassword);
-    
-    // Initalizing the view elememts
-    initalizeViewVariables();
-    
+    ActivityLoadPasswordBinding binding = ActivityLoadPasswordBinding.inflate(getLayoutInflater());
+    setContentView(binding.getRoot());
+  
     // Add event onclick listener
-    addOnClickListenerOnButton();
+    addOnClickListenerOnButton(binding);
 
     // Make window fullscreen
     WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
   }
   
-  // Inizalize all the local view based variables
-  private void initalizeViewVariables() {
-    domainTextInput = findViewById(R.id.input_domain);
-    usernameTextInput = findViewById(R.id.input_username);
-    loadpasswordbtn = findViewById(R.id.load_password_btn);
-  }
-  
   // Added all the onclick event listiners
-  private void addOnClickListenerOnButton() {
-    loadpasswordbtn.setOnClickListener(v -> {
-      String domain = domainTextInput.getText().toString();
-      String username = usernameTextInput.getText().toString();
+  private void addOnClickListenerOnButton(ActivityLoadPasswordBinding binding) {
+    binding.loadPasswordBtn.setOnClickListener(v -> {
+      String domain = binding.inputDomain.getText().toString();
+      String username = binding.inputUsername.getText().toString();
       
       Controller controller = new Controller(LoadPasswordActivity.this);
       

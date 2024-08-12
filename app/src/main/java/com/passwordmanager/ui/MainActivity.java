@@ -5,28 +5,24 @@ import android.content.Intent;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
+import android.view.LayoutInflater;
 
 import com.passwordmanager.R;
+import com.passwordmanager.databinding.ActivityMainBinding;
 // import com.passwordmanager.utils.Permissions;
 
 public class MainActivity extends AppCompatActivity {
-  
-  private Button savepasswordbtn;
-  private Button loadpasswordbtn;
-  private Button quitbtn;
   
   // private Permissions permissionsHandle;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
-    
-    // Initalizing the view elememts
-    initalizeViewVariables();
-    
+    ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+    setContentView(binding.getRoot());
+  
     // Add event onclick listener
-    addOnClickListenerOnButton();
+    addOnClickListenerOnButton(binding);
     
     // Make window fullscreen
     WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
@@ -55,26 +51,19 @@ public class MainActivity extends AppCompatActivity {
       }
   */
   
-  // Inizalize all the local view based variables
-  private void initalizeViewVariables() {
-    savepasswordbtn = findViewById(R.id.save_password_btn);
-    loadpasswordbtn = findViewById(R.id.load_password_btn);
-    quitbtn = findViewById(R.id.quit_button);
-  }
-  
   // Added all the onclick event listiners
-  private void addOnClickListenerOnButton() {
-    savepasswordbtn.setOnClickListener(v -> {
+  private void addOnClickListenerOnButton(ActivityMainBinding binding) {
+    binding.savePasswordBtn.setOnClickListener(v -> {
       Intent savepasswordintent = new Intent(MainActivity.this, SavePasswordActivity.class);
       startActivity(savepasswordintent);
     });
     
-    loadpasswordbtn.setOnClickListener(v -> {
+    binding.loadPasswordBtn.setOnClickListener(v -> {
       Intent loadpasswordintent = new Intent(MainActivity.this, LoadPasswordActivity.class);
       startActivity(loadpasswordintent);
     });
     
-    quitbtn.setOnClickListener(v -> {
+    binding.quitBtn.setOnClickListener(v -> {
       finishAndRemoveTask();
     });
   }

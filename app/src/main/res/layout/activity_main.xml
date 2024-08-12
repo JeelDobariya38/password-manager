@@ -54,7 +54,7 @@
       android:textSize="14dp" />
     
     <com.google.android.material.button.MaterialButton
-      android:id="@+id/quit_button"
+      android:id="@+id/quit_btn"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="@string/quit_button_text"

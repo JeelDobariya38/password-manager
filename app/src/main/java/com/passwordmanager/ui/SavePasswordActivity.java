@@ -9,45 +9,30 @@ import android.widget.TextView;
 
 import com.passwordmanager.R;
 import com.passwordmanager.utils.Controller;
+import com.passwordmanager.databinding.ActivitySavePasswordBinding;
 
 public class SavePasswordActivity extends AppCompatActivity {
-  private TextView domainTextInput;
-  private TextView usernameTextInput;
-  private TextView passwordTextInput;
-  private TextView notesTextInput;
-  private Button savepasswordbtn;
   
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_savepassword);
-    
-    // Initalizing the view elememts
-    initalizeViewVariables();
-    
+    ActivitySavePasswordBinding binding = ActivitySavePasswordBinding.inflate(getLayoutInflater());
+    setContentView(binding.getRoot());
+  
     // Add event onclick listener
-    addOnClickListenerOnButton();
+    addOnClickListenerOnButton(binding);
     
     // Make window fullscreen
     WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
   }
   
-  // Inizalize all the local view based variables
-  private void initalizeViewVariables() {
-    domainTextInput = findViewById(R.id.input_domain);
-    usernameTextInput = findViewById(R.id.input_username);
-    passwordTextInput = findViewById(R.id.input_password);
-    notesTextInput = findViewById(R.id.input_notes);
-    savepasswordbtn = findViewById(R.id.save_password_btn);
-  }
-  
   // Added all the onclick event listiners
-  private void addOnClickListenerOnButton() {
-    savepasswordbtn.setOnClickListener(v -> {
-      String domain = domainTextInput.getText().toString();
-      String username = usernameTextInput.getText().toString();
-      String password = passwordTextInput.getText().toString();
-      String notes = notesTextInput.getText().toString();
+  private void addOnClickListenerOnButton(ActivitySavePasswordBinding binding) {
+    binding.savePasswordBtn.setOnClickListener(v -> {
+      String domain = binding.inputDomain.getText().toString();
+      String username = binding.inputUsername.getText().toString();
+      String password = binding.inputPassword.getText().toString();
+      String notes = binding.inputNotes.getText().toString();
       
       Controller controller = new Controller(SavePasswordActivity.this);
       
