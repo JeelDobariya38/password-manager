@@ -2,6 +2,7 @@ package com.passwordmanager.ui;
 
 import android.os.Bundle;
 import android.content.Intent;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 import android.view.LayoutInflater;
@@ -49,7 +50,7 @@ public class ViewPasswordActivity extends AppCompatActivity {
   private void addOnClickListenerOnButton(ActivityViewPasswordBinding binding) {
     binding.updatePasswordBtn.setOnClickListener(v -> {
       // TODO: implement password update logic.
-      Toast.makeText(ActivityViewPasswordBinding.this, "update password feature under development", Toast.LENGTH_SHORT).show();
+      Toast.makeText(ViewPasswordActivity.this, "update password feature under development", Toast.LENGTH_SHORT).show();
     });
     
     binding.deletePasswordBtn.setOnClickListener(v -> {
@@ -57,11 +58,11 @@ public class ViewPasswordActivity extends AppCompatActivity {
       int res = controller.deletePassword(passwordEnitityId);
       
       if (res == 1) {
-        Toast.makeText(ActivityViewPasswordBinding.this, getString(R.string.delete_sucess_msg), Toast.LENGTH_SHORT).show();
+        Toast.makeText(ViewPasswordActivity.this, getString(R.string.delete_sucess_msg), Toast.LENGTH_SHORT).show();
         
         finish();
       } else {
-        Toast.makeText(ActivityViewPasswordBinding.this, getString(R.string.something_went_wrong_msg), Toast.LENGTH_SHORT).show();
+        Toast.makeText(ViewPasswordActivity.this, getString(R.string.something_went_wrong_msg), Toast.LENGTH_SHORT).show();
       }
     });
   }
