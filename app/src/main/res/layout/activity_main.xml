@@ -5,7 +5,7 @@
 	android:layout_height="match_parent"
 	android:gravity="center"
   android:orientation="vertical"
-	tools:context=".SavePasswordActivity"
+	tools:context=".ui.MainActivity"
   android:padding="4sp" >
     
   <LinearLayout
