@@ -127,9 +127,20 @@ public class Controller {
     values.put("username", username);
     values.put("password", password);
     values.put("notes", notes);
-    values.put("updatedat", "datetime('now')"); // Update the updatedAt column
 
-    int rowsAffected = db.update(MyDatabaseHelper.PASSWORDS_TABLE, values, "id = ?", new String[]{String.valueOf(id)});
+    int rowsAffected;
+    
+    try {
+        rowsAffected = db.update(MyDatabaseHelper.PASSWORDS_TABLE, values, "id = ?", new String[]{String.valueOf(id)});
+
+        if (rowsAffected > 0) {
+            String updateQuery = "UPDATE " + MyDatabaseHelper.PASSWORDS_TABLE + " SET updatedat = datetime('now') WHERE id = ?";
+            db.execSQL(updateQuery, new Object[]{id});
+        }
+    } catch (Exception e) {
+        db.close();
+        return -1;  // Error in SQL
+    }
     db.close();
 
     return rowsAffected == 0 ? -1 : rowsAffected;
