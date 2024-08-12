@@ -49,7 +49,7 @@ public class LoadPasswordActivity extends AppCompatActivity {
       PasswordModel passwordmodel = controller.getPasswordByUsernameAndDomain(username, domain);
       
       if (passwordmodel == null) {
-        Toast.makeText(LoadPasswordActivity.this, "404: Not Found!!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(LoadPasswordActivity.this, getString(R.string.not_found_error_message), Toast.LENGTH_SHORT).show();
       } else {
         Toast.makeText(LoadPasswordActivity.this, passwordmodel.toString(), Toast.LENGTH_LONG).show();
       }

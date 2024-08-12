@@ -22,4 +22,10 @@
   <!-- Permission -->
 	<string name="permission_granted">Permission Granted</string>
 	<string name="permission_denied">Permission Denied</string>
+  
+  <!-- Toast Message -->
+  <string name="not_found_error_message">404: Not Found!!</string>
+  <string name="warn_fill_form">Warning: please fill the form first!!</string>
+  <string name="fail_msg">Failed: please try again!!</string>
+  <string name="sucess_clause">Success: </string>
 </resources>

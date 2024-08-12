@@ -54,12 +54,12 @@ public class SavePasswordActivity extends AppCompatActivity {
       int res = controller.savePasswordEntity(domain, username, password, notes);
       
       if (res == -2) {
-        Toast.makeText(SavePasswordActivity.this, "please fill the form first!!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(SavePasswordActivity.this, getString(R.string.warn_fill_form), Toast.LENGTH_SHORT).show();
       } 
       else if (res == -1) {
-        Toast.makeText(SavePasswordActivity.this, "Failed: please try again!!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(SavePasswordActivity.this, getString(R.string.fail_msg), Toast.LENGTH_SHORT).show();
       } else {
-        Toast.makeText(SavePasswordActivity.this, "Success: " + res, Toast.LENGTH_SHORT).show();
+        Toast.makeText(SavePasswordActivity.this, getString(R.string.sucess_clause) + res, Toast.LENGTH_SHORT).show();
       }
     });
   }
