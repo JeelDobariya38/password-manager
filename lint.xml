@@ -1,0 +1,6 @@
+<lint>
+    <!-- Suppress a specific warning globally -->
+    <issue id="Range">
+        <ignore path="**/Controller.java" />
+    </issue>
+</lint>
