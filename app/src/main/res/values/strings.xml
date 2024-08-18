@@ -15,6 +15,7 @@
   <string name="load_password_button_text">Load Password</string>
   <string name="update_password_button_text">Update Password</string>
   <string name="delete_password_button_text">Delete Password</string>
+  <string name="about_us_button_text">About Us</string>
   
   <!-- Headline of Activity -->
   <string name="textview_loadpassword_headline">Load Password</string>
