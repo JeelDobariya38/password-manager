@@ -13,10 +13,6 @@ android {
         versionCode 1
         versionName "0.1.0-Alpha"
     }
-    
-    viewBinding {
-        enabled = true
-    }
 
     signingConfigs {
         release {
@@ -64,9 +60,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+	
+	buildFeature {
+		viewBinding true
+	}
 }
 
 dependencies {
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
+	implementation 'androidx.databinding:viewbinding:7.4.1'
 }
