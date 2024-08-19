@@ -3,6 +3,11 @@
     <string name="app_name">Password Manager</string>
     <string name="app_version">v0.1.0-Alpha</string>
 
+    <!-- Contributor Names -->
+    <string name="developer_name">Developed by: Dobariya Jeel</string>
+    <string name="designer_name">UI/UX Designed by: Hamada Issas (Native)</string>
+    <string name="code_mantainer">Code Maintainer and Tester: Achmad Syahputra (Daniel)</string>
+
     <!-- Main Activity -->
     <string name="quit_button_text">Quit</string>
 
@@ -10,7 +15,7 @@
     <string name="textview_app_description">An open source password managing solution!!</string>
     <string name="textview_app_warning">App is currently under active development and it is made for fun and educational purpose and it might not be safe to save your auth info with it. For more info, view security guidelines!!!</string>
 
-    <!-- Common in all Activity -->
+    <!-- Button, Textview general in all Activity -->
     <string name="hint_domain">Domain</string>
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
