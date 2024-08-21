@@ -7,9 +7,9 @@ A android app that take down the headace of remember passwords. It is open sourc
 
 ## Features
 
-- [ ] Intuitive UI.
+- [X] Intuitive UI.
 - [ ] Update Checkers.
-- [ ] Password Management. (current priority)
+- [X] Password Management. (current priority)
 - [ ] Other Info Management.
 - [ ] Backup Manager.
 - [ ] Import/Export Passwords.

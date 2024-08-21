@@ -1,46 +1,61 @@
 <resources>
-	<string name="app_name">Password Manager</string>
-  <string name="app_version">v0.1.0-Alpha</string>
-  
-  <!-- Main Activity -->
-  <string name="quit_button_text">Quit</string>
-  
-  <!-- Common in all Activity -->
-  <string name="hint_domain">Domain</string>
-  <string name="hint_username">Username</string>
-  <string name="hint_password">Password</string>
-  <string name="hint_notes">Notes</string>
-  
-  <string name="save_password_button_text">Save Password</string>
-  <string name="load_password_button_text">Load Password</string>
-  <string name="update_password_button_text">Update Password</string>
-  <string name="delete_password_button_text">Delete Password</string>
-  
-  <!-- Headline of Activity -->
-  <string name="textview_loadpassword_headline">Load Password</string>
-  <string name="textview_savepassword_headline">Save Password</string>
-  <string name="textview_viewpassword_headline">View Password</string>
-  <string name="textview_updatepassword_headline">View Password</string>
-  
-  <!-- Prefix & Suffix -->
-  <string name="id_prefix">Id: </string>
-  <string name="domain_prefix">Domain: </string>
-  <string name="username_prefix">Username: </string>
-  <string name="password_prefix">Password: </string>
-  <string name="notes_prefix">Notes: </string>
-  <string name="createdat_prefix">CreatedAt: </string>
-  <string name="updatedat_prefix">UpdatedAt: </string>
-  
-  <!-- Permission -->
-	<string name="permission_granted">Permission Granted</string>
-	<string name="permission_denied">Permission Denied</string>
-  
-  <!-- Toast Message -->
-  <string name="not_found_error_message">404: Not Found!!</string>
-  <string name="warn_fill_form">Warning: please fill the form first!!</string>
-  <string name="fail_msg">Failed: please try again!!</string>
-  <string name="sucess_clause">Success: </string>
-  <string name="update_sucess_msg">Updated Successfully!!</string>
-  <string name="delete_sucess_msg">Deleted Successfully!!</string>
-  <string name="something_went_wrong_msg">Something Went Wrong!!</string>
+
+    <string name="app_name">Password Manager</string>
+    <string name="app_version">v0.1.0-Alpha</string>
+
+    <!-- Contributor Names -->
+    <string name="developer_name">Developed by: Dobariya Jeel</string>
+    <string name="designer_name">UI/UX Designed by: Hamada Issas (Native)</string>
+    <string name="code_mantainer">Code Maintainer and Tester: Achmad Daniel (Kudanill)</string>
+
+    <!-- Main Activity -->
+    <string name="quit_button_text">Quit</string>
+
+    <!-- About Us Activity -->
+    <string name="textview_app_description">An open source password managing solution that take down you headace of remembering password!!</string>
+    <string name="textview_app_warning">App is currently under active development and it is made for fun and educational purpose and it might not be safe to save your auth info with it. For more info, view security guidelines!!!</string>
+
+    <!-- Button, Textview general in all Activity -->
+    <string name="hint_domain">Domain</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_notes">Notes</string>
+    <string name="save_password_button_text">Save Password</string>
+    <string name="load_password_button_text">Load Password</string>
+    <string name="update_password_button_text">Update Password</string>
+    <string name="delete_password_button_text">Delete Password</string>
+    <string name="about_us_button_text">About Us</string>
+    <string name="view_license_button_text">View License</string>
+    <string name="view_security_guidelines_button_text">View Security Guidelines</string>
+    <string name="view_change_log_button_text">View Changelog</string>
+
+    <!-- Headline of Activity -->
+    <string name="textview_loadpassword_headline">Load Password</string>
+    <string name="textview_savepassword_headline">Save Password</string>
+    <string name="textview_viewpassword_headline">View Password</string>
+    <string name="textview_updatepassword_headline">Update Password</string>
+    <string name="textview_aboutus_headline">About Us</string>
+
+    <!-- Prefix & Suffix -->
+    <string name="id_prefix">Id: </string>
+    <string name="domain_prefix">Domain: </string>
+    <string name="username_prefix">Username: </string>
+    <string name="password_prefix">Password: </string>
+    <string name="notes_prefix">Notes: </string>
+    <string name="createdat_prefix">CreatedAt: </string>
+    <string name="updatedat_prefix">UpdatedAt: </string>
+
+    <!-- Permission -->
+    <string name="permission_granted">Permission Granted</string>
+    <string name="permission_denied">Permission Denied</string>
+
+    <!-- Toast Message -->
+    <string name="not_found_error_message">404: Not Found!!</string>
+    <string name="warn_fill_form">Warning: please fill the form first!!</string>
+    <string name="fail_msg">Failed: please try again!!</string>
+    <string name="sucess_clause">Success: </string>
+    <string name="update_sucess_msg">Updated Successfully!!</string>
+    <string name="delete_sucess_msg">Deleted Successfully!!</string>
+    <string name="something_went_wrong_msg">Something Went Wrong!!</string>
+
 </resources>

@@ -9,4 +9,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Made a Basic App by @JeelDobariya
 - Made a Main page of App by @HamadaNative
