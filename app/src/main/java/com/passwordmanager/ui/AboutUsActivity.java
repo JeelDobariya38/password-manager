@@ -31,7 +31,7 @@ public class AboutUsActivity extends AppCompatActivity {
   private void addOnClickListenerOnButton(ActivityAboutUsBinding binding) {
     binding.viewSecurityGuidelinesBtn.setOnClickListener(
         v -> {
-          // TODO: open security guidelines
+          openBrowser("https://github.com/JeelDobariya38/password-manager/blob/main/docs/security_guide.md");
         });
 
     binding.viewChangeLogBtn.setOnClickListener(
