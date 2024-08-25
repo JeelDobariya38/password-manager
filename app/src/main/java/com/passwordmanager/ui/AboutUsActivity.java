@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 import com.passwordmanager.databinding.ActivityAboutUsBinding;
+import com.passwordmanager.utils.Constant;
 // import com.passwordmanager.utils.Permissions;
 
 public class AboutUsActivity extends AppCompatActivity {
@@ -31,17 +32,17 @@ public class AboutUsActivity extends AppCompatActivity {
   private void addOnClickListenerOnButton(ActivityAboutUsBinding binding) {
     binding.viewSecurityGuidelinesBtn.setOnClickListener(
         v -> {
-          openBrowser("https://github.com/JeelDobariya38/password-manager/blob/main/docs/security_guide.md");
+          openBrowser(Constant.SECURITY_GUIDE_URL);
         });
 
     binding.viewChangeLogBtn.setOnClickListener(
         v -> {
-          openBrowser("https://github.com/JeelDobariya38/password-manager/blob/main/changelog.md");
+          openBrowser(Constant.CHANGELOG_URL);
         });
 
     binding.viewLicenseBtn.setOnClickListener(
         v -> {
-          openBrowser("https://github.com/JeelDobariya38/password-manager/blob/main/LICENSE.txt");
+          openBrowser(Constant.LICENSE_URL);
         });
   }
 }
