@@ -61,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
       Intent loadpasswordintent = new Intent(MainActivity.this, LoadPasswordActivity.class);
       startActivity(loadpasswordintent);
     });
+	
+	binding.aboutUsBtn.setOnClickListener(v -> {
+	  Intent aboutusintent = new Intent(MainActivity.this, AboutUsActivity.class);
+      startActivity(aboutusintent);
+    });
     
     binding.quitBtn.setOnClickListener(v -> {
       finishAndRemoveTask();

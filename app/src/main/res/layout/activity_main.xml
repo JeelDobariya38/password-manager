@@ -51,7 +51,14 @@
       android:layout_height="wrap_content"
       android:text="@string/load_password_button_text"
       android:textSize="14dp" />
-    
+	
+	<com.google.android.material.button.MaterialButton
+	  android:id="@+id/about_us_btn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/about_us_button_text"
+      android:textSize="14dp" />
+		
     <com.google.android.material.button.MaterialButton
       android:id="@+id/quit_btn"
       android:layout_width="match_parent"
