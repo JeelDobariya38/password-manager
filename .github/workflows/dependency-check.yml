@@ -1,12 +1,23 @@
 name: Gradle Dependency Submission
 
 on:
+  push:
+    branches: [ 'main' ]
   workflow_dispatch: # This makes it a manual trigger
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+permissions:
+  contents: write
 
+jobs:
+  dependency-submission:
+    runs-on: ubuntu-latest
     steps:
-    - name: Gradle Dependency Submission
-      uses: mikepenz/gradle-dependency-submission@v1.0.0
+    - name: Checkout sources
+      uses: actions/checkout@v4
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: 17
+    - name: Generate and submit dependency graph
+      uses: gradle/actions/dependency-submission@v4
