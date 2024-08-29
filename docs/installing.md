@@ -18,7 +18,7 @@ For inital installion of app, you follow step given below it work in most sineri
 
     - Go to our [github repository release page](https://github.com/JeelDobariya38/password-manager/releases). There you will fing a list of release avaiable.
   
-    - pick up any one of the release you like. (we recommend you pick a good release [how can you find a good release](#Guide-to-find-a-best-release))?
+    - pick up any one of the release you like. (we recommend you pick a good release [how can you find a good release](#Guide-to-find-a-best-release)?)
   
     - after pick up a release, you can read the changelog to know what change (optional step)
 
@@ -50,11 +50,11 @@ you can follow the below step. they work for most senerios.
   
     - check whether a update exist or not? 
   
-    - if no, then you can;t update but, can surely enquire about the next upadate using github issues.
+    - if no, then you can;t update but, can surely enquire about the next update using github issues.
   
-    - if yes, check how big the upadte is and how it affect your expirence as user?
+    - if yes, check how big the update is and how it affect your expirence as user?
   
-    - to find the upadate impact you can check what the difference between your version and new version you updating to.
+    - to find the update impact you can check what the difference between your version and new version you updating to.
   
     - eg, if you update from 1.x.x to 2.x.x the the change will be big. if you update from 1.x.0 to 1.x.2 then change might be not visible even.
 
@@ -77,23 +77,25 @@ you can follow the below step. they work for most senerios.
 
 ## Guide to find a best release
 
-To find a best release you should have knowledge of password-manager versioning system and type of release we release.
+To find a best release you should have knowledge of password-manager versioning system and type of releases we release.
 
 ### release types
 
-On our github release page you will find majorly `5 (3+2)` type of release. where each type of release label tell you something about release.
-Each release on github may have a label but, some even lack them completly. These label tends to tell more about release, so they are IMPORTANT to consider.
+On our github release page you will find majorly `5 (3+2)` type of release. Where each type of release label tell you something about release.
+Each release on github may have a label but, some even lack them completely. These label tends to tell more about release, so they are IMPORTANT to consider.
 
 Three type that are there in app itself, you find them in release title on github: 
 (this tags/labels can;t change after initial release of that version is done).
-    - Alpha: special design for development purpose, not intented to use by end users, they comes with bugs and venurablitity.
-    - Beta: release that can be used by mass audience, can contain minior bugs.
-    - Stable: are likey to be more stable then others release type, contain nearly zero bugs as they are well tested.
+    
+   - Alpha: special design for development purpose, not intented to use by end users, they comes with bugs and venurablitity.
+   - Beta: release that can be used by mass audience, can contain minior bugs.
+   - Stable: are likey to be more stable then others release type, contain nearly zero bugs as they are well tested.
 
 Two type are specific to github release. they are label on release itself:
 (this tags can label can change with time as they are dynamic and are not tied to app itself. meaning they are no hard coded anywhere)
-    - Pre Release: this release are not so good to install or to stick with. they are generally like `marked as deperacted` or more like `yanked release`
-    - Latest: this release label make a release as the best up to date release to install.
+    
+   - Pre Release: this release are not so good to install or to stick with. they are generally like `marked as deperacted` or more like `yanked release`
+   - Latest: this release label make a release as the best up to date release to install.
 
 > [!NOTE]
 > this label or flag changes with time. mean a app after it release can marked later as pre-release as there are lots of bug found or as latest release as it all good after test in production enviroment.
