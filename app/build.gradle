@@ -14,6 +14,20 @@ android {
         versionName "0.1.0-Alpha"
     }
 
+    flavorDimensions "default"
+
+    productFlavors {
+        dev {
+            dimension "default"
+            applicationId "com.passwordmanager.dev"
+            versionNameSuffix "-Dev"
+        }
+        prod {
+            dimension "default"
+            applicationId "com.passwordmanager"
+        }
+    }
+
     signingConfigs {
         release {
             def keystorePropertiesFile = rootProject.file("keystore.properties")
@@ -51,7 +65,8 @@ android {
             if (rootProject.file("keystore.properties").exists()) {
                 signingConfig signingConfigs.release
             }
-            minifyEnabled false
+            
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
