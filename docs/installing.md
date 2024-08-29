@@ -77,4 +77,31 @@ you can follow the below step. they work for most senerios.
 
 ## Guide to find a best release
 
-- comming soon
+To find a best release you should have knowledge of password-manager versioning system and type of release we release.
+
+### release types
+
+On our github release page you will find majorly `5 (3+2)` type of release. where each type of release label tell you something about release.
+Each release on github may have a label but, some even lack them completly. These label tends to tell more about release, so they are IMPORTANT to consider.
+
+Three type that are there in app itself, you find them in release title on github: 
+(this tags/labels can;t change after initial release of that version is done).
+  - Alpha: special design for development purpose, not intented to use by end users, they comes with bugs and venurablitity.
+  - Beta: release that can be used by mass audience, can contain minior bugs.
+  - Stable: are likey to be more stable then others release type, contain nearly zero bugs as they are well tested.
+
+Two type are specific to github release. they are label on release itself:
+(this tags can label can change with time as they are dynamic and are not tied to app itself. meaning they are no hard coded anywhere)
+  - Pre Release: this release are not so good to install or to stick with. they are generally like `marked as deperacted` or more like `yanked release`
+  - Latest: this release label make a release as the best up to date release to install.
+
+> [!NOTE]
+> this label or flag changes with time. mean a app after it release can marked later as pre-release as there are lots of bug found or as latest release as it all good after test in production enviroment.
+
+So, here is a list in order where starting type are best and ending types are worse.
+
+- STABLE (the best) > LATEST > BETA > ALPHA > PRE-RELEASE > RELEASE-WITH-NO-FLAGS (the worst)
+
+
+> [!NOTE]
+> Some release can even have two flag at a time. for example, stable and pre-release. I such case consider the github base label in this case pre-release. as they are dynamic and provide the latest infomation from us (developer part).
