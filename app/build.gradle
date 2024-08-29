@@ -19,12 +19,13 @@ android {
     productFlavors {
         dev {
             dimension "default"
-            applicationId "com.passwordmanager.dev"
+            applicationIdSuffix ".dev"
             versionNameSuffix "-Dev"
+            manifestPlaceholders = [appIcon: "@mipmap/dev_ic_launcher", appLabel: "Devpasscode"] // the name come from a parent project name "PassCodes"
         }
         prod {
             dimension "default"
-            applicationId "com.passwordmanager"
+            manifestPlaceholders = [appIcon: "@mipmap/ic_launcher", appLabel: "@string/app_name"]
         }
     }
 
