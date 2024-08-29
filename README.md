@@ -21,7 +21,7 @@ A android app that take down the headace of remember passwords. It is open sourc
 2. Download the apk for your phone. If Don't know the architecture of phone then download apk file that has universal in its name.
 3. Install the apk and you are ready to use the app.
 
-it was short and sweet description, for more detailed description vist the file ['docs/installing.md'](docs/installing.md)
+it was short and sweet description, for more detailed description vist the file [docs/installing.md](docs/installing.md)
 
 ## Building The App
 
@@ -31,9 +31,13 @@ it was short and sweet description, for more detailed description vist the file 
 
 3. Follow the general step and build the app.
 
-4. For code documention and support docs, check the `docs/` folder in our repository. You can even seek help on your [telegram community](https://t.me/passwordmanagercommunity)
+4. For code documention and support docs, check the `docs/` folder in our repository. 
 
-it was short and sweet description, for more detailed description vist the file ['docs/building.md'](docs/building.md)
+it was short and sweet description, for more detailed description vist the file [docs/building.md](docs/building.md)
+
+## Support Docs
+
+you can checkout support docs provided in [docs/](docs/) Or You can even seek help on our [telegram community](https://t.me/passwordmanagercommunity)
 
 ## Contribution Are Appicated!!!
 
