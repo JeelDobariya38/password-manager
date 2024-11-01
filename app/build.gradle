@@ -14,6 +14,21 @@ android {
         versionName "0.1.0-Alpha"
     }
 
+    flavorDimensions "default"
+
+    productFlavors {
+        dev {
+            dimension "default"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-Dev"
+            manifestPlaceholders = [appIcon: "@mipmap/dev_ic_launcher", appLabel: "Devpasscode"] // the name come from a parent project name "PassCodes"
+        }
+        prod {
+            dimension "default"
+            manifestPlaceholders = [appIcon: "@mipmap/ic_launcher", appLabel: "@string/app_name"]
+        }
+    }
+
     signingConfigs {
         release {
             def keystorePropertiesFile = rootProject.file("keystore.properties")
@@ -51,7 +66,8 @@ android {
             if (rootProject.file("keystore.properties").exists()) {
                 signingConfig signingConfigs.release
             }
-            minifyEnabled false
+            
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
