@@ -20,6 +20,7 @@
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="hint_notes">Notes</string>
+    <string name="password_manager_button_text">Password Manager</string>
     <string name="save_password_button_text">Save Password</string>
     <string name="load_password_button_text">Load Password</string>
     <string name="update_password_button_text">Update Password</string>
@@ -30,6 +31,7 @@
     <string name="view_change_log_button_text">View Changelog</string>
 
     <!-- Headline of Activity -->
+    <string name="textview_passwordmanager_headline">Password Manager</string>
     <string name="textview_loadpassword_headline">Load Password</string>
     <string name="textview_savepassword_headline">Save Password</string>
     <string name="textview_viewpassword_headline">View Password</string>

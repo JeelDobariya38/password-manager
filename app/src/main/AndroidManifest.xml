@@ -34,6 +34,7 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
+        <activity android:name=".ui.PasswordManagerActivity" />
     	<activity android:name=".ui.SavePasswordActivity" />
     	<activity android:name=".ui.LoadPasswordActivity" />
     	<activity android:name=".ui.ViewPasswordActivity" />
