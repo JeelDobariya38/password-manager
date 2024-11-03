@@ -1,0 +1,116 @@
+<resources>
+
+    <string name="app_name">Password Manager</string>
+    <string name="app_version">v0.1.0-Alpha</string>
+
+    <!-- Contributor Names -->
+    <string name="developer_name">Developed by: Dobariya Jeel</string>
+    <string name="designer_name">UI/UX Designed by: Hamada Issas (Native)</string>
+    <string name="code_mantainer">Code Maintainer and Tester: Achmad Daniel (Kudanill)</string>
+
+    <!-- Main Activity -->
+    <string name="quit_button_text">Quit</string>
+
+    <!-- Bottom Nav Menu -->
+    <string name="item_password">Password</string>
+    <string name="item_generator">Generator</string>
+    <string name="item_settings">Settings</string>
+
+    <!-- Password Fragment -->
+    <string name="password_title">Password</string>
+    <string name="search_password_hint">Search Password</string>
+
+    <!-- Settings Fragment -->
+
+    <!-- About Us Activity -->
+    <string name="textview_app_description">An open source password managing solution that take down you headace of remembering password!!</string>
+    <string name="textview_app_warning">App is currently under active development and it is made for fun and educational purpose and it might not be safe to save your auth info with it. For more info, view security guidelines!!!</string>
+
+    <!-- Button, Textview general in all Activity -->
+    <string name="hint_domain">Domain</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_notes">Notes</string>
+    <string name="save_password_button_text">Save Password</string>
+    <string name="load_password_button_text">Load Password</string>
+    <string name="update_password_button_text">Update Password</string>
+    <string name="delete_password_button_text">Delete Password</string>
+    <string name="about_us_button_text">About Us</string>
+    <string name="view_license_button_text">View License</string>
+    <string name="view_security_guidelines_button_text">View Security Guidelines</string>
+    <string name="view_change_log_button_text">View Changelog</string>
+
+    <!-- Headline of Activity -->
+    <string name="textview_loadpassword_headline">Load Password</string>
+    <string name="textview_savepassword_headline">Save Password</string>
+    <string name="textview_viewpassword_headline">View Password</string>
+    <string name="textview_updatepassword_headline">Update Password</string>
+    <string name="textview_aboutus_headline">About Us</string>
+
+    <!-- Prefix & Suffix -->
+    <string name="id_prefix">Id: </string>
+    <string name="domain_prefix">Domain: </string>
+    <string name="username_prefix">Username: </string>
+    <string name="password_prefix">Password: </string>
+    <string name="notes_prefix">Notes: </string>
+    <string name="createdat_prefix">CreatedAt: </string>
+    <string name="updatedat_prefix">UpdatedAt: </string>
+
+    <!-- Permission -->
+    <string name="permission_granted">Permission Granted</string>
+    <string name="permission_denied">Permission Denied</string>
+
+    <!-- Toast Message -->
+    <string name="not_found_error_message">404: Not Found!!</string>
+    <string name="warn_fill_form">Warning: please fill the form first!!</string>
+    <string name="fail_msg">Failed: please try again!!</string>
+    <string name="sucess_clause">Success: </string>
+    <string name="update_sucess_msg">Updated Successfully!!</string>
+    <string name="delete_sucess_msg">Deleted Successfully!!</string>
+    <string name="something_went_wrong_msg">Something Went Wrong!!</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
