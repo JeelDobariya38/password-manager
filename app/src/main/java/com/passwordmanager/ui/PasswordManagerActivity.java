@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 
 import com.passwordmanager.R;
 import com.passwordmanager.databinding.ActivityPasswordManagerBinding;
-// import com.passwordmanager.utils.Permissions;
 
 public class PasswordManagerActivity extends AppCompatActivity {
 
@@ -20,7 +19,7 @@ public class PasswordManagerActivity extends AppCompatActivity {
     setContentView(binding.getRoot());
   
     // Add event onclick listener
-    // addOnClickListenerOnButton(binding);
+    addOnClickListenerOnButton(binding);
     
     // Make window fullscreen
     WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
@@ -29,25 +28,25 @@ public class PasswordManagerActivity extends AppCompatActivity {
   // Added all the onclick event listiners
   private void addOnClickListenerOnButton(ActivityPasswordManagerBinding binding) {
     binding.savePasswordBtn.setOnClickListener(v -> {
-        Intent savepasswordintent = new Intent(PasswordManager.this, SavePasswordActivity.class);
+        Intent savepasswordintent = new Intent(PasswordManagerActivity.this, SavePasswordActivity.class);
         startActivity(savepasswordintent);
     });
     
     binding.loadPasswordBtn.setOnClickListener(v -> {
-        Intent loadpasswordintent = new Intent(PasswordManager.this, LoadPasswordActivity.class);
+        Intent loadpasswordintent = new Intent(PasswordManagerActivity.this, LoadPasswordActivity.class);
         startActivity(loadpasswordintent);
     });
     
     binding.securityCheckBtn.setOnClickListener(v -> {
-        Toast.makeText(SavePasswordActivity.this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show();
     });
     
     binding.importPasswordBtn.setOnClickListener(v -> {
-        Toast.makeText(SavePasswordActivity.this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show();
     });
     
     binding.exportPasswordBtn.setOnClickListener(v -> {
-        Toast.makeText(SavePasswordActivity.this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show();
     });
   }
 }
