@@ -1,11 +1,11 @@
 package com.passwordmanager.ui;
 
+import android.net.Uri;
 import android.os.Bundle;
-import android.content.Intent;
-import android.content.Context;
-import android.content.ClipData;
-import android.content.ClipboardManager;
+import android.provider.DocumentsContract;
 import android.widget.Toast;
+import androidx.annotation.Nullable;
+import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 import android.view.LayoutInflater;
@@ -20,9 +20,13 @@ import com.passwordmanager.models.PasswordModel;
 import com.passwordmanager.databinding.ActivityPasswordManagerBinding;
 
 import java.util.List;
+import java.io.OutputStream;
 
 public class PasswordManagerActivity extends AppCompatActivity {
   private Controller controller;
+  private static final int CREATE_EXPORT_DATA_FILE_REQUEST = 1;
+
+  private String exportPasswordsContent;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -58,46 +62,77 @@ public class PasswordManagerActivity extends AppCompatActivity {
     });
     
     binding.exportPasswordBtn.setOnClickListener(v -> {
-        Toast.makeText(this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show();
-
         controller = new Controller(PasswordManagerActivity.this);
-        List<PasswordModel> passwordList = controller.getAllPasswords();
+        List<PasswordModel> allPasswords = controller.getAllPasswords();
+        exportPasswordsContent = convertPasswordsToJson(allPasswords);
 
-        String textToCopy = convertPasswordsToJson(passwordList);
-        
-        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText("Copied Text", textToCopy);
-
-        if (clipboard != null) {
-            clipboard.setPrimaryClip(clip);
-            Toast.makeText(this, "Text copied to clipboard!", Toast.LENGTH_SHORT).show();
+        if (exportPasswordsContent != null) {
+            createFile(null);
         } else {
-            Toast.makeText(this, "Clipboard service not available.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Failed to generate secure report content.", Toast.LENGTH_SHORT).show();
         }
     });
   }
+  
+  private String convertPasswordsToJson(List<PasswordModel> passwordList) {
+    JSONArray jsonArray = new JSONArray();
+    try {
+        for (PasswordModel password : passwordList) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("id", password.getId());
+            jsonObject.put("domain", password.getDomain());
+            jsonObject.put("username", password.getUsername());
+            jsonObject.put("password", password.getPassword()); // !!! Highly Sensitive Data !!!
+            jsonObject.put("notes", password.getNotes());
+            jsonObject.put("createdAt", password.getCreatedAt());
+            jsonObject.put("updatedAt", password.getUpdatedAt());
+            jsonArray.put(jsonObject);
+        }
+            
+        return jsonArray.toString(4);
+    } catch (JSONException e) {
+        return null;
+    }
+  }
 
-  // New method to convert List<PasswordModel> to JSON string
-    private String convertPasswordsToJson(List<PasswordModel> passwordList) {
-        JSONArray jsonArray = new JSONArray();
-        try {
-            for (PasswordModel password : passwordList) {
-                JSONObject jsonObject = new JSONObject();
-                jsonObject.put("id", password.getId());
-                jsonObject.put("domain", password.getDomain());
-                jsonObject.put("username", password.getUsername());
-                jsonObject.put("password", password.getPassword()); // !!! Highly Sensitive Data !!!
-                jsonObject.put("notes", password.getNotes());
-                jsonObject.put("createdAt", password.getCreatedAt());
-                jsonObject.put("updatedAt", password.getUpdatedAt());
-                jsonArray.put(jsonObject);
+  private void createFile(@Nullable Uri pickerInitialUri) {
+    Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+    intent.addCategory(Intent.CATEGORY_OPENABLE);
+    intent.setType("application/json");
+    intent.putExtra(Intent.EXTRA_TITLE, "password_manager_data.json");
+
+    if (pickerInitialUri != null) {
+        intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, pickerInitialUri);
+    }
+
+    startActivityForResult(intent, CREATE_EXPORT_DATA_FILE_REQUEST);
+  }
+
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+
+    if (requestCode == CREATE_EXPORT_DATA_FILE_REQUEST) {
+        if (resultCode == RESULT_OK && data != null) {
+            Uri uri = data.getData();
+            if (uri != null && exportPasswordsContent != null) {
+                try {
+                    OutputStream outputStream = getContentResolver().openOutputStream(uri);
+                    if (outputStream != null) {
+                        outputStream.write(exportPasswordsContent.getBytes());
+                        outputStream.close();
+                        Toast.makeText(this, "Data export successfully to: " + uri.getPath(), Toast.LENGTH_LONG).show();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(this, "Error export data: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            } else {
+                Toast.makeText(this, "Failed to get file URI or report content is empty.", Toast.LENGTH_SHORT).show();
             }
-            // Move the return statement INSIDE the try block,
-            // so it's covered by the catch for JSONException
-            return jsonArray.toString(4);
-        } catch (JSONException e) {
-            e.printStackTrace(); // Log the error for debugging
-            return null; // Return null or throw a custom exception
+        } else {
+            Toast.makeText(this, "File creation cancelled.", Toast.LENGTH_SHORT).show();
         }
     }
+ }
 }
