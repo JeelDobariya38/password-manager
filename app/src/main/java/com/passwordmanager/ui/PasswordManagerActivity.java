@@ -10,10 +10,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 import android.view.LayoutInflater;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.passwordmanager.R;
+import com.passwordmanager.utils.Controller;
+import com.passwordmanager.models.PasswordModel;
 import com.passwordmanager.databinding.ActivityPasswordManagerBinding;
 
+import java.util.List;
+
 public class PasswordManagerActivity extends AppCompatActivity {
+  private Controller controller;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +60,11 @@ public class PasswordManagerActivity extends AppCompatActivity {
     binding.exportPasswordBtn.setOnClickListener(v -> {
         Toast.makeText(this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show();
 
-        String textToCopy = "Your data is copied to clipboard!!";
+        controller = new Controller(PasswordManagerActivity.this);
+        List<PasswordModel> passwordList = controller.getAllPasswords();
 
+        String textToCopy = convertPasswordsToJson(passwordList);
+        
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("Copied Text", textToCopy);
 
@@ -64,4 +76,28 @@ public class PasswordManagerActivity extends AppCompatActivity {
         }
     });
   }
+
+  // New method to convert List<PasswordModel> to JSON string
+    private String convertPasswordsToJson(List<PasswordModel> passwordList) {
+        JSONArray jsonArray = new JSONArray();
+        try {
+            for (PasswordModel password : passwordList) {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("id", password.getId());
+                jsonObject.put("domain", password.getDomain());
+                jsonObject.put("username", password.getUsername());
+                jsonObject.put("password", password.getPassword()); // !!! Highly Sensitive Data !!!
+                jsonObject.put("notes", password.getNotes());
+                jsonObject.put("createdAt", password.getCreatedAt());
+                jsonObject.put("updatedAt", password.getUpdatedAt());
+                jsonArray.put(jsonObject);
+            }
+            // Move the return statement INSIDE the try block,
+            // so it's covered by the catch for JSONException
+            return jsonArray.toString(4);
+        } catch (JSONException e) {
+            e.printStackTrace(); // Log the error for debugging
+            return null; // Return null or throw a custom exception
+        }
+    }
 }
