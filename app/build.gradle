@@ -54,12 +54,23 @@ android {
 
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            manifestPlaceholders = [
+                appIcon: "@mipmap/ic_launcher",
+                appLabel: "@string/app_name"
+            ]
         }
 
         debug {
             applicationIdSuffix ".dev"
             versionNameSuffix "-Dev"
             minifyEnabled false
+            
+            // the name come from a parent project name "PassCodes"
+            manifestPlaceholders = [
+                appIcon: "@mipmap/dev_ic_launcher",
+                appLabel: "Passcodes Dev"
+            ]
         }
 
         staging {
@@ -69,6 +80,11 @@ android {
             minifyEnabled true
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            manifestPlaceholders = [
+                appIcon: "@mipmap/dev_ic_launcher",
+                appLabel: "Passcodes Stageing"
+            ]
         }
     }
 
