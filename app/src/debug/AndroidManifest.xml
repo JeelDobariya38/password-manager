@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <application
+        android:icon="@mipmap/dev_ic_launcher"
+        android:label="Passcodes Dev"
+        tools:replace="android:icon,android:label">
+    </application>
+</manifest>
