@@ -2,7 +2,7 @@ package com.passwordmanager.utils;
 
 import org.junit.Test;
 import org.junit.Before;
-import static org.junit.Assert.assertEquals;
+import static com.google.common.truth.Truth.assertThat;
 
 public class ExampleTestableCodeTest {
     private ExampleTestableCode testObj;
@@ -17,11 +17,8 @@ public class ExampleTestableCodeTest {
         // Given
         String password = "";
 
-        // When
-        int strength = testObj.checkStrength(password);
-
-        // // Then
-        assertEquals(1, 1);
+        // When & Then
+        assertThat(testObj.checkStrength(password)).isEqualTo(-1);
     }
 
     @Test
@@ -29,11 +26,8 @@ public class ExampleTestableCodeTest {
         // Given
         String password = "short"; // Less than 8 characters
 
-        // When
-        int strength = testObj.checkStrength(password);
-
-        // Then
-        assertEquals(0, strength);
+        // When & Then
+        assertThat(testObj.checkStrength(password)).isEqualTo(0);
     }
 
     @Test
@@ -41,10 +35,7 @@ public class ExampleTestableCodeTest {
         // Given
         String password = "long password"; // More than 8 characters
 
-        // When
-        int strength = testObj.checkStrength(password);
-
-        // Then
-        assertEquals(1, strength);
+        // When & Then
+        assertThat(testObj.checkStrength(password)).isEqualTo(1);
     }
 }
