@@ -2,30 +2,48 @@
 
 - For Building A Clean ALL Variant
 
-```powershell
+```bash
 ./gradlew clean assemble
 ```
 
 - For Building A Clean Release Variant
 
-```powershell
+```bash
 ./gradlew clean assembleRelease
 ```
 
 - For Building A Staging Variant
 
-```powershell
+```bash
 ./gradlew assembleStaging
 ```
 
 - For Building A Debug Variant
 
-```powershell
+```bash
 ./gradlew assembleDebug
 ```
 
 - For Clearing Build Files
 
-```powershell
+```bash
 ./gradlew clean
+```
+
+- For sync depeendency
+
+```bash
+./gradlew --refresh-dependencies
+```
+
+- For test app
+
+```bash
+./gradlew testDebugUnitTest
+```
+
+- For install app on usb connect device
+
+```bash
+./gradlew installDebug
 ```
