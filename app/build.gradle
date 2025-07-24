@@ -103,4 +103,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.databinding:viewbinding:7.4.1'
     implementation 'org.json:json:20250517'
+
+    testImplementation 'junit:junit:4.13.2'
 }
