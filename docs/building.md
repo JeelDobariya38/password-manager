@@ -10,20 +10,20 @@ You will need `gradle` and `adb` accessible from commandline so, that script can
 
 something like this...
 ```
-PS C:\Users\HP> gradle help
+PS C:\Users\ABC> gradle help
 
 > Task :help
 
 Welcome to Gradle 8.9.
 
-Directory 'C:\Users\HP' does not contain a Gradle build.
+Directory 'C:\Users\ABC' does not contain a Gradle build.
 
 ....
 
 BUILD SUCCESSFUL in 1s
 1 actionable task: 1 executed
 
-PS C:\Users\HP> adb help
+PS C:\Users\ABC> adb help
 Android Debug Bridge version 1.0.41
 Version 35.0.2-12147458
 Installed as C:...\cmdline-tools\lib\platform-tools\adb.exe
