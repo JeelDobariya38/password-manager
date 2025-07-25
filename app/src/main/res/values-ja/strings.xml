@@ -1,0 +1,63 @@
+<resources>
+    <!-- Contributor Names -->
+    <string name="developer_name">開発者：Dobariya Jeel</string>
+    <string name="designer_name">UI/UX デザイン：Hamada Issas (Native)</string>
+    <string name="code_mantainer">コードメンテナー兼テスター：Achmad Daniel (Kudanill)</string>
+
+    <!-- Main Activity -->
+    <string name="quit_button_text">終了</string>
+
+    <!-- About Us Activity -->
+    <string name="textview_app_description">パスワードを覚える手間を省くオープンソースのパスワード管理ソリューションです!!</string>
+    <string name="textview_app_warning">このアプリは現在開発中で、娯楽および教育目的で作成されています。認証情報を保存するのは安全ではない場合があります。詳細については、セキュリティガイドラインをご覧ください!!!</string>
+
+    <!-- Button, Textview general in all Activity -->
+    <string name="hint_domain">ドメイン</string>
+    <string name="hint_username">ユーザー名</string>
+    <string name="hint_password">パスワード</string>
+    <string name="hint_notes">メモ</string>
+    <string name="password_manager_button_text">パスワードマネージャー</string>
+    <string name="save_password_button_text">パスワードを保存</string>
+    <string name="load_password_button_text">パスワードを読み込む</string>
+    <string name="update_password_button_text">パスワードを更新</string>
+    <string name="delete_password_button_text">パスワードを削除</string>
+    <string name="import_password_button_text">パスワードをインポート</string>
+    <string name="export_password_button_text">パスワードをエクスポート</string>
+    <string name="password_security_check_button_text">セキュリティチェック</string>
+    <string name="about_us_button_text">について</string>
+    <string name="view_license_button_text">ライセンスを表示</string>
+    <string name="view_security_guidelines_button_text">セキュリティガイドラインを表示</string>
+    <string name="view_change_log_button_text">変更履歴を表示</string>
+
+    <!-- Headline of Activity -->
+    <string name="textview_passwordmanager_headline">パスワードマネージャー</string>
+    <string name="textview_loadpassword_headline">パスワードを読み込む</string>
+    <string name="textview_savepassword_headline">パスワードを保存</string>
+    <string name="textview_viewpassword_headline">パスワードを表示</string>
+    <string name="textview_updatepassword_headline">パスワードを更新</string>
+    <string name="textview_aboutus_headline">について</string>
+
+    <!-- Prefix & Suffix -->
+    <string name="id_prefix">ID: </string>
+    <string name="domain_prefix">ドメイン: </string>
+    <string name="username_prefix">ユーザー名: </string>
+    <string name="password_prefix">パスワード: </string>
+    <string name="notes_prefix">メモ: </string>
+    <string name="createdat_prefix">作成日時: </string>
+    <string name="updatedat_prefix">更新日時: </string>
+
+    <!-- Permission -->
+    <string name="permission_granted">権限が付与されました</string>
+    <string name="permission_denied">権限が拒否されました</string>
+
+    <!-- Toast Message -->
+    <string name="future_feat_clause">機能は開発中です!!</string>
+    <string name="not_found_error_message">404: 見つかりません!!</string>
+    <string name="warn_fill_form">警告：まずフォームに入力してください!!</string>
+    <string name="fail_msg">失敗しました：もう一度お試しください!!</string>
+    <string name="sucess_clause">成功: </string>
+    <string name="update_sucess_msg">正常に更新されました!!</string>
+    <string name="delete_sucess_msg">正常に削除されました!!</string>
+    <string name="something_went_wrong_msg">何かがうまくいきませんでした!!</string>
+
+</resources>
