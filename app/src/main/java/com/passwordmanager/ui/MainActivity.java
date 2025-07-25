@@ -52,18 +52,13 @@ public class MainActivity extends AppCompatActivity {
   
   // Added all the onclick event listiners
   private void addOnClickListenerOnButton(ActivityMainBinding binding) {
-    binding.savePasswordBtn.setOnClickListener(v -> {
-      Intent savepasswordintent = new Intent(MainActivity.this, SavePasswordActivity.class);
-      startActivity(savepasswordintent);
+    binding.passwordManagerBtn.setOnClickListener(v -> {
+      Intent passwordmanagerintent = new Intent(MainActivity.this, PasswordManagerActivity.class);
+      startActivity(passwordmanagerintent);
     });
     
-    binding.loadPasswordBtn.setOnClickListener(v -> {
-      Intent loadpasswordintent = new Intent(MainActivity.this, LoadPasswordActivity.class);
-      startActivity(loadpasswordintent);
-    });
-	
-	binding.aboutUsBtn.setOnClickListener(v -> {
-	  Intent aboutusintent = new Intent(MainActivity.this, AboutUsActivity.class);
+    binding.aboutUsBtn.setOnClickListener(v -> {
+      Intent aboutusintent = new Intent(MainActivity.this, AboutUsActivity.class);
       startActivity(aboutusintent);
     });
     

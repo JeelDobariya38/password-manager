@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	package="com.passwordmanager">
+	xmlns:tools="http://schemas.android.com/tools">
 
 	<uses-sdk
 		android:minSdkVersion="26"
 		android:targetSdkVersion="33" />
 
-	<!-- Storage access permission -->
+	<!-- Storage access permission
 	<uses-permission
 		android:name="android.permission.WRITE_EXTERNAL_STORAGE"
 		android:maxSdkVersion="32"
@@ -15,7 +14,7 @@
   
 	<uses-permission
 		android:name="android.permission.READ_EXTERNAL_STORAGE"
-		android:maxSdkVersion="32" />
+		android:maxSdkVersion="32" /> -->
 
 	<application
 		android:allowBackup="true"
@@ -34,6 +33,7 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
+        <activity android:name=".ui.PasswordManagerActivity" />
     	<activity android:name=".ui.SavePasswordActivity" />
     	<activity android:name=".ui.LoadPasswordActivity" />
     	<activity android:name=".ui.ViewPasswordActivity" />
