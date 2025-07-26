@@ -3,6 +3,7 @@ package com.passwordmanager.ui;
 import android.os.Bundle;
 import android.content.Intent;
 import android.widget.Toast;
+import android.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 import android.view.LayoutInflater;
@@ -66,17 +67,31 @@ public class ViewPasswordActivity extends AppCompatActivity {
     });
     
     binding.deletePasswordBtn.setOnClickListener(v -> {
-      controller = new Controller(ViewPasswordActivity.this);
-      int res = controller.deletePassword(passwordEnitityId);
+      AlertDialog confirmDialog =new AlertDialog.Builder(ViewPasswordActivity.this)
+        .setTitle("Delete Password?")
+        .setMessage("This action is irreverseable")
+        .setPositiveButton("Confirm", (dialog, which) -> {
+          performDeletePasswordAction();
+        })
+        .setNegativeButton("Discard", (dialog, which) -> {
+          // Do Nothing
+        })
+        .create();
       
-      if (res == 1) {
-        Toast.makeText(ViewPasswordActivity.this, getString(R.string.delete_sucess_msg), Toast.LENGTH_SHORT).show();
-        
-        finish();
-      } else {
-        Toast.makeText(ViewPasswordActivity.this, getString(R.string.something_went_wrong_msg), Toast.LENGTH_SHORT).show();
-      }
+      confirmDialog.show();
     });
+  }
+
+  private void performDeletePasswordAction() {
+    int res = controller.deletePassword(passwordEnitityId);
+    
+    if (res == 1) {
+      Toast.makeText(ViewPasswordActivity.this, getString(R.string.delete_sucess_msg), Toast.LENGTH_SHORT).show();
+      
+      finish();
+    } else {
+      Toast.makeText(ViewPasswordActivity.this, getString(R.string.something_went_wrong_msg), Toast.LENGTH_SHORT).show();
+    }
   }
   
   @Override
