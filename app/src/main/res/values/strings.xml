@@ -17,6 +17,7 @@
 
     <!-- Button, Textview general in all Activity -->
     <string name="hint_domain">Domain</string>
+    <string name="helper_text_domain_filed">enter associated website</string>
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="hint_notes">Notes</string>
