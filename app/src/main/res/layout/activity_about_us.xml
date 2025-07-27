@@ -71,6 +71,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/view_security_guidelines_btn"
+            android:textColor="?attr/colorTertiary"
+            app:backgroundTint="?attr/colorTertiaryContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4sp"
@@ -79,6 +81,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/view_change_log_btn"
+            android:textColor="?attr/colorTertiary"
+            app:backgroundTint="?attr/colorTertiaryContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4sp"
@@ -87,6 +91,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/view_license_btn"
+            android:textColor="?attr/colorTertiary"
+            app:backgroundTint="?attr/colorTertiaryContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4sp"
