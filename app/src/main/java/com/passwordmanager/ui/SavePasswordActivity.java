@@ -27,6 +27,30 @@ public class SavePasswordActivity extends AppCompatActivity {
   
   // Added all the onclick event listiners
   private void addOnClickListenerOnButton(ActivitySavePasswordBinding binding) {
+    binding.inputDomain.setOnFocusChangeListener((v, hasFocus) -> {
+        if (hasFocus) {
+            binding.inputDomain.setHint(R.string.placeholder_domain_field);
+        } else {
+            binding.inputDomain.setHint("");
+        }
+    });
+
+    binding.inputUsername.setOnFocusChangeListener((v, hasFocus) -> {
+        if (hasFocus) {
+            binding.inputUsername.setHint(R.string.placeholder_username_field);
+        } else {
+            binding.inputUsername.setHint("");
+        }
+    });
+
+    binding.inputPassword.setOnFocusChangeListener((v, hasFocus) -> {
+        if (hasFocus) {
+            binding.inputPassword.setHint(R.string.placeholder_password_field);
+        } else {
+            binding.inputPassword.setHint("");
+        }
+    });
+
     binding.savePasswordBtn.setOnClickListener(v -> {
       String domain = binding.inputDomain.getText().toString();
       String username = binding.inputUsername.getText().toString();
