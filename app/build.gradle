@@ -4,10 +4,10 @@ plugins {
 
 android {
     compileSdk 33
-    namespace "com.passwordmanager"
+    namespace "com.jeeldobariya.passcodes"
 
     defaultConfig {
-        applicationId "com.passwordmanager"
+        applicationId "com.jeeldobariya.passcodes"
         minSdk 26
         targetSdk 33
         versionCode 1

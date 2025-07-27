@@ -1,4 +1,4 @@
-package com.passwordmanager.utils;
+package com.jeeldobariya.passcodes.utils;
 
 class ExampleTestableCode {
     int checkStrength(String password) {

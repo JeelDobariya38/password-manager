@@ -1,13 +1,13 @@
-package com.passwordmanager.ui;
+package com.jeeldobariya.passcodes.ui;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
-import com.passwordmanager.databinding.ActivityAboutUsBinding;
-import com.passwordmanager.utils.Constant;
-// import com.passwordmanager.utils.Permissions;
+import com.jeeldobariya.passcodes.databinding.ActivityAboutUsBinding;
+import com.jeeldobariya.passcodes.utils.Constant;
+// import com.jeeldobariya.passcodes.utils.Permissions;
 
 public class AboutUsActivity extends AppCompatActivity {
   @Override

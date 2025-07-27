@@ -1,4 +1,4 @@
-package com.passwordmanager.ui;
+package com.jeeldobariya.passcodes.ui;
 
 import android.os.Bundle;
 import android.content.Intent;
@@ -6,11 +6,11 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 
-import com.passwordmanager.R;
-import com.passwordmanager.utils.Controller;
-import com.passwordmanager.models.PasswordModel;
-import com.passwordmanager.databinding.ActivityLoadPasswordBinding;
-import com.passwordmanager.ui.adapter.PasswordAdapter;
+import com.jeeldobariya.passcodes.R;
+import com.jeeldobariya.passcodes.utils.Controller;
+import com.jeeldobariya.passcodes.models.PasswordModel;
+import com.jeeldobariya.passcodes.databinding.ActivityLoadPasswordBinding;
+import com.jeeldobariya.passcodes.ui.adapter.PasswordAdapter;
 
 import java.util.List;
 

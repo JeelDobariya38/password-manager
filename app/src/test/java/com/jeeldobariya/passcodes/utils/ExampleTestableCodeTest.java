@@ -1,4 +1,4 @@
-package com.passwordmanager.utils;
+package com.jeeldobariya.passcodes.utils;
 
 import org.junit.Test;
 import org.junit.Before;

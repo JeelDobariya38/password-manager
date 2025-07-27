@@ -1,4 +1,4 @@
-package com.passwordmanager.utils;
+package com.jeeldobariya.passcodes.utils;
 
 import android.Manifest;
 import android.app.Activity;

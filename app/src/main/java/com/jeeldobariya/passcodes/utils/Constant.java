@@ -1,4 +1,4 @@
-package com.passwordmanager.utils;
+package com.jeeldobariya.passcodes.utils;
 
 public class Constant {
     public static final String REPO_URL = "https://github.com/JeelDobariya38/password-manager";
