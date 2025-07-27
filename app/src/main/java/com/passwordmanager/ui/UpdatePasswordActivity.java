@@ -56,7 +56,7 @@ public class UpdatePasswordActivity extends AppCompatActivity {
     binding.updatePasswordBtn.setOnClickListener(v -> {
       AlertDialog confirmDialog =new AlertDialog.Builder(UpdatePasswordActivity.this)
         .setTitle(R.string.update_password_dialog_title)
-        .setMessage(R.string.irreverseable_dialog_desc)
+        .setMessage(R.string.irreversible_dialog_desc)
         .setPositiveButton(R.string.confirm_dialog_button_text, (dialog, which) -> {
           String newDomain = binding.inputDomain.getText().toString();
           String newUsername = binding.inputUsername.getText().toString();
@@ -78,7 +78,7 @@ public class UpdatePasswordActivity extends AppCompatActivity {
     int res = controller.updatePassword(passwordEnitityId, newDomain, newUsername, newPassword, newNotes);
     
     if (res == 1) {
-      Toast.makeText(this, getString(R.string.update_sucess_msg), Toast.LENGTH_SHORT).show();
+      Toast.makeText(this, getString(R.string.update_success_msg), Toast.LENGTH_SHORT).show();
       
       finish();
     } else {

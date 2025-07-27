@@ -56,8 +56,8 @@
     <string name="not_found_error_message">404: 찾을 수 없음!!</string>
     <string name="warn_fill_form">경고: 먼저 양식을 작성하십시오!!</string>
     <string name="fail_msg">실패: 다시 시도하십시오!!</string>
-    <string name="sucess_clause">성공: </string>
-    <string name="update_sucess_msg">성공적으로 업데이트됨!!</string>
-    <string name="delete_sucess_msg">성공적으로 삭제됨!!</string>
+    <string name="success_clause">성공: </string>
+    <string name="update_success_msg">성공적으로 업데이트됨!!</string>
+    <string name="delete_success_msg">성공적으로 삭제됨!!</string>
     <string name="something_went_wrong_msg">문제가 발생했습니다!!</string>
 </resources>

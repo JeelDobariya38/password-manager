@@ -66,7 +66,7 @@ public class SavePasswordActivity extends AppCompatActivity {
       else if (res == -1) {
         Toast.makeText(SavePasswordActivity.this, getString(R.string.fail_msg), Toast.LENGTH_SHORT).show();
       } else {
-        Toast.makeText(SavePasswordActivity.this, getString(R.string.sucess_clause) + res, Toast.LENGTH_SHORT).show();
+        Toast.makeText(SavePasswordActivity.this, getString(R.string.success_clause) + res, Toast.LENGTH_SHORT).show();
       }
     });
   }

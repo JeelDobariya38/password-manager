@@ -55,9 +55,9 @@
     <string name="not_found_error_message">404: 見つかりません!!</string>
     <string name="warn_fill_form">警告：まずフォームに入力してください!!</string>
     <string name="fail_msg">失敗しました：もう一度お試しください!!</string>
-    <string name="sucess_clause">成功: </string>
-    <string name="update_sucess_msg">正常に更新されました!!</string>
-    <string name="delete_sucess_msg">正常に削除されました!!</string>
+    <string name="success_clause">成功: </string>
+    <string name="update_success_msg">正常に更新されました!!</string>
+    <string name="delete_success_msg">正常に削除されました!!</string>
     <string name="something_went_wrong_msg">何かがうまくいきませんでした!!</string>
 
 </resources>

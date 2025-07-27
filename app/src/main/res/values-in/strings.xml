@@ -55,9 +55,9 @@
     <string name="not_found_error_message">404: Tidak Ditemukan!!</string>
     <string name="warn_fill_form">Peringatan: harap isi formulir terlebih dahulu!!</string>
     <string name="fail_msg">Gagal: coba lagi!!</string>
-    <string name="sucess_clause">Berhasil: </string>
-    <string name="update_sucess_msg">Berhasil Diperbarui!!</string>
-    <string name="delete_sucess_msg">Berhasil Dihapus!!</string>
+    <string name="success_clause">Berhasil: </string>
+    <string name="update_success_msg">Berhasil Diperbarui!!</string>
+    <string name="delete_success_msg">Berhasil Dihapus!!</string>
     <string name="something_went_wrong_msg">Terjadi Kesalahan!!</string>
 
 </resources>

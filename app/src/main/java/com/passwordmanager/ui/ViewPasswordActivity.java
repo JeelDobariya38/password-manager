@@ -69,7 +69,7 @@ public class ViewPasswordActivity extends AppCompatActivity {
     binding.deletePasswordBtn.setOnClickListener(v -> {
       AlertDialog confirmDialog =new AlertDialog.Builder(ViewPasswordActivity.this)
         .setTitle(R.string.delete_password_dialog_title)
-        .setMessage(R.string.irreverseable_dialog_desc)
+        .setMessage(R.string.irreversible_dialog_desc)
         .setPositiveButton(R.string.confirm_dialog_button_text, (dialog, which) -> {
           performDeletePasswordAction();
         })
@@ -86,7 +86,7 @@ public class ViewPasswordActivity extends AppCompatActivity {
     int res = controller.deletePassword(passwordEnitityId);
     
     if (res == 1) {
-      Toast.makeText(this, getString(R.string.delete_sucess_msg), Toast.LENGTH_SHORT).show();
+      Toast.makeText(this, getString(R.string.delete_success_msg), Toast.LENGTH_SHORT).show();
       
       finish();
     } else {
