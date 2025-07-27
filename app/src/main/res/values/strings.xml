@@ -67,6 +67,7 @@
     <string name="update_sucess_msg">Updated Successfully!!</string>
     <string name="delete_sucess_msg">Deleted Successfully!!</string>
     <string name="something_went_wrong_msg">Something Went Wrong!!</string>
+    <string name="action_discard">Action Discard!</string>
 
     <!-- Alert Dialog Message -->
     <string name="update_password_dialog_title">Update Password?</string>

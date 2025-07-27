@@ -74,7 +74,7 @@ public class ViewPasswordActivity extends AppCompatActivity {
           performDeletePasswordAction();
         })
         .setNegativeButton(R.string.discard_dialog_button_text, (dialog, which) -> {
-          // Do Nothing
+          Toast.makeText(this, getString(R.string.action_discard), Toast.LENGTH_SHORT).show();
         })
         .create();
       
