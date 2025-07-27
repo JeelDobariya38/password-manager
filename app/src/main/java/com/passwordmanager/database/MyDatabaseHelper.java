@@ -1,4 +1,4 @@
-package com.jeeldobariya.passcodes.database;
+package com.passwordmanager.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

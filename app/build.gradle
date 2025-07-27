@@ -1,15 +1,13 @@
 plugins {
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
 }
 
 android {
     compileSdk 33
-    namespace "com.jeeldobariya.passcodes"
+    namespace "com.passwordmanager"
 
     defaultConfig {
-        applicationId "com.jeeldobariya.passcodes"
+        applicationId "com.passwordmanager"
         minSdk 26
         targetSdk 33
         versionCode 1
@@ -90,18 +88,9 @@ android {
         }
     }
 
-    // You can update these to Java 11 or higher if your project allows,
-    // but 1.8 is fine for basic Kotlin interop.
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    // Add kotlinOptions for JVM target if you have specific requirements,
-    // though often not strictly necessary for simple cases as it defaults
-    // to Java 8 compatible bytecode.
-    kotlinOptions {
-        jvmTarget = '1.8' // Ensure Kotlin compiles to Java 8 bytecode
     }
 
     viewBinding {
@@ -110,15 +99,9 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0"
-
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.databinding:viewbinding:7.4.1'
-    
-    implementation 'androidx.room:room-ktx:2.5.0'
-    kapt 'androidx.room:room-compiler:2.5.0'
-
     implementation 'org.json:json:20250517'
 
     testImplementation 'junit:junit:4.13.2'

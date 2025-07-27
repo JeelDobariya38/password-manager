@@ -1,13 +1,13 @@
-package com.jeeldobariya.passcodes.ui;
+package com.passwordmanager.ui;
 
 import android.os.Bundle;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 
-import com.jeeldobariya.passcodes.R;
-import com.jeeldobariya.passcodes.utils.Controller;
-import com.jeeldobariya.passcodes.databinding.ActivitySavePasswordBinding;
+import com.passwordmanager.R;
+import com.passwordmanager.utils.Controller;
+import com.passwordmanager.databinding.ActivitySavePasswordBinding;
 
 public class SavePasswordActivity extends AppCompatActivity {
   private Controller controller;
