@@ -68,12 +68,12 @@ public class ViewPasswordActivity extends AppCompatActivity {
     
     binding.deletePasswordBtn.setOnClickListener(v -> {
       AlertDialog confirmDialog =new AlertDialog.Builder(ViewPasswordActivity.this)
-        .setTitle("Delete Password?")
-        .setMessage("This action is irreverseable")
-        .setPositiveButton("Confirm", (dialog, which) -> {
+        .setTitle(R.string.delete_password_dialog_title)
+        .setMessage(R.string.irreverseable_dialog_desc)
+        .setPositiveButton(R.string.confirm_dialog_button_text, (dialog, which) -> {
           performDeletePasswordAction();
         })
-        .setNegativeButton("Discard", (dialog, which) -> {
+        .setNegativeButton(R.string.discard_dialog_button_text, (dialog, which) -> {
           // Do Nothing
         })
         .create();
@@ -86,11 +86,11 @@ public class ViewPasswordActivity extends AppCompatActivity {
     int res = controller.deletePassword(passwordEnitityId);
     
     if (res == 1) {
-      Toast.makeText(ViewPasswordActivity.this, getString(R.string.delete_sucess_msg), Toast.LENGTH_SHORT).show();
+      Toast.makeText(this, getString(R.string.delete_sucess_msg), Toast.LENGTH_SHORT).show();
       
       finish();
     } else {
-      Toast.makeText(ViewPasswordActivity.this, getString(R.string.something_went_wrong_msg), Toast.LENGTH_SHORT).show();
+      Toast.makeText(this, getString(R.string.something_went_wrong_msg), Toast.LENGTH_SHORT).show();
     }
   }
   

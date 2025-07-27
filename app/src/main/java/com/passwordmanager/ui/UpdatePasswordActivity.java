@@ -3,6 +3,7 @@ package com.passwordmanager.ui;
 import android.os.Bundle;
 import android.content.Intent;
 import android.widget.Toast;
+import android.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 import android.view.LayoutInflater;
@@ -53,23 +54,37 @@ public class UpdatePasswordActivity extends AppCompatActivity {
   // Added all the onclick event listiners
   private void addOnClickListenerOnButton(ActivityUpdatePasswordBinding binding) {
     binding.updatePasswordBtn.setOnClickListener(v -> {
-      // TODO: implement password update logic.
-      String newDomain = binding.inputDomain.getText().toString();
-      String newUsername = binding.inputUsername.getText().toString();
-      String newPassword = binding.inputPassword.getText().toString();
-      String newNotes = binding.inputNotes.getText().toString();
+      AlertDialog confirmDialog =new AlertDialog.Builder(UpdatePasswordActivity.this)
+        .setTitle(R.string.update_password_dialog_title)
+        .setMessage(R.string.irreverseable_dialog_desc)
+        .setPositiveButton(R.string.confirm_dialog_button_text, (dialog, which) -> {
+          String newDomain = binding.inputDomain.getText().toString();
+          String newUsername = binding.inputUsername.getText().toString();
+          String newPassword = binding.inputPassword.getText().toString();
+          String newNotes = binding.inputNotes.getText().toString();
+
+          performUpdatePasswordAction(newDomain, newUsername, newPassword, newNotes);
+        })
+        .setNegativeButton(R.string.discard_dialog_button_text, (dialog, which) -> {
+          // Do Nothing
+        })
+        .create();
       
-      int res = controller.updatePassword(passwordEnitityId, newDomain, newUsername, newPassword, newNotes);
-      
-      if (res == 1) {
-        Toast.makeText(UpdatePasswordActivity.this, getString(R.string.update_sucess_msg), Toast.LENGTH_SHORT).show();
-        
-        finish();
-      } else {
-        Toast.makeText(UpdatePasswordActivity.this, getString(R.string.something_went_wrong_msg), Toast.LENGTH_SHORT).show();
-      }
+      confirmDialog.show();
+    });
+  }
+
+  private void performUpdatePasswordAction(String newDomain, String newUsername, String newPassword, String newNotes) {
+    int res = controller.updatePassword(passwordEnitityId, newDomain, newUsername, newPassword, newNotes);
+    
+    if (res == 1) {
+      Toast.makeText(this, getString(R.string.update_sucess_msg), Toast.LENGTH_SHORT).show();
       
       finish();
-    });
+    } else {
+      Toast.makeText(this, getString(R.string.something_went_wrong_msg), Toast.LENGTH_SHORT).show();
+    }
+    
+    finish();
   }
 }
