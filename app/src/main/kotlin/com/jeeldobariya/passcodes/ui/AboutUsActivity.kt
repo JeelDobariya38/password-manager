@@ -1,0 +1,44 @@
+package com.jeeldobariya.passcodes.ui;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.WindowCompat;
+import com.jeeldobariya.passcodes.databinding.ActivityAboutUsBinding;
+import com.jeeldobariya.passcodes.utils.Constant;
+
+public class AboutUsActivity : AppCompatActivity() {
+  
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState);
+    val binding = ActivityAboutUsBinding.inflate(layoutInflater);
+    setContentView(binding.root);
+
+    // Add event onclick listener
+    addOnClickListenerOnButton(binding);
+
+    // Make window fullscreen
+    WindowCompat.setDecorFitsSystemWindows(window, false);
+  }
+
+  private fun openBrowser(url: String) {
+    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url));
+    startActivity(browserIntent);
+  }
+
+  // Added all the onclick event listiners
+  private fun addOnClickListenerOnButton(binding: ActivityAboutUsBinding) {
+    binding.viewSecurityGuidelinesBtn.setOnClickListener {
+        openBrowser(Constant.SECURITY_GUIDE_URL);
+    };
+
+    binding.viewChangeLogBtn.setOnClickListener {
+        openBrowser(Constant.CHANGELOG_URL);
+    };
+
+    binding.viewLicenseBtn.setOnClickListener {
+        openBrowser(Constant.LICENSE_URL);
+    };
+  }
+}

@@ -1,4 +1,4 @@
-package com.passwordmanager.models;
+package com.jeeldobariya.passcodes.models;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

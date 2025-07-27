@@ -1,4 +1,4 @@
-package com.passwordmanager.ui;
+package com.jeeldobariya.passcodes.ui;
 
 import android.os.Bundle;
 import android.content.Intent;
@@ -7,10 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 import android.view.LayoutInflater;
 
-import com.passwordmanager.R;
-import com.passwordmanager.utils.Controller;
-import com.passwordmanager.models.PasswordModel;
-import com.passwordmanager.databinding.ActivityUpdatePasswordBinding;
+import com.jeeldobariya.passcodes.R;
+import com.jeeldobariya.passcodes.utils.Controller;
+import com.jeeldobariya.passcodes.models.PasswordModel;
+import com.jeeldobariya.passcodes.databinding.ActivityUpdatePasswordBinding;
 
 /*
   Activity expects id as intent parameters.
