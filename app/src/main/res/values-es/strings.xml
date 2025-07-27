@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Administrador de Contraseñas</string>
+    <string name="app_version">v0.1.0-Alpha</string>
+
+    <string name="developer_name">Desarrollado por: Dobariya Jeel</string>
+    <string name="designer_name">Diseño UI/UX por: Hamada Issas (Native)</string>
+    <string name="code_mantainer">Mantenimiento y pruebas del código: Achmad Daniel (Kudanill)</string>
+
+    <string name="quit_button_text">Salir</string>
+
+    <string name="textview_app_description">Una solución de código abierto para gestionar contraseñas sin tener que recordarlas todas.</string>
+    <string name="textview_app_warning">Esta aplicación está en desarrollo activo y fue creada con fines de aprendizaje y experimentación. No se recomienda para datos sensibles.</string>
+
+    <string name="hint_domain">Dominio</string>
+    <string name="helper_text_domain_field">Nombre del sitio web o dominio relacionado</string>
+    <string name="hint_username">Nombre de usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_notes">Notas</string>
+    <string name="placeholder_domain_field">ej. Google, Instagram, WhatsApp</string>
+    <string name="placeholder_username_field">ej. Liam15, Noha, Olivia, Ava_25</string>
+    <string name="placeholder_password_field">ej. 12345, abc123xyz, qwerty</string>
+    <string name="password_manager_button_text">Administrador de Contraseñas</string>
+    <string name="save_password_button_text">Guardar Contraseña</string>
+    <string name="load_password_button_text">Cargar Contraseña</string>
+    <string name="update_password_button_text">Actualizar Contraseña</string>
+    <string name="delete_password_button_text">Eliminar Contraseña</string>
+    <string name="import_password_button_text">Importar Contraseñas</string>
+    <string name="export_password_button_text">Exportar Contraseñas</string>
+    <string name="password_security_check_button_text">Revisar Seguridad</string>
+    <string name="about_us_button_text">Sobre Nosotros</string>
+    <string name="view_license_button_text">Ver Licencia</string>
+    <string name="view_security_guidelines_button_text">Ver Guías de Seguridad</string>
+    <string name="view_change_log_button_text">Ver Registro de Cambios</string>
+
+    <string name="textview_passwordmanager_headline">Administrador de Contraseñas</string>
+    <string name="textview_loadpassword_headline">Cargar Contraseña</string>
+    <string name="textview_savepassword_headline">Guardar Contraseña</string>
+    <string name="textview_viewpassword_headline">Ver Contraseña</string>
+    <string name="textview_updatepassword_headline">Actualizar Contraseña</string>
+    <string name="textview_aboutus_headline">Sobre Nosotros</string>
+
+    <string name="id_prefix">ID: </string>
+    <string name="domain_prefix">Dominio: </string>
+    <string name="username_prefix">Usuario: </string>
+    <string name="password_prefix">Contraseña: </string>
+    <string name="notes_prefix">Notas: </string>
+    <string name="createdat_prefix">Creado el: </string>
+    <string name="updatedat_prefix">Actualizado el: </string>
+
+    <string name="permission_granted">Permiso Concedido</string>
+    <string name="permission_denied">Permiso Denegado</string>
+
+    <string name="future_feat_clause">Esta función está en desarrollo.</string>
+    <string name="not_found_error_message">404: No Encontrado</string>
+    <string name="warn_fill_form">Advertencia: Rellene el formulario primero.</string>
+    <string name="fail_msg">Error: Inténtelo de nuevo.</string>
+    <string name="success_clause">Éxito: </string>
+    <string name="update_success_msg">Actualizado con éxito.</string>
+    <string name="delete_success_msg">Eliminado con éxito.</string>
+    <string name="something_went_wrong_msg">Algo salió mal.</string>
+    <string name="action_discard">Acción descartada.</string>
+
+    <string name="update_password_dialog_title">¿Actualizar contraseña?</string>
+    <string name="delete_password_dialog_title">¿Eliminar contraseña?</string>
+    <string name="irreversible_dialog_desc">Esta acción no se puede deshacer.</string>
+    <string name="confirm_dialog_button_text">Confirmar</string>
+    <string name="discard_dialog_button_text">Cancelar</string>
+</resources>

@@ -5,25 +5,25 @@
 
     <!-- Contributor Names -->
     <string name="developer_name">Developed by: Dobariya Jeel</string>
-    <string name="designer_name">UI/UX Designed by: Hamada Issas (Native)</string>
-    <string name="code_mantainer">Code Maintainer and Tester: Achmad Daniel (Kudanill)</string>
+    <string name="designer_name">UI/UX Design by: Hamada Issas (Native)</string>
+    <string name="code_mantainer">Code Maintenance &amp; Testing: Achmad Daniel (Kudanill)</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">Quit</string>
 
     <!-- About Us Activity -->
-    <string name="textview_app_description">An open source password managing solution that take down you headace of remembering password!!</string>
-    <string name="textview_app_warning">App is currently under active development and it is made for fun and educational purpose and it might not be safe to save your auth info with it. For more info, view security guidelines!!!</string>
+    <string name="textview_app_description">An open-source password manager that helps eliminate the headache of remembering your passwords.</string>
+    <string name="textview_app_warning">This app is currently under active development and is intended for educational and experimental purposes. It may not be secure for storing sensitive authentication information. Please review the security guidelines for more details.</string>
 
     <!-- Button, Textview general in all Activity -->
     <string name="hint_domain">Domain</string>
-    <string name="helper_text_domain_field">name of website or domain associated</string>
+    <string name="helper_text_domain_field">The name of the website or domain associated</string>
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="hint_notes">Notes</string>
-    <string name="placeholder_domain_field">e.g. Google, Instagram, Whatapp etc..</string>
-    <string name="placeholder_username_field">e.g. Liam15, Noha, Olivia, Ava_25 etc...</string>
-    <string name="placeholder_password_field">e.g. 12345, abc123xyz, qwerty etc...</string>
+    <string name="placeholder_domain_field">e.g. Google, Instagram, WhatsApp, etc.</string>
+    <string name="placeholder_username_field">e.g. Liam15, Noha, Olivia, Ava_25, etc.</string>
+    <string name="placeholder_password_field">e.g. 12345, abc123xyz, qwerty, etc.</string>
     <string name="password_manager_button_text">Password Manager</string>
     <string name="save_password_button_text">Save Password</string>
     <string name="load_password_button_text">Load Password</string>
@@ -46,33 +46,34 @@
     <string name="textview_aboutus_headline">About Us</string>
 
     <!-- Prefix & Suffix -->
-    <string name="id_prefix">Id: </string>
+    <string name="id_prefix">ID: </string>
     <string name="domain_prefix">Domain: </string>
     <string name="username_prefix">Username: </string>
     <string name="password_prefix">Password: </string>
     <string name="notes_prefix">Notes: </string>
-    <string name="createdat_prefix">CreatedAt: </string>
-    <string name="updatedat_prefix">UpdatedAt: </string>
+    <string name="createdat_prefix">Created At: </string>
+    <string name="updatedat_prefix">Updated At: </string>
 
     <!-- Permission -->
-    <string name="permission_granted">Permission Granted</string>
-    <string name="permission_denied">Permission Denied</string>
+    <string name="permission_granted">Permission granted</string>
+    <string name="permission_denied">Permission denied</string>
 
     <!-- Toast Message -->
-    <string name="future_feat_clause">Feature is under development!!</string>
-    <string name="not_found_error_message">404: Not Found!!</string>
-    <string name="warn_fill_form">Warning: please fill the form first!!</string>
-    <string name="fail_msg">Failed: please try again!!</string>
-    <string name="success_clause">Success: </string>
-    <string name="update_success_msg">Updated Successfully!!</string>
-    <string name="delete_success_msg">Deleted Successfully!!</string>
-    <string name="something_went_wrong_msg">Something Went Wrong!!</string>
-    <string name="action_discard">Action Discard!</string>
+    <string name="future_feat_clause">This feature is currently under development.</string>
+    <string name="not_found_error_message">404: Not found.</string>
+    <string name="warn_fill_form">Warning: Please fill out the form first.</string>
+    <string name="fail_msg">Failed: Please try again.</string>
+    <string name="success_clause">Success:</string>
+    <string name="update_success_msg">Updated successfully.</string>
+    <string name="delete_success_msg">Deleted successfully.</string>
+    <string name="something_went_wrong_msg">Something went wrong.</string>
+    <string name="action_discard">Action discarded.</string>
 
     <!-- Alert Dialog Message -->
-    <string name="update_password_dialog_title">Update Password?</string>
-    <string name="delete_password_dialog_title">Delete Password?</string>
-    <string name="irreversible_dialog_desc">This action is irreversible</string>
+    <string name="update_password_dialog_title">Update password?</string>
+    <string name="delete_password_dialog_title">Delete password?</string>
+    <string name="irreversible_dialog_desc">This action cannot be undone.</string>
     <string name="confirm_dialog_button_text">Confirm</string>
     <string name="discard_dialog_button_text">Discard</string>
+
 </resources>
