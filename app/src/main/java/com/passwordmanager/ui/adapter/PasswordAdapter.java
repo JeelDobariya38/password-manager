@@ -1,4 +1,4 @@
-package com.jeeldobariya.passcodes.ui.adapter;
+package com.passwordmanager.ui.adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import android.view.LayoutInflater;
 import android.widget.BaseAdapter;
 
-import com.jeeldobariya.passcodes.models.PasswordModel;
-import com.jeeldobariya.passcodes.databinding.PasswordListItemBinding;
+import com.passwordmanager.models.PasswordModel;
+import com.passwordmanager.databinding.PasswordListItemBinding;
 
 import java.util.List;
 

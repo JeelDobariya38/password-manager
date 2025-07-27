@@ -1,4 +1,4 @@
-package com.jeeldobariya.passcodes.ui;
+package com.passwordmanager.ui;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,10 +14,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.jeeldobariya.passcodes.R;
-import com.jeeldobariya.passcodes.utils.Controller;
-import com.jeeldobariya.passcodes.models.PasswordModel;
-import com.jeeldobariya.passcodes.databinding.ActivityPasswordManagerBinding;
+import com.passwordmanager.R;
+import com.passwordmanager.utils.Controller;
+import com.passwordmanager.models.PasswordModel;
+import com.passwordmanager.databinding.ActivityPasswordManagerBinding;
 
 import java.util.List;
 import java.io.OutputStream;
