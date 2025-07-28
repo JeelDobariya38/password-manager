@@ -1,12 +1,12 @@
-package com.jeeldobariya.passcodes.utils
+package com.passwordmanager.utils;
 
 class ExampleTestableCode {
-    fun checkStrength(password: String): Int {
+    int checkStrength(String password) {
         if (password == null || password.isEmpty()) {
             return -1;
         }
 
-        val length = password.length;
+        int length = password.length();
 
         if (length < 8) {
             return 0;
