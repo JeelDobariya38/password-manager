@@ -12,7 +12,7 @@ For inital installion of app, you follow step given below it work in most sineri
    
     - if no, then sorry app is not comatible with your device.
    
-    - if yes, then mostly you are good to go but, officially we only support device between android 8 to 13. for more high android version app can be runned but we don;t officially support it.
+    - if yes, then mostly you are good to go but, officially we only support device between android 8 to 14. for more high android version app can be runned but we don;t officially support it.
 
 2. After completing first step, Picking the version of app to install.
 
