@@ -1,4 +1,4 @@
-package com.passwordmanager.utils;
+package com.jeeldobariya.passcodes.utils;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,8 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.passwordmanager.database.MyDatabaseHelper;
-import com.passwordmanager.models.PasswordModel;
+import com.jeeldobariya.passcodes.database.MyDatabaseHelper;
+import com.jeeldobariya.passcodes.models.PasswordModel;
 
 public class Controller {
   private MyDatabaseHelper dbHelper;
