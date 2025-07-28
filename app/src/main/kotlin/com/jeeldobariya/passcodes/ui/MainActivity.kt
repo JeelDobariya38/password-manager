@@ -14,13 +14,15 @@ class MainActivity : AppCompatActivity() {
 
     // private lateinit var permissionsHandle: Permissions
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Add event onclick listener
-        addOnClickListenerOnButton(binding)
+        addOnClickListenerOnButton()
 
         // Make window fullscreen
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -50,7 +52,7 @@ class MainActivity : AppCompatActivity() {
     */
 
     // Added all the onclick event listeners
-    private fun addOnClickListenerOnButton(binding: ActivityMainBinding) {
+    private fun addOnClickListenerOnButton() {
         binding.passwordManagerBtn.setOnClickListener {
             val passwordManagerIntent = Intent(this, PasswordManagerActivity::class.java)
             startActivity(passwordManagerIntent)

@@ -9,14 +9,16 @@ import com.jeeldobariya.passcodes.databinding.ActivityAboutUsBinding;
 import com.jeeldobariya.passcodes.utils.Constant;
 
 public class AboutUsActivity : AppCompatActivity() {
+
+  private lateinit var binding: ActivityAboutUsBinding
   
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState);
-    val binding = ActivityAboutUsBinding.inflate(layoutInflater);
+    binding = ActivityAboutUsBinding.inflate(layoutInflater);
     setContentView(binding.root);
 
     // Add event onclick listener
-    addOnClickListenerOnButton(binding);
+    addOnClickListenerOnButton();
 
     // Make window fullscreen
     WindowCompat.setDecorFitsSystemWindows(window, false);
@@ -28,7 +30,7 @@ public class AboutUsActivity : AppCompatActivity() {
   }
 
   // Added all the onclick event listiners
-  private fun addOnClickListenerOnButton(binding: ActivityAboutUsBinding) {
+  private fun addOnClickListenerOnButton() {
     binding.viewSecurityGuidelinesBtn.setOnClickListener {
         openBrowser(Constant.SECURITY_GUIDE_URL);
     };
