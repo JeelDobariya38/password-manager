@@ -10,13 +10,13 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 36
     namespace = "com.jeeldobariya.passcodes"
 
     defaultConfig {
         applicationId = "com.jeeldobariya.passcodes"
         minSdk = 26
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "0.1.0-Alpha"
 
