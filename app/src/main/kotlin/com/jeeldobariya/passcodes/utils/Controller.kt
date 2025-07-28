@@ -5,7 +5,7 @@ This is a temporary workaround for learning. In a real-world Android app, you sh
 package com.jeeldobariya.passcodes.utils
 
 import android.content.Context
-import com.jeeldobariya.passcodes.database.Masterdatabase
+import com.jeeldobariya.passcodes.database.MasterDatabase
 import com.jeeldobariya.passcodes.database.Password
 import com.jeeldobariya.passcodes.database.PasswordsDao
 import java.text.SimpleDateFormat
@@ -23,8 +23,8 @@ class Controller(context: Context) {
 
     init {
         // Initialize Room database and get the DAO instance
-        val db = Masterdatabase.getDatabase(context)
-        passwordsDao = db.passwordsDao()
+        val db = MasterDatabase.getDatabase(context)
+        passwordsDao = db.passwordsDao
     }
 
     /**

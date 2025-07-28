@@ -62,6 +62,7 @@
     <string name="sucess_clause">Success: </string>
     <string name="update_sucess_msg">Updated Successfully!!</string>
     <string name="delete_sucess_msg">Deleted Successfully!!</string>
+    <string name="error_invalid_password_id">Something Went Wrong: Invalid ID!!</string>
     <string name="something_went_wrong_msg">Something Went Wrong!!</string>
 
 </resources>

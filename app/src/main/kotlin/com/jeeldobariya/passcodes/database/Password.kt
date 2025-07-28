@@ -11,7 +11,7 @@ data class Password(
     var domain: String,
     var username: String,
     var password: String,
-    var notes: String
+    var notes: String,
 
     @ColumnInfo(name = "created_at", defaultValue = "CURRENT_TIMESTAMP")
     var createdAt: String? = null,
