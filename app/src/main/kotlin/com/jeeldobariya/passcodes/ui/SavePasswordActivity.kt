@@ -4,16 +4,20 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
+import androidx.lifecycle.lifecycleScope
 import com.jeeldobariya.passcodes.R
 import com.jeeldobariya.passcodes.databinding.ActivitySavePasswordBinding
 import com.jeeldobariya.passcodes.utils.Controller
 import com.jeeldobariya.passcodes.utils.DatabaseOperationException
 import com.jeeldobariya.passcodes.utils.InvalidInputException
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SavePasswordActivity : AppCompatActivity() {
 
-    private lateinit var controller: Controller // Use lateinit since it's initialized in onCreate
-    private lateinit var binding: ActivitySavePasswordBinding // Use lateinit for binding
+    private lateinit var controller: Controller
+    private lateinit var binding: ActivitySavePasswordBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +27,7 @@ class SavePasswordActivity : AppCompatActivity() {
         controller = Controller(this) // Initialize controller
 
         // Add event onclick listener
-        addOnClickListenerOnButton() // Pass binding via class member
+        addOnClickListenerOnButton()
 
         // Make window fullscreen
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -37,22 +41,30 @@ class SavePasswordActivity : AppCompatActivity() {
             val password = binding.inputPassword.text.toString()
             val notes = binding.inputNotes.text.toString()
 
-            try {
-                // Call the controller method which now throws exceptions
-                val rowId = controller.savePasswordEntity(domain, username, password, notes)
-                Toast.makeText(this, "${getString(R.string.sucess_clause)} $rowId", Toast.LENGTH_SHORT).show()
-                finish() // Optionally close the activity after successful save
-            } catch (e: InvalidInputException) {
-                // Handle the case where input parameters are empty/blank
-                Toast.makeText(this, getString(R.string.warn_fill_form), Toast.LENGTH_SHORT).show()
-            } catch (e: DatabaseOperationException) {
-                // Handle general database operation errors
-                Toast.makeText(this, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
-                e.printStackTrace() // Log the stack trace for debugging
-            } catch (e: Exception) {
-                // Catch any other unexpected exceptions
-                Toast.makeText(this, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
-                e.printStackTrace()
+            // Launch a coroutine to call the suspend function
+            lifecycleScope.launch {
+                try {
+                    val rowId = controller.savePasswordEntity(domain, username, password, notes)
+                    // Switch back to Main dispatcher for UI updates
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(this@SavePasswordActivity, "${getString(R.string.sucess_clause)} $rowId", Toast.LENGTH_SHORT).show()
+                        finish()
+                    }
+                } catch (e: InvalidInputException) {
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(this@SavePasswordActivity, getString(R.string.warn_fill_form), Toast.LENGTH_SHORT).show()
+                    }
+                } catch (e: DatabaseOperationException) {
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(this@SavePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                        e.printStackTrace()
+                    }
+                } catch (e: Exception) {
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(this@SavePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                        e.printStackTrace()
+                    }
+                }
             }
         }
     }

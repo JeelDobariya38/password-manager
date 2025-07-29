@@ -5,12 +5,17 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
+import androidx.lifecycle.lifecycleScope
 import com.jeeldobariya.passcodes.R
-import com.jeeldobariya.passcodes.database.Password // Use your Room entity directly
+import com.jeeldobariya.passcodes.database.Password
 import com.jeeldobariya.passcodes.databinding.ActivityLoadPasswordBinding
 import com.jeeldobariya.passcodes.ui.adapter.PasswordAdapter
 import com.jeeldobariya.passcodes.utils.Controller
 import com.jeeldobariya.passcodes.utils.DatabaseOperationException
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.catch
 
 class LoadPasswordActivity : AppCompatActivity() {
 
@@ -30,36 +35,42 @@ class LoadPasswordActivity : AppCompatActivity() {
 
         // Make window fullscreen
         WindowCompat.setDecorFitsSystemWindows(window, false)
+
+        // Start collecting the password list Flow when the activity is created
+        // This collection will automatically update the UI when database changes occur.
+        collectPasswordList()
     }
 
-    private fun fillPasswordList() {
-        try {
-            // This is a synchronous call and will block the UI thread.
-            // For a real app, use suspend functions and coroutines/Flow here.
-            val passwordList: List<Password> = controller.getAllPasswords()
-
-            // Initialize or update the adapter
-            if (!this::passwordAdapter.isInitialized) { // Check if adapter is already initialized
-                passwordAdapter = PasswordAdapter(this, passwordList)
-                binding.passwordList.adapter = passwordAdapter
-            } else {
-                passwordAdapter.updateData(passwordList) // Update existing adapter
-            }
-        } catch (e: DatabaseOperationException) {
-            Toast.makeText(this, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
-            e.printStackTrace()
-            // Optionally, set an empty adapter or show a message if loading fails
-            if (!this::passwordAdapter.isInitialized) {
-                passwordAdapter = PasswordAdapter(this, emptyList())
-                binding.passwordList.adapter = passwordAdapter
-            }
-        } catch (e: Exception) {
-            Toast.makeText(this, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
-            e.printStackTrace()
-            if (!this::passwordAdapter.isInitialized) {
-                passwordAdapter = PasswordAdapter(this, emptyList())
-                binding.passwordList.adapter = passwordAdapter
-            }
+    private fun collectPasswordList() {
+        lifecycleScope.launch {
+            controller.getAllPasswords()
+                .catch { e ->
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(
+                            this@LoadPasswordActivity,
+                            "${getString(R.string.something_went_wrong_msg)}: ${e.message}",
+                            Toast.LENGTH_LONG
+                        ).show()
+                        e.printStackTrace()
+                        // Ensure adapter is initialized with empty list on error
+                        if (!this@LoadPasswordActivity::passwordAdapter.isInitialized) {
+                            passwordAdapter = PasswordAdapter(this@LoadPasswordActivity, emptyList())
+                            binding.passwordList.adapter = passwordAdapter
+                        }
+                    }
+                }
+                .collect { passwordList ->
+                    // This block will be executed every time the list of passwords changes in the database
+                    // and emitted by the Flow.
+                    withContext(Dispatchers.Main) { // Ensure UI updates are on the main thread
+                        if (!this@LoadPasswordActivity::passwordAdapter.isInitialized) {
+                            passwordAdapter = PasswordAdapter(this@LoadPasswordActivity, passwordList)
+                            binding.passwordList.adapter = passwordAdapter
+                        } else {
+                            passwordAdapter.updateData(passwordList)
+                        }
+                    }
+                }
         }
     }
 
@@ -76,8 +87,15 @@ class LoadPasswordActivity : AppCompatActivity() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        fillPasswordList() // Refresh the list whenever the activity resumes
-    }
+    // onResume is no longer needed to explicitly call fillPasswordList()
+    // because Flow collection started in onCreate will handle updates.
+    // However, if your activity might be killed and recreated, the onCreate will
+    // re-initiate the collection. For simple cases, this is fine.
+    // If you need to stop collection when the activity goes to background,
+    // and restart on foreground, you might manage the coroutine job more explicitly.
+    // But lifecycleScope handles stopping on destroy for you.
+    // In this specific setup, `onResume`'s `super.onResume()` is enough.
+    // No need for a custom `onResume` override anymore if it only contained `fillPasswordList()`
+    // and `collectPasswordList()` is in `onCreate`.
+    // Removed the `onResume` override as it's now redundant with Flow collection in onCreate.
 }
