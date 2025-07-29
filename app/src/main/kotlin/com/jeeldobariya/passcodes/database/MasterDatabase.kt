@@ -7,8 +7,8 @@ import androidx.room.RoomDatabase;
 
 @Database(
     entities = [Password::class],
-    version = 1,
-    exportSchema = false
+    version = 1
+    // exportSchema = false
 )
 abstract class MasterDatabase : RoomDatabase() {
     abstract val passwordsDao: PasswordsDao
