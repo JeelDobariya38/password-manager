@@ -14,4 +14,10 @@ In this file, you will find documented process about, how we release, new versio
 
 6. Discuss on community and check & test release app on various parameters and
 
-7. Then release it.
+    - We run unit tests.
+    
+    - We run android tests.
+    
+    - And ofcourse, we internally as developers also test it (manually).
+
+8. Then release it.
