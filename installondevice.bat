@@ -1,4 +1,13 @@
+@REM WARNING: Script is Deprecated!! From 2025-07-29T12:45:00Z.
+@REM Checkout: https://github.com/JeelDobariya38/password-manager/blob/main/docs/building.md.
+
 @REM Build & install on Android phone
+
+echo "WARNING: Script is Deprecated!! From 2025-07-29T12:45:00Z. More Info:- https://github.com/JeelDobariya38/password-manager/blob/main/docs/building.md."
+
+pause
+
+@echo off
 
 @REM Force continuation after Gradle command by capturing the output
 if "%~1"=="prod" (
@@ -6,14 +15,12 @@ if "%~1"=="prod" (
     call gradlew clean assembleRelease
     if ERRORLEVEL 1 (
         echo Gradle build failed! Check build_output.txt for details.
-        exit /b 1
     )
 ) else (
     echo building a development build
     call gradlew assembleDebug
     if ERRORLEVEL 1 (
         echo Gradle build failed! Check build_output.txt for details.
-        exit /b 1
     )
 )
 
@@ -21,7 +28,6 @@ if "%~1"=="prod" (
 adb start-server
 if ERRORLEVEL 1 (
     echo Failed to start ADB server! Exiting...
-    exit /b 1
 )
 
 @REM Check if a device is connected
@@ -29,7 +35,6 @@ adb devices
 if ERRORLEVEL 1 (
     echo No device found! Make sure your device is connected and USB debugging is enabled.
     adb kill-server
-    exit /b 1
 )
 
 @REM Install the APK on the connected device
@@ -38,28 +43,27 @@ if "%~1"=="prod" (
     adb install ./app/build/outputs/apk/release/app-universal-release.apk
     if ERRORLEVEL 1 (
         echo Gradle build failed! Check build_output.txt for details.
-        exit /b 1
     )
 ) else (
     echo Installing a dev apk
     adb install ./app/build/outputs/apk/debug/app-universal-debug.apk
     if ERRORLEVEL 1 (
         echo Gradle build failed! Check build_output.txt for details.
-        exit /b 1
     )
 )
 if ERRORLEVEL 1 (
     echo APK installation failed! Exiting...
     adb kill-server
-    exit /b 1
 )
 
 @REM Kill ADB server after installation
 adb kill-server
 if ERRORLEVEL 1 (
     echo Failed to stop ADB server! Exiting...
-    exit /b 1
 )
 
 echo Build and installation completed successfully!
-exit /b 0
+
+pause
+
+echo "Thanks for using installondevice.bat!!!"
