@@ -8,7 +8,7 @@ This file give you a deep guide on installion & updation process. we hope that y
 - [Installion Process](#installion-process)
 - [Updation Process](#updation-process)
 - [Guide To Find A Best Release](#guide-to-find-a-best-release)
-- [Explictly Yanked Release (Pure Trash)](explictly-yanked-release-pure-trash)
+- [Explictly Yanked Release (Pure Trash)](#explictly-yanked-release-pure-trash)
 
 ## Installion Process
 
