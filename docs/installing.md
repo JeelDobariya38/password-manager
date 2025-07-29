@@ -54,7 +54,7 @@ you can follow step given below. they work for most scenario.
 > this try of data loss are likely to occur, when you are update from one major version to another major version meaning from `1.x.x` to `2.x.x`.
 
 1. Checking Whether The Update Exist Or Not
-    - compare your current app version with lastest app update. (you can find your current installed passcode app version under app info in your phone settings)
+    - compare your current app version with lastest app update. (you can find your current installed passcodes app version under app info in your phone settings)
   
     - check whether a update exist or not? 
   

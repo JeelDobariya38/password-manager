@@ -1,19 +1,19 @@
 # Security Guide
 
-Here, In this file, You can find the information about security concern that arise with saveing your password with passcode app.
+Here, In this file, You can find the information about security concern that arise with saveing your password with passcodes app.
 
 > [!warning]
-> Firstly, The passcode is open source project and is currently under active development. So, one is soley responsible for share there information with passcode application.
+> Firstly, The passcodes is open source project and is currently under active development. So, one is soley responsible for share there information with passcodes application.
 
-We as developers, recommended you to wait, for its stable release. before full trusting passcode with yous your passwords data.
+We as developers, recommended you to wait, for its stable release. before full trusting passcodes with yous your passwords data.
 
 ## Consideration
 
-While, save your password with passcode application. you should consider or should have knowledge of following things.
+While, save your password with passcodes application. you should consider or should have knowledge of following things.
 
 - Project is license under MIT License. which means that application is given `as it is,  without any warranty or guarantee` and is openly/freely available to redistribution or modify. (but you need to have a copy of original license in it)
   
-- With passcode, your password are as safe as you write it down on pieces of paper or in a txt file digitally. which means that, `your information is not specially protected.`
+- With passcodes, your password are as safe as you write it down on pieces of paper or in a txt file digitally. which means that, `your information is not specially protected.`
 
 ## Recommendation
 

@@ -27,13 +27,13 @@ cd passcodes
 Something like this...
 
 ```powershell
-PS D:\####\####\password-manager> adb --version    
+PS D:\####\####\passcodes> adb --version    
 Android Debug Bridge version 1.0.41
 Version 35.0.2-12147458
 Installed as D:\####\####\lib\platform-tools\adb.exe
 Running on Windows 10.0.26100
 
-PS D:\####\####\password-manager> ./gradlew --version
+PS D:\####\####\passcodes> ./gradlew --version
 
 ------------------------------------------------------------
 Gradle 8.14.3
@@ -52,14 +52,14 @@ OS:            Windows 11 10.0 amd64
 
 ## Preparing For A Build.
 
-Here, are the things you required, first you will need a `keystore.properties` & `passwordmanager.jks` in project root. So, that the script can be able to sign the apk file when generated. second thing you might need is a mobile device with usb debugging enable, connect to your machine, because script install the app dirctly using `adb`.
+Here, are the things you required, first you will need a `keystore.properties` & `passcodes.jks` in project root. So, that the script can be able to sign the apk file when generated. second thing you might need is a mobile device with usb debugging enable, connect to your machine, because script install the app dirctly using `adb`.
 
 ### Template For keystore.properties
 
 ```
-keyAlias=passwordmanager
+keyAlias=passcodes
 keyPassword=
-storeFile=./../passwordmanager.jks
+storeFile=./../passcodes.jks
 storePassword=
 ```
 

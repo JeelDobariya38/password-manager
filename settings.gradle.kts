@@ -13,4 +13,4 @@ include(":app")
 // include(":app", ":data", ":domain", ":feature:home")
 
 // Define root project name
-rootProject.name = "Password Manager"
+rootProject.name = "Passcodes"
