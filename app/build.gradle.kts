@@ -157,6 +157,15 @@ dependencies {
     // Testing dependencies
     testImplementation("junit:junit:$junitVersion")
     testImplementation("com.google.truth:truth:$truthVersion")
+    
+    // Room testing
+    androidTestImplementation("androidx.room:room-testing:$roomVersion") // Essential for Room testing
     androidTestImplementation("androidx.test.ext:junit:$androidxTestExtJunitVersion")
     androidTestImplementation("androidx.test.espresso:espresso-core:$espressoCoreVersion")
+
+    // Coroutine test utilities (for runTest)
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion")
+
+    // Assertion library (Google Truth)
+    androidTestImplementation("com.google.truth:truth:$truthVersion")
 }
