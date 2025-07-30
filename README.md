@@ -5,6 +5,9 @@ A android app that take down the headace of remember passwords. It is open sourc
 > [!WARNING]
 > It is just a open source project. An is under active development please, consider using it for fun and not for real password managment. (untill, we offically release a stable release)
 
+> What we think of passcodes?
+> Password management is one such thing that is as simple as remember a password yet, it very important topic in term of security. So, we as developer of passcode think to streamline and securing the process as much as possible. [Read more](docs/project-overview.md)
+
 ## Features
 
 - [X] Intuitive UI.
