@@ -4,7 +4,7 @@
 
 	<uses-sdk
 		android:minSdkVersion="26"
-		android:targetSdkVersion="33" />
+		android:targetSdkVersion="34" />
 
 	<!-- Storage access permission
 	<uses-permission
@@ -23,7 +23,7 @@
 		android:requestLegacyExternalStorage="true"
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
-		android:theme="@style/PasswordManagerTheme">
+		android:theme="@style/PasscodesTheme">
 		<activity
 			android:name=".ui.MainActivity"
 			android:exported="true">

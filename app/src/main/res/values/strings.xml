@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Password Manager</string>
+    <string name="app_name">Passcodes</string>
     <string name="app_version">v0.1.0-Alpha</string>
 
     <!-- Contributor Names -->
@@ -34,7 +34,7 @@
     <string name="view_change_log_button_text">View Changelog</string>
 
     <!-- Headline of Activity -->
-    <string name="textview_passwordmanager_headline">Password Manager</string>
+    <string name="textview_passwordmanager_headline">Passcodes</string>
     <string name="textview_loadpassword_headline">Load Password</string>
     <string name="textview_savepassword_headline">Save Password</string>
     <string name="textview_viewpassword_headline">View Password</string>
@@ -62,6 +62,7 @@
     <string name="sucess_clause">Success: </string>
     <string name="update_sucess_msg">Updated Successfully!!</string>
     <string name="delete_sucess_msg">Deleted Successfully!!</string>
+    <string name="error_invalid_password_id">Something Went Wrong: Invalid ID!!</string>
     <string name="something_went_wrong_msg">Something Went Wrong!!</string>
 
 </resources>

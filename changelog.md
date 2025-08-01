@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **Mirgated Package Name**: Migrate package name from `com.passwordmanager` to `com.jeeldobariya.passcodes`. Contributed by [@JeelDobariya].
+- **Improve Safety By Kotlin Implementaion**: Move from `Java` to `Kotlin` Language. Contributed by [@JeelDobariya].
+- **Improve Data Storing Process**: Move from `SqliteDatabase` to `Room` Libaray for better datastorage. Contributed by [@JeelDobariya].
+
 ## v0.1.0-Alpha
 
 ### Added
