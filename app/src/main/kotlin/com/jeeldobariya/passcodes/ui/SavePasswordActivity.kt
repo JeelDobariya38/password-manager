@@ -47,7 +47,7 @@ class SavePasswordActivity : AppCompatActivity() {
                     val rowId = controller.savePasswordEntity(domain, username, password, notes)
                     // Switch back to Main dispatcher for UI updates
                     withContext(Dispatchers.Main) {
-                        Toast.makeText(this@SavePasswordActivity, "${getString(R.string.sucess_clause)} $rowId", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@SavePasswordActivity, "${getString(R.string.success_clause)} $rowId", Toast.LENGTH_SHORT).show()
                         finish()
                     }
                 } catch (e: InvalidInputException) {

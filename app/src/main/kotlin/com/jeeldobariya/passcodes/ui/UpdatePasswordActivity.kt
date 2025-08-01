@@ -98,7 +98,7 @@ class UpdatePasswordActivity : AppCompatActivity() {
                     val rowsAffected = controller.updatePassword(passwordEntityId, newDomain, newUsername, newPassword, newNotes)
                     withContext(Dispatchers.Main) {
                         if (rowsAffected > 0) {
-                            Toast.makeText(this@UpdatePasswordActivity, getString(R.string.update_sucess_msg), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@UpdatePasswordActivity, getString(R.string.update_success_msg), Toast.LENGTH_SHORT).show()
                             finish()
                         } else {
                             Toast.makeText(this@UpdatePasswordActivity, getString(R.string.something_went_wrong_msg) + ": No changes applied or password not found.", Toast.LENGTH_SHORT).show()

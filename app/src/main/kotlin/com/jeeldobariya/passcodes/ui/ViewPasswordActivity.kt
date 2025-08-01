@@ -96,7 +96,7 @@ class ViewPasswordActivity : AppCompatActivity() {
                     val rowsDeleted = controller.deletePassword(passwordEntityId)
                     withContext(Dispatchers.Main) {
                         if (rowsDeleted > 0) {
-                            Toast.makeText(this@ViewPasswordActivity, getString(R.string.delete_sucess_msg), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@ViewPasswordActivity, getString(R.string.delete_success_msg), Toast.LENGTH_SHORT).show()
                             finish()
                         } else {
                             Toast.makeText(this@ViewPasswordActivity, getString(R.string.something_went_wrong_msg) + ": Password not found for deletion or no rows affected.", Toast.LENGTH_SHORT).show()
