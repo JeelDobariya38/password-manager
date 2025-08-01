@@ -1,61 +1,84 @@
 # Detail Guide On Building Project
 
+> [!warning]
+> The script `installondevice.bat` itself is deprecated by developers,
+> But, it still may works!! We will provide a new solution, more likely a `powershell` more robust script soon.
+> Which directly integrate with morden windows 11. and has more feature.. though this script will remain as it.
+
 Here, you will get the details about how to build the app (in recommended way).
 
-Note: This doc file assume that, you are build the project without android studio and with the 'scripts/installondevice.bat' script provided.
+Note: This docs file assume that, you are build the project without android studio and with the 'installondevice.bat' script provided.
 
 ## Prerequisites
 
 You will need `gradle` and `adb` accessible from commandline so, that script can do its job.
 
-something like this...
+```powershell
+adb --version
 ```
-PS C:\Users\ABC> gradle help
 
-> Task :help
+and
 
-Welcome to Gradle 8.9.
+```powershell
+cd passcodes
+./gradlew --version
+```
 
-Directory 'C:\Users\ABC' does not contain a Gradle build.
+Something like this...
 
-....
-
-BUILD SUCCESSFUL in 1s
-1 actionable task: 1 executed
-
-PS C:\Users\ABC> adb help
+```powershell
+PS D:\####\####\passcodes> adb --version    
 Android Debug Bridge version 1.0.41
 Version 35.0.2-12147458
-Installed as C:...\cmdline-tools\lib\platform-tools\adb.exe
+Installed as D:\####\####\lib\platform-tools\adb.exe
+Running on Windows 10.0.26100
 
-....
+PS D:\####\####\passcodes> ./gradlew --version
+
+------------------------------------------------------------
+Gradle 8.14.3
+------------------------------------------------------------
+
+Build time:    2025-07-04 13:15:44 UTC
+Revision:      e5ee1df3d88b8ca3a8074787a94f373e3090e1db
+
+Kotlin:        2.0.21
+Groovy:        3.0.24
+Ant:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024
+Launcher JVM:  17.0.12 (Oracle Corporation 17.0.12+8-LTS-286)
+Daemon JVM:    C:\Program Files\Java\jdk-17 (no JDK specified, using current Java home)
+OS:            Windows 11 10.0 amd64
 ```
 
 ## Preparing For A Build.
 
-Here, are the things you required, first you will need a `keystore.properties` & `passwordmanager.jks` in project root. So, that the script can be able to sign the apk file when generated. second thing you might need is a mobile device with use debugging connect to your machine because script install the app dirctly using `adb`.
+Here, are the things you required, first you will need a `keystore.properties` & `passcodes.jks` in project root. So, that the script can be able to sign the apk file when generated. second thing you might need is a mobile device with usb debugging enable, connect to your machine, because script install the app dirctly using `adb`.
 
 ### Template For keystore.properties
 
 ```
-keyAlias=passwordmanager
+keyAlias=passcodes
 keyPassword=
-storeFile=./../passwordmanager.jks
+storeFile=./../passcodes.jks
 storePassword=
 ```
 
 **Fill the keyPassword and storePassword** and you are good to go.
 
-## Finial Run Script For Building
+## Deprecated: Finial Run Script For Building
+
+> [!warning]
+> the script `installondevice.bat` itself is deprecated by developers,
+> but it still may works!!
 
 you can build the app for production and dev version.
 
-Dev Builds
-```bat
-installondevice.bat
-```
+- Development Builds
+  ```bat
+  installondevice.bat
+  ```
 
-Production Builds
-```
-installondevice.bat prod
-```
+- Production Builds
+  ```
+  installondevice.bat prod
+  ```

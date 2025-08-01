@@ -1,9 +1,21 @@
 # Password Manager
 
-A android app that take down the headace of remember passwords. It is open source solutions that help you in keep your passwords safe and secure in your own local storage without ever need to push you password to cloud.
+A android app that take down the headace of remember passwords. It is open source solutions that help you in keep your passwords safe and secure in your own local storage without ever need to push them to cloud.
 
 > [!WARNING]
-> It is just a open source project. An is under active development please, consider using it for fun and not for real password managment. (untill, we offically release a stable release)
+> It is just a open source project. An is current under active development.
+> Please, consider using it for fun and not for real password managment. (untill, we offically release a stable release)
+
+## Compatibility
+
+**Compile Sdk**: `Android 16 (API level 36)`
+
+```
+Android 8+ (Minimum) [API level 26+]
+Android 14 [API level 34] (we support offically)
+
+Note: high version can still run but are not guaranteed offically.
+```
 
 > What we think of passcodes?
 > Password management is one such thing that is as simple as remember a password yet, it very important topic in term of security. So, we as developer of passcode think to streamline and securing the process as much as possible. [Read more](docs/project-overview.md)
@@ -11,20 +23,42 @@ A android app that take down the headace of remember passwords. It is open sourc
 ## Features
 
 - [X] Intuitive UI.
-- [ ] Update Checkers.
-- [X] Password Management. (current priority)
-- [ ] Other Info Management.
+- [ ] Update Checkers & Manager.
+- [X] Password Management. (Current Priority)
+- [ ] Secure File. (Least Priority, Because it include permission. Which, I am as developer not familar with 😂)
+    - Could be Image. (JPG. PNG ....)
+    - Could be Vidoe.
+    - Could any Binary File. (more like won't be a text file)
+- [ ] Other Secret Info Management.
+    - Could be note. (txt file)
+    - Could be any info that can encode as key & value.
+      ```json
+      {
+        "key": "SECRET API KEY",
+        "content": "qwerty-let-say"
+        "createdat": "...",
+        "updatedat": "..."
+      }
+      ```
+- [ ] NON Secret Info Store
+- [ ] Encryption and Decryption.
 - [ ] Backup Manager.
 - [ ] Import/Export Passwords.
 - [ ] Extensivity with custom database.
+- [ ] Multiple Language Translation.
+- [ ] Theme & Customization.
+- [ ] Key Manager.
+- [ ] Multi Platform Support. (KMP)
 
 ## Installation Steps
 
 1. Go to our [github repository release page](https://github.com/JeelDobariya38/password-manager/releases/latest).
+
 2. Download the apk for your phone. If Don't know the architecture of phone then download apk file that has universal in its name.
+
 3. Install the apk and you are ready to use the app.
 
-it was short and sweet description, for more detailed description vist the file [docs/installing.md](docs/installing.md)
+It was most shortest and sweetest description (I have ever crafted), For more detailed description, Vist the file [docs/installing.md](docs/installing.md)
 
 ## Building The App
 
@@ -36,7 +70,7 @@ it was short and sweet description, for more detailed description vist the file 
 
 4. For code documention and support docs, check the `docs/` folder in our repository. 
 
-it was short and sweet description, for more detailed description vist the file [docs/building.md](docs/building.md)
+It was general, intuitive, short and sweet description, For more detailed description, Vist the file [docs/building.md](docs/building.md).
 
 ## Support Docs
 
@@ -48,4 +82,4 @@ By, contribuating to project you accept the [CONTRIBUTING.md](CONTRIBUTING.md) &
 
 ## Licence
 
-Password Manager Project is licence under [MIT](LICENSE.txt) Licence. Downloading the app would mean you are ok with the license.
+Passcodes Project is licence under [MIT](LICENSE.txt) Licence. Downloading the app would mean, you are ok and have accepted the license.
