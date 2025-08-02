@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Passwort-Manager</string>
+    <string name="app_version">v0.1.0-Alpha</string>
+
+    <string name="developer_name">Entwickelt von: Dobariya Jeel</string>
+    <string name="designer_name">UI/UX-Design von: Hamada Issas (Native)</string>
+    <string name="code_mantainer">Codebetreuer und Tester: Achmad Daniel (Kudanill)</string>
+
+    <string name="quit_button_text">Beenden</string>
+
+    <string name="textview_app_description">Eine Open-Source-Lösung zur Passwortverwaltung, die das Merken von Passwörtern erleichtert.</string>
+    <string name="textview_app_warning">Diese App befindet sich derzeit in aktiver Entwicklung und dient zu Lern- und Testzwecken. Sie ist möglicherweise nicht sicher für sensible Informationen.</string>
+
+    <string name="hint_domain">Domain</string>
+    <string name="helper_text_domain_field">Name der zugehörigen Website oder Domain</string>
+    <string name="hint_username">Benutzername</string>
+    <string name="hint_password">Passwort</string>
+    <string name="hint_notes">Notizen</string>
+    <string name="placeholder_domain_field">z. B. Google, Instagram, WhatsApp usw.</string>
+    <string name="placeholder_username_field">z. B. Liam15, Noha, Olivia, Ava_25 usw.</string>
+    <string name="placeholder_password_field">z. B. 12345, abc123xyz, qwerty usw.</string>
+    <string name="password_manager_button_text">Passwort-Manager</string>
+    <string name="save_password_button_text">Passwort speichern</string>
+    <string name="load_password_button_text">Passwort laden</string>
+    <string name="update_password_button_text">Passwort aktualisieren</string>
+    <string name="delete_password_button_text">Passwort löschen</string>
+    <string name="import_password_button_text">Passwörter importieren</string>
+    <string name="export_password_button_text">Passwörter exportieren</string>
+    <string name="password_security_check_button_text">Sicherheitsprüfung</string>
+    <string name="about_us_button_text">Über uns</string>
+    <string name="view_license_button_text">Lizenz anzeigen</string>
+    <string name="view_security_guidelines_button_text">Sicherheitsrichtlinien anzeigen</string>
+    <string name="view_change_log_button_text">Änderungsprotokoll anzeigen</string>
+
+    <string name="textview_passwordmanager_headline">Passwort-Manager</string>
+    <string name="textview_loadpassword_headline">Passwort laden</string>
+    <string name="textview_savepassword_headline">Passwort speichern</string>
+    <string name="textview_viewpassword_headline">Passwort anzeigen</string>
+    <string name="textview_updatepassword_headline">Passwort aktualisieren</string>
+    <string name="textview_aboutus_headline">Über uns</string>
+
+    <string name="id_prefix">ID: </string>
+    <string name="domain_prefix">Domain: </string>
+    <string name="username_prefix">Benutzername: </string>
+    <string name="password_prefix">Passwort: </string>
+    <string name="notes_prefix">Notizen: </string>
+    <string name="createdat_prefix">Erstellt am: </string>
+    <string name="updatedat_prefix">Aktualisiert am: </string>
+
+    <string name="permission_granted">Berechtigung erteilt</string>
+    <string name="permission_denied">Berechtigung verweigert</string>
+
+    <string name="future_feat_clause">Diese Funktion wird derzeit entwickelt.</string>
+    <string name="not_found_error_message">404: Nicht gefunden</string>
+    <string name="warn_fill_form">Warnung: Bitte füllen Sie zuerst das Formular aus.</string>
+    <string name="fail_msg">Fehler: Bitte versuchen Sie es erneut.</string>
+    <string name="success_clause">Erfolg: </string>
+    <string name="update_success_msg">Erfolgreich aktualisiert.</string>
+    <string name="delete_success_msg">Erfolgreich gelöscht.</string>
+    <string name="something_went_wrong_msg">Etwas ist schiefgelaufen.</string>
+    <string name="action_discard">Aktion verworfen.</string>
+
+    <string name="update_password_dialog_title">Passwort aktualisieren?</string>
+    <string name="delete_password_dialog_title">Passwort löschen?</string>
+    <string name="irreversible_dialog_desc">Diese Aktion kann nicht rückgängig gemacht werden.</string>
+    <string name="confirm_dialog_button_text">Bestätigen</string>
+    <string name="discard_dialog_button_text">Verwerfen</string>
+</resources>

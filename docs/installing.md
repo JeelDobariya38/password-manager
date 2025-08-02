@@ -24,7 +24,7 @@ For inital installion of app, you follow step given below it work in most scenar
 
 2. After completing first step, Pick a version of app to install.
 
-    - Go to our [github repository release page](https://github.com/JeelDobariya38/password-manager/releases). There you will find a list of release avaiable.
+    - Go to our [github repository release page](https://github.com/JeelDobariya38/Passcodes/releases). There you will find a list of release avaiable.
   
     - pick up any one of the release you like. (we recommend you to pick a good release. [how can you find a good release](#guide-to-find-a-best-release)?)
   
@@ -41,7 +41,7 @@ For inital installion of app, you follow step given below it work in most scenar
 
     - open the app.
   
-if any problem occur while performing the above 4 step. report your problem using [github issues](https://github.com/JeelDobariya38/password-manager/issues/new) after checking other support docs avaiable in github repositoy "docs/" folder.
+if any problem occur while performing the above 4 step. report your problem using [github issues](https://github.com/JeelDobariya38/Passcodes/issues/new) after checking other support docs avaiable in github repositoy "docs/" folder.
 
 ## Updation Process
 

@@ -1,0 +1,79 @@
+<resources>
+
+    <string name="app_name">पासवर्ड प्रबंधक</string>
+    <string name="app_version">v0.1.0-Alpha</string>
+
+    <!-- Contributor Names -->
+    <string name="developer_name">डेवलपर: डोबारिया जील</string>
+    <string name="designer_name">UI/UX डिज़ाइन: हामदा इस्सास (Native)</string>
+    <string name="code_mantainer">कोड मेंटेनेंस और परीक्षण: अचमद डैनियल (Kudanill)</string>
+
+    <!-- Main Activity -->
+    <string name="quit_button_text">बाहर निकलें</string>
+
+    <!-- About Us Activity -->
+    <string name="textview_app_description">एक ओपन-सोर्स पासवर्ड प्रबंधक जो पासवर्ड याद रखने की परेशानी को दूर करता है।</string>
+    <string name="textview_app_warning">यह ऐप अभी विकास के चरण में है और केवल शैक्षिक व प्रयोगात्मक उद्देश्यों के लिए है। कृपया इसमें संवेदनशील जानकारी संग्रहीत करने से बचें। अधिक जानकारी के लिए सुरक्षा दिशानिर्देश देखें।</string>
+
+    <!-- Button, Textview general in all Activity -->
+    <string name="hint_domain">डोमेन</string>
+    <string name="helper_text_domain_field">संबंधित वेबसाइट या डोमेन का नाम</string>
+    <string name="hint_username">उपयोगकर्ता नाम</string>
+    <string name="hint_password">पासवर्ड</string>
+    <string name="hint_notes">टिप्पणियाँ</string>
+    <string name="placeholder_domain_field">e.g. Google, Instagram, WhatsApp, etc.</string>
+    <string name="placeholder_username_field">e.g. Liam15, Noha, Olivia, Ava_25, etc.</string>
+    <string name="placeholder_password_field">e.g. 12345, abc123xyz, qwerty, etc.</string>
+    <string name="password_manager_button_text">पासवर्ड प्रबंधक</string>
+    <string name="save_password_button_text">पासवर्ड सहेजें</string>
+    <string name="load_password_button_text">पासवर्ड लोड करें</string>
+    <string name="update_password_button_text">पासवर्ड अपडेट करें</string>
+    <string name="delete_password_button_text">पासवर्ड हटाएं</string>
+    <string name="import_password_button_text">पासवर्ड आयात करें</string>
+    <string name="export_password_button_text">पासवर्ड निर्यात करें</string>
+    <string name="password_security_check_button_text">सुरक्षा जांच</string>
+    <string name="about_us_button_text">हमारे बारे में</string>
+    <string name="view_license_button_text">लाइसेंस देखें</string>
+    <string name="view_security_guidelines_button_text">सुरक्षा दिशानिर्देश देखें</string>
+    <string name="view_change_log_button_text">परिवर्तन लॉग देखें</string>
+
+    <!-- Headline of Activity -->
+    <string name="textview_passwordmanager_headline">पासवर्ड प्रबंधक</string>
+    <string name="textview_loadpassword_headline">पासवर्ड लोड करें</string>
+    <string name="textview_savepassword_headline">पासवर्ड सहेजें</string>
+    <string name="textview_viewpassword_headline">पासवर्ड देखें</string>
+    <string name="textview_updatepassword_headline">पासवर्ड अपडेट करें</string>
+    <string name="textview_aboutus_headline">हमारे बारे में</string>
+
+    <!-- Prefix & Suffix -->
+    <string name="id_prefix">आईडी: </string>
+    <string name="domain_prefix">डोमेन: </string>
+    <string name="username_prefix">उपयोगकर्ता नाम: </string>
+    <string name="password_prefix">पासवर्ड: </string>
+    <string name="notes_prefix">टिप्पणियाँ: </string>
+    <string name="createdat_prefix">बनाया गया: </string>
+    <string name="updatedat_prefix">अपडेट किया गया: </string>
+
+    <!-- Permission -->
+    <string name="permission_granted">अनुमति स्वीकृत</string>
+    <string name="permission_denied">अनुमति अस्वीकृत</string>
+
+    <!-- Toast Message -->
+    <string name="future_feat_clause">यह सुविधा अभी विकास में है।</string>
+    <string name="not_found_error_message">404: नहीं मिला।</string>
+    <string name="warn_fill_form">चेतावनी: कृपया पहले फ़ॉर्म भरें।</string>
+    <string name="fail_msg">विफल: कृपया पुनः प्रयास करें।</string>
+    <string name="success_clause">सफलता:</string>
+    <string name="update_success_msg">सफलतापूर्वक अपडेट किया गया।</string>
+    <string name="delete_success_msg">सफलतापूर्वक हटाया गया।</string>
+    <string name="something_went_wrong_msg">कुछ गलत हो गया।</string>
+    <string name="action_discard">क्रिया रद्द कर दी गई।</string>
+
+    <!-- Alert Dialog Message -->
+    <string name="update_password_dialog_title">क्या आप पासवर्ड अपडेट करना चाहते हैं?</string>
+    <string name="delete_password_dialog_title">क्या आप पासवर्ड हटाना चाहते हैं?</string>
+    <string name="irreversible_dialog_desc">यह क्रिया अपरिवर्तनीय है।</string>
+    <string name="confirm_dialog_button_text">पुष्टि करें</string>
+    <string name="discard_dialog_button_text">रद्द करें</string>
+
+</resources>
