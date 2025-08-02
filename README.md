@@ -1,4 +1,4 @@
-# Password Manager
+# Passcodes
 
 A android app that take down the headace of remember passwords. It is open source solutions that help you in keep your passwords safe and secure in your own local storage without ever need to push them to cloud.
 
@@ -52,7 +52,7 @@ Note: high version can still run but are not guaranteed offically.
 
 ## Installation Steps
 
-1. Go to our [github repository release page](https://github.com/JeelDobariya38/password-manager/releases/latest).
+1. Go to our [github repository release page](https://github.com/JeelDobariya38/Passcodes/releases/latest).
 
 2. Download the apk for your phone. If Don't know the architecture of phone then download apk file that has universal in its name.
 
