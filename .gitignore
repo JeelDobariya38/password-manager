@@ -7,3 +7,4 @@
 
 # Allow .gitignore itself
 !.gitignore
+!README.md
