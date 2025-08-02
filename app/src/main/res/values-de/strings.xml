@@ -54,7 +54,7 @@
     <string name="not_found_error_message">404: Nicht gefunden</string>
     <string name="warn_fill_form">Warnung: Bitte füllen Sie zuerst das Formular aus.</string>
     <string name="fail_msg">Fehler: Bitte versuchen Sie es erneut.</string>
-    <string name="sucess_clause">Erfolg: </string>
+    <string name="success_clause">Erfolg: </string>
     <string name="update_success_msg">Erfolgreich aktualisiert.</string>
     <string name="delete_success_msg">Erfolgreich gelöscht.</string>
     <string name="something_went_wrong_msg">Etwas ist schiefgelaufen.</string>
