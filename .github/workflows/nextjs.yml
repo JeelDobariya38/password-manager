@@ -5,6 +5,9 @@ on:
     branches: ["website-production"]
   workflow_dispatch:
 
+env:
+  NODE_ENV: ${{ vars.NODE_ENV }}
+
 permissions:
   contents: read
   pages: write
