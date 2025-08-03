@@ -90,7 +90,6 @@ class SettingsActivity : AppCompatActivity() {
 
             // Save the new theme and restart the application to apply it
             sharedPrefs.edit().putInt(THEME_KEY, newThemeStyle).apply()
-            Toast.makeText(this@SettingsActivity, "Theme Toggled: $newThemeStyle", Toast.LENGTH_SHORT).show()
             recreate()
         }
     }

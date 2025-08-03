@@ -1,5 +1,6 @@
 package com.jeeldobariya.passcodes.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -27,6 +28,10 @@ class ViewPasswordActivity : AppCompatActivity() {
     private lateinit var controller: Controller
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
+        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
+        setTheme(savedThemeStyle)
+        
         super.onCreate(savedInstanceState)
         binding = ActivityViewPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)

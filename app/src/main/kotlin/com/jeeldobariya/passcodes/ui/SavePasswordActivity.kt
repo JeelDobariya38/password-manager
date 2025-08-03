@@ -1,5 +1,6 @@
 package com.jeeldobariya.passcodes.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,10 @@ class SavePasswordActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySavePasswordBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
+        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
+        setTheme(savedThemeStyle)
+        
         super.onCreate(savedInstanceState)
         binding = ActivitySavePasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
