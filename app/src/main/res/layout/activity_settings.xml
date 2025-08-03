@@ -69,12 +69,12 @@
                 android:text="@string/label_theme_setting"
                 android:textAppearance="?attr/textAppearanceTitleMedium" />
 
-            <Spinner
-                android:id="@+id/theme_switch_dropdown"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/toggle_theme_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:entries="@array/theme_options" />
+                android:text="@string/load_password_button_text"
+                android:textSize="14dp" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>

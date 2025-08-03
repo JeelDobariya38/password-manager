@@ -33,6 +33,7 @@
     <string name="export_password_button_text">Export Password</string>
     <string name="password_security_check_button_text">Check Security</string>
     <string name="setting_button_text">Settings</string>
+    <string name="toogle_theme_button_tex">Toggle Theme</string>
     <string name="label_language_setting">Language: </string>
     <string name="label_theme_setting">Themes: </string>
     <string name="about_us_button_text">About Us</string>
@@ -103,11 +104,5 @@
         <item>es</item>
         <item>zh</item>
         <item>vi</item>
-    </string-array>
-
-    <string-array name="theme_options">
-        <item>Passcodes</item>
-        <item>Trusted</item>
-        <item>Cute</item>
     </string-array>
 </resources>

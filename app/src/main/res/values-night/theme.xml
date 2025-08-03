@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="PasscodesTheme" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="PasscodesTheme.Default" parent="Theme.Material3.Dark.NoActionBar">
 	    <!-- Base Colors -->
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
         <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
