@@ -32,6 +32,9 @@
     <string name="import_password_button_text">Import Password</string>
     <string name="export_password_button_text">Export Password</string>
     <string name="password_security_check_button_text">Check Security</string>
+    <string name="setting_button_text">Settings</string>
+    <string name="label_language_setting">Language: </string>
+    <string name="label_theme_setting">Themes: </string>
     <string name="about_us_button_text">About Us</string>
     <string name="view_license_button_text">View License</string>
     <string name="view_security_guidelines_button_text">View Security Guidelines</string>
@@ -43,6 +46,7 @@
     <string name="textview_savepassword_headline">Save Password</string>
     <string name="textview_viewpassword_headline">View Password</string>
     <string name="textview_updatepassword_headline">Update Password</string>
+    <string name="textview_settings_headline">Settings</string>
     <string name="textview_aboutus_headline">About Us</string>
 
     <!-- Prefix & Suffix -->
@@ -77,4 +81,33 @@
     <string name="confirm_dialog_button_text">Confirm</string>
     <string name="discard_dialog_button_text">Discard</string>
 
+    <string-array name="lang_options">
+        <item>English (en-us)</item>
+        <item>Hindi (hi)</item>
+        <item>Indonesian (in)</item>
+        <item>Korean (ko)</item>
+        <item>Japanese (ja)</item>
+        <item>German (de)</item>
+        <item>Spanish (es)</item>
+        <item>Chinese (zh)</item>
+        <item>Vietnamese (vi)</item>
+    </string-array>
+
+    <string-array name="lang_locale_tags">
+        <item>en</item>
+        <item>hi</item>
+        <item>in</item>
+        <item>ko</item>
+        <item>ja</item>
+        <item>de</item>
+        <item>es</item>
+        <item>zh</item>
+        <item>vi</item>
+    </string-array>
+
+    <string-array name="theme_options">
+        <item>Material</item>
+        <item>Passcodes</item>
+        <item>Trusted</item>
+    </string-array>
 </resources>

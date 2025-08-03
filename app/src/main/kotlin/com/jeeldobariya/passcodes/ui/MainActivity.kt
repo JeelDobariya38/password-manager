@@ -58,6 +58,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(passwordManagerIntent)
         }
 
+        binding.settingBtn.setOnClickListener {
+            val settingIntent = Intent(this, SettingsActivity::class.java)
+            startActivity(settingIntent)
+        }
+
         binding.aboutUsBtn.setOnClickListener {
             val aboutUsIntent = Intent(this, AboutUsActivity::class.java)
             startActivity(aboutUsIntent)
