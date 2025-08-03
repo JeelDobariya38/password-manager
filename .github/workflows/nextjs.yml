@@ -14,12 +14,14 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+defaults:
+  run:
+    shell: bash
+    working-directory: website
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: website
 
     steps:
       - name: ⬇️ Checkout Repository
@@ -30,13 +32,19 @@ jobs:
         with:
           node-version: "24"
           cache: npm
+          cache-dependency-path: website/package-lock.json
 
       - name: 📦 Install Dependencies (npm)
-        run: npm ci
+        run: |
+          npm ci
+
+      - name: 🧪 Test The Site
+        run: |
+          npm test
 
       - name: 🛠️ Build and Export Site
         run: |
-          npm run build  # should do next build && next export
+          npm run build
 
       - name: 📤 Upload Static Site
         uses: actions/upload-pages-artifact@v3
