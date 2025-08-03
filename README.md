@@ -1,5 +1,7 @@
 # Passcodes
 
+[![🚀 Deploy Next.js Website to GitHub Pages](https://github.com/JeelDobariya38/Passcodes/actions/workflows/nextjs.yml/badge.svg)](https://github.com/JeelDobariya38/Passcodes/actions/workflows/nextjs.yml)
+
 > [!Important]
 > For app source code and app related stuff!!
 > Goto [Passcodes Repo](https://github.com/JeelDobariya38/Passcodes)
