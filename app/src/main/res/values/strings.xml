@@ -106,8 +106,8 @@
     </string-array>
 
     <string-array name="theme_options">
-        <item>Material</item>
         <item>Passcodes</item>
         <item>Trusted</item>
+        <item>Cute</item>
     </string-array>
 </resources>
