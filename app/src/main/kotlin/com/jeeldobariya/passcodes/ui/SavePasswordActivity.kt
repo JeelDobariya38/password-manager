@@ -1,6 +1,5 @@
 package com.jeeldobariya.passcodes.ui
 
-import android.util.Log
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -24,7 +23,6 @@ class SavePasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySavePasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Log.i("Passcodes", "Save Password")
 
         controller = Controller(this) // Initialize controller
 
