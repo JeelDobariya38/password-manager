@@ -28,6 +28,7 @@ class SettingsActivity : AppCompatActivity() {
     private val THEMES = listOf(
         R.style.PasscodesTheme_Default,
         R.style.PasscodesTheme_Trusted,
+        R.style.PasscodesTheme_Pink,
         R.style.PasscodesTheme_Cute
     )
 
@@ -89,7 +90,7 @@ class SettingsActivity : AppCompatActivity() {
 
             // Save the new theme and restart the application to apply it
             sharedPrefs.edit().putInt(THEME_KEY, newThemeStyle).apply()
-            Toast.makeText(this@SettingsActivity, "Theme Toggled", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@SettingsActivity, "Theme Toggled: $newThemeStyle", Toast.LENGTH_SHORT).show()
             recreate()
         }
     }
