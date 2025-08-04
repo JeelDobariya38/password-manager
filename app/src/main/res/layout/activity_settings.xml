@@ -30,21 +30,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
             android:padding="16dp">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_language_setting"
-                android:textAppearance="?attr/textAppearanceTitleMedium" />
+                android:textColor="?attr/colorPrimary"
+                android:textSize="24sp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_margin="8dp" />
 
             <Spinner
                 android:id="@+id/lang_switch_dropdown"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:entries="@array/lang_options" />
+                android:entries="@array/lang_options"
+                android:layout_gravity="right|center_vertical" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -60,21 +64,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
             android:padding="16dp">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_theme_setting"
-                android:textAppearance="?attr/textAppearanceTitleMedium" />
+                android:textColor="?attr/colorPrimary"
+                android:textSize="24sp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_margin="8dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/toggle_theme_btn"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/toggle_theme_button_text"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:layout_gravity="right|center_vertical" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
