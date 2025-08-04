@@ -73,7 +73,7 @@
                 android:id="@+id/toggle_theme_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/load_password_button_text"
+                android:text="@string/toggle_theme_button_text"
                 android:textSize="14dp" />
 
         </LinearLayout>
