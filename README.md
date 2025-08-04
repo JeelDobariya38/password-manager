@@ -22,24 +22,24 @@ Note: high version can still run but are not guaranteed offically.
 
 ## Features
 
-- [X] Intuitive UI.
+- [x] Intuitive UI.
 - [ ] Update Checkers & Manager.
-- [X] Password Management. (Current Priority)
+- [x] Password Management. (Current Priority)
 - [ ] Secure File. (Least Priority, Because it include permission. Which, I am as developer not familar with 😂)
-    - Could be Image. (JPG. PNG ....)
-    - Could be Vidoe.
-    - Could any Binary File. (more like won't be a text file)
+  - Could be Image. (JPG. PNG ....)
+  - Could be Vidoe.
+  - Could any Binary File. (more like won't be a text file)
 - [ ] Other Secret Info Management.
-    - Could be note. (txt file)
-    - Could be any info that can encode as key & value.
-      ```json
-      {
-        "key": "SECRET API KEY",
-        "content": "qwerty-let-say"
-        "createdat": "...",
-        "updatedat": "..."
-      }
-      ```
+  - Could be note. (txt file)
+  - Could be any info that can encode as key & value.
+    ```json
+    {
+      "key": "SECRET API KEY",
+      "content": "qwerty-let-say"
+      "createdat": "...",
+      "updatedat": "..."
+    }
+    ```
 - [ ] NON Secret Info Store
 - [ ] Encryption and Decryption.
 - [ ] Backup Manager.
@@ -68,7 +68,7 @@ It was most shortest and sweetest description (I have ever crafted), For more de
 
 3. Follow the general step and build the app.
 
-4. For code documention and support docs, check the `docs/` folder in our repository. 
+4. For code documention and support docs, check the `docs/` folder in our repository.
 
 It was general, intuitive, short and sweet description, For more detailed description, Vist the file [docs/building.md](docs/building.md).
 

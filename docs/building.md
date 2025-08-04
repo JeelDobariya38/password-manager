@@ -27,7 +27,7 @@ cd passcodes
 Something like this...
 
 ```powershell
-PS D:\####\####\passcodes> adb --version    
+PS D:\####\####\passcodes> adb --version
 Android Debug Bridge version 1.0.41
 Version 35.0.2-12147458
 Installed as D:\####\####\lib\platform-tools\adb.exe
@@ -74,6 +74,7 @@ storePassword=
 you can build the app for production and dev version.
 
 - Development Builds
+
   ```bat
   installondevice.bat
   ```
