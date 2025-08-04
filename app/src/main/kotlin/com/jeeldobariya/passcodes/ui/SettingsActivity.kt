@@ -91,6 +91,8 @@ class SettingsActivity : AppCompatActivity() {
             // Save the new theme and restart the application to apply it
             sharedPrefs.edit().putInt(THEME_KEY, newThemeStyle).apply()
             recreate()
+
+            Toast.makeText(this@SettingsActivity, getString(R.string.restart_app_require), Toast.LENGTH_SHORT).show()
         }
     }
 }

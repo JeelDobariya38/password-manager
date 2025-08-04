@@ -42,7 +42,7 @@
     <string name="view_change_log_button_text">View Changelog</string>
 
     <!-- Headline of Activity -->
-    <string name="textview_passwordmanager_headline">Passcodes</string>
+    <string name="textview_passwordmanager_headline">Password Manager</string>
     <string name="textview_loadpassword_headline">Load Password</string>
     <string name="textview_savepassword_headline">Save Password</string>
     <string name="textview_viewpassword_headline">View Password</string>
@@ -64,6 +64,7 @@
     <string name="permission_denied">Permission denied</string>
 
     <!-- Toast Message -->
+    <string name="restart_app_require">Restart App Require.</string>
     <string name="future_feat_clause">This feature is currently under development.</string>
     <string name="not_found_error_message">404: Not found.</string>
     <string name="warn_fill_form">Warning: Please fill out the form first.</string>
@@ -87,6 +88,7 @@
         <item>Hindi (hi)</item>
         <item>Indonesian (in)</item>
         <item>Korean (ko)</item>
+        <item>Korean Romanized (kr)</item>
         <item>Japanese (ja)</item>
         <item>German (de)</item>
         <item>Spanish (es)</item>
@@ -99,6 +101,7 @@
         <item>hi</item>
         <item>id</item>
         <item>ko</item>
+        <item>kr</item>
         <item>ja</item>
         <item>de</item>
         <item>es</item>
