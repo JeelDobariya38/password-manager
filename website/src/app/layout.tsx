@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Passcodes Website",
-  description: "A password manager app.",
+  description:
+    "An open source password manager app that give control of your passwords",
 };
 
 export default function RootLayout({
@@ -13,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <div className="p-4">{children}</div>
+      </body>
     </html>
   );
 }
