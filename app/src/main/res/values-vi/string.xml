@@ -6,7 +6,7 @@
     <!-- Contributor Names -->
     <string name="developer_name">Phát triển bởi: Jeel Dobariya</string>
     <string name="designer_name">Thiết kế UI/UX: Hamada Issas (Native)</string>
-    <string name="code_mantainer">Bảo trì &amp; Kiểm thử mã: Achmad Daniel (Kudanill)</string>
+    <string name="code_maintainer">Bảo trì &amp; Kiểm thử mã: Achmad Daniel (Kudanill)</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">Thoát</string>
@@ -35,7 +35,9 @@
     <string name="setting_button_text">Cài đặt</string>
     <string name="toggle_theme_button_text">Chuyển giao diện</string>
     <string name="label_language_setting">Ngôn ngữ: </string>
+    <string name="label_contributor">Người đóng góp: </string>
     <string name="label_theme_setting">Giao diện: </string>
+    <string name="report_bug_button_text">Báo cáo lỗi</string>
     <string name="about_us_button_text">Giới thiệu</string>
     <string name="view_license_button_text">Xem giấy phép</string>
     <string name="view_security_guidelines_button_text">Hướng dẫn bảo mật</string>

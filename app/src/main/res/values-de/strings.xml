@@ -6,7 +6,7 @@
     <!-- Contributor Names -->
     <string name="developer_name">Entwickelt von: Jeel Dobariya</string>
     <string name="designer_name">UI/UX Design von: Hamada Issas (Native)</string>
-    <string name="code_mantainer">Codepflege &amp; Tests: Achmad Daniel (Kudanill)</string>
+    <string name="code_maintainer">Codepflege &amp; Tests: Achmad Daniel (Kudanill)</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">Beenden</string>
@@ -35,7 +35,9 @@
     <string name="setting_button_text">Einstellungen</string>
     <string name="toggle_theme_button_text">Design wechseln</string>
     <string name="label_language_setting">Sprache: </string>
+    <string name="label_contributor">Mitwirkender: </string>
     <string name="label_theme_setting">Design: </string>
+    <string name="report_bug_button_text">Fehler melden</string>
     <string name="about_us_button_text">Über uns</string>
     <string name="view_license_button_text">Lizenz anzeigen</string>
     <string name="view_security_guidelines_button_text">Sicherheitsrichtlinien</string>

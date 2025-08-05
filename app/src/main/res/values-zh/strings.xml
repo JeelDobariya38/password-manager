@@ -6,7 +6,7 @@
     <!-- Contributor Names -->
     <string name="developer_name">开发者：Jeel Dobariya</string>
     <string name="designer_name">UI/UX 设计：Hamada Issas（Native）</string>
-    <string name="code_mantainer">代码维护与测试：Achmad Daniel（Kudanill）</string>
+    <string name="code_maintainer">代码维护与测试：Achmad Daniel（Kudanill）</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">退出</string>
@@ -35,7 +35,9 @@
     <string name="setting_button_text">设置</string>
     <string name="toggle_theme_button_text">切换主题</string>
     <string name="label_language_setting">语言：</string>
+    <string name="label_contributor">贡献者: </string>
     <string name="label_theme_setting">主题：</string>
+    <string name="report_bug_button_text">报告错误</string>
     <string name="about_us_button_text">关于我们</string>
     <string name="view_license_button_text">查看许可证</string>
     <string name="view_security_guidelines_button_text">查看安全指南</string>

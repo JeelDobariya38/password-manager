@@ -6,7 +6,7 @@
     <!-- Contributor Names -->
     <string name="developer_name">डेवलप किया गया: जीत डोबरिया</string>
     <string name="designer_name">यूआई/यूएक्स डिजाइन: हामदा इस्सास (नेटिव)</string>
-    <string name="code_mantainer">कोड मेंटेनेंस और टेस्टिंग: अहमद डेनियल (कुडानिल)</string>
+    <string name="code_maintainer">कोड मेंटेनेंस और टेस्टिंग: अहमद डेनियल (कुडानिल)</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">बंद करें</string>
@@ -35,7 +35,9 @@
     <string name="setting_button_text">सेटिंग्स</string>
     <string name="toggle_theme_button_text">थीम बदलें</string>
     <string name="label_language_setting">भाषा: </string>
+    <string name="label_contributor">योगदानकर्ता: </string>
     <string name="label_theme_setting">थीम: </string>
+    <string name="report_bug_button_text">रिपोर्ट बग</string>
     <string name="about_us_button_text">हमारे बारे में</string>
     <string name="view_license_button_text">लाइसेंस देखें</string>
     <string name="view_security_guidelines_button_text">सिक्योरिटी गाइडलाइंस</string>

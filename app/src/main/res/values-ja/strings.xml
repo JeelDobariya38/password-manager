@@ -6,7 +6,7 @@
     <!-- Contributor Names -->
     <string name="developer_name">開発者：Jeel Dobariya</string>
     <string name="designer_name">UI/UXデザイン：Hamada Issas（Native）</string>
-    <string name="code_mantainer">コード管理・テスト：Achmad Daniel（Kudanill）</string>
+    <string name="code_maintainer">コード管理・テスト：Achmad Daniel（Kudanill）</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">終了</string>
@@ -35,7 +35,9 @@
     <string name="setting_button_text">設定</string>
     <string name="toggle_theme_button_text">テーマ切替</string>
     <string name="label_language_setting">言語：</string>
+    <string name="label_contributor">寄稿者: </string>
     <string name="label_theme_setting">テーマ：</string>
+    <string name="report_bug_button_text">バグ報告</string>
     <string name="about_us_button_text">アプリについて</string>
     <string name="view_license_button_text">ライセンスを見る</string>
     <string name="view_security_guidelines_button_text">セキュリティガイドライン</string>

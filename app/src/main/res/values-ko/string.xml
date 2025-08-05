@@ -6,7 +6,7 @@
     <!-- Contributor Names -->
     <string name="developer_name">개발자: Jeel Dobariya</string>
     <string name="designer_name">UI/UX 디자인: Hamada Issas (Native)</string>
-    <string name="code_mantainer">코드 유지보수 및 테스트: Achmad Daniel (Kudanill)</string>
+    <string name="code_maintainer">코드 유지보수 및 테스트: Achmad Daniel (Kudanill)</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">종료</string>
@@ -35,7 +35,9 @@
     <string name="setting_button_text">설정</string>
     <string name="toggle_theme_button_text">테마 전환</string>
     <string name="label_language_setting">언어: </string>
+    <string name="label_contributor">기여자: </string>
     <string name="label_theme_setting">테마: </string>
+    <string name="report_bug_button_text">버그 보고</string>
     <string name="about_us_button_text">앱 정보</string>
     <string name="view_license_button_text">라이선스 보기</string>
     <string name="view_security_guidelines_button_text">보안 지침 보기</string>
