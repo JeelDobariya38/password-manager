@@ -77,13 +77,11 @@ We understand some contributors may want to work on both the app and the website
 ### ✅ Correct Workflow:
 
 1. **App Contribution:**
-
    - Branch off from `main` -> `yourname-dev`.
    - Make changes.
    - Open a PR to `main`.
 
 2. **Website Contribution:**
-
    - Branch off from `website-production`-> `yourname-website-development`.
    - Make your changes.
    - Open a PR to `website-production`.

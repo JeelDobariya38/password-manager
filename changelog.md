@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+
+- **Localized App**: add language support for English, Chinese, Hindi, Indonesian, Japanese, Korean, German, Spanish, Vietnamese. Contributed by [@JeelDobariya].
+- **Improved UI/UX**: add confirmation dialogs, support for light & dark theme with additional minor changes. Contributed by [@JeelDobariya].
+
 ### Changed
 
 - **Mirgated Package Name**: Migrate package name from `com.passwordmanager` to `com.jeeldobariya.passcodes`. Contributed by [@JeelDobariya].
@@ -22,5 +27,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Main Page Development**: Developed the main page of the app, including basic UI components and initial layout. Contributed by [@HamadaNative].
 
 ### Notes
-- This is the initial alpha release, focused on setting up the basic structure and key visual elements of the app.
 
+- This is the initial alpha release, focused on setting up the basic structure and key visual elements of the app.

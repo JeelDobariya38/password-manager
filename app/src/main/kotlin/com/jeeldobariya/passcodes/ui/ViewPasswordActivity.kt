@@ -1,8 +1,10 @@
 package com.jeeldobariya.passcodes.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.lifecycleScope
@@ -26,6 +28,10 @@ class ViewPasswordActivity : AppCompatActivity() {
     private lateinit var controller: Controller
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
+        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
+        setTheme(savedThemeStyle)
+        
         super.onCreate(savedInstanceState)
         binding = ActivityViewPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -91,28 +97,43 @@ class ViewPasswordActivity : AppCompatActivity() {
         }
 
         binding.deletePasswordBtn.setOnClickListener {
-            lifecycleScope.launch {
-                try {
-                    val rowsDeleted = controller.deletePassword(passwordEntityId)
-                    withContext(Dispatchers.Main) {
-                        if (rowsDeleted > 0) {
-                            Toast.makeText(this@ViewPasswordActivity, getString(R.string.delete_sucess_msg), Toast.LENGTH_SHORT).show()
-                            finish()
-                        } else {
-                            Toast.makeText(this@ViewPasswordActivity, getString(R.string.something_went_wrong_msg) + ": Password not found for deletion or no rows affected.", Toast.LENGTH_SHORT).show()
-                            finish()
-                        }
+            val confirmDialog = AlertDialog.Builder(this@ViewPasswordActivity)
+                .setTitle(R.string.delete_password_dialog_title)
+                .setMessage(R.string.irreversible_dialog_desc)
+                .setPositiveButton(R.string.confirm_dialog_button_text) { dialog, which -> 
+                    performDeletePasswordAction();
+                }
+                .setNegativeButton(R.string.discard_dialog_button_text) { dialog, which -> 
+                    Toast.makeText(this, getString(R.string.action_discard), Toast.LENGTH_SHORT).show();
+                }
+                .create();
+        
+            confirmDialog.show();
+        }
+    }
+
+    fun performDeletePasswordAction() {
+        lifecycleScope.launch {
+            try {
+                val rowsDeleted = controller.deletePassword(passwordEntityId)
+                withContext(Dispatchers.Main) {
+                    if (rowsDeleted > 0) {
+                        Toast.makeText(this@ViewPasswordActivity, getString(R.string.delete_success_msg), Toast.LENGTH_SHORT).show()
+                        finish()
+                    } else {
+                        Toast.makeText(this@ViewPasswordActivity, getString(R.string.something_went_wrong_msg) + ": Password not found for deletion or no rows affected.", Toast.LENGTH_SHORT).show()
+                        finish()
                     }
-                } catch (e: DatabaseOperationException) {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
-                        e.printStackTrace()
-                    }
-                } catch (e: Exception) {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
-                        e.printStackTrace()
-                    }
+                }
+            } catch (e: DatabaseOperationException) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    e.printStackTrace()
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    e.printStackTrace()
                 }
             }
         }

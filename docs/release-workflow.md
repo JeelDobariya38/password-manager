@@ -13,11 +13,8 @@ In this file, you will find documented process about, how we release, new versio
 5. Draft a new release with all apk files uploaded (signed apks).
 
 6. Discuss on community and check & test release app on various parameters and
+   - We run unit tests.
+   - We run android tests.
+   - And ofcourse, we internally as developers also test it (manually).
 
-    - We run unit tests.
-    
-    - We run android tests.
-    
-    - And ofcourse, we internally as developers also test it (manually).
-
-8. Then release it.
+7. Then release it.

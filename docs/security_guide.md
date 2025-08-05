@@ -12,7 +12,6 @@ We as developers, recommended you to wait, for its stable release. before full t
 While, save your password with passcodes application. you should consider or should have knowledge of following things.
 
 - Project is license under MIT License. which means that application is given `as it is,  without any warranty or guarantee` and is openly/freely available to redistribution or modify. (but you need to have a copy of original license in it)
-  
 - With passcodes, your password are as safe as you write it down on pieces of paper or in a txt file digitally. which means that, `your information is not specially protected.`
 
 ## Recommendation
