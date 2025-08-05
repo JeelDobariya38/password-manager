@@ -4,9 +4,10 @@
     <string name="app_version">v0.1.0-Alpha</string>
 
     <!-- Contributor Names -->
+    <string name="contributor">Contributor:</string>
     <string name="developer_name">Developed by: Dobariya Jeel</string>
     <string name="designer_name">UI/UX Designed by: Hamada Issas (Native)</string>
-    <string name="code_mantainer">Code Maintainer and Tester: Achmad Daniel (Kudanill)</string>
+    <string name="code_maintainer">Code Maintainer and Tester: Achmad Daniel (Kudanill)</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">Quit</string>
@@ -29,9 +30,10 @@
     <string name="export_password_button_text">Export Password</string>
     <string name="password_security_check_button_text">Check Security</string>
     <string name="about_us_button_text">About Us</string>
-    <string name="view_license_button_text">View License</string>
-    <string name="view_security_guidelines_button_text">View Security Guidelines</string>
-    <string name="view_change_log_button_text">View Changelog</string>
+    <string name="report_bug_button_text">Report Bug</string>
+    <string name="view_license_button_text">License</string>
+    <string name="view_security_guidelines_button_text">Security Guidelines</string>
+    <string name="view_change_log_button_text">Changelog</string>
 
     <!-- Headline of Activity -->
     <string name="textview_passwordmanager_headline">Passcodes</string>

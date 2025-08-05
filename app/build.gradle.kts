@@ -122,6 +122,7 @@ android {
 dependencies {
     val kotlinVersion = "1.9.0"
     val materialVersion = "1.12.0"
+    val ossLicenseVersion = "17.2.1"
     val appCompatVersion = "1.7.0"
     val roomVersion = "2.7.2"
     // val jsonVersion = "20250517"
@@ -136,6 +137,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
 
     implementation("com.google.android.material:material:$materialVersion")
+    implementation("com.google.android.gms:play-services-oss-licenses:$ossLicenseVersion")
     implementation("androidx.appcompat:appcompat:$appCompatVersion")
     // viewbinding is often not explicitly needed here if buildFeatures.viewBinding = true
     // implementation("androidx.databinding:viewbinding:7.4.1")
