@@ -3,9 +3,9 @@
 import { redirectToUrl } from "@/libs/utils";
 import { useEffect, useState } from "react";
 
-export const LicenseHtmlURL =
+const LicenseHtmlURL =
   "https://github.com/JeelDobariya38/Passcodes/blob/main/LICENSE.txt";
-export const LicenseAPIURL =
+const LicenseAPIURL =
   "https://raw.githubusercontent.com/JeelDobariya38/Passcodes/main/LICENSE.txt";
 
 export default function page() {
