@@ -185,7 +185,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="16dp"
-                android:text="@string/contributor"
+                android:text="@string/label_contributor"
                 android:textColor="?attr/colorOnSurface"/>
 
             <com.google.android.material.card.MaterialCardView

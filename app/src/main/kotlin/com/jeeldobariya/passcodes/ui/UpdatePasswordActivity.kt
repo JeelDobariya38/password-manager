@@ -1,8 +1,10 @@
 package com.jeeldobariya.passcodes.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.lifecycleScope
@@ -27,6 +29,10 @@ class UpdatePasswordActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUpdatePasswordBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
+        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
+        setTheme(savedThemeStyle)
+        
         super.onCreate(savedInstanceState)
         binding = ActivityUpdatePasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -93,38 +99,53 @@ class UpdatePasswordActivity : AppCompatActivity() {
             val newPassword = binding.inputPassword.text.toString()
             val newNotes = binding.inputNotes.text.toString()
 
-            lifecycleScope.launch {
-                try {
-                    val rowsAffected = controller.updatePassword(passwordEntityId, newDomain, newUsername, newPassword, newNotes)
-                    withContext(Dispatchers.Main) {
-                        if (rowsAffected > 0) {
-                            Toast.makeText(this@UpdatePasswordActivity, getString(R.string.update_sucess_msg), Toast.LENGTH_SHORT).show()
-                            finish()
-                        } else {
-                            Toast.makeText(this@UpdatePasswordActivity, getString(R.string.something_went_wrong_msg) + ": No changes applied or password not found.", Toast.LENGTH_SHORT).show()
-                            finish()
-                        }
-                    }
-                } catch (e: InvalidInputException) {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(this@UpdatePasswordActivity, getString(R.string.warn_fill_form), Toast.LENGTH_SHORT).show()
-                    }
-                } catch (e: PasswordNotFoundException) {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(this@UpdatePasswordActivity, e.message, Toast.LENGTH_LONG).show()
-                        e.printStackTrace()
+            val confirmDialog = AlertDialog.Builder(this@UpdatePasswordActivity)
+                .setTitle(R.string.update_password_dialog_title)
+                .setMessage(R.string.irreversible_dialog_desc)
+                .setPositiveButton(R.string.confirm_dialog_button_text) { dialog, which -> 
+                    performUpdatePasswordAction(newDomain, newUsername, newPassword, newNotes);
+                }
+                .setNegativeButton(R.string.discard_dialog_button_text) { dialog, which -> 
+                    Toast.makeText(this, getString(R.string.action_discard), Toast.LENGTH_SHORT).show();
+                }
+                .create();
+      
+            confirmDialog.show();
+        }
+    }
+
+    fun performUpdatePasswordAction(newDomain: String, newUsername: String, newPassword: String, newNotes: String) {
+        lifecycleScope.launch {
+            try {
+                val rowsAffected = controller.updatePassword(passwordEntityId, newDomain, newUsername, newPassword, newNotes)
+                withContext(Dispatchers.Main) {
+                    if (rowsAffected > 0) {
+                        Toast.makeText(this@UpdatePasswordActivity, getString(R.string.update_success_msg), Toast.LENGTH_SHORT).show()
+                        finish()
+                    } else {
+                        Toast.makeText(this@UpdatePasswordActivity, getString(R.string.something_went_wrong_msg) + ": No changes applied or password not found.", Toast.LENGTH_SHORT).show()
                         finish()
                     }
-                } catch (e: DatabaseOperationException) {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
-                        e.printStackTrace()
-                    }
-                } catch (e: Exception) {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
-                        e.printStackTrace()
-                    }
+                }
+            } catch (e: InvalidInputException) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@UpdatePasswordActivity, getString(R.string.warn_fill_form), Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: PasswordNotFoundException) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@UpdatePasswordActivity, e.message, Toast.LENGTH_LONG).show()
+                    e.printStackTrace()
+                    finish()
+                }
+            } catch (e: DatabaseOperationException) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    e.printStackTrace()
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    e.printStackTrace()
                 }
             }
         }

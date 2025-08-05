@@ -1,5 +1,6 @@
 package com.jeeldobariya.passcodes.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
+        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
+        setTheme(savedThemeStyle)
+        
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -56,6 +61,11 @@ class MainActivity : AppCompatActivity() {
         binding.passwordManagerBtn.setOnClickListener {
             val passwordManagerIntent = Intent(this, PasswordManagerActivity::class.java)
             startActivity(passwordManagerIntent)
+        }
+
+        binding.settingBtn.setOnClickListener {
+            val settingIntent = Intent(this, SettingsActivity::class.java)
+            startActivity(settingIntent)
         }
 
         binding.aboutUsBtn.setOnClickListener {

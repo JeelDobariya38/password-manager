@@ -44,6 +44,13 @@
             android:layout_height="wrap_content"
             android:text="@string/password_manager_button_text"
             android:textSize="14dp" />
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/setting_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_button_text"
+            android:textSize="14dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/about_us_btn"

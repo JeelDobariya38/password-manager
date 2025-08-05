@@ -9,6 +9,7 @@ plugins {
     id("kotlin-kapt")
     // If you use Kotlin Parcelize, uncomment the next line:
     // id("kotlin-parcelize")
+    id("com.google.android.gms.oss-licenses-plugin")
 }
 
 android {

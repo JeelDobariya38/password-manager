@@ -4,23 +4,26 @@
     <string name="app_version">v0.1.0-Alpha</string>
 
     <!-- Contributor Names -->
-    <string name="contributor">Contributor:</string>
     <string name="developer_name">Developed by: Dobariya Jeel</string>
-    <string name="designer_name">UI/UX Designed by: Hamada Issas (Native)</string>
-    <string name="code_maintainer">Code Maintainer and Tester: Achmad Daniel (Kudanill)</string>
+    <string name="designer_name">UI/UX Design by: Hamada Issas (Native)</string>
+    <string name="code_maintainer">Code Maintenance &amp; Testing: Achmad Daniel (Kudanill)</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">Quit</string>
 
     <!-- About Us Activity -->
-    <string name="textview_app_description">An open source password managing solution that take down you headace of remembering password!!</string>
-    <string name="textview_app_warning">App is currently under active development and it is made for fun and educational purpose and it might not be safe to save your auth info with it. For more info, view security guidelines!!!</string>
+    <string name="textview_app_description">An open-source password manager that helps eliminate the headache of remembering your passwords.</string>
+    <string name="textview_app_warning">This app is currently under active development and is intended for educational and experimental purposes. It may not be secure for storing sensitive authentication information. Please review the security guidelines for more details.</string>
 
     <!-- Button, Textview general in all Activity -->
     <string name="hint_domain">Domain</string>
+    <string name="helper_text_domain_field">The name of the website or domain associated</string>
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="hint_notes">Notes</string>
+    <string name="placeholder_domain_field">e.g. Google, Instagram, WhatsApp, etc.</string>
+    <string name="placeholder_username_field">e.g. Liam15, Noha, Olivia, Ava_25, etc.</string>
+    <string name="placeholder_password_field">e.g. 12345, abc123xyz, qwerty, etc.</string>
     <string name="password_manager_button_text">Password Manager</string>
     <string name="save_password_button_text">Save Password</string>
     <string name="load_password_button_text">Load Password</string>
@@ -29,42 +32,82 @@
     <string name="import_password_button_text">Import Password</string>
     <string name="export_password_button_text">Export Password</string>
     <string name="password_security_check_button_text">Check Security</string>
+    <string name="setting_button_text">Settings</string>
+    <string name="toggle_theme_button_text">Toggle Theme</string>
+    <string name="label_language_setting">Language: </string>
+    <string name="label_theme_setting">Themes: </string>
+    <string name="label_contributor">Contributor: </string>
     <string name="about_us_button_text">About Us</string>
     <string name="report_bug_button_text">Report Bug</string>
-    <string name="view_license_button_text">License</string>
+    <string name="view_license_button_text">View License</string>
     <string name="view_security_guidelines_button_text">Security Guidelines</string>
-    <string name="view_change_log_button_text">Changelog</string>
+    <string name="view_change_log_button_text">View Changelog</string>
 
     <!-- Headline of Activity -->
-    <string name="textview_passwordmanager_headline">Passcodes</string>
+    <string name="textview_passwordmanager_headline">Password Manager</string>
     <string name="textview_loadpassword_headline">Load Password</string>
     <string name="textview_savepassword_headline">Save Password</string>
     <string name="textview_viewpassword_headline">View Password</string>
     <string name="textview_updatepassword_headline">Update Password</string>
+    <string name="textview_settings_headline">Settings</string>
     <string name="textview_aboutus_headline">About Us</string>
 
     <!-- Prefix & Suffix -->
-    <string name="id_prefix">Id: </string>
+    <string name="id_prefix">ID: </string>
     <string name="domain_prefix">Domain: </string>
     <string name="username_prefix">Username: </string>
     <string name="password_prefix">Password: </string>
     <string name="notes_prefix">Notes: </string>
-    <string name="createdat_prefix">CreatedAt: </string>
-    <string name="updatedat_prefix">UpdatedAt: </string>
+    <string name="createdat_prefix">Created At: </string>
+    <string name="updatedat_prefix">Updated At: </string>
 
     <!-- Permission -->
-    <string name="permission_granted">Permission Granted</string>
-    <string name="permission_denied">Permission Denied</string>
+    <string name="permission_granted">Permission granted</string>
+    <string name="permission_denied">Permission denied</string>
 
     <!-- Toast Message -->
-    <string name="future_feat_clause">Feature is under development!!</string>
-    <string name="not_found_error_message">404: Not Found!!</string>
-    <string name="warn_fill_form">Warning: please fill the form first!!</string>
-    <string name="fail_msg">Failed: please try again!!</string>
-    <string name="sucess_clause">Success: </string>
-    <string name="update_sucess_msg">Updated Successfully!!</string>
-    <string name="delete_sucess_msg">Deleted Successfully!!</string>
+    <string name="restart_app_require">Restart App Require.</string>
+    <string name="future_feat_clause">This feature is currently under development.</string>
+    <string name="not_found_error_message">404: Not found.</string>
+    <string name="warn_fill_form">Warning: Please fill out the form first.</string>
+    <string name="fail_msg">Failed: Please try again.</string>
+    <string name="success_clause">Success:</string>
+    <string name="update_success_msg">Updated successfully.</string>
+    <string name="delete_success_msg">Deleted successfully.</string>
+    <string name="something_went_wrong_msg">Something went wrong.</string>
+    <string name="action_discard">Action discarded.</string>
     <string name="error_invalid_password_id">Something Went Wrong: Invalid ID!!</string>
-    <string name="something_went_wrong_msg">Something Went Wrong!!</string>
 
+    <!-- Alert Dialog Message -->
+    <string name="update_password_dialog_title">Update password?</string>
+    <string name="delete_password_dialog_title">Delete password?</string>
+    <string name="irreversible_dialog_desc">This action cannot be undone.</string>
+    <string name="confirm_dialog_button_text">Confirm</string>
+    <string name="discard_dialog_button_text">Discard</string>
+
+    <string-array name="lang_options">
+        <item>English (en-us)</item>
+        <item>Hindi (hi)</item>
+        <item>Indonesian (in)</item>
+        <item>Korean (ko)</item>
+        <item>Korean Romanized (kr)</item>
+        <item>Japanese (ja)</item>
+        <item>German (de)</item>
+        <item>Spanish (es)</item>
+        <item>Chinese (zh)</item>
+        <item>Vietnamese (vi)</item>
+    </string-array>
+
+    <string-array name="lang_locale_tags">
+        <item>en</item>
+        <item>hi</item>
+        <item>id</item>
+        <item>ko</item>
+        <item>kr</item>
+        <item>ja</item>
+        <item>de</item>
+        <item>es</item>
+        <item>zh</item>
+        <item>vi</item>
+    </string-array>
 </resources>

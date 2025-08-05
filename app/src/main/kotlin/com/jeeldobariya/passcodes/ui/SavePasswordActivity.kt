@@ -1,5 +1,6 @@
 package com.jeeldobariya.passcodes.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,10 @@ class SavePasswordActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySavePasswordBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
+        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
+        setTheme(savedThemeStyle)
+        
         super.onCreate(savedInstanceState)
         binding = ActivitySavePasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -35,35 +40,63 @@ class SavePasswordActivity : AppCompatActivity() {
 
     // Added all the onclick event listeners
     private fun addOnClickListenerOnButton() {
+        binding.inputDomain.setOnFocusChangeListener { v, hasFocus -> 
+            if (hasFocus) {
+                binding.inputDomain.setHint(getString(R.string.placeholder_domain_field));
+            } else {
+                binding.inputDomain.setHint("");
+            }
+        };
+
+        binding.inputUsername.setOnFocusChangeListener { v, hasFocus -> 
+            if (hasFocus) {
+                binding.inputUsername.setHint(getString(R.string.placeholder_username_field));
+            } else {
+                binding.inputUsername.setHint("");
+            }
+        };
+
+        binding.inputPassword.setOnFocusChangeListener { v, hasFocus -> 
+            if (hasFocus) {
+                binding.inputPassword.setHint(getString(R.string.placeholder_password_field));
+            } else {
+                binding.inputPassword.setHint("");
+            }
+        };
+
         binding.savePasswordBtn.setOnClickListener {
             val domain = binding.inputDomain.text.toString()
             val username = binding.inputUsername.text.toString()
             val password = binding.inputPassword.text.toString()
             val notes = binding.inputNotes.text.toString()
 
-            // Launch a coroutine to call the suspend function
-            lifecycleScope.launch {
-                try {
-                    val rowId = controller.savePasswordEntity(domain, username, password, notes)
-                    // Switch back to Main dispatcher for UI updates
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(this@SavePasswordActivity, "${getString(R.string.sucess_clause)} $rowId", Toast.LENGTH_SHORT).show()
-                        finish()
-                    }
-                } catch (e: InvalidInputException) {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(this@SavePasswordActivity, getString(R.string.warn_fill_form), Toast.LENGTH_SHORT).show()
-                    }
-                } catch (e: DatabaseOperationException) {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(this@SavePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
-                        e.printStackTrace()
-                    }
-                } catch (e: Exception) {
-                    withContext(Dispatchers.Main) {
-                        Toast.makeText(this@SavePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
-                        e.printStackTrace()
-                    }
+            performSavePasswordAction(domain, username, password, notes)
+        }
+    }
+
+    fun performSavePasswordAction(domain: String, username: String, password: String, notes: String) {
+        // Launch a coroutine to call the suspend function
+        lifecycleScope.launch {
+            try {
+                val rowId = controller.savePasswordEntity(domain, username, password, notes)
+                // Switch back to Main dispatcher for UI updates
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@SavePasswordActivity, "${getString(R.string.success_clause)} $rowId", Toast.LENGTH_SHORT).show()
+                    finish()
+                }
+            } catch (e: InvalidInputException) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@SavePasswordActivity, getString(R.string.warn_fill_form), Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: DatabaseOperationException) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@SavePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    e.printStackTrace()
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@SavePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    e.printStackTrace()
                 }
             }
         }

@@ -1,6 +1,6 @@
 # Contributing Guidelines
 
-*Pull requests, bug reports, and all other forms of contribution are welcomed and highly encouraged!* :octocat:
+_Pull requests, bug reports, and all other forms of contribution are welcomed and highly encouraged!_ :octocat:
 
 ### Contents
 
@@ -22,7 +22,7 @@ See our [Community](https://t.me/passwordmanagercommunity) on telegram we appric
 
 ## :inbox_tray: Opening an Issue
 
-Before [creating an issue](https://github.com/JeelDobariya38/password-manager/issues/new), check if you are using the latest version of the project. If you are not up-to-date, see if updating fixes your issue first.
+Before [creating an issue](https://github.com/JeelDobariya38/Passcodes/issues/new), check if you are using the latest version of the project. If you are not up-to-date, see if updating fixes your issue first.
 
 ### :lock: Reporting Security Issues
 
@@ -36,7 +36,7 @@ In short, since you are most likely a developer, **provide a ticket that you wou
 
 - **Review the Documentation and Support Guide** before opening a new issue.
 
-- **Do not open a duplicate issue!** Search through existing issues to see if your issue has previously been reported. If your issue exists, comment with any additional information you have. You may simply note "I have this problem too", which helps prioritize the most common problems and requests. 
+- **Do not open a duplicate issue!** Search through existing issues to see if your issue has previously been reported. If your issue exists, comment with any additional information you have. You may simply note "I have this problem too", which helps prioritize the most common problems and requests.
 
 - **Prefer using [reactions](https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/)**, not comments, if you simply want to "+1" an existing issue.
 
@@ -60,9 +60,9 @@ We **love** pull requests! Before [forking the repo](https://help.github.com/en/
 
 For most contributions, after your first pull request is accepted and merged, you will be [invited to the project](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository) and given **push access**. :tada:
 
-*Note: All contributions will be licensed under the project's license.*
+_Note: All contributions will be licensed under the project's license._
 
-- **Smaller is better.** Submit **one** pull request per bug fix or feature. A pull request should contain isolated changes pertaining to a single bug fix or feature implementation. **Do not** refactor or reformat code that is unrelated to your change. It is better to **submit many small pull requests** rather than a single large one. Enormous pull requests will take enormous amounts of time to review, or may be rejected altogether. 
+- **Smaller is better.** Submit **one** pull request per bug fix or feature. A pull request should contain isolated changes pertaining to a single bug fix or feature implementation. **Do not** refactor or reformat code that is unrelated to your change. It is better to **submit many small pull requests** rather than a single large one. Enormous pull requests will take enormous amounts of time to review, or may be rejected altogether.
 
 - **Coordinate bigger changes.** For large and non-trivial changes, open an issue to discuss a strategy with the maintainers. Otherwise, you risk doing a lot of work for nothing!
 
@@ -80,7 +80,7 @@ For most contributions, after your first pull request is accepted and merged, yo
 
 - **[Resolve any merge conflicts](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-on-github)** that occur.
 
-- **Promptly address any CI failures**. If your pull request fails to build or pass tests, please push another commit to fix it. 
+- **Promptly address any CI failures**. If your pull request fails to build or pass tests, please push another commit to fix it.
 
 - When writing comments, use properly constructed sentences, including punctuation.
 
@@ -98,32 +98,33 @@ Please [write a great commit message](https://gist.github.com/joshbuchea/6f47e86
 
 - **Always do your best.** No one writes bugs on purpose. Do your best, and learn from your mistakes.
 
-- Kindly note any violations to the guidelines specified in this document. 
+- Kindly note any violations to the guidelines specified in this document.
 
 ## :medal_sports: Certificate of Origin
 
-*Developer's Certificate of Origin 1.1*
+_Developer's Certificate of Origin 1.1_
 
 By making a contribution to this project, I certify that:
+
 > I understand and agree that this project and the contribution are public and that a record of the contribution (including all personal information I submit with it, including my sign-off) is maintained indefinitely and may be redistributed consistent with this project or the open source license(s) involved.
 
 ## [No Brown M&M's](https://en.wikipedia.org/wiki/Van_Halen#Contract_riders)
 
-If you are reading this, bravo dear user and (hopefully) contributor for making it this far! You are awesome. :100: 
+If you are reading this, bravo dear user and (hopefully) contributor for making it this far! You are awesome. :100:
 
 To confirm that you have read this guide and are following it as best as possible, **include this emoji at the top** of your issue or pull request: :black_heart: `:black_heart:`
 
 ## :pray: Credits
 
-Written by [@jessesquires](https://github.com/jessesquires). 
+Written by [@jessesquires](https://github.com/jessesquires).
 
 **Please feel free to adopt this guide in your own projects. Fork it wholesale or remix it for your needs.**
 
-*Many of the ideas and prose for the statements in this document were based on or inspired by work from the following communities:*
+_Many of the ideas and prose for the statements in this document were based on or inspired by work from the following communities:_
 
 - [Alamofire](https://github.com/Alamofire/Alamofire/blob/master/CONTRIBUTING.md)
 - [CocoaPods](https://github.com/CocoaPods/CocoaPods/blob/master/CONTRIBUTING.md)
 - [Docker](https://github.com/moby/moby/blob/master/CONTRIBUTING.md)
 - [Linux](https://elinux.org/Developer_Certificate_Of_Origin)
 
-*We commend them for their efforts to facilitate collaboration in their projects.*
+_We commend them for their efforts to facilitate collaboration in their projects._

@@ -2,7 +2,7 @@ package com.jeeldobariya.passcodes.utils
 
 class ExampleTestableCode {
     fun checkStrength(password: String): Int {
-        if (password == null || password.isEmpty()) {
+        if (password.isEmpty()) {
             return -1;
         }
 
