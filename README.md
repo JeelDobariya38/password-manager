@@ -6,6 +6,10 @@ A android app that take down the headace of remember passwords. It is open sourc
 > It is just a open source project. An is current under active development.
 > Please, consider using it for fun and not for real password managment. (untill, we offically release a stable release)
 
+## ScreenShots
+
+![d7e0fb12-17fe-4e48-ae86-2629172ac0ca](https://github.com/user-attachments/assets/011afd00-6102-4962-969a-0d36599743bc)![5f7050d9-ccda-4b79-9b7f-36fb018f4118](https://github.com/user-attachments/assets/27f1aac0-0391-496d-aafa-67fe2d124bbc)![994be12d-1b9d-480b-8c2b-0771145b6a0b](https://github.com/user-attachments/assets/5782ec10-3cad-49c8-929b-9570901a8a53)![9f736037-99c0-4deb-a53b-afddb8617fff](https://github.com/user-attachments/assets/0c84450e-608d-4845-8771-2adba562e48d)
+
 ## Compatibility
 
 **Compile Sdk**: `Android 16 (API level 36)`
