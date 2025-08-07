@@ -1,24 +1,33 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
+import type { Metadata } from "next"
+import { Inter } from 'next/font/google'
+import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Passcodes Website",
-  description:
-    "An open source password manager app that give control of your passwords",
-};
+  title: "Passcodes - Open Source Password Manager",
+  description: "An Android app that takes down the headache of remembering passwords. Open source solution for secure local password storage.",
+    generator: 'v0.dev'
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        <div className="p-4">{children}</div>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
