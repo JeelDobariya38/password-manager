@@ -8,7 +8,10 @@ A android app that take down the headace of remember passwords. It is open sourc
 
 ## ScreenShots
 
-![d7e0fb12-17fe-4e48-ae86-2629172ac0ca](https://github.com/user-attachments/assets/011afd00-6102-4962-969a-0d36599743bc)![5f7050d9-ccda-4b79-9b7f-36fb018f4118](https://github.com/user-attachments/assets/27f1aac0-0391-496d-aafa-67fe2d124bbc)![994be12d-1b9d-480b-8c2b-0771145b6a0b](https://github.com/user-attachments/assets/5782ec10-3cad-49c8-929b-9570901a8a53)![9f736037-99c0-4deb-a53b-afddb8617fff](https://github.com/user-attachments/assets/0c84450e-608d-4845-8771-2adba562e48d)
+<img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/b6407ba3-be7f-4a5b-9e17-8e201ecf2ff3" />
+<img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/930c18aa-7e38-4a56-a8e4-f5f1d2ee6e38" />
+<img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/135f29cb-97ed-4cc3-acd6-4a606e9d8844" />
+<img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/0c84450e-608d-4845-8771-2adba562e48d" />
 
 ## Compatibility
 
