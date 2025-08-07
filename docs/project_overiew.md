@@ -60,3 +60,31 @@ Which clearly mean that app might have a ten different reduant, in software chec
 Also, performace is not even a thing, we consider opimising for, while making passcodes app. and it's done for better or for worse. as passcodes app is not use daily. and also we belive, that security concerns assoicated wih password management app is more important then any performance issue ever arise can, and sure in morden work we have high speed computer and three different reduant check won;t hurt. but an app crash or data corruption might, As the data app deals with is highly sensitive, consider end user might end up save all there account form different platform at one place.... And sure a user can wait for 2 or 3 minutes if app is not responding and doing some redundant checks just ensure data is valid...
 
 But that sure doesn't mean we will not focus on performance... if it became a serious issue we will try our best to solve the performance issues... but it just that, we might end up wait until something goes seriouly go wrong with performance!! (e.g. app take time, to process a simple single store password action.. for straight 1 minute...)
+
+## Motivation
+
+We have pretty good and decent motivation that drive us forward, there are many previous project that back passcodes app... that were made piously by me(jeeldobariya38) and fellow contributor...
+
+### Kupass
+
+Github REPO: [Kupass](https://github.com/kudanilll/kupass).
+
+#### Overview
+
+It a simple much more intuative password management soultion.. develop by fellow contributor, danil (@kudanill). It is one of recommended solution if you want to have easy to use app.. and don't need complexcity and customization that passcodes offer you. as it simple ant intiuative.. it very much more secure as it all in your local storage...
+
+#### Why Quit?
+
+Danil, the official owner of project, has stop provide further update as his poritiy change... there was no real desgin issue with project... it just that project was more made for eduaitional purpose and prototying, hobby kind of purpose.
+
+### Smart Manager
+
+Github REPO: [Smart Manager](https://github.com/JeelDobariya38/Smart-Manager)
+
+#### Overview
+
+It was my first project in world of password manager and also in world of software engineering... it mostly a project, where i have made a lots of design mistakes... and try to make the code scalable and extensible and try implementing various stuff, that just don't fit together.. it perfect example, of use everything someone say is a community standard, without ever questioning why am i using it or wether is it worth adding to project.... it like if someone said use dependency injection make code better... then let just use it in our project....
+
+#### Why Quit?
+
+The project suffer from major design issue that, I realized very later, in project timeline. it happens to reach to the point where the code was litearlly just mess and it just don;t have core features... so i thing to dump the app, and idea as whole... never really thaought that i might come back to same idea a year after and use it to build a app in android...
