@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools">
 
-	<uses-sdk
-		android:minSdkVersion="26"
-		android:targetSdkVersion="34" />
-
 	<!-- Storage access permission
 	<uses-permission
 		android:name="android.permission.WRITE_EXTERNAL_STORAGE"
@@ -24,7 +20,8 @@
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
 		android:theme="@style/PasscodesTheme.Default"
-		android:localeConfig="@xml/locales_config">
+		android:localeConfig="@xml/locales_config"
+        tools:targetApi="33">
 		<activity
 			android:name=".ui.MainActivity"
 			android:exported="true">
