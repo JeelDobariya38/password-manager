@@ -3,7 +3,7 @@
 > [!warning]
 > The script `installondevice.bat` itself is deprecated by developers,
 > But, it still may works!! We will provide a new solution, more likely a `powershell` more robust script soon.
-> Which directly integrate with morden windows 11. and has more feature.. though this script will remain as it.
+> Which directly integrate with modern windows 11. and has more features.. though this script will remains as it.
 
 Here, you will get the details about how to build the app (in recommended way).
 
@@ -52,7 +52,7 @@ OS:            Windows 11 10.0 amd64
 
 ## Preparing For A Build.
 
-Here, are the things you required, first you will need a `keystore.properties` & `passcodes.jks` in project root. So, that the script can be able to sign the apk file when generated. second thing you might need is a mobile device with usb debugging enable, connect to your machine, because script install the app dirctly using `adb`.
+Here, are the things you required, first you will need a `keystore.properties` & `passcodes.jks` in project root. So, that the script can be able to sign the apk file when generated. Second thing you might need is a mobile device with USB debugging enable, connected to your machine, because script install the app directly using `adb`.
 
 ### Template For keystore.properties
 
@@ -68,18 +68,19 @@ storePassword=
 ## Deprecated: Finial Run Script For Building
 
 > [!warning]
-> the script `installondevice.bat` itself is deprecated by developers,
-> but it still may works!!
+> The script `installondevice.bat` itself is deprecated by developers,
+> But it still may works!!
 
-you can build the app for production and dev version.
+You can build the app for production and dev version.
 
-- Development Builds
+-   Development Builds
 
-  ```bat
-  installondevice.bat
-  ```
+    ```powershell
+    ./installondevice.bat
+    ```
 
-- Production Builds
-  ```
-  installondevice.bat prod
-  ```
+-   Production Builds
+
+    ```powershell
+    ./installondevice.bat prod
+    ```
