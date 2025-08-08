@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { Shield, Code, Menu, X } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { ThemeToggle } from './theme-toggle'
-import { useState } from 'react'
+import Link from "next/link";
+import { Shield, Code, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "./theme-toggle";
+import { useState } from "react";
 
 export function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="border-b bg-background/80 backdrop-blur-sm sticky top-0 z-50">
@@ -16,16 +16,25 @@ export function Navigation() {
           <Shield className="h-8 w-8 text-primary" />
           <h1 className="text-2xl font-bold">Passcodes</h1>
         </Link>
-        
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link
+            href="/"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
             Home
           </Link>
-          <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link
+            href="/about"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
             About
           </Link>
-          <Link href="/github" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link
+            href="/github"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
             GitHub
           </Link>
           <ThemeToggle />
@@ -45,7 +54,11 @@ export function Navigation() {
             size="sm"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            {isMenuOpen ? (
+              <X className="h-4 w-4" />
+            ) : (
+              <Menu className="h-4 w-4" />
+            )}
           </Button>
         </div>
       </div>
@@ -54,22 +67,22 @@ export function Navigation() {
       {isMenuOpen && (
         <div className="md:hidden border-t bg-background">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
-            <Link 
-              href="/about" 
+            <Link
+              href="/about"
               className="text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
-            <Link 
-              href="/github" 
+            <Link
+              href="/github"
               className="text-muted-foreground hover:text-foreground transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -85,5 +98,5 @@ export function Navigation() {
         </div>
       )}
     </header>
-  )
+  );
 }
