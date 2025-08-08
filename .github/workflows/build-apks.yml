@@ -1,27 +1,24 @@
 # This workflow automates the build process and artifact uploading for an Android app.
-# It can be triggered manually, on a push to the 'main' branch, or when a new release is published.
 
 name: Android CI/CD
 
-# Define the events that trigger this workflow.
 on:
   # This allows you to manually trigger the workflow from the GitHub UI.
   workflow_dispatch:
 
-  # This triggers the workflow on a push to the 'main' branch.
   push:
-    branches: [main]
+    branches:
+      - main
 
-  pull-requests:
-    branches: [main]
+  pull_request:
+    branches:
+      - main
 
-  # This triggers the workflow when a release is published.
   release:
-    types: [published]
+    types:
+      - published
 
-# Define the jobs that will run as part of this workflow.
 jobs:
-  # The 'build_and_upload_apk' job handles the core logic.
   build_and_upload_apk:
     runs-on: ubuntu-latest
 
@@ -52,14 +49,11 @@ jobs:
             BUILD_VARIANT="release"
             ./gradlew assembleRelease
             APK_PATH=app/build/outputs/apk/release/app-universal-release-unsigned.apk
-          elif [[ "${{ github.event_name }}" == "push" ]]; then
+          else
             echo "Triggered by push to 'main' branch. Building staging variant."
             BUILD_VARIANT="staging"
             ./gradlew assembleStaging
             APK_PATH=app/build/outputs/apk/staging/app-universal-staging-unsigned.apk
-          else
-            echo "Unknown trigger. Exiting."
-            exit 1
           fi
 
           # Set the output variables for the next steps.
