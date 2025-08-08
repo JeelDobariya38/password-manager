@@ -1,5 +1,6 @@
 # Passcodes
 
+[![Android CI/CD](https://github.com/JeelDobariya38/Passcodes/actions/workflows/build-apks.yml/badge.svg)](https://github.com/JeelDobariya38/Passcodes/actions/workflows/build-apks.yml)
 A android app that take down the headache of remembering passwords. It is open source solutions that help you in keeping your passwords safe and secure, in your own local storage without ever needing to push them to cloud.
 
 > [!WARNING]
