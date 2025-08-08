@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
-    tools:context=".ui.AboutUsActivity">
+    tools:context=".ui.activities.AboutUsActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/topAppBar"
@@ -72,7 +72,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:padding="16dp"
-                        android:gravity="center">
+                        android:gravity="center"
+                        tools:ignore="UseCompoundDrawables">
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
@@ -102,7 +103,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:padding="16dp"
-                        android:gravity="center">
+                        android:gravity="center"
+                        tools:ignore="UseCompoundDrawables">
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
@@ -162,7 +164,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:padding="16dp"
-                        android:gravity="center">
+                        android:gravity="center"
+                        tools:ignore="UseCompoundDrawables">
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
@@ -197,19 +200,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/developer_name"
-                    android:padding="16dp"
-                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="16dp"
-                android:layout_marginBottom="8dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/designer_name"
                     android:padding="16dp"
                     android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
             </com.google.android.material.card.MaterialCardView>

@@ -1,14 +1,14 @@
-package com.jeeldobariya.passcodes.ui
+package com.jeeldobariya.passcodes.ui.activities
 
 import android.content.Context
 import android.os.Bundle
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
-import android.view.LayoutInflater
 
 import com.jeeldobariya.passcodes.R
 import com.jeeldobariya.passcodes.databinding.ActivityMainBinding
+
 // import com.jeeldobariya.passcodes.utils.Permissions
 
 class MainActivity : AppCompatActivity() {

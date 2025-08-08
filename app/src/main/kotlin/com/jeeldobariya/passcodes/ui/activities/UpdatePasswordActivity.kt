@@ -1,7 +1,6 @@
-package com.jeeldobariya.passcodes.ui
+package com.jeeldobariya.passcodes.ui.activities
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import android.app.AlertDialog

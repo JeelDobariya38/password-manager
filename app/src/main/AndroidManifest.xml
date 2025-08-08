@@ -23,7 +23,7 @@
 		android:localeConfig="@xml/locales_config"
         tools:targetApi="33">
 		<activity
-			android:name=".ui.MainActivity"
+			android:name=".ui.activities.MainActivity"
 			android:exported="true">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
@@ -31,13 +31,13 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-        <activity android:name=".ui.PasswordManagerActivity" />
-    	<activity android:name=".ui.SavePasswordActivity" />
-    	<activity android:name=".ui.LoadPasswordActivity" />
-    	<activity android:name=".ui.ViewPasswordActivity" />
-    	<activity android:name=".ui.UpdatePasswordActivity" />
-		<activity android:name=".ui.SettingsActivity" />
-		<activity android:name=".ui.AboutUsActivity" />
+        <activity android:name=".ui.activities.PasswordManagerActivity" />
+    	<activity android:name=".ui.activities.SavePasswordActivity" />
+    	<activity android:name=".ui.activities.LoadPasswordActivity" />
+    	<activity android:name=".ui.activities.ViewPasswordActivity" />
+    	<activity android:name=".ui.activities.UpdatePasswordActivity" />
+		<activity android:name=".ui.activities.SettingsActivity" />
+		<activity android:name=".ui.activities.AboutUsActivity" />
 
 		<service
 			android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"

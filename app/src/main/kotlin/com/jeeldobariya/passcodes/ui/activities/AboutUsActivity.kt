@@ -1,4 +1,4 @@
-package com.jeeldobariya.passcodes.ui
+package com.jeeldobariya.passcodes.ui.activities
 
 import com.jeeldobariya.passcodes.databinding.ActivityAboutUsBinding
 import com.jeeldobariya.passcodes.utils.Constant

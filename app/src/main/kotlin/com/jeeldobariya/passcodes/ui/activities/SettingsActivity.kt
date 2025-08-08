@@ -1,4 +1,4 @@
-package com.jeeldobariya.passcodes.ui
+package com.jeeldobariya.passcodes.ui.activities
 
 import android.content.Context
 import android.os.Bundle
@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.LocaleListCompat
 import android.view.View
 import androidx.core.view.WindowCompat
-import android.view.LayoutInflater
 
 import com.jeeldobariya.passcodes.R
 import com.jeeldobariya.passcodes.databinding.ActivitySettingsBinding
@@ -33,8 +32,8 @@ class SettingsActivity : AppCompatActivity() {
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
+        val sharedPrefs = getSharedPreferences(THEME_PREFS_NAME, Context.MODE_PRIVATE)
+        val savedThemeStyle = sharedPrefs.getInt(THEME_KEY, R.style.PasscodesTheme_Default)
         setTheme(savedThemeStyle)
 
         super.onCreate(savedInstanceState)
@@ -81,8 +80,8 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         binding.toggleThemeBtn.setOnClickListener {
-            val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-            val currentThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
+            val sharedPrefs = getSharedPreferences(THEME_PREFS_NAME, Context.MODE_PRIVATE)
+            val currentThemeStyle = sharedPrefs.getInt(THEME_KEY, R.style.PasscodesTheme_Default)
 
             val currentIndex = THEMES.indexOf(currentThemeStyle)
             val nextIndex = (currentIndex + 1) % THEMES.size

@@ -1,4 +1,4 @@
-package com.jeeldobariya.passcodes.ui
+package com.jeeldobariya.passcodes.ui.activities
 
 import android.content.Context
 import android.content.Intent
@@ -12,7 +12,6 @@ import com.jeeldobariya.passcodes.database.Password
 import com.jeeldobariya.passcodes.databinding.ActivityLoadPasswordBinding
 import com.jeeldobariya.passcodes.ui.adapter.PasswordAdapter
 import com.jeeldobariya.passcodes.utils.Controller
-import com.jeeldobariya.passcodes.utils.DatabaseOperationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
