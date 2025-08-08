@@ -89,4 +89,4 @@ By, contributing to project you accept the [CONTRIBUTING.md](CONTRIBUTING.md) & 
 
 ## Licence
 
-Passcodes Project is licence under [MIT](LICENSE.txt) Licence. Downloading the app would mean, you are okay and have accepted the license.
+Passcodes Project is license under [MIT](LICENSE.txt) License. Downloading the app would mean, you are okay and have accepted the license.
