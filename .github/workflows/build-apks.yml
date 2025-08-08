@@ -1,0 +1,72 @@
+# This workflow automates the build process and artifact uploading for an Android app.
+# It can be triggered manually, on a push to the 'main' branch, or when a new release is published.
+
+name: Android CI/CD
+
+# Define the events that trigger this workflow.
+on:
+  # This allows you to manually trigger the workflow from the GitHub UI.
+  workflow_dispatch:
+
+  # This triggers the workflow on a push to the 'main' branch.
+  push:
+    branches: [main]
+
+  # This triggers the workflow when a release is published.
+  release:
+    types: [published]
+
+# Define the jobs that will run as part of this workflow.
+jobs:
+  # The 'build_and_upload_apk' job handles the core logic.
+  build_and_upload_apk:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v3
+
+      # Step 4: Build the Android app based on the trigger.
+      # This step uses an 'if-elif' conditional to determine the correct build variant.
+      - name: Build APK based on trigger
+        id: build_apk
+        run: |
+          BUILD_VARIANT=""
+          APK_PATH=""
+
+          # Determine the build variant based on the triggering event.
+          if [[ "${{ github.event_name }}" == "release" || "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "Triggered by release or manual dispatch. Building release variant."
+            BUILD_VARIANT="release"
+            ./gradlew assembleRelease
+            APK_PATH=app/build/outputs/apk/release/app-universal-release-unsigned.apk
+          elif [[ "${{ github.event_name }}" == "push" ]]; then
+            echo "Triggered by push to 'main' branch. Building staging variant."
+            BUILD_VARIANT="staging"
+            ./gradlew assembleStaging
+            APK_PATH=app/build/outputs/apk/staging/app-universal-staging-unsigned.apk
+          else
+            echo "Unknown trigger. Exiting."
+            exit 1
+          fi
+
+          # Set the output variables for the next steps.
+          echo "build_variant=${BUILD_VARIANT}" >> $GITHUB_OUTPUT
+          echo "apk_path=${APK_PATH}" >> $GITHUB_OUTPUT
+          echo "Found APK at: ${{ steps.build_apk.outputs.apk_path }}"
+
+      - name: Upload APK as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.build_apk.outputs.build_variant }}-apk
+          path: ${{ steps.build_apk.outputs.apk_path }}
+          if-no-files-found: error
