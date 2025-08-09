@@ -20,8 +20,18 @@ import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Navigation } from "@/components/navigation";
 import Link from "next/link";
+import { getLatestDownloadableUniversialApkUrl } from "@/lib/githubApiUtils";
 
-export default function HomePage() {
+export default async function HomePage() {
+  let downloadableApkUrl = "/";
+  let githubRepoUrl = "https://github.com/JeelDobariya38/Passcodes";
+
+  try {
+    downloadableApkUrl = await getLatestDownloadableUniversialApkUrl();
+  } catch (e) {
+    downloadableApkUrl = "https://github.com/JeelDobariya38/Passcodes/releases";
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       <Navigation />
@@ -55,12 +65,14 @@ export default function HomePage() {
           </Alert>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="gap-2">
-              <Download className="h-5 w-5" />
-              Download APK
+            <Button size="lg" className="gap-2" asChild>
+              <Link href={downloadableApkUrl}>
+                <Download className="h-5 w-5" />
+                Download APK
+              </Link>
             </Button>
             <Button variant="outline" size="lg" className="gap-2" asChild>
-              <Link href="/github">
+              <Link href={githubRepoUrl}>
                 <Code className="h-5 w-5" />
                 View Source Code
               </Link>
