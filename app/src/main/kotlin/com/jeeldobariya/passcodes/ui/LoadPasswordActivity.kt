@@ -86,7 +86,7 @@ class LoadPasswordActivity : AppCompatActivity() {
             val selectedPassword = passwordAdapter.getItem(position) as Password
 
             // Do something with the selectedPassword
-            val intent = Intent(this, ViewPasswordActivity::class)
+            val intent = Intent(this, ViewPasswordActivity::class.java)
             intent.putExtra("id", selectedPassword.id) // Pass the ID from the Password entity
             startActivity(intent)
         }

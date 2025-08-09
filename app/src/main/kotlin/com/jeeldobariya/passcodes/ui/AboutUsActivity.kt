@@ -42,7 +42,7 @@ class AboutUsActivity : AppCompatActivity() {
     }
 
     binding.cardLicense.setOnClickListener {
-      startActivity(Intent(this, OssLicensesMenuActivity::class))
+      startActivity(Intent(this, OssLicensesMenuActivity::class.java))
     }
 
     binding.cardReportBug.setOnClickListener {
