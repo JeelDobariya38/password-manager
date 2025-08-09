@@ -32,7 +32,7 @@ class PasswordDatabaseTest {
         // interfere with the actual app database or other tests.
         db = Room.inMemoryDatabaseBuilder(
             context,
-            MasterDatabase::class.java
+            MasterDatabase::class
         ).allowMainThreadQueries() // Allow queries on the main thread for simplicity in tests
             .build()
         passwordsDao = db.passwordsDao // Get the DAO instance

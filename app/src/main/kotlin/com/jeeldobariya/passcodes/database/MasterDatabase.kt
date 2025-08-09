@@ -22,7 +22,7 @@ abstract class MasterDatabase : RoomDatabase() {
                 
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    MasterDatabase::class.java,
+                    MasterDatabase::class,
                     "master"
                 )
                 .build()

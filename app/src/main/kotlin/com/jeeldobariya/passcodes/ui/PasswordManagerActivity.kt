@@ -34,12 +34,12 @@ class PasswordManagerActivity : AppCompatActivity() {
     // Added all the onclick event listeners
     private fun addOnClickListenerOnButton(binding: ActivityPasswordManagerBinding) {
         binding.savePasswordBtn.setOnClickListener {
-            val savePasswordIntent = Intent(this, SavePasswordActivity::class.java)
+            val savePasswordIntent = Intent(this, SavePasswordActivity::class)
             startActivity(savePasswordIntent)
         }
 
         binding.loadPasswordBtn.setOnClickListener {
-            val loadPasswordIntent = Intent(this, LoadPasswordActivity::class.java)
+            val loadPasswordIntent = Intent(this, LoadPasswordActivity::class)
             startActivity(loadPasswordIntent)
         }
 

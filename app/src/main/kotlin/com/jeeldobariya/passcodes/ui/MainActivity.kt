@@ -59,17 +59,17 @@ class MainActivity : AppCompatActivity() {
     // Added all the onclick event listeners
     private fun addOnClickListenerOnButton() {
         binding.passwordManagerBtn.setOnClickListener {
-            val passwordManagerIntent = Intent(this, PasswordManagerActivity::class.java)
+            val passwordManagerIntent = Intent(this, PasswordManagerActivity::class)
             startActivity(passwordManagerIntent)
         }
 
         binding.settingBtn.setOnClickListener {
-            val settingIntent = Intent(this, SettingsActivity::class.java)
+            val settingIntent = Intent(this, SettingsActivity::class)
             startActivity(settingIntent)
         }
 
         binding.aboutUsBtn.setOnClickListener {
-            val aboutUsIntent = Intent(this, AboutUsActivity::class.java)
+            val aboutUsIntent = Intent(this, AboutUsActivity::class)
             startActivity(aboutUsIntent)
         }
 

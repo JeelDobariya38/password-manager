@@ -91,9 +91,9 @@ class ViewPasswordActivity : AppCompatActivity() {
     // Added all the onclick event listeners
     private fun addOnClickListenerOnButton() {
         binding.updatePasswordBtn.setOnClickListener {
-            val viewPasswordIntent = Intent(this, UpdatePasswordActivity::class.java)
-            viewPasswordIntent.putExtra("id", passwordEntityId)
-            startActivity(viewPasswordIntent)
+            val updatePasswordIntent = Intent(this, UpdatePasswordActivity::class)
+            updatePasswordIntent.putExtra("id", passwordEntityId)
+            startActivity(updatePasswordIntent)
         }
 
         binding.deletePasswordBtn.setOnClickListener {
