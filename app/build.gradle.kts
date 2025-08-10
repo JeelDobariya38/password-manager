@@ -121,8 +121,10 @@ android {
 }
 
 dependencies {
+    implementation("androidx.navigation:navigation-fragment-ktx:2.9.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.9.3")
     val kotlinVersion = "1.9.0"
-    val materialVersion = "1.12.0"
+    val materialVersion = "1.14.0-alpha03"
     val ossLicenseVersion = "17.2.1"
     val appCompatVersion = "1.7.0"
     val roomVersion = "2.7.2"

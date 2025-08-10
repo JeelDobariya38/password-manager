@@ -4,9 +4,8 @@
     <string name="app_version">v0.1.0-Alpha</string>
 
     <!-- Contributor Names -->
-    <string name="developer_name">개발자: Jeel Dobariya</string>
-    <string name="designer_name">UI/UX 디자인: Hamada Issas (Native)</string>
-    <string name="code_maintainer">코드 유지보수 및 테스트: Achmad Daniel (Kudanill)</string>
+    <string name="developer_name">Jeel Dobariya</string>
+    <string name="code_maintainer">Achmad Daniel</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">종료</string>
@@ -34,11 +33,15 @@
     <string name="password_security_check_button_text">보안 확인</string>
     <string name="setting_button_text">설정</string>
     <string name="toggle_theme_button_text">테마 전환</string>
-    <string name="label_language_setting">언어: </string>
-    <string name="label_contributor">기여자: </string>
-    <string name="label_theme_setting">테마: </string>
+    <string name="label_language_setting">언어</string>
+    <string name="label_contributor">기여자</string>
+    <string name="label_appearance">모습</string>
+    <string name="label_other">다른</string>
+    <string name="label_theme_setting">테마</string>
+    <string name="label_palette_setting">그림 물감</string>
     <string name="report_bug_button_text">버그 보고</string>
     <string name="about_us_button_text">앱 정보</string>
+    <string name="profile_button_text">프로필 개발자</string>
     <string name="view_license_button_text">라이선스 보기</string>
     <string name="view_security_guidelines_button_text">보안 지침 보기</string>
     <string name="view_change_log_button_text">변경 기록</string>
@@ -78,11 +81,19 @@
     <string name="action_discard">작업이 취소되었습니다.</string>
     <string name="error_invalid_password_id">문제 발생: 잘못된 ID입니다!!</string>
 
-    <!-- Dialog -->
+    <!-- Alert Dialog Message -->
     <string name="update_password_dialog_title">비밀번호를 수정할까요?</string>
     <string name="delete_password_dialog_title">비밀번호를 삭제할까요?</string>
     <string name="irreversible_dialog_desc">이 작업은 되돌릴 수 없습니다.</string>
     <string name="confirm_dialog_button_text">확인</string>
     <string name="discard_dialog_button_text">취소</string>
+
+    <!-- Bottom Navigation -->
+    <string name="bottom_nav_home">Home</string>
+    <string name="bottom_nav_security">Security</string>
+
+    <!-- Coming Soon -->
+    <string name="coming_soon">Feature not available now</string>
+    <string name="coming_soon_desc">Stay tuned for the next update</string>
 
 </resources>

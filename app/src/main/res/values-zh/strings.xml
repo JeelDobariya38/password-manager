@@ -4,9 +4,8 @@
     <string name="app_version">v0.1.0-Alpha</string>
 
     <!-- Contributor Names -->
-    <string name="developer_name">开发者：Jeel Dobariya</string>
-    <string name="designer_name">UI/UX 设计：Hamada Issas（Native）</string>
-    <string name="code_maintainer">代码维护与测试：Achmad Daniel（Kudanill）</string>
+    <string name="developer_name">Jeel Dobariya</string>
+    <string name="code_maintainer">Achmad Daniel</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">退出</string>
@@ -34,11 +33,15 @@
     <string name="password_security_check_button_text">安全检查</string>
     <string name="setting_button_text">设置</string>
     <string name="toggle_theme_button_text">切换主题</string>
-    <string name="label_language_setting">语言：</string>
-    <string name="label_contributor">贡献者: </string>
-    <string name="label_theme_setting">主题：</string>
+    <string name="label_language_setting">语言</string>
+    <string name="label_contributor">贡献者</string>
+    <string name="label_appearance">外观</string>
+    <string name="label_other">其他</string>
+    <string name="label_theme_setting">主题</string>
+    <string name="label_palette_setting">颜色</string>
     <string name="report_bug_button_text">报告错误</string>
     <string name="about_us_button_text">关于我们</string>
+    <string name="profile_button_text">个人资料开发者</string>
     <string name="view_license_button_text">查看许可证</string>
     <string name="view_security_guidelines_button_text">查看安全指南</string>
     <string name="view_change_log_button_text">查看更新记录</string>
@@ -78,11 +81,19 @@
     <string name="action_discard">操作已取消。</string>
     <string name="error_invalid_password_id">错误：无效的 ID！！</string>
 
-    <!-- Dialog -->
+    <!-- Alert Dialog Message -->
     <string name="update_password_dialog_title">要更新密码吗？</string>
     <string name="delete_password_dialog_title">要删除密码吗？</string>
     <string name="irreversible_dialog_desc">此操作无法撤销。</string>
     <string name="confirm_dialog_button_text">确认</string>
     <string name="discard_dialog_button_text">取消</string>
+
+    <!-- Bottom Navigation -->
+    <string name="bottom_nav_home">Home</string>
+    <string name="bottom_nav_security">Security</string>
+
+    <!-- Coming Soon -->
+    <string name="coming_soon">Feature not available now</string>
+    <string name="coming_soon_desc">Stay tuned for the next update</string>
 
 </resources>

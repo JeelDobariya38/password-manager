@@ -3,9 +3,8 @@
     <string name="app_version">v0.1.0-Alpha</string>
 
     <!-- Contributor Names -->
-    <string name="developer_name">Desarrollado por: Dobariya Jeel</string>
-    <string name="designer_name">Diseño UI/UX por: Hamada Issas (Native)</string>
-    <string name="code_maintainer">Mantenimiento de código y pruebas: Achmad Daniel (Kudanill)</string>
+    <string name="developer_name">Jeel Dobariya</string>
+    <string name="code_maintainer">Achmad Daniel</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">Salir</string>
@@ -33,11 +32,15 @@
     <string name="password_security_check_button_text">Revisar Seguridad</string>
     <string name="setting_button_text">Ajustes</string>
     <string name="toggle_theme_button_text">Cambiar Tema</string>
-    <string name="label_language_setting">Idioma: </string>
-    <string name="label_contributor">Colaborador: </string>
-    <string name="label_theme_setting">Temas: </string>
+    <string name="label_language_setting">Idioma</string>
+    <string name="label_contributor">Colaborador</string>
+    <string name="label_appearance">Apariencia</string>
+    <string name="label_other">Otros</string>
+    <string name="label_theme_setting">Temas</string>
+    <string name="label_palette_setting">Colores</string>
     <string name="report_bug_button_text">Informar un error</string>
     <string name="about_us_button_text">Sobre Nosotros</string>
+    <string name="profile_button_text">Desarrollador de perfiles</string>
     <string name="view_license_button_text">Ver Licencia</string>
     <string name="view_security_guidelines_button_text">Ver Seguridad</string>
     <string name="view_change_log_button_text">Ver Cambios</string>
@@ -83,4 +86,13 @@
     <string name="irreversible_dialog_desc">Esta acción no se puede deshacer.</string>
     <string name="confirm_dialog_button_text">Confirmar</string>
     <string name="discard_dialog_button_text">Cancelar</string>
+
+    <!-- Bottom Navigation -->
+    <string name="bottom_nav_home">Home</string>
+    <string name="bottom_nav_security">Security</string>
+
+    <!-- Coming Soon -->
+    <string name="coming_soon">Feature not available now</string>
+    <string name="coming_soon_desc">Stay tuned for the next update</string>
+
 </resources>

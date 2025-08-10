@@ -1,10 +1,12 @@
 package com.jeeldobariya.passcodes.ui.activities
 
-import android.content.Context
 import android.os.Bundle
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 
 import com.jeeldobariya.passcodes.R
 import com.jeeldobariya.passcodes.databinding.ActivityMainBinding
@@ -16,18 +18,15 @@ class MainActivity : AppCompatActivity() {
     // private lateinit var permissionsHandle: Permissions
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
-        setTheme(savedThemeStyle)
-        
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Add event onclick listener
-        addOnClickListenerOnButton()
+        setupNavController()
+        setupBottomNavigation()
 
         // Make window fullscreen
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -56,25 +55,32 @@ class MainActivity : AppCompatActivity() {
         }
     */
 
-    // Added all the onclick event listeners
-    private fun addOnClickListenerOnButton() {
-        binding.passwordManagerBtn.setOnClickListener {
-            val passwordManagerIntent = Intent(this, PasswordManagerActivity::class.java)
-            startActivity(passwordManagerIntent)
-        }
+    private fun setupNavController() {
+        // Get NavHostFragment
+        val navHostFragment = supportFragmentManager.findFragmentById(
+            R.id.fragment_container
+        ) as NavHostFragment
 
-        binding.settingBtn.setOnClickListener {
-            val settingIntent = Intent(this, SettingsActivity::class.java)
-            startActivity(settingIntent)
-        }
+        // Get the NavController from NavHostFragment
+        navController = navHostFragment.navController
 
-        binding.aboutUsBtn.setOnClickListener {
-            val aboutUsIntent = Intent(this, AboutUsActivity::class.java)
-            startActivity(aboutUsIntent)
-        }
+        // Connect BottomNavigationView with NavController
+        binding.bottomNavigation.setupWithNavController(navController)
+    }
 
-        binding.quitBtn.setOnClickListener {
-            finishAndRemoveTask()
+    private fun setupBottomNavigation() {
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when(item.itemId) {
+                R.id.nav_item_home -> {
+                    navController.navigate(R.id.home_fragment)
+                    true
+                }
+                R.id.nav_item_security -> {
+                    navController.navigate(R.id.security_fragment)
+                    true
+                }
+                else -> false
+            }
         }
     }
 }

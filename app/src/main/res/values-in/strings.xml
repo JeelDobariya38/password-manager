@@ -4,9 +4,8 @@
     <string name="app_version">v0.1.0-Alpha</string>
 
     <!-- Contributor Names -->
-    <string name="developer_name">Dikembangkan oleh: Jeel Dobariya</string>
-    <string name="designer_name">Desain UI/UX oleh: Hamada Issas (Native)</string>
-    <string name="code_maintainer">Tester: Achmad Daniel (Kudanill)</string>
+    <string name="developer_name">Jeel Dobariya</string>
+    <string name="code_maintainer">Achmad Daniel</string>
 
     <!-- Main Activity -->
     <string name="quit_button_text">Keluar</string>
@@ -34,11 +33,15 @@
     <string name="password_security_check_button_text">Cek Keamanan</string>
     <string name="setting_button_text">Pengaturan</string>
     <string name="toggle_theme_button_text">Ganti Tema</string>
-    <string name="label_language_setting">Bahasa: </string>
-    <string name="label_contributor">Kontributor: </string>
-    <string name="label_theme_setting">Tema: </string>
+    <string name="label_language_setting">Bahasa</string>
+    <string name="label_contributor">Kontributor</string>
+    <string name="label_appearance">Tampilan</string>
+    <string name="label_other">Lainnya</string>
+    <string name="label_theme_setting">Tema</string>
+    <string name="label_palette_setting">Warna Aplikasi</string>
     <string name="report_bug_button_text">Laporkan Bug</string>
     <string name="about_us_button_text">Tentang Kami</string>
+    <string name="profile_button_text">Profil Pengembang</string>
     <string name="view_license_button_text">Lihat Lisensi</string>
     <string name="view_security_guidelines_button_text">Panduan Keamanan</string>
     <string name="view_change_log_button_text">Lihat Changelog</string>
@@ -78,11 +81,19 @@
     <string name="action_discard">Aksi dibatalkan.</string>
     <string name="error_invalid_password_id">Terjadi kesalahan: ID tidak valid!!</string>
 
-    <!-- Dialog -->
+    <!-- Alert Dialog Message -->
     <string name="update_password_dialog_title">Perbarui kata sandi?</string>
     <string name="delete_password_dialog_title">Hapus kata sandi?</string>
     <string name="irreversible_dialog_desc">Tindakan ini tidak dapat dibatalkan.</string>
     <string name="confirm_dialog_button_text">Konfirmasi</string>
     <string name="discard_dialog_button_text">Batal</string>
+
+    <!-- Bottom Navigation -->
+    <string name="bottom_nav_home">Beranda</string>
+    <string name="bottom_nav_security">Keamanan</string>
+
+    <!-- Coming Soon -->
+    <string name="coming_soon">Feature not available now</string>
+    <string name="coming_soon_desc">Stay tuned for the next update</string>
 
 </resources>
