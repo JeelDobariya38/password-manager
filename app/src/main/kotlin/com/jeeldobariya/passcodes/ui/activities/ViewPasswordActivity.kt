@@ -110,7 +110,7 @@ class ViewPasswordActivity : AppCompatActivity() {
         }
     }
 
-    fun performDeletePasswordAction() {
+    private fun performDeletePasswordAction() {
         lifecycleScope.launch {
             try {
                 val rowsDeleted = controller.deletePassword(passwordEntityId)
