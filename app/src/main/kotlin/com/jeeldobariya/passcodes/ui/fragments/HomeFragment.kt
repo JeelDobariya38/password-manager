@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
 import com.jeeldobariya.passcodes.databinding.FragmentHomeBinding
+import com.jeeldobariya.passcodes.ui.activities.SavePasswordActivity
 import com.jeeldobariya.passcodes.ui.activities.SettingsActivity
 
 class HomeFragment : Fragment() {
@@ -30,6 +31,10 @@ class HomeFragment : Fragment() {
         // Set up settings button click listener
         binding.settingsButton.setOnClickListener {
             startActivity(Intent(requireContext(), SettingsActivity::class.java))
+        }
+
+        binding.createPasswordBtn.setOnClickListener {
+            startActivity(Intent(requireContext(), SavePasswordActivity::class.java))
         }
     }
 
