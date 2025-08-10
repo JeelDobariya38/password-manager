@@ -53,7 +53,9 @@
     <string name="text_profile_developer">開発者プロフィール</string>
     <string name="text_report_bug">バグを報告</string>
     <string name="text_view_license">ライセンスを表示</string>
-    <string name="text_security_guidelines">セキュリティガイドライン</string>
+    <string name="text_view_third_party_license">サードパーティライセンスを見る</string>
+    <string name="text_view_website">ウェブサイトを見る</string>
+    <string name="text_view_security_guidelines">セキュリティガイドライン</string>
     <string name="text_view_changelog">変更履歴を表示</string>
     <string name="text_toggle_theme">テーマを切り替える</string>
     <string name="text_quit">終了</string>

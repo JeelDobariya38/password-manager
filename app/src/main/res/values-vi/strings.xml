@@ -53,7 +53,9 @@
     <string name="text_profile_developer">Hồ sơ nhà phát triển</string>
     <string name="text_report_bug">Báo cáo lỗi</string>
     <string name="text_view_license">Xem giấy phép</string>
-    <string name="text_security_guidelines">Nguyên tắc bảo mật</string>
+    <string name="text_view_third_party_license">Xem Giấy phép Bên thứ ba</string>
+    <string name="text_view_website">Xem Trang web</string>
+    <string name="text_view_security_guidelines">Hướng dẫn Bảo mật</string>
     <string name="text_view_changelog">Xem nhật ký thay đổi</string>
     <string name="text_toggle_theme">Chuyển đổi chủ đề</string>
     <string name="text_quit">Thoát</string>

@@ -53,7 +53,9 @@
     <string name="text_profile_developer">개발자 프로필</string>
     <string name="text_report_bug">버그 신고</string>
     <string name="text_view_license">라이선스 보기</string>
-    <string name="text_security_guidelines">보안 지침</string>
+    <string name="text_view_third_party_license">서드파티 라이선스 보기</string>
+    <string name="text_view_website">웹사이트 보기</string>
+    <string name="text_view_security_guidelines">보안 지침</string>
     <string name="text_view_changelog">변경 로그 보기</string>
     <string name="text_toggle_theme">테마 전환</string>
     <string name="text_quit">종료</string>

@@ -46,11 +46,19 @@ class AboutUsActivity : AppCompatActivity() {
         }
 
         binding.cardLicense.setOnClickListener {
-            startActivity(Intent(this, OssLicensesMenuActivity::class.java))
+            openBrowser(Constant.LICENSE_URL)
         }
 
         binding.cardReportBug.setOnClickListener {
             openBrowser(Constant.REPORT_BUG_URL)
+        }
+
+        binding.cardWebsite.setOnClickListener {
+            openBrowser(Constant.WEBSITE_URL)
+        }
+
+        binding.cardThirdPartyLicense.setOnClickListener {
+            startActivity(Intent(this, OssLicensesMenuActivity::class.java))
         }
     }
 }

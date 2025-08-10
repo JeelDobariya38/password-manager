@@ -51,9 +51,9 @@
     <string name="text_settings">设置</string>
     <string name="text_about_us">关于我们</string>
     <string name="text_profile_developer">开发者资料</string>
-    <string name="text_report_bug">报告错误</string>
-    <string name="text_view_license">查看许可证</string>
-    <string name="text_security_guidelines">安全指南</string>
+    <string name="text_view_third_party_license">查看第三方许可证</string>
+    <string name="text_view_website">查看网站</string>
+    <string name="text_view_security_guidelines">安全指南</string>
     <string name="text_view_changelog">查看变更日志</string>
     <string name="text_toggle_theme">切换主题</string>
     <string name="text_quit">退出</string>

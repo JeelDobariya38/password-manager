@@ -53,7 +53,9 @@
     <string name="text_profile_developer">डेवलपर प्रोफाइल</string>
     <string name="text_report_bug">बग की रिपोर्ट करें</string>
     <string name="text_view_license">लाइसेंस देखें</string>
-    <string name="text_security_guidelines">सुरक्षा दिशानिर्देश</string>
+    <string name="text_view_third_party_license">थर्ड पार्टी लाइसेंस देखें</string>
+    <string name="text_view_website">वेबसाइट देखें</string>
+    <string name="text_view_security_guidelines">सुरक्षा दिशानिर्देश</string>
     <string name="text_view_changelog">चेंजलॉग देखें</string>
     <string name="text_toggle_theme">थीम टॉगल करें</string>
     <string name="text_quit">छोड़ें</string>
