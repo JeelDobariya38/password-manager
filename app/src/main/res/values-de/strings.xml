@@ -1,99 +1,115 @@
 <resources>
-
     <string name="app_name">Passcodes</string>
     <string name="app_version">v0.1.0-Alpha</string>
 
-    <!-- Contributor Names -->
-    <string name="developer_name">Jeel Dobariya</string>
+    <string name="app_description">Ein Open-Source-Passwort-Manager, der Ihnen hilft, sich das Kopfzerbrechen beim Merken Ihrer Passwörter zu ersparen.</string>
+    <string name="app_warning">Diese App befindet sich derzeit in aktiver Entwicklung und ist für Bildungs- und Versuchszwecke gedacht. Sie ist möglicherweise nicht sicher für die Speicherung sensibler Authentifizierungsinformationen. Bitte lesen Sie die Sicherheitsrichtlinien für weitere Details.</string>
+
+    <!-- Developer -->
+    <string name="developer_name">Dobariya Jeel</string>
     <string name="code_maintainer">Achmad Daniel</string>
 
-    <!-- Main Activity -->
-    <string name="quit_button_text">Beenden</string>
+    <!-- Headline -->
+    <string name="headline_password_manager">Passwort-Manager</string>
+    <string name="headline_load_password">Passwort laden</string>
+    <string name="headline_save_password">Passwort speichern</string>
+    <string name="headline_view_password">Passwort anzeigen</string>
+    <string name="headline_update_password">Passwort aktualisieren</string>
+    <string name="headline_settings">Einstellungen</string>
+    <string name="headline_about_us">Über uns</string>
 
-    <!-- About Us Activity -->
-    <string name="textview_app_description">Ein Open-Source-Passwort-Manager, der dir hilft, Passwörter nicht mehr selbst merken zu müssen.</string>
-    <string name="textview_app_warning">Diese App befindet sich noch in der Entwicklung und ist nur für Lern- und Testzwecke gedacht. Sie ist möglicherweise nicht sicher für sensible Daten. Bitte lies die Sicherheitshinweise.</string>
+    <!-- Label -->
+    <string name="label_domain">Domäne</string>
+    <string name="label_username">Benutzername</string>
+    <string name="label_password">Passwort</string>
+    <string name="label_notes">Notizen</string>
+    <string name="label_language_setting">Sprache</string>
+    <string name="label_theme_setting">Thema</string>
+    <string name="label_palette_setting">Farbpalette</string>
+    <string name="label_appearance">Erscheinungsbild</string>
+    <string name="label_other">Andere</string>
+    <string name="label_contributor">Mitwirkender</string>
 
-    <!-- General UI Elements -->
-    <string name="hint_domain">Domain</string>
-    <string name="helper_text_domain_field">Name der zugehörigen Webseite oder Domain</string>
+    <!-- Form -->
+    <string name="hint_domain">Domäne</string>
     <string name="hint_username">Benutzername</string>
     <string name="hint_password">Passwort</string>
     <string name="hint_notes">Notizen</string>
-    <string name="placeholder_domain_field">z. B. Google, Instagram, WhatsApp usw.</string>
-    <string name="placeholder_username_field">z. B. Liam15, Noha, Olivia, Ava_25 usw.</string>
-    <string name="placeholder_password_field">z. B. 12345, abc123xyz, qwerty usw.</string>
-    <string name="password_manager_button_text">Passwort-Manager</string>
-    <string name="save_password_button_text">Speichern</string>
-    <string name="load_password_button_text">Laden</string>
-    <string name="update_password_button_text">Aktualisieren</string>
-    <string name="delete_password_button_text">Löschen</string>
-    <string name="import_password_button_text">Importieren</string>
-    <string name="export_password_button_text">Exportieren</string>
-    <string name="password_security_check_button_text">Sicherheitsprüfung</string>
-    <string name="setting_button_text">Einstellungen</string>
-    <string name="toggle_theme_button_text">Design wechseln</string>
-    <string name="label_language_setting">Sprache</string>
-    <string name="label_contributor">Mitwirkender</string>
-    <string name="label_appearance">Aussehen</string>
-    <string name="label_other">Sonstiges</string>
-    <string name="label_theme_setting">Design</string>
-    <string name="label_palette_setting">Farben</string>
-    <string name="report_bug_button_text">Fehler melden</string>
-    <string name="about_us_button_text">Über uns</string>
-    <string name="profile_button_text">Profilentwickler</string>
-    <string name="view_license_button_text">Lizenz anzeigen</string>
-    <string name="view_security_guidelines_button_text">Sicherheitsrichtlinien</string>
-    <string name="view_change_log_button_text">Änderungsprotokoll</string>
+    <string name="placeholder_domain_field">z.B. Google, Instagram, WhatsApp, etc.</string>
+    <string name="placeholder_username_field">z.B. Liam15, Noha, Olivia, Ava_25, etc.</string>
+    <string name="placeholder_password_field">z.B. 12345, abc123xyz, qwerty, etc.</string>
 
-    <!-- Headline -->
-    <string name="textview_passwordmanager_headline">Passwort-Manager</string>
-    <string name="textview_loadpassword_headline">Passwort laden</string>
-    <string name="textview_savepassword_headline">Passwort speichern</string>
-    <string name="textview_viewpassword_headline">Passwort anzeigen</string>
-    <string name="textview_updatepassword_headline">Passwort aktualisieren</string>
-    <string name="textview_settings_headline">Einstellungen</string>
-    <string name="textview_aboutus_headline">Über uns</string>
+    <!-- General -->
+    <string name="text_password_manager">Passwort-Manager</string>
+    <string name="text_save_password">Passwort speichern</string>
+    <string name="text_load_password">Passwort laden</string>
+    <string name="text_update_password">Passwort aktualisieren</string>
+    <string name="text_delete_password">Passwort löschen</string>
+    <string name="text_import_password">Passwort importieren</string>
+    <string name="text_export_password">Passwort exportieren</string>
+    <string name="text_security_check">Sicherheit prüfen</string>
+    <string name="text_settings">Einstellungen</string>
+    <string name="text_about_us">Über uns</string>
+    <string name="text_profile_developer">Entwicklerprofil</string>
+    <string name="text_report_bug">Fehler melden</string>
+    <string name="text_view_license">Lizenz anzeigen</string>
+    <string name="text_security_guidelines">Sicherheitsrichtlinien</string>
+    <string name="text_view_changelog">Änderungsprotokoll anzeigen</string>
+    <string name="text_toggle_theme">Thema umschalten</string>
+    <string name="text_quit">Beenden</string>
+    <string name="text_apply">Anwenden</string>
+    <string name="text_cancel">Abbrechen</string>
 
-    <!-- Prefix & Suffix -->
-    <string name="id_prefix">ID: </string>
-    <string name="domain_prefix">Domain: </string>
-    <string name="username_prefix">Benutzername: </string>
-    <string name="password_prefix">Passwort: </string>
-    <string name="notes_prefix">Notizen: </string>
-    <string name="createdat_prefix">Erstellt am: </string>
-    <string name="updatedat_prefix">Aktualisiert am: </string>
-
-    <!-- Permission -->
-    <string name="permission_granted">Zugriff erlaubt</string>
-    <string name="permission_denied">Zugriff verweigert</string>
-
-    <!-- Toast Message -->
-    <string name="restart_app_require">App muss neu gestartet werden.</string>
-    <string name="future_feat_clause">Diese Funktion ist in Arbeit.</string>
-    <string name="not_found_error_message">404: Nicht gefunden</string>
-    <string name="warn_fill_form">Bitte zuerst das Formular ausfüllen.</string>
-    <string name="fail_msg">Fehler: Bitte versuche es erneut.</string>
-    <string name="success_clause">Erfolg:</string>
-    <string name="update_success_msg">Erfolgreich aktualisiert</string>
-    <string name="delete_success_msg">Erfolgreich gelöscht</string>
-    <string name="something_went_wrong_msg">Etwas ist schiefgelaufen</string>
-    <string name="action_discard">Aktion abgebrochen</string>
-    <string name="error_invalid_password_id">Fehler: Ungültige ID!!</string>
-
-    <!-- Alert Dialog Message -->
-    <string name="update_password_dialog_title">Passwort aktualisieren?</string>
-    <string name="delete_password_dialog_title">Passwort löschen?</string>
-    <string name="irreversible_dialog_desc">Dieser Vorgang kann nicht rückgängig gemacht werden.</string>
-    <string name="confirm_dialog_button_text">Bestätigen</string>
-    <string name="discard_dialog_button_text">Abbrechen</string>
+    <!-- Prefix -->
+    <string name="prefix_id">ID: </string>
+    <string name="prefix_domain">Domäne: </string>
+    <string name="prefix_username">Benutzername: </string>
+    <string name="prefix_password">Passwort: </string>
+    <string name="prefix_notes">Notizen: </string>
+    <string name="prefix_created_at">Erstellt am: </string>
+    <string name="prefix_updated_at">Aktualisiert am: </string>
 
     <!-- Bottom Navigation -->
-    <string name="bottom_nav_home">Home</string>
-    <string name="bottom_nav_security">Security</string>
+    <string name="bottom_nav_home">Start</string>
+    <string name="bottom_nav_security">Sicherheit</string>
 
-    <!-- Coming Soon -->
-    <string name="coming_soon">Feature not available now</string>
-    <string name="coming_soon_desc">Stay tuned for the next update</string>
+    <!-- Toast -->
+    <string name="toast_restart_app_require">App-Neustart erforderlich.</string>
+    <string name="toast_future_feat_clause">Diese Funktion befindet sich derzeit in der Entwicklung.</string>
+    <string name="toast_not_found_error">404: Nicht gefunden.</string>
+    <string name="toast_warn_fill_form">Warnung: Bitte füllen Sie zuerst das Formular aus.</string>
+    <string name="toast_fail_msg">Fehlgeschlagen: Bitte versuchen Sie es erneut.</string>
+    <string name="toast_success_clause">Erfolg:</string>
+    <string name="toast_update_success">Erfolgreich aktualisiert.</string>
+    <string name="toast_delete_success">Erfolgreich gelöscht.</string>
+    <string name="toast_something_went_wrong">Etwas ist schief gelaufen.</string>
+    <string name="toast_action_discarded">Aktion verworfen.</string>
+    <string name="toast_error_invalid_password_id">Etwas ist schief gelaufen: Ungültige ID!!</string>
+
+    <!-- Dialog -->
+    <string name="dialog_update_password_title">Passwort aktualisieren?</string>
+    <string name="dialog_delete_password_title">Passwort löschen?</string>
+    <string name="dialog_irreversible_desc">Diese Aktion kann nicht rückgängig gemacht werden.</string>
+    <string name="dialog_confirm_button">Bestätigen</string>
+    <string name="dialog_cancel_button">Abbrechen</string>
+    <string name="dialog_apply_button">Anwenden</string>
+    <string name="dialog_language_title">Sprache auswählen</string>
+    <string name="dialog_theme_title">Thema auswählen</string>
+    <string name="dialog_palette_title">Farbpalette auswählen</string>
+
+    <!-- Theme -->
+    <string name="theme_light">Hell</string>
+    <string name="theme_dark">Dunkel</string>
+    <string name="theme_system">Systemstandard</string>
+
+    <!-- Palette -->
+    <string name="palette_default">Standard</string>
+
+    <string name="coming_soon">Funktion nicht verfügbar</string>
+    <string name="coming_soon_desc">Bleiben Sie dran für das nächste Update</string>
+
+    <!-- Permission -->
+    <string name="permission_granted">Berechtigung erteilt</string>
+    <string name="permission_denied">Berechtigung verweigert</string>
 
 </resources>

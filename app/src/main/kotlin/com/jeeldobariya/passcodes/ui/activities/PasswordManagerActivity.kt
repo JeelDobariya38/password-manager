@@ -15,10 +15,6 @@ class PasswordManagerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPasswordManagerBinding // Use lateinit for binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme)
-        setTheme(savedThemeStyle)
-
         super.onCreate(savedInstanceState)
         binding = ActivityPasswordManagerBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -43,15 +39,15 @@ class PasswordManagerActivity : AppCompatActivity() {
         }
 
         binding.securityCheckBtn.setOnClickListener {
-            Toast.makeText(this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_future_feat_clause), Toast.LENGTH_SHORT).show()
         }
 
         binding.importPasswordBtn.setOnClickListener {
-            Toast.makeText(this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_future_feat_clause), Toast.LENGTH_SHORT).show()
         }
 
         binding.exportPasswordBtn.setOnClickListener {
-            Toast.makeText(this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_future_feat_clause), Toast.LENGTH_SHORT).show()
         }
     }
 }

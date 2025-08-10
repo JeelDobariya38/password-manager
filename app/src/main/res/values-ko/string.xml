@@ -1,99 +1,115 @@
 <resources>
-
     <string name="app_name">패스코드</string>
-    <string name="app_version">v0.1.0-Alpha</string>
+    <string name="app_version">v0.1.0-알파</string>
 
-    <!-- Contributor Names -->
-    <string name="developer_name">Jeel Dobariya</string>
+    <string name="app_description">비밀번호를 기억하는 번거로움을 없애주는 오픈 소스 비밀번호 관리자입니다.</string>
+    <string name="app_warning">이 앱은 현재 활발하게 개발 중이며 교육 및 실험 목적으로 제작되었습니다. 민감한 인증 정보를 저장하는 데 안전하지 않을 수 있습니다. 자세한 내용은 보안 지침을 검토하십시오.</string>
+
+    <!-- Developer -->
+    <string name="developer_name">Dobariya Jeel</string>
     <string name="code_maintainer">Achmad Daniel</string>
 
-    <!-- Main Activity -->
-    <string name="quit_button_text">종료</string>
+    <!-- Headline -->
+    <string name="headline_password_manager">비밀번호 관리자</string>
+    <string name="headline_load_password">비밀번호 불러오기</string>
+    <string name="headline_save_password">비밀번호 저장</string>
+    <string name="headline_view_password">비밀번호 보기</string>
+    <string name="headline_update_password">비밀번호 업데이트</string>
+    <string name="headline_settings">설정</string>
+    <string name="headline_about_us">정보</string>
 
-    <!-- About Us Activity -->
-    <string name="textview_app_description">비밀번호 기억하기 귀찮을 때 사용하는 오픈소스 비밀번호 관리자입니다.</string>
-    <string name="textview_app_warning">이 앱은 현재 개발 중이며 교육 및 실험용으로만 사용해야 합니다. 중요한 정보를 저장하기엔 아직 안전하지 않을 수 있습니다. 보안 가이드를 꼭 참고해주세요.</string>
+    <!-- Label -->
+    <string name="label_domain">도메인</string>
+    <string name="label_username">사용자 이름</string>
+    <string name="label_password">비밀번호</string>
+    <string name="label_notes">메모</string>
+    <string name="label_language_setting">언어</string>
+    <string name="label_theme_setting">테마</string>
+    <string name="label_palette_setting">색상 팔레트</string>
+    <string name="label_appearance">모양</string>
+    <string name="label_other">기타</string>
+    <string name="label_contributor">기여자</string>
 
-    <!-- General UI Elements -->
+    <!-- Form -->
     <string name="hint_domain">도메인</string>
-    <string name="helper_text_domain_field">사이트 또는 도메인 이름</string>
     <string name="hint_username">사용자 이름</string>
     <string name="hint_password">비밀번호</string>
     <string name="hint_notes">메모</string>
     <string name="placeholder_domain_field">예: Google, Instagram, WhatsApp 등</string>
     <string name="placeholder_username_field">예: Liam15, Noha, Olivia, Ava_25 등</string>
     <string name="placeholder_password_field">예: 12345, abc123xyz, qwerty 등</string>
-    <string name="password_manager_button_text">비밀번호 관리자</string>
-    <string name="save_password_button_text">비밀번호 저장</string>
-    <string name="load_password_button_text">비밀번호 불러오기</string>
-    <string name="update_password_button_text">비밀번호 수정</string>
-    <string name="delete_password_button_text">비밀번호 삭제</string>
-    <string name="import_password_button_text">비밀번호 가져오기</string>
-    <string name="export_password_button_text">비밀번호 내보내기</string>
-    <string name="password_security_check_button_text">보안 확인</string>
-    <string name="setting_button_text">설정</string>
-    <string name="toggle_theme_button_text">테마 전환</string>
-    <string name="label_language_setting">언어</string>
-    <string name="label_contributor">기여자</string>
-    <string name="label_appearance">모습</string>
-    <string name="label_other">다른</string>
-    <string name="label_theme_setting">테마</string>
-    <string name="label_palette_setting">그림 물감</string>
-    <string name="report_bug_button_text">버그 보고</string>
-    <string name="about_us_button_text">앱 정보</string>
-    <string name="profile_button_text">프로필 개발자</string>
-    <string name="view_license_button_text">라이선스 보기</string>
-    <string name="view_security_guidelines_button_text">보안 지침 보기</string>
-    <string name="view_change_log_button_text">변경 기록</string>
 
-    <!-- Headline -->
-    <string name="textview_passwordmanager_headline">비밀번호 관리자</string>
-    <string name="textview_loadpassword_headline">비밀번호 불러오기</string>
-    <string name="textview_savepassword_headline">비밀번호 저장</string>
-    <string name="textview_viewpassword_headline">비밀번호 보기</string>
-    <string name="textview_updatepassword_headline">비밀번호 수정</string>
-    <string name="textview_settings_headline">설정</string>
-    <string name="textview_aboutus_headline">앱 정보</string>
+    <!-- General -->
+    <string name="text_password_manager">비밀번호 관리자</string>
+    <string name="text_save_password">비밀번호 저장</string>
+    <string name="text_load_password">비밀번호 불러오기</string>
+    <string name="text_update_password">비밀번호 업데이트</string>
+    <string name="text_delete_password">비밀번호 삭제</string>
+    <string name="text_import_password">비밀번호 가져오기</string>
+    <string name="text_export_password">비밀번호 내보내기</string>
+    <string name="text_security_check">보안 확인</string>
+    <string name="text_settings">설정</string>
+    <string name="text_about_us">정보</string>
+    <string name="text_profile_developer">개발자 프로필</string>
+    <string name="text_report_bug">버그 신고</string>
+    <string name="text_view_license">라이선스 보기</string>
+    <string name="text_security_guidelines">보안 지침</string>
+    <string name="text_view_changelog">변경 로그 보기</string>
+    <string name="text_toggle_theme">테마 전환</string>
+    <string name="text_quit">종료</string>
+    <string name="text_apply">적용</string>
+    <string name="text_cancel">취소</string>
 
-    <!-- Prefix & Suffix -->
-    <string name="id_prefix">ID: </string>
-    <string name="domain_prefix">도메인: </string>
-    <string name="username_prefix">사용자 이름: </string>
-    <string name="password_prefix">비밀번호: </string>
-    <string name="notes_prefix">메모: </string>
-    <string name="createdat_prefix">생성일: </string>
-    <string name="updatedat_prefix">수정일: </string>
-
-    <!-- Permission -->
-    <string name="permission_granted">권한 허용됨</string>
-    <string name="permission_denied">권한 거부됨</string>
-
-    <!-- Toast Message -->
-    <string name="restart_app_require">앱을 다시 시작해야 해요.</string>
-    <string name="future_feat_clause">이 기능은 아직 개발 중입니다.</string>
-    <string name="not_found_error_message">404: 찾을 수 없음</string>
-    <string name="warn_fill_form">주의: 먼저 양식을 작성해주세요.</string>
-    <string name="fail_msg">실패: 다시 시도해주세요.</string>
-    <string name="success_clause">성공:</string>
-    <string name="update_success_msg">성공적으로 수정되었습니다.</string>
-    <string name="delete_success_msg">성공적으로 삭제되었습니다.</string>
-    <string name="something_went_wrong_msg">문제가 발생했습니다.</string>
-    <string name="action_discard">작업이 취소되었습니다.</string>
-    <string name="error_invalid_password_id">문제 발생: 잘못된 ID입니다!!</string>
-
-    <!-- Alert Dialog Message -->
-    <string name="update_password_dialog_title">비밀번호를 수정할까요?</string>
-    <string name="delete_password_dialog_title">비밀번호를 삭제할까요?</string>
-    <string name="irreversible_dialog_desc">이 작업은 되돌릴 수 없습니다.</string>
-    <string name="confirm_dialog_button_text">확인</string>
-    <string name="discard_dialog_button_text">취소</string>
+    <!-- Prefix -->
+    <string name="prefix_id">ID: </string>
+    <string name="prefix_domain">도메인: </string>
+    <string name="prefix_username">사용자 이름: </string>
+    <string name="prefix_password">비밀번호: </string>
+    <string name="prefix_notes">메모: </string>
+    <string name="prefix_created_at">생성 날짜: </string>
+    <string name="prefix_updated_at">업데이트 날짜: </string>
 
     <!-- Bottom Navigation -->
-    <string name="bottom_nav_home">Home</string>
-    <string name="bottom_nav_security">Security</string>
+    <string name="bottom_nav_home">홈</string>
+    <string name="bottom_nav_security">보안</string>
 
-    <!-- Coming Soon -->
-    <string name="coming_soon">Feature not available now</string>
-    <string name="coming_soon_desc">Stay tuned for the next update</string>
+    <!-- Toast -->
+    <string name="toast_restart_app_require">앱을 다시 시작해야 합니다.</string>
+    <string name="toast_future_feat_clause">이 기능은 현재 개발 중입니다.</string>
+    <string name="toast_not_found_error">404: 찾을 수 없습니다.</string>
+    <string name="toast_warn_fill_form">경고: 먼저 양식을 작성하십시오.</string>
+    <string name="toast_fail_msg">실패: 다시 시도하십시오.</string>
+    <string name="toast_success_clause">성공:</string>
+    <string name="toast_update_success">성공적으로 업데이트되었습니다.</string>
+    <string name="toast_delete_success">성공적으로 삭제되었습니다.</string>
+    <string name="toast_something_went_wrong">문제가 발생했습니다.</string>
+    <string name="toast_action_discarded">작업이 취소되었습니다.</string>
+    <string name="toast_error_invalid_password_id">문제가 발생했습니다: 잘못된 ID입니다!!</string>
+
+    <!-- Dialog -->
+    <string name="dialog_update_password_title">비밀번호를 업데이트하시겠습니까?</string>
+    <string name="dialog_delete_password_title">비밀번호를 삭제하시겠습니까?</string>
+    <string name="dialog_irreversible_desc">이 작업은 되돌릴 수 없습니다.</string>
+    <string name="dialog_confirm_button">확인</string>
+    <string name="dialog_cancel_button">취소</string>
+    <string name="dialog_apply_button">적용</string>
+    <string name="dialog_language_title">언어 선택</string>
+    <string name="dialog_theme_title">테마 선택</string>
+    <string name="dialog_palette_title">색상 팔레트 선택</string>
+
+    <!-- Theme -->
+    <string name="theme_light">라이트</string>
+    <string name="theme_dark">다크</string>
+    <string name="theme_system">시스템 기본값</string>
+
+    <!-- Palette -->
+    <string name="palette_default">기본값</string>
+
+    <string name="coming_soon">기능을 사용할 수 없음</string>
+    <string name="coming_soon_desc">다음 업데이트를 기대해주세요</string>
+
+    <!-- Permission -->
+    <string name="permission_granted">권한이 부여되었습니다</string>
+    <string name="permission_denied">권한이 거부되었습니다</string>
 
 </resources>

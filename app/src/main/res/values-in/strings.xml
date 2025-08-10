@@ -1,99 +1,115 @@
 <resources>
-
     <string name="app_name">Passcodes</string>
     <string name="app_version">v0.1.0-Alpha</string>
 
-    <!-- Contributor Names -->
-    <string name="developer_name">Jeel Dobariya</string>
+    <string name="app_description">Manajer kata sandi sumber terbuka yang membantu menghilangkan pusingnya mengingat kata sandi Anda.</string>
+    <string name="app_warning">Aplikasi ini sedang dalam pengembangan aktif dan ditujukan untuk tujuan pendidikan dan eksperimental. Mungkin tidak aman untuk menyimpan informasi otentikasi yang sensitif. Harap tinjau pedoman keamanan untuk detail lebih lanjut.</string>
+
+    <!-- Developer -->
+    <string name="developer_name">Dobariya Jeel</string>
     <string name="code_maintainer">Achmad Daniel</string>
 
-    <!-- Main Activity -->
-    <string name="quit_button_text">Keluar</string>
+    <!-- Headline -->
+    <string name="headline_password_manager">Manajer Kata Sandi</string>
+    <string name="headline_load_password">Muat Kata Sandi</string>
+    <string name="headline_save_password">Simpan Kata Sandi</string>
+    <string name="headline_view_password">Lihat Kata Sandi</string>
+    <string name="headline_update_password">Perbarui Kata Sandi</string>
+    <string name="headline_settings">Pengaturan</string>
+    <string name="headline_about_us">Tentang Kami</string>
 
-    <!-- About Us Activity -->
-    <string name="textview_app_description">Pengelola kata sandi open-source yang bantu kamu bebas dari repotnya mengingat password.</string>
-    <string name="textview_app_warning">Aplikasi ini masih dalam tahap pengembangan aktif dan ditujukan untuk pembelajaran dan eksperimen. Mungkin belum aman untuk menyimpan informasi penting. Silakan baca panduan keamanan untuk info lebih lanjut.</string>
-
-    <!-- General UI Elements -->
-    <string name="hint_domain">Domain</string>
-    <string name="helper_text_domain_field">Nama situs web atau domain yang digunakan</string>
-    <string name="hint_username">Nama pengguna</string>
-    <string name="hint_password">Kata sandi</string>
-    <string name="hint_notes">Catatan</string>
-    <string name="placeholder_domain_field">cth. Google, Instagram, WhatsApp, dll.</string>
-    <string name="placeholder_username_field">cth. Liam15, Noha, Olivia, Ava_25, dll.</string>
-    <string name="placeholder_password_field">cth. 12345, abc123xyz, qwerty, dll.</string>
-    <string name="password_manager_button_text">Pengelola Kata Sandi</string>
-    <string name="save_password_button_text">Simpan Kata Sandi</string>
-    <string name="load_password_button_text">Muat Kata Sandi</string>
-    <string name="update_password_button_text">Perbarui Kata Sandi</string>
-    <string name="delete_password_button_text">Hapus Kata Sandi</string>
-    <string name="import_password_button_text">Impor Kata Sandi</string>
-    <string name="export_password_button_text">Ekspor Kata Sandi</string>
-    <string name="password_security_check_button_text">Cek Keamanan</string>
-    <string name="setting_button_text">Pengaturan</string>
-    <string name="toggle_theme_button_text">Ganti Tema</string>
+    <!-- Label -->
+    <string name="label_domain">Domain</string>
+    <string name="label_username">Nama Pengguna</string>
+    <string name="label_password">Kata Sandi</string>
+    <string name="label_notes">Catatan</string>
     <string name="label_language_setting">Bahasa</string>
-    <string name="label_contributor">Kontributor</string>
+    <string name="label_theme_setting">Tema</string>
+    <string name="label_palette_setting">Palet Warna</string>
     <string name="label_appearance">Tampilan</string>
     <string name="label_other">Lainnya</string>
-    <string name="label_theme_setting">Tema</string>
-    <string name="label_palette_setting">Warna Aplikasi</string>
-    <string name="report_bug_button_text">Laporkan Bug</string>
-    <string name="about_us_button_text">Tentang Kami</string>
-    <string name="profile_button_text">Profil Pengembang</string>
-    <string name="view_license_button_text">Lihat Lisensi</string>
-    <string name="view_security_guidelines_button_text">Panduan Keamanan</string>
-    <string name="view_change_log_button_text">Lihat Changelog</string>
+    <string name="label_contributor">Kontributor</string>
 
-    <!-- Headline -->
-    <string name="textview_passwordmanager_headline">Pengelola Kata Sandi</string>
-    <string name="textview_loadpassword_headline">Muat Kata Sandi</string>
-    <string name="textview_savepassword_headline">Simpan Kata Sandi</string>
-    <string name="textview_viewpassword_headline">Lihat Kata Sandi</string>
-    <string name="textview_updatepassword_headline">Perbarui Kata Sandi</string>
-    <string name="textview_settings_headline">Pengaturan</string>
-    <string name="textview_aboutus_headline">Tentang Kami</string>
+    <!-- Form -->
+    <string name="hint_domain">Domain</string>
+    <string name="hint_username">Nama Pengguna</string>
+    <string name="hint_password">Kata Sandi</string>
+    <string name="hint_notes">Catatan</string>
+    <string name="placeholder_domain_field">mis. Google, Instagram, WhatsApp, dll.</string>
+    <string name="placeholder_username_field">mis. Liam15, Noha, Olivia, Ava_25, dll.</string>
+    <string name="placeholder_password_field">mis. 12345, abc123xyz, qwerty, dll.</string>
 
-    <!-- Prefix & Suffix -->
-    <string name="id_prefix">ID: </string>
-    <string name="domain_prefix">Domain: </string>
-    <string name="username_prefix">Nama Pengguna: </string>
-    <string name="password_prefix">Kata Sandi: </string>
-    <string name="notes_prefix">Catatan: </string>
-    <string name="createdat_prefix">Dibuat: </string>
-    <string name="updatedat_prefix">Diperbarui: </string>
+    <!-- General -->
+    <string name="text_password_manager">Manajer Kata Sandi</string>
+    <string name="text_save_password">Simpan Kata Sandi</string>
+    <string name="text_load_password">Muat Kata Sandi</string>
+    <string name="text_update_password">Perbarui Kata Sandi</string>
+    <string name="text_delete_password">Hapus Kata Sandi</string>
+    <string name="text_import_password">Impor Kata Sandi</string>
+    <string name="text_export_password">Ekspor Kata Sandi</string>
+    <string name="text_security_check">Periksa Keamanan</string>
+    <string name="text_settings">Pengaturan</string>
+    <string name="text_about_us">Tentang Kami</string>
+    <string name="text_profile_developer">Profil Pengembang</string>
+    <string name="text_report_bug">Laporkan Bug</string>
+    <string name="text_view_license">Lihat Lisensi</string>
+    <string name="text_security_guidelines">Pedoman Keamanan</string>
+    <string name="text_view_changelog">Lihat Log Perubahan</string>
+    <string name="text_toggle_theme">Ganti Tema</string>
+    <string name="text_quit">Keluar</string>
 
-    <!-- Permission -->
-    <string name="permission_granted">Izin diberikan</string>
-    <string name="permission_denied">Izin ditolak</string>
-
-    <!-- Toast Message -->
-    <string name="restart_app_require">Aplikasi perlu dimulai ulang.</string>
-    <string name="future_feat_clause">Fitur ini sedang dikembangkan.</string>
-    <string name="not_found_error_message">404: Tidak ditemukan.</string>
-    <string name="warn_fill_form">Peringatan: Harap isi formulir dulu.</string>
-    <string name="fail_msg">Gagal: Coba lagi nanti.</string>
-    <string name="success_clause">Berhasil:</string>
-    <string name="update_success_msg">Berhasil diperbarui.</string>
-    <string name="delete_success_msg">Berhasil dihapus.</string>
-    <string name="something_went_wrong_msg">Terjadi kesalahan.</string>
-    <string name="action_discard">Aksi dibatalkan.</string>
-    <string name="error_invalid_password_id">Terjadi kesalahan: ID tidak valid!!</string>
-
-    <!-- Alert Dialog Message -->
-    <string name="update_password_dialog_title">Perbarui kata sandi?</string>
-    <string name="delete_password_dialog_title">Hapus kata sandi?</string>
-    <string name="irreversible_dialog_desc">Tindakan ini tidak dapat dibatalkan.</string>
-    <string name="confirm_dialog_button_text">Konfirmasi</string>
-    <string name="discard_dialog_button_text">Batal</string>
+    <!-- Prefix -->
+    <string name="prefix_id">ID: </string>
+    <string name="prefix_domain">Domain: </string>
+    <string name="prefix_username">Nama Pengguna: </string>
+    <string name="prefix_password">Kata Sandi: </string>
+    <string name="prefix_notes">Catatan: </string>
+    <string name="prefix_created_at">Dibuat Pada: </string>
+    <string name="prefix_updated_at">Diperbarui Pada: </string>
+    <string name="text_apply">Terapkan</string>
+    <string name="text_cancel">Batal</string>
 
     <!-- Bottom Navigation -->
     <string name="bottom_nav_home">Beranda</string>
     <string name="bottom_nav_security">Keamanan</string>
 
-    <!-- Coming Soon -->
-    <string name="coming_soon">Feature not available now</string>
-    <string name="coming_soon_desc">Stay tuned for the next update</string>
+    <!-- Toast -->
+    <string name="toast_restart_app_require">Mulai Ulang Aplikasi Diperlukan.</string>
+    <string name="toast_future_feat_clause">Fitur ini sedang dalam pengembangan.</string>
+    <string name="toast_not_found_error">404: Tidak ditemukan.</string>
+    <string name="toast_warn_fill_form">Peringatan: Harap isi formulir terlebih dahulu.</string>
+    <string name="toast_fail_msg">Gagal: Silakan coba lagi.</string>
+    <string name="toast_success_clause">Berhasil:</string>
+    <string name="toast_update_success">Berhasil diperbarui.</string>
+    <string name="toast_delete_success">Berhasil dihapus.</string>
+    <string name="toast_something_went_wrong">Terjadi kesalahan.</string>
+    <string name="toast_action_discarded">Tindakan dibatalkan.</string>
+    <string name="toast_error_invalid_password_id">Terjadi Kesalahan: ID tidak valid!!</string>
+
+    <!-- Dialog -->
+    <string name="dialog_update_password_title">Perbarui kata sandi?</string>
+    <string name="dialog_delete_password_title">Hapus kata sandi?</string>
+    <string name="dialog_irreversible_desc">Tindakan ini tidak dapat dibatalkan.</string>
+    <string name="dialog_confirm_button">Konfirmasi</string>
+    <string name="dialog_cancel_button">Batal</string>
+    <string name="dialog_apply_button">Terapkan</string>
+    <string name="dialog_language_title">Pilih Bahasa</string>
+    <string name="dialog_theme_title">Pilih Tema</string>
+    <string name="dialog_palette_title">Pilih Palet Warna</string>
+
+    <!-- Theme -->
+    <string name="theme_light">Terang</string>
+    <string name="theme_dark">Gelap</string>
+    <string name="theme_system">Default Sistem</string>
+
+    <!-- Palette -->
+    <string name="palette_default">Default</string>
+
+    <string name="coming_soon">Fitur Tidak Tersedia</string>
+    <string name="coming_soon_desc">Nantikan pembaruan berikutnya</string>
+
+    <!-- Permission -->
+    <string name="permission_granted">Izin diberikan</string>
+    <string name="permission_denied">Izin ditolak</string>
 
 </resources>

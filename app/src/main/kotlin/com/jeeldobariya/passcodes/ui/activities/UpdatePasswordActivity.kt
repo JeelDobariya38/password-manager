@@ -1,5 +1,6 @@
 package com.jeeldobariya.passcodes.ui.activities
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
@@ -28,10 +29,6 @@ class UpdatePasswordActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUpdatePasswordBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme)
-        setTheme(savedThemeStyle)
-        
         super.onCreate(savedInstanceState)
         binding = ActivityUpdatePasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -40,7 +37,7 @@ class UpdatePasswordActivity : AppCompatActivity() {
         passwordEntityId = intent.getIntExtra("id", -1) // -1 is an invalid id.
 
         if (passwordEntityId == -1) { // invalid entity
-            Toast.makeText(this, getString(R.string.error_invalid_password_id), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_error_invalid_password_id), Toast.LENGTH_SHORT).show()
             finish()
             return // Exit onCreate if ID is invalid
         }
@@ -57,12 +54,13 @@ class UpdatePasswordActivity : AppCompatActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
     }
 
+    @SuppressLint("SetTextI18n")
     private fun fillDataInViews() {
         lifecycleScope.launch {
             try {
                 val passwordEntity: Password = controller.getPasswordById(passwordEntityId)
                 withContext(Dispatchers.Main) {
-                    binding.tvId.text = "${getString(R.string.id_prefix)}  $passwordEntityId"
+                    binding.tvId.text = "${getString(R.string.prefix_id)}  $passwordEntityId"
                     binding.inputDomain.setText(passwordEntity.domain)
                     binding.inputUsername.setText(passwordEntity.username)
                     binding.inputPassword.setText(passwordEntity.password)
@@ -76,13 +74,13 @@ class UpdatePasswordActivity : AppCompatActivity() {
                 }
             } catch (e: DatabaseOperationException) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.toast_something_went_wrong)}: ${e.message}", Toast.LENGTH_LONG).show()
                     e.printStackTrace()
                     finish()
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.toast_something_went_wrong)}: ${e.message}", Toast.LENGTH_LONG).show()
                     e.printStackTrace()
                     finish()
                 }
@@ -99,16 +97,15 @@ class UpdatePasswordActivity : AppCompatActivity() {
             val newNotes = binding.inputNotes.text.toString()
 
             val confirmDialog = AlertDialog.Builder(this@UpdatePasswordActivity)
-                .setTitle(R.string.update_password_dialog_title)
-                .setMessage(R.string.irreversible_dialog_desc)
-                .setPositiveButton(R.string.confirm_dialog_button_text) { dialog, which -> 
+                .setTitle(R.string.dialog_update_password_title)
+                .setMessage(R.string.dialog_irreversible_desc)
+                .setPositiveButton(R.string.dialog_confirm_button) { _, _ ->
                     performUpdatePasswordAction(newDomain, newUsername, newPassword, newNotes);
                 }
-                .setNegativeButton(R.string.discard_dialog_button_text) { dialog, which -> 
-                    Toast.makeText(this, getString(R.string.action_discard), Toast.LENGTH_SHORT).show();
+                .setNegativeButton(R.string.dialog_cancel_button) { _, _ ->
+                    Toast.makeText(this, getString(R.string.toast_action_discarded), Toast.LENGTH_SHORT).show();
                 }
                 .create();
-      
             confirmDialog.show();
         }
     }
@@ -119,16 +116,16 @@ class UpdatePasswordActivity : AppCompatActivity() {
                 val rowsAffected = controller.updatePassword(passwordEntityId, newDomain, newUsername, newPassword, newNotes)
                 withContext(Dispatchers.Main) {
                     if (rowsAffected > 0) {
-                        Toast.makeText(this@UpdatePasswordActivity, getString(R.string.update_success_msg), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@UpdatePasswordActivity, getString(R.string.toast_update_success), Toast.LENGTH_SHORT).show()
                         finish()
                     } else {
-                        Toast.makeText(this@UpdatePasswordActivity, getString(R.string.something_went_wrong_msg) + ": No changes applied or password not found.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@UpdatePasswordActivity, getString(R.string.toast_something_went_wrong) + ": No changes applied or password not found.", Toast.LENGTH_SHORT).show()
                         finish()
                     }
                 }
             } catch (e: InvalidInputException) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@UpdatePasswordActivity, getString(R.string.warn_fill_form), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@UpdatePasswordActivity, getString(R.string.toast_warn_fill_form), Toast.LENGTH_SHORT).show()
                 }
             } catch (e: PasswordNotFoundException) {
                 withContext(Dispatchers.Main) {
@@ -138,12 +135,12 @@ class UpdatePasswordActivity : AppCompatActivity() {
                 }
             } catch (e: DatabaseOperationException) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.toast_fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
                     e.printStackTrace()
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@UpdatePasswordActivity, "${getString(R.string.toast_fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
                     e.printStackTrace()
                 }
             }

@@ -21,10 +21,6 @@ class SavePasswordActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySavePasswordBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme)
-        setTheme(savedThemeStyle)
-        
         super.onCreate(savedInstanceState)
         binding = ActivitySavePasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -74,28 +70,28 @@ class SavePasswordActivity : AppCompatActivity() {
         }
     }
 
-    fun performSavePasswordAction(domain: String, username: String, password: String, notes: String) {
+    private fun performSavePasswordAction(domain: String, username: String, password: String, notes: String) {
         // Launch a coroutine to call the suspend function
         lifecycleScope.launch {
             try {
                 val rowId = controller.savePasswordEntity(domain, username, password, notes)
                 // Switch back to Main dispatcher for UI updates
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@SavePasswordActivity, "${getString(R.string.success_clause)} $rowId", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SavePasswordActivity, "${getString(R.string.toast_success_clause)} $rowId", Toast.LENGTH_SHORT).show()
                     finish()
                 }
             } catch (e: InvalidInputException) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@SavePasswordActivity, getString(R.string.warn_fill_form), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SavePasswordActivity, getString(R.string.toast_warn_fill_form), Toast.LENGTH_SHORT).show()
                 }
             } catch (e: DatabaseOperationException) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@SavePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@SavePasswordActivity, "${getString(R.string.toast_fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
                     e.printStackTrace()
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@SavePasswordActivity, "${getString(R.string.fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@SavePasswordActivity, "${getString(R.string.toast_fail_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
                     e.printStackTrace()
                 }
             }

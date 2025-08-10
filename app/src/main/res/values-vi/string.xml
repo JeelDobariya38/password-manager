@@ -1,99 +1,115 @@
 <resources>
-
-    <string name="app_name">Mã Bảo Mật</string>
+    <string name="app_name">Mật mã</string>
     <string name="app_version">v0.1.0-Alpha</string>
 
-    <!-- Contributor Names -->
-    <string name="developer_name">Jeel Dobariya</string>
+    <string name="app_description">Một trình quản lý mật khẩu mã nguồn mở giúp loại bỏ cơn đau đầu khi phải nhớ mật khẩu của bạn.</string>
+    <string name="app_warning">Ứng dụng này hiện đang được phát triển tích cực và dành cho mục đích giáo dục và thử nghiệm. Nó có thể không an toàn để lưu trữ thông tin xác thực nhạy cảm. Vui lòng xem lại các nguyên tắc bảo mật để biết thêm chi tiết.</string>
+
+    <!-- Developer -->
+    <string name="developer_name">Dobariya Jeel</string>
     <string name="code_maintainer">Achmad Daniel</string>
 
-    <!-- Main Activity -->
-    <string name="quit_button_text">Thoát</string>
+    <!-- Headline -->
+    <string name="headline_password_manager">Trình quản lý mật khẩu</string>
+    <string name="headline_load_password">Tải mật khẩu</string>
+    <string name="headline_save_password">Lưu mật khẩu</string>
+    <string name="headline_view_password">Xem mật khẩu</string>
+    <string name="headline_update_password">Cập nhật mật khẩu</string>
+    <string name="headline_settings">Cài đặt</string>
+    <string name="headline_about_us">Về chúng tôi</string>
 
-    <!-- About Us Activity -->
-    <string name="textview_app_description">Trình quản lý mật khẩu mã nguồn mở giúp bạn không cần nhớ mật khẩu nữa.</string>
-    <string name="textview_app_warning">Ứng dụng này đang được phát triển và chỉ dùng cho mục đích học tập hoặc thử nghiệm. Có thể chưa đủ an toàn để lưu thông tin nhạy cảm. Vui lòng xem hướng dẫn bảo mật để biết thêm chi tiết.</string>
+    <!-- Label -->
+    <string name="label_domain">Miền</string>
+    <string name="label_username">Tên người dùng</string>
+    <string name="label_password">Mật khẩu</string>
+    <string name="label_notes">Ghi chú</string>
+    <string name="label_language_setting">Ngôn ngữ</string>
+    <string name="label_theme_setting">Chủ đề</string>
+    <string name="label_palette_setting">Bảng màu</string>
+    <string name="label_appearance">Giao diện</string>
+    <string name="label_other">Khác</string>
+    <string name="label_contributor">Người đóng góp</string>
 
-    <!-- General UI Elements -->
-    <string name="hint_domain">Tên miền</string>
-    <string name="helper_text_domain_field">Tên trang web hoặc tên miền liên quan</string>
+    <!-- Form -->
+    <string name="hint_domain">Miền</string>
     <string name="hint_username">Tên người dùng</string>
     <string name="hint_password">Mật khẩu</string>
     <string name="hint_notes">Ghi chú</string>
-    <string name="placeholder_domain_field">vd: Google, Instagram, WhatsApp, v.v.</string>
-    <string name="placeholder_username_field">vd: Liam15, Noha, Olivia, Ava_25, v.v.</string>
-    <string name="placeholder_password_field">vd: 12345, abc123xyz, qwerty, v.v.</string>
-    <string name="password_manager_button_text">Quản lý Mật khẩu</string>
-    <string name="save_password_button_text">Lưu mật khẩu</string>
-    <string name="load_password_button_text">Tải mật khẩu</string>
-    <string name="update_password_button_text">Cập nhật mật khẩu</string>
-    <string name="delete_password_button_text">Xóa mật khẩu</string>
-    <string name="import_password_button_text">Nhập mật khẩu</string>
-    <string name="export_password_button_text">Xuất mật khẩu</string>
-    <string name="password_security_check_button_text">Kiểm tra bảo mật</string>
-    <string name="setting_button_text">Cài đặt</string>
-    <string name="toggle_theme_button_text">Chuyển giao diện</string>
-    <string name="label_language_setting">Ngôn ngữ</string>
-    <string name="label_contributor">Người đóng góp</string>
-    <string name="label_appearance">Hình thức</string>
-    <string name="label_other">Khác</string>
-    <string name="label_theme_setting">Giao diện</string>
-    <string name="label_palette_setting">Màu sắc</string>
-    <string name="report_bug_button_text">Báo cáo lỗi</string>
-    <string name="about_us_button_text">Giới thiệu</string>
-    <string name="profile_button_text">Nhà phát triển hồ sơ</string>
-    <string name="view_license_button_text">Xem giấy phép</string>
-    <string name="view_security_guidelines_button_text">Hướng dẫn bảo mật</string>
-    <string name="view_change_log_button_text">Xem lịch sử thay đổi</string>
+    <string name="placeholder_domain_field">ví dụ: Google, Instagram, WhatsApp, v.v.</string>
+    <string name="placeholder_username_field">ví dụ: Liam15, Noha, Olivia, Ava_25, v.v.</string>
+    <string name="placeholder_password_field">ví dụ: 12345, abc123xyz, qwerty, v.v.</string>
 
-    <!-- Headline -->
-    <string name="textview_passwordmanager_headline">Quản lý Mật khẩu</string>
-    <string name="textview_loadpassword_headline">Tải Mật khẩu</string>
-    <string name="textview_savepassword_headline">Lưu Mật khẩu</string>
-    <string name="textview_viewpassword_headline">Xem Mật khẩu</string>
-    <string name="textview_updatepassword_headline">Cập nhật Mật khẩu</string>
-    <string name="textview_settings_headline">Cài đặt</string>
-    <string name="textview_aboutus_headline">Giới thiệu</string>
+    <!-- General -->
+    <string name="text_password_manager">Trình quản lý mật khẩu</string>
+    <string name="text_save_password">Lưu mật khẩu</string>
+    <string name="text_load_password">Tải mật khẩu</string>
+    <string name="text_update_password">Cập nhật mật khẩu</string>
+    <string name="text_delete_password">Xóa mật khẩu</string>
+    <string name="text_import_password">Nhập mật khẩu</string>
+    <string name="text_export_password">Xuất mật khẩu</string>
+    <string name="text_security_check">Kiểm tra bảo mật</string>
+    <string name="text_settings">Cài đặt</string>
+    <string name="text_about_us">Về chúng tôi</string>
+    <string name="text_profile_developer">Hồ sơ nhà phát triển</string>
+    <string name="text_report_bug">Báo cáo lỗi</string>
+    <string name="text_view_license">Xem giấy phép</string>
+    <string name="text_security_guidelines">Nguyên tắc bảo mật</string>
+    <string name="text_view_changelog">Xem nhật ký thay đổi</string>
+    <string name="text_toggle_theme">Chuyển đổi chủ đề</string>
+    <string name="text_quit">Thoát</string>
+    <string name="text_apply">Áp dụng</string>
+    <string name="text_cancel">Hủy</string>
 
-    <!-- Prefix & Suffix -->
-    <string name="id_prefix">ID: </string>
-    <string name="domain_prefix">Tên miền: </string>
-    <string name="username_prefix">Tên người dùng: </string>
-    <string name="password_prefix">Mật khẩu: </string>
-    <string name="notes_prefix">Ghi chú: </string>
-    <string name="createdat_prefix">Tạo lúc: </string>
-    <string name="updatedat_prefix">Cập nhật lúc: </string>
+    <!-- Prefix -->
+    <string name="prefix_id">ID: </string>
+    <string name="prefix_domain">Miền: </string>
+    <string name="prefix_username">Tên người dùng: </string>
+    <string name="prefix_password">Mật khẩu: </string>
+    <string name="prefix_notes">Ghi chú: </string>
+    <string name="prefix_created_at">Tạo lúc: </string>
+    <string name="prefix_updated_at">Cập nhật lúc: </string>
+
+    <!-- Bottom Navigation -->
+    <string name="bottom_nav_home">Trang chủ</string>
+    <string name="bottom_nav_security">Bảo mật</string>
+
+    <!-- Toast -->
+    <string name="toast_restart_app_require">Yêu cầu khởi động lại ứng dụng.</string>
+    <string name="toast_future_feat_clause">Tính năng này hiện đang được phát triển.</string>
+    <string name="toast_not_found_error">404: Không tìm thấy.</string>
+    <string name="toast_warn_fill_form">Cảnh báo: Vui lòng điền vào biểu mẫu trước.</string>
+    <string name="toast_fail_msg">Thất bại: Vui lòng thử lại.</string>
+    <string name="toast_success_clause">Thành công:</string>
+    <string name="toast_update_success">Cập nhật thành công.</string>
+    <string name="toast_delete_success">Đã xóa thành công.</string>
+    <string name="toast_something_went_wrong">Đã xảy ra lỗi.</string>
+    <string name="toast_action_discarded">Hành động đã bị hủy bỏ.</string>
+    <string name="toast_error_invalid_password_id">Đã xảy ra lỗi: ID không hợp lệ!!</string>
+
+    <!-- Dialog -->
+    <string name="dialog_update_password_title">Cập nhật mật khẩu?</string>
+    <string name="dialog_delete_password_title">Xóa mật khẩu?</string>
+    <string name="dialog_irreversible_desc">Hành động này không thể hoàn tác.</string>
+    <string name="dialog_confirm_button">Xác nhận</string>
+    <string name="dialog_cancel_button">Hủy</string>
+    <string name="dialog_apply_button">Áp dụng</string>
+    <string name="dialog_language_title">Chọn ngôn ngữ</string>
+    <string name="dialog_theme_title">Chọn chủ đề</string>
+    <string name="dialog_palette_title">Chọn bảng màu</string>
+
+    <!-- Theme -->
+    <string name="theme_light">Sáng</string>
+    <string name="theme_dark">Tối</string>
+    <string name="theme_system">Mặc định của hệ thống</string>
+
+    <!-- Palette -->
+    <string name="palette_default">Mặc định</string>
+
+    <string name="coming_soon">Tính năng không có sẵn</string>
+    <string name="coming_soon_desc">Hãy theo dõi bản cập nhật tiếp theo</string>
 
     <!-- Permission -->
     <string name="permission_granted">Đã cấp quyền</string>
-    <string name="permission_denied">Từ chối quyền</string>
-
-    <!-- Toast Message -->
-    <string name="restart_app_require">Cần khởi động lại ứng dụng.</string>
-    <string name="future_feat_clause">Tính năng đang được phát triển.</string>
-    <string name="not_found_error_message">404: Không tìm thấy</string>
-    <string name="warn_fill_form">Vui lòng điền vào biểu mẫu trước.</string>
-    <string name="fail_msg">Thất bại: Vui lòng thử lại.</string>
-    <string name="success_clause">Thành công:</string>
-    <string name="update_success_msg">Cập nhật thành công.</string>
-    <string name="delete_success_msg">Xóa thành công.</string>
-    <string name="something_went_wrong_msg">Đã xảy ra lỗi.</string>
-    <string name="action_discard">Đã hủy hành động.</string>
-    <string name="error_invalid_password_id">Lỗi: ID không hợp lệ!!</string>
-
-    <!-- Alert Dialog Message -->
-    <string name="update_password_dialog_title">Cập nhật mật khẩu?</string>
-    <string name="delete_password_dialog_title">Xóa mật khẩu?</string>
-    <string name="irreversible_dialog_desc">Hành động này không thể hoàn tác.</string>
-    <string name="confirm_dialog_button_text">Xác nhận</string>
-    <string name="discard_dialog_button_text">Hủy</string>
-
-    <!-- Bottom Navigation -->
-    <string name="bottom_nav_home">Home</string>
-    <string name="bottom_nav_security">Security</string>
-
-    <!-- Coming Soon -->
-    <string name="coming_soon">Feature not available now</string>
-    <string name="coming_soon_desc">Stay tuned for the next update</string>
+    <string name="permission_denied">Quyền bị từ chối</string>
 
 </resources>

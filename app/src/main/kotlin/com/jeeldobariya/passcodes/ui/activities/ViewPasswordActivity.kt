@@ -1,5 +1,6 @@
 package com.jeeldobariya.passcodes.ui.activities
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -28,10 +29,6 @@ class ViewPasswordActivity : AppCompatActivity() {
     private lateinit var controller: Controller
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme)
-        setTheme(savedThemeStyle)
-        
         super.onCreate(savedInstanceState)
         binding = ActivityViewPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -40,7 +37,7 @@ class ViewPasswordActivity : AppCompatActivity() {
         passwordEntityId = intent.getIntExtra("id", -1) // -1 is an invalid id.
 
         if (passwordEntityId == -1) { // invalid entity
-            Toast.makeText(this, getString(R.string.error_invalid_password_id), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_error_invalid_password_id), Toast.LENGTH_SHORT).show()
             finish()
             return // Exit onCreate if ID is invalid
         }
@@ -54,17 +51,18 @@ class ViewPasswordActivity : AppCompatActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
     }
 
+    @SuppressLint("SetTextI18n")
     private fun fillDataInTextview() {
         lifecycleScope.launch {
             try {
                 val passwordEntity: Password = controller.getPasswordById(passwordEntityId)
                 withContext(Dispatchers.Main) {
-                    binding.tvDomain.text = "${getString(R.string.domain_prefix)}  ${passwordEntity.domain}"
-                    binding.tvUsername.text = "${getString(R.string.username_prefix)}  ${passwordEntity.username}"
-                    binding.tvPassword.text = "${getString(R.string.password_prefix)}  ${passwordEntity.password}"
-                    binding.tvNotes.text = "${getString(R.string.notes_prefix)}  ${passwordEntity.notes}"
-                    binding.tvCreatedAt.text = "${getString(R.string.createdat_prefix)}  ${passwordEntity.createdAt}"
-                    binding.tvUpdatedAt.text = "${getString(R.string.updatedat_prefix)}  ${passwordEntity.updatedAt}"
+                    binding.tvDomain.text = "${getString(R.string.prefix_domain)}  ${passwordEntity.domain}"
+                    binding.tvUsername.text = "${getString(R.string.prefix_username)}  ${passwordEntity.username}"
+                    binding.tvPassword.text = "${getString(R.string.prefix_password)}  ${passwordEntity.password}"
+                    binding.tvNotes.text = "${getString(R.string.prefix_notes)}  ${passwordEntity.notes}"
+                    binding.tvCreatedAt.text = "${getString(R.string.prefix_created_at)}  ${passwordEntity.createdAt}"
+                    binding.tvUpdatedAt.text = "${getString(R.string.prefix_updated_at)}  ${passwordEntity.updatedAt}"
                 }
             } catch (e: PasswordNotFoundException) {
                 withContext(Dispatchers.Main) {
@@ -74,13 +72,13 @@ class ViewPasswordActivity : AppCompatActivity() {
                 }
             } catch (e: DatabaseOperationException) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.toast_something_went_wrong)}: ${e.message}", Toast.LENGTH_LONG).show()
                     e.printStackTrace()
                     finish()
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.toast_something_went_wrong)}: ${e.message}", Toast.LENGTH_LONG).show()
                     e.printStackTrace()
                     finish()
                 }
@@ -98,13 +96,13 @@ class ViewPasswordActivity : AppCompatActivity() {
 
         binding.deletePasswordBtn.setOnClickListener {
             val confirmDialog = AlertDialog.Builder(this@ViewPasswordActivity)
-                .setTitle(R.string.delete_password_dialog_title)
-                .setMessage(R.string.irreversible_dialog_desc)
-                .setPositiveButton(R.string.confirm_dialog_button_text) { dialog, which -> 
+                .setTitle(R.string.dialog_delete_password_title)
+                .setMessage(R.string.dialog_irreversible_desc)
+                .setPositiveButton(R.string.dialog_confirm_button) { _, _ ->
                     performDeletePasswordAction();
                 }
-                .setNegativeButton(R.string.discard_dialog_button_text) { dialog, which -> 
-                    Toast.makeText(this, getString(R.string.action_discard), Toast.LENGTH_SHORT).show();
+                .setNegativeButton(R.string.dialog_cancel_button) { _, _ ->
+                    Toast.makeText(this, getString(R.string.toast_action_discarded), Toast.LENGTH_SHORT).show();
                 }
                 .create();
         
@@ -118,21 +116,21 @@ class ViewPasswordActivity : AppCompatActivity() {
                 val rowsDeleted = controller.deletePassword(passwordEntityId)
                 withContext(Dispatchers.Main) {
                     if (rowsDeleted > 0) {
-                        Toast.makeText(this@ViewPasswordActivity, getString(R.string.delete_success_msg), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@ViewPasswordActivity, getString(R.string.toast_delete_success), Toast.LENGTH_SHORT).show()
                         finish()
                     } else {
-                        Toast.makeText(this@ViewPasswordActivity, getString(R.string.something_went_wrong_msg) + ": Password not found for deletion or no rows affected.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@ViewPasswordActivity, getString(R.string.toast_something_went_wrong) + ": Password not found for deletion or no rows affected.", Toast.LENGTH_SHORT).show()
                         finish()
                     }
                 }
             } catch (e: DatabaseOperationException) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.toast_something_went_wrong)}: ${e.message}", Toast.LENGTH_LONG).show()
                     e.printStackTrace()
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.something_went_wrong_msg)}: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@ViewPasswordActivity, "${getString(R.string.toast_something_went_wrong)}: ${e.message}", Toast.LENGTH_LONG).show()
                     e.printStackTrace()
                 }
             }

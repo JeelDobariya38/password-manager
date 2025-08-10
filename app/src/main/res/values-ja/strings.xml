@@ -1,99 +1,115 @@
 <resources>
-
     <string name="app_name">パスコード</string>
-    <string name="app_version">v0.1.0-Alpha</string>
+    <string name="app_version">v0.1.0-アルファ</string>
 
-    <!-- Contributor Names -->
-    <string name="developer_name">Jeel Dobariya</string>
+    <string name="app_description">パスワードを覚える手間を省くのに役立つオープンソースのパスワードマネージャー。</string>
+    <string name="app_warning">このアプリは現在活発に開発中であり、教育および実験目的を意図しています。機密性の高い認証情報を保存するには安全でない可能性があります。詳細については、セキュリティガイドラインを確認してください。</string>
+
+    <!-- Developer -->
+    <string name="developer_name">Dobariya Jeel</string>
     <string name="code_maintainer">Achmad Daniel</string>
 
-    <!-- Main Activity -->
-    <string name="quit_button_text">終了</string>
+    <!-- Headline -->
+    <string name="headline_password_manager">パスワードマネージャー</string>
+    <string name="headline_load_password">パスワードを読み込む</string>
+    <string name="headline_save_password">パスワードを保存</string>
+    <string name="headline_view_password">パスワードを表示</string>
+    <string name="headline_update_password">パスワードを更新</string>
+    <string name="headline_settings">設定</string>
+    <string name="headline_about_us">私たちについて</string>
 
-    <!-- About Us Activity -->
-    <string name="textview_app_description">パスワードを覚える手間をなくす、オープンソースのパスワードマネージャーです。</string>
-    <string name="textview_app_warning">このアプリは開発中で、教育・実験目的のみでの使用を想定しています。機密情報の保存には安全でない可能性があります。セキュリティガイドラインをご確認ください。</string>
+    <!-- Label -->
+    <string name="label_domain">ドメイン</string>
+    <string name="label_username">ユーザー名</string>
+    <string name="label_password">パスワード</string>
+    <string name="label_notes">メモ</string>
+    <string name="label_language_setting">言語</string>
+    <string name="label_theme_setting">テーマ</string>
+    <string name="label_palette_setting">カラーパレット</string>
+    <string name="label_appearance">外観</string>
+    <string name="label_other">その他</string>
+    <string name="label_contributor">貢献者</string>
 
-    <!-- General UI Elements -->
+    <!-- Form -->
     <string name="hint_domain">ドメイン</string>
-    <string name="helper_text_domain_field">関連するウェブサイトやドメインの名前</string>
     <string name="hint_username">ユーザー名</string>
     <string name="hint_password">パスワード</string>
     <string name="hint_notes">メモ</string>
-    <string name="placeholder_domain_field">例：Google、Instagram、WhatsApp など</string>
-    <string name="placeholder_username_field">例：Liam15、Noha、Olivia、Ava_25 など</string>
-    <string name="placeholder_password_field">例：12345、abc123xyz、qwerty など</string>
-    <string name="password_manager_button_text">パスワードマネージャー</string>
-    <string name="save_password_button_text">保存</string>
-    <string name="load_password_button_text">読み込み</string>
-    <string name="update_password_button_text">更新</string>
-    <string name="delete_password_button_text">削除</string>
-    <string name="import_password_button_text">インポート</string>
-    <string name="export_password_button_text">エクスポート</string>
-    <string name="password_security_check_button_text">セキュリティチェック</string>
-    <string name="setting_button_text">設定</string>
-    <string name="toggle_theme_button_text">テーマ切替</string>
-    <string name="label_language_setting">言語</string>
-    <string name="label_contributor">寄稿者</string>
-    <string name="label_appearance">外観</string>
-    <string name="label_other">その他</string>
-    <string name="label_theme_setting">テーマ</string>
-    <string name="label_palette_setting">色</string>
-    <string name="report_bug_button_text">バグ報告</string>
-    <string name="about_us_button_text">アプリについて</string>
-    <string name="profile_button_text">プロフィール開発者</string>
-    <string name="view_license_button_text">ライセンスを見る</string>
-    <string name="view_security_guidelines_button_text">セキュリティガイドライン</string>
-    <string name="view_change_log_button_text">更新履歴</string>
+    <string name="placeholder_domain_field">例：Google、Instagram、WhatsAppなど</string>
+    <string name="placeholder_username_field">例：Liam15、Noha、Olivia、Ava_25など</string>
+    <string name="placeholder_password_field">例：12345、abc123xyz、qwertyなど</string>
 
-    <!-- Headline -->
-    <string name="textview_passwordmanager_headline">パスワードマネージャー</string>
-    <string name="textview_loadpassword_headline">パスワード読み込み</string>
-    <string name="textview_savepassword_headline">パスワード保存</string>
-    <string name="textview_viewpassword_headline">パスワードを見る</string>
-    <string name="textview_updatepassword_headline">パスワード更新</string>
-    <string name="textview_settings_headline">設定</string>
-    <string name="textview_aboutus_headline">アプリについて</string>
+    <!-- General -->
+    <string name="text_password_manager">パスワードマネージャー</string>
+    <string name="text_save_password">パスワードを保存</string>
+    <string name="text_load_password">パスワードを読み込む</string>
+    <string name="text_update_password">パスワードを更新</string>
+    <string name="text_delete_password">パスワードを削除</string>
+    <string name="text_import_password">パスワードをインポート</string>
+    <string name="text_export_password">パスワードをエクスポート</string>
+    <string name="text_security_check">セキュリティをチェック</string>
+    <string name="text_settings">設定</string>
+    <string name="text_about_us">私たちについて</string>
+    <string name="text_profile_developer">開発者プロフィール</string>
+    <string name="text_report_bug">バグを報告</string>
+    <string name="text_view_license">ライセンスを表示</string>
+    <string name="text_security_guidelines">セキュリティガイドライン</string>
+    <string name="text_view_changelog">変更履歴を表示</string>
+    <string name="text_toggle_theme">テーマを切り替える</string>
+    <string name="text_quit">終了</string>
+    <string name="text_apply">適用</string>
+    <string name="text_cancel">キャンセル</string>
 
-    <!-- Prefix & Suffix -->
-    <string name="id_prefix">ID：</string>
-    <string name="domain_prefix">ドメイン：</string>
-    <string name="username_prefix">ユーザー名：</string>
-    <string name="password_prefix">パスワード：</string>
-    <string name="notes_prefix">メモ：</string>
-    <string name="createdat_prefix">作成日：</string>
-    <string name="updatedat_prefix">更新日：</string>
-
-    <!-- Permission -->
-    <string name="permission_granted">許可されました</string>
-    <string name="permission_denied">許可されませんでした</string>
-
-    <!-- Toast Message -->
-    <string name="restart_app_require">アプリを再起動する必要があります。</string>
-    <string name="future_feat_clause">この機能は現在開発中です。</string>
-    <string name="not_found_error_message">404：見つかりませんでした</string>
-    <string name="warn_fill_form">警告：フォームを入力してください</string>
-    <string name="fail_msg">失敗しました：もう一度お試しください</string>
-    <string name="success_clause">成功：</string>
-    <string name="update_success_msg">更新に成功しました</string>
-    <string name="delete_success_msg">削除に成功しました</string>
-    <string name="something_went_wrong_msg">問題が発生しました</string>
-    <string name="action_discard">操作がキャンセルされました</string>
-    <string name="error_invalid_password_id">エラー：無効なIDです!!</string>
-
-    <!-- Alert Dialog Message -->
-    <string name="update_password_dialog_title">パスワードを更新しますか？</string>
-    <string name="delete_password_dialog_title">パスワードを削除しますか？</string>
-    <string name="irreversible_dialog_desc">この操作は元に戻せません。</string>
-    <string name="confirm_dialog_button_text">確認</string>
-    <string name="discard_dialog_button_text">キャンセル</string>
+    <!-- Prefix -->
+    <string name="prefix_id">ID: </string>
+    <string name="prefix_domain">ドメイン: </string>
+    <string name="prefix_username">ユーザー名: </string>
+    <string name="prefix_password">パスワード: </string>
+    <string name="prefix_notes">メモ: </string>
+    <string name="prefix_created_at">作成日: </string>
+    <string name="prefix_updated_at">更新日: </string>
 
     <!-- Bottom Navigation -->
-    <string name="bottom_nav_home">Home</string>
-    <string name="bottom_nav_security">Security</string>
+    <string name="bottom_nav_home">ホーム</string>
+    <string name="bottom_nav_security">セキュリティ</string>
 
-    <!-- Coming Soon -->
-    <string name="coming_soon">Feature not available now</string>
-    <string name="coming_soon_desc">Stay tuned for the next update</string>
+    <!-- Toast -->
+    <string name="toast_restart_app_require">アプリの再起動が必要です。</string>
+    <string name="toast_future_feat_clause">この機能は現在開発中です。</string>
+    <string name="toast_not_found_error">404: 見つかりません。</string>
+    <string name="toast_warn_fill_form">警告：最初にフォームに記入してください。</string>
+    <string name="toast_fail_msg">失敗しました：もう一度お試しください。</string>
+    <string name="toast_success_clause">成功：</string>
+    <string name="toast_update_success">正常に更新されました。</string>
+    <string name="toast_delete_success">正常に削除されました。</string>
+    <string name="toast_something_went_wrong">問題が発生しました。</string>
+    <string name="toast_action_discarded">アクションは破棄されました。</string>
+    <string name="toast_error_invalid_password_id">問題が発生しました：無効なIDです!!</string>
+
+    <!-- Dialog -->
+    <string name="dialog_update_password_title">パスワードを更新しますか？</string>
+    <string name="dialog_delete_password_title">パスワードを削除しますか？</string>
+    <string name="dialog_irreversible_desc">この操作は元に戻せません。</string>
+    <string name="dialog_confirm_button">確認</string>
+    <string name="dialog_cancel_button">キャンセル</string>
+    <string name="dialog_apply_button">適用</string>
+    <string name="dialog_language_title">言語を選択</string>
+    <string name="dialog_theme_title">テーマを選択</string>
+    <string name="dialog_palette_title">カラーパレットを選択</string>
+
+    <!-- Theme -->
+    <string name="theme_light">ライト</string>
+    <string name="theme_dark">ダーク</string>
+    <string name="theme_system">システムデフォルト</string>
+
+    <!-- Palette -->
+    <string name="palette_default">デフォルト</string>
+
+    <string name="coming_soon">機能は利用できません</string>
+    <string name="coming_soon_desc">次のアップデートをお楽しみに</string>
+
+    <!-- Permission -->
+    <string name="permission_granted">許可が与えられました</string>
+    <string name="permission_denied">許可が拒否されました</string>
 
 </resources>

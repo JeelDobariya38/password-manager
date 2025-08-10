@@ -1,0 +1,42 @@
+<resources>
+    <string-array name="lang_locale_names">
+        <item>English</item>
+        <item>Hindi</item>
+        <item>Indonesia</item>
+        <item>Korean</item>
+        <item>German</item>
+        <item>Spanish</item>
+        <item>Chinese</item>
+        <item>Vietnamese</item>
+    </string-array>
+
+    <string-array name="lang_locale_tags">
+        <item>en-US</item>
+        <item>hi</item>
+        <item>id-ID</item>
+        <item>ko</item>
+        <item>ja</item>
+        <item>de</item>
+        <item>es</item>
+        <item>zh</item>
+        <item>vi</item>
+    </string-array>
+
+    <string-array name="theme_options">
+        <item>@string/theme_light</item>
+        <item>@string/theme_dark</item>
+        <item>@string/theme_system</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>light</item>
+        <item>dark</item>
+        <item>system</item>
+    </string-array>
+
+    <string-array name="palette_options">
+        <item>@string/palette_default</item>
+    </string-array>
+    <string-array name="palette_values">
+        <item>default</item>
+    </string-array>
+</resources>

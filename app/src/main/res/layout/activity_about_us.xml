@@ -30,7 +30,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:navigationIcon="?attr/homeAsUpIndicator"
-                app:title="@string/textview_aboutus_headline"
+                app:title="@string/headline_about_us"
                 app:titleTextColor="?attr/colorOnSurface" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
@@ -66,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                android:text="@string/textview_app_description"
+                android:text="@string/app_description"
                 android:textAlignment="viewStart"
                 android:textColor="?attr/colorOnBackground" />
 
@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
-                android:text="@string/textview_app_warning"
+                android:text="@string/app_warning"
                 android:textAlignment="viewStart"
                 android:textColor="?attr/colorOnBackground" />
 
@@ -115,7 +115,7 @@
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/view_security_guidelines_button_text"
+                            android:text="@string/text_security_guidelines"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
                             android:textColor="?attr/colorOnPrimaryContainer" />
@@ -151,7 +151,7 @@
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/view_change_log_button_text"
+                            android:text="@string/text_view_changelog"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
                             android:textColor="?attr/colorOnPrimaryContainer" />
@@ -186,7 +186,7 @@
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/view_license_button_text"
+                            android:text="@string/text_view_license"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
                             android:textColor="?attr/colorOnPrimaryContainer" />
@@ -222,7 +222,7 @@
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/report_bug_button_text"
+                            android:text="@string/text_report_bug"
                             android:textAlignment="center"
                             android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
                             android:textColor="?attr/colorOnPrimaryContainer" />

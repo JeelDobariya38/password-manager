@@ -1,6 +1,5 @@
 package com.jeeldobariya.passcodes.ui.activities
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -24,10 +23,6 @@ class LoadPasswordActivity : AppCompatActivity() {
     private lateinit var controller: Controller
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme)
-        setTheme(savedThemeStyle)
-        
         super.onCreate(savedInstanceState)
         binding = ActivityLoadPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -52,7 +47,7 @@ class LoadPasswordActivity : AppCompatActivity() {
                     withContext(Dispatchers.Main) {
                         Toast.makeText(
                             this@LoadPasswordActivity,
-                            "${getString(R.string.something_went_wrong_msg)}: ${e.message}",
+                            "${getString(R.string.toast_something_went_wrong)}: ${e.message}",
                             Toast.LENGTH_LONG
                         ).show()
                         e.printStackTrace()

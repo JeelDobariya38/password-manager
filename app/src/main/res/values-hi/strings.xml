@@ -1,99 +1,115 @@
 <resources>
+    <string name="app_name">पासकोड</string>
+    <string name="app_version">v0.1.0-अल्फा</string>
 
-    <string name="app_name">पासकोड्स</string>
-    <string name="app_version">v0.1.0-Alpha</string>
+    <string name="app_description">एक ओपन-सोर्स पासवर्ड मैनेजर जो आपके पासवर्ड याद रखने के सिरदर्द को खत्म करने में मदद करता है।</string>
+    <string name="app_warning">यह ऐप वर्तमान में सक्रिय विकास के अधीन है और शैक्षिक और प्रयोगात्मक उद्देश्यों के लिए है। संवेदनशील प्रमाणीकरण जानकारी संग्रहीत करने के लिए यह सुरक्षित नहीं हो सकता है। अधिक जानकारी के लिए कृपया सुरक्षा दिशानिर्देशों की समीक्षा करें।</string>
 
-    <!-- Contributor Names -->
-    <string name="developer_name">जीत डोबरिया</string>
-    <string name="code_maintainer">अहमद डेनियल</string>
+    <!-- Developer -->
+    <string name="developer_name">डोबरिया जील</string>
+    <string name="code_maintainer">अचमद डैनियल</string>
 
-    <!-- Main Activity -->
-    <string name="quit_button_text">बंद करें</string>
+    <!-- Headline -->
+    <string name="headline_password_manager">पासवर्ड मैनेजर</string>
+    <string name="headline_load_password">पासवर्ड लोड करें</string>
+    <string name="headline_save_password">पासवर्ड सहेजें</string>
+    <string name="headline_view_password">पासवर्ड देखें</string>
+    <string name="headline_update_password">पासवर्ड अपडेट करें</string>
+    <string name="headline_settings">सेटिंग्स</string>
+    <string name="headline_about_us">हमारे बारे में</string>
 
-    <!-- About Us Activity -->
-    <string name="textview_app_description">ओपन-सोर्स पासवर्ड मैनेजर जो पासवर्ड याद रखने की झंझट को खत्म करता है।</string>
-    <string name="textview_app_warning">यह ऐप अभी डेवलपमेंट में है और सिर्फ एजुकेशनल और एक्सपेरिमेंटल यूज़ के लिए है। जरूरी डेटा स्टोर करने के लिए यह सिक्योर नहीं हो सकता। कृपया सिक्योरिटी गाइडलाइंस देखें।</string>
+    <!-- Label -->
+    <string name="label_domain">डोमेन</string>
+    <string name="label_username">उपयोगकर्ता नाम</string>
+    <string name="label_password">पासवर्ड</string>
+    <string name="label_notes">नोट्स</string>
+    <string name="label_language_setting">भाषा</string>
+    <string name="label_theme_setting">थीम</string>
+    <string name="label_palette_setting">रंग पैलेट</string>
+    <string name="label_appearance">दिखावट</string>
+    <string name="label_other">अन्य</string>
+    <string name="label_contributor">योगदानकर्ता</string>
 
-    <!-- Button, Textview general in all Activity -->
+    <!-- Form -->
     <string name="hint_domain">डोमेन</string>
-    <string name="helper_text_domain_field">वेबसाइट या डोमेन का नाम</string>
-    <string name="hint_username">यूज़रनेम</string>
+    <string name="hint_username">उपयोगकर्ता नाम</string>
     <string name="hint_password">पासवर्ड</string>
     <string name="hint_notes">नोट्स</string>
-    <string name="placeholder_domain_field">जैसे Google, Instagram, WhatsApp वगैरह</string>
-    <string name="placeholder_username_field">जैसे Liam15, Noha, Olivia, Ava_25 वगैरह</string>
-    <string name="placeholder_password_field">जैसे 12345, abc123xyz, qwerty वगैरह</string>
-    <string name="password_manager_button_text">पासवर्ड मैनेजर</string>
-    <string name="save_password_button_text">पासवर्ड सेव करें</string>
-    <string name="load_password_button_text">पासवर्ड लोड करें</string>
-    <string name="update_password_button_text">पासवर्ड अपडेट करें</string>
-    <string name="delete_password_button_text">पासवर्ड हटाएं</string>
-    <string name="import_password_button_text">पासवर्ड इंपोर्ट करें</string>
-    <string name="export_password_button_text">पासवर्ड एक्सपोर्ट करें</string>
-    <string name="password_security_check_button_text">सिक्योरिटी चेक</string>
-    <string name="setting_button_text">सेटिंग्स</string>
-    <string name="toggle_theme_button_text">थीम बदलें</string>
-    <string name="label_language_setting">भाषा</string>
-    <string name="label_contributor">योगदानकर्ता</string>
-    <string name="label_appearance">उपस्थिति</string>
-    <string name="label_other">अन्य</string>
-    <string name="label_theme_setting">थीम</string>
-    <string name="label_palette_setting">रंग</string>
-    <string name="report_bug_button_text">रिपोर्ट बग</string>
-    <string name="about_us_button_text">हमारे बारे में</string>
-    <string name="profile_button_text">प्रोफ़ाइल डेवलपर</string>
-    <string name="view_license_button_text">लाइसेंस देखें</string>
-    <string name="view_security_guidelines_button_text">सिक्योरिटी गाइडलाइंस</string>
-    <string name="view_change_log_button_text">चेंजलॉग देखें</string>
+    <string name="placeholder_domain_field">उदा. गूगल, इंस्टाग्राम, व्हाट्सएप, आदि।</string>
+    <string name="placeholder_username_field">उदा. लियाम15, नोहा, ओलिविया, अवा_25, आदि।</string>
+    <string name="placeholder_password_field">उदा. 12345, abc123xyz, qwerty, आदि।</string>
 
-    <!-- Headline of Activity -->
-    <string name="textview_passwordmanager_headline">पासवर्ड मैनेजर</string>
-    <string name="textview_loadpassword_headline">पासवर्ड लोड करें</string>
-    <string name="textview_savepassword_headline">पासवर्ड सेव करें</string>
-    <string name="textview_viewpassword_headline">पासवर्ड देखें</string>
-    <string name="textview_updatepassword_headline">पासवर्ड अपडेट करें</string>
-    <string name="textview_settings_headline">सेटिंग्स</string>
-    <string name="textview_aboutus_headline">हमारे बारे में</string>
+    <!-- General -->
+    <string name="text_password_manager">पासवर्ड मैनेजर</string>
+    <string name="text_save_password">पासवर्ड सहेजें</string>
+    <string name="text_load_password">पासवर्ड लोड करें</string>
+    <string name="text_update_password">पासवर्ड अपडेट करें</string>
+    <string name="text_delete_password">पासवर्ड हटाएं</string>
+    <string name="text_import_password">पासवर्ड आयात करें</string>
+    <string name="text_export_password">पासवर्ड निर्यात करें</string>
+    <string name="text_security_check">सुरक्षा जांचें</string>
+    <string name="text_settings">सेटिंग्स</string>
+    <string name="text_about_us">हमारे बारे में</string>
+    <string name="text_profile_developer">डेवलपर प्रोफाइल</string>
+    <string name="text_report_bug">बग की रिपोर्ट करें</string>
+    <string name="text_view_license">लाइसेंस देखें</string>
+    <string name="text_security_guidelines">सुरक्षा दिशानिर्देश</string>
+    <string name="text_view_changelog">चेंजलॉग देखें</string>
+    <string name="text_toggle_theme">थीम टॉगल करें</string>
+    <string name="text_quit">छोड़ें</string>
+    <string name="text_apply">लागू करें</string>
+    <string name="text_cancel">रद्द करें</string>
 
-    <!-- Prefix & Suffix -->
-    <string name="id_prefix">आईडी: </string>
-    <string name="domain_prefix">डोमेन: </string>
-    <string name="username_prefix">यूज़रनेम: </string>
-    <string name="password_prefix">पासवर्ड: </string>
-    <string name="notes_prefix">नोट्स: </string>
-    <string name="createdat_prefix">बनाया गया: </string>
-    <string name="updatedat_prefix">अपडेट किया गया: </string>
-
-    <!-- Permission -->
-    <string name="permission_granted">परमिशन मिल गई</string>
-    <string name="permission_denied">परमिशन नहीं मिली</string>
-
-    <!-- Toast Message -->
-    <string name="restart_app_require">ऐप को फिर से शुरू करना जरूरी है।</string>
-    <string name="future_feat_clause">यह फीचर अभी बन रहा है।</string>
-    <string name="not_found_error_message">404: नहीं मिला।</string>
-    <string name="warn_fill_form">चेतावनी: पहले फॉर्म भरें।</string>
-    <string name="fail_msg">फेल हुआ: फिर से कोशिश करें।</string>
-    <string name="success_clause">सफलता:</string>
-    <string name="update_success_msg">सफलतापूर्वक अपडेट हुआ।</string>
-    <string name="delete_success_msg">सफलतापूर्वक हटाया गया।</string>
-    <string name="something_went_wrong_msg">कुछ गलत हो गया।</string>
-    <string name="action_discard">कार्रवाई रद्द की गई।</string>
-    <string name="error_invalid_password_id">कुछ गलत हुआ: ID सही नहीं है!!</string>
-
-    <!-- Alert Dialog Message -->
-    <string name="update_password_dialog_title">पासवर्ड अपडेट करें?</string>
-    <string name="delete_password_dialog_title">पासवर्ड हटाएं?</string>
-    <string name="irreversible_dialog_desc">यह काम वापस नहीं लिया जा सकता।</string>
-    <string name="confirm_dialog_button_text">पक्का करें</string>
-    <string name="discard_dialog_button_text">रद्द करें</string>
+    <!-- Prefix -->
+    <string name="prefix_id">आईडी: </string>
+    <string name="prefix_domain">डोमेन: </string>
+    <string name="prefix_username">उपयोगकर्ता नाम: </string>
+    <string name="prefix_password">पासवर्ड: </string>
+    <string name="prefix_notes">नोट्स: </string>
+    <string name="prefix_created_at">पर बनाया गया: </string>
+    <string name="prefix_updated_at">पर अपडेट किया गया: </string>
 
     <!-- Bottom Navigation -->
-    <string name="bottom_nav_home">Home</string>
-    <string name="bottom_nav_security">Security</string>
+    <string name="bottom_nav_home">होम</string>
+    <string name="bottom_nav_security">सुरक्षा</string>
 
-    <!-- Coming Soon -->
-    <string name="coming_soon">Feature not available now</string>
-    <string name="coming_soon_desc">Stay tuned for the next update</string>
+    <!-- Toast -->
+    <string name="toast_restart_app_require">ऐप को पुनरारंभ करना आवश्यक है।</string>
+    <string name="toast_future_feat_clause">यह सुविधा वर्तमान में विकास के अधीन है।</string>
+    <string name="toast_not_found_error">404: नहीं मिला।</string>
+    <string name="toast_warn_fill_form">चेतावनी: कृपया पहले फॉर्म भरें।</string>
+    <string name="toast_fail_msg">विफल: कृपया पुन: प्रयास करें।</string>
+    <string name="toast_success_clause">सफलता:</string>
+    <string name="toast_update_success">सफलतापूर्वक अपडेट किया गया।</string>
+    <string name="toast_delete_success">सफलतापूर्वक हटाया गया।</string>
+    <string name="toast_something_went_wrong">कुछ गलत हो गया।</string>
+    <string name="toast_action_discarded">कार्रवाई छोड़ दी गई।</string>
+    <string name="toast_error_invalid_password_id">कुछ गलत हो गया: अमान्य आईडी !!</string>
+
+    <!-- Dialog -->
+    <string name="dialog_update_password_title">पासवर्ड अपडेट करें?</string>
+    <string name="dialog_delete_password_title">पासवर्ड हटाएं?</string>
+    <string name="dialog_irreversible_desc">यह क्रिया पूर्ववत नहीं की जा सकती।</string>
+    <string name="dialog_confirm_button">पुष्टि करें</string>
+    <string name="dialog_cancel_button">रद्द करें</string>
+    <string name="dialog_apply_button">लागू करें</string>
+    <string name="dialog_language_title">भाषा चुनें</string>
+    <string name="dialog_theme_title">थीम चुनें</string>
+    <string name="dialog_palette_title">रंग पैलेट चुनें</string>
+
+    <!-- Theme -->
+    <string name="theme_light">लाइट</string>
+    <string name="theme_dark">डार्क</string>
+    <string name="theme_system">सिस्टम डिफॉल्ट</string>
+
+    <!-- Palette -->
+    <string name="palette_default">डिफ़ॉल्ट</string>
+
+    <string name="coming_soon">सुविधा उपलब्ध नहीं है</string>
+    <string name="coming_soon_desc">अगले अपडेट के लिए बने रहें</string>
+
+    <!-- Permission -->
+    <string name="permission_granted">अनुमति दी गई</string>
+    <string name="permission_denied">अनुमति अस्वीकृत</string>
 
 </resources>

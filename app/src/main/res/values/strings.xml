@@ -3,122 +3,114 @@
     <string name="app_name">Passcodes</string>
     <string name="app_version">v0.1.0-Alpha</string>
 
-    <!-- Contributor Names -->
+    <string name="app_description">An open-source password manager that helps eliminate the headache of remembering your passwords.</string>
+    <string name="app_warning">This app is currently under active development and is intended for educational and experimental purposes. It may not be secure for storing sensitive authentication information. Please review the security guidelines for more details.</string>
+
+    <!-- Developer -->
     <string name="developer_name">Dobariya Jeel</string>
     <string name="code_maintainer">Achmad Daniel</string>
 
-    <!-- Main Activity -->
-    <string name="quit_button_text">Quit</string>
+    <!-- Headline -->
+    <string name="headline_password_manager">Password Manager</string>
+    <string name="headline_load_password">Load Password</string>
+    <string name="headline_save_password">Save Password</string>
+    <string name="headline_view_password">View Password</string>
+    <string name="headline_update_password">Update Password</string>
+    <string name="headline_settings">Settings</string>
+    <string name="headline_about_us">About Us</string>
 
-    <!-- About Us Activity -->
-    <string name="textview_app_description">An open-source password manager that helps eliminate the headache of remembering your passwords.</string>
-    <string name="textview_app_warning">This app is currently under active development and is intended for educational and experimental purposes. It may not be secure for storing sensitive authentication information. Please review the security guidelines for more details.</string>
+    <!-- Label -->
+    <string name="label_domain">Domain</string>
+    <string name="label_username">Username</string>
+    <string name="label_password">Password</string>
+    <string name="label_notes">Notes</string>
+    <string name="label_language_setting">Language</string>
+    <string name="label_theme_setting">Theme</string>
+    <string name="label_palette_setting">Color Palette</string>
+    <string name="label_appearance">Appearance</string>
+    <string name="label_other">Other</string>
+    <string name="label_contributor">Contributor</string>
 
-    <!-- Button, Textview general in all Activity -->
+    <!-- Form -->
     <string name="hint_domain">Domain</string>
-    <string name="helper_text_domain_field">The name of the website or domain associated</string>
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="hint_notes">Notes</string>
     <string name="placeholder_domain_field">e.g. Google, Instagram, WhatsApp, etc.</string>
     <string name="placeholder_username_field">e.g. Liam15, Noha, Olivia, Ava_25, etc.</string>
     <string name="placeholder_password_field">e.g. 12345, abc123xyz, qwerty, etc.</string>
-    <string name="password_manager_button_text">Password Manager</string>
-    <string name="save_password_button_text">Save Password</string>
-    <string name="load_password_button_text">Load Password</string>
-    <string name="update_password_button_text">Update Password</string>
-    <string name="delete_password_button_text">Delete Password</string>
-    <string name="import_password_button_text">Import Password</string>
-    <string name="export_password_button_text">Export Password</string>
-    <string name="password_security_check_button_text">Check Security</string>
-    <string name="setting_button_text">Settings</string>
-    <string name="toggle_theme_button_text">Toggle Theme</string>
-    <string name="label_language_setting">Language</string>
-    <string name="label_contributor">Contributor</string>
-    <string name="label_appearance">Appearance</string>
-    <string name="label_other">Other</string>
-    <string name="label_theme_setting">Themes</string>
-    <string name="label_palette_setting">Colors</string>
-    <string name="report_bug_button_text">Report Bug</string>
-    <string name="about_us_button_text">About Us</string>
-    <string name="profile_button_text">Profile Developer</string>
-    <string name="view_license_button_text">View License</string>
-    <string name="view_security_guidelines_button_text">Security Guidelines</string>
-    <string name="view_change_log_button_text">View Changelog</string>
 
-    <!-- Headline of Activity -->
-    <string name="textview_passwordmanager_headline">Password Manager</string>
-    <string name="textview_loadpassword_headline">Load Password</string>
-    <string name="textview_savepassword_headline">Save Password</string>
-    <string name="textview_viewpassword_headline">View Password</string>
-    <string name="textview_updatepassword_headline">Update Password</string>
-    <string name="textview_settings_headline">Settings</string>
-    <string name="textview_aboutus_headline">About Us</string>
+    <!-- General -->
+    <string name="text_password_manager">Password Manager</string>
+    <string name="text_save_password">Save Password</string>
+    <string name="text_load_password">Load Password</string>
+    <string name="text_update_password">Update Password</string>
+    <string name="text_delete_password">Delete Password</string>
+    <string name="text_import_password">Import Password</string>
+    <string name="text_export_password">Export Password</string>
+    <string name="text_security_check">Check Security</string>
+    <string name="text_settings">Settings</string>
+    <string name="text_about_us">About Us</string>
+    <string name="text_profile_developer">Developer Profile</string>
+    <string name="text_report_bug">Report Bug</string>
+    <string name="text_view_license">View License</string>
+    <string name="text_security_guidelines">Security Guidelines</string>
+    <string name="text_view_changelog">View Changelog</string>
+    <string name="text_toggle_theme">Toggle Theme</string>
+    <string name="text_quit">Quit</string>
+    <string name="text_apply">Apply</string>
+    <string name="text_cancel">Cancel</string>
 
-    <!-- Prefix & Suffix -->
-    <string name="id_prefix">ID: </string>
-    <string name="domain_prefix">Domain: </string>
-    <string name="username_prefix">Username: </string>
-    <string name="password_prefix">Password: </string>
-    <string name="notes_prefix">Notes: </string>
-    <string name="createdat_prefix">Created At: </string>
-    <string name="updatedat_prefix">Updated At: </string>
-
-    <!-- Permission -->
-    <string name="permission_granted">Permission granted</string>
-    <string name="permission_denied">Permission denied</string>
-
-    <!-- Toast Message -->
-    <string name="restart_app_require">Restart App Require.</string>
-    <string name="future_feat_clause">This feature is currently under development.</string>
-    <string name="not_found_error_message">404: Not found.</string>
-    <string name="warn_fill_form">Warning: Please fill out the form first.</string>
-    <string name="fail_msg">Failed: Please try again.</string>
-    <string name="success_clause">Success:</string>
-    <string name="update_success_msg">Updated successfully.</string>
-    <string name="delete_success_msg">Deleted successfully.</string>
-    <string name="something_went_wrong_msg">Something went wrong.</string>
-    <string name="action_discard">Action discarded.</string>
-    <string name="error_invalid_password_id">Something Went Wrong: Invalid ID!!</string>
-
-    <!-- Alert Dialog Message -->
-    <string name="update_password_dialog_title">Update password?</string>
-    <string name="delete_password_dialog_title">Delete password?</string>
-    <string name="irreversible_dialog_desc">This action cannot be undone.</string>
-    <string name="confirm_dialog_button_text">Confirm</string>
-    <string name="discard_dialog_button_text">Discard</string>
+    <!-- Prefix -->
+    <string name="prefix_id">ID: </string>
+    <string name="prefix_domain">Domain: </string>
+    <string name="prefix_username">Username: </string>
+    <string name="prefix_password">Password: </string>
+    <string name="prefix_notes">Notes: </string>
+    <string name="prefix_created_at">Created At: </string>
+    <string name="prefix_updated_at">Updated At: </string>
 
     <!-- Bottom Navigation -->
     <string name="bottom_nav_home">Home</string>
     <string name="bottom_nav_security">Security</string>
 
-    <!-- Coming Soon -->
-    <string name="coming_soon">Feature not available now</string>
+    <!-- Toast -->
+    <string name="toast_restart_app_require">App Restart Required.</string>
+    <string name="toast_future_feat_clause">This feature is currently under development.</string>
+    <string name="toast_not_found_error">404: Not found.</string>
+    <string name="toast_warn_fill_form">Warning: Please fill out the form first.</string>
+    <string name="toast_fail_msg">Failed: Please try again.</string>
+    <string name="toast_success_clause">Success:</string>
+    <string name="toast_update_success">Updated successfully.</string>
+    <string name="toast_delete_success">Deleted successfully.</string>
+    <string name="toast_something_went_wrong">Something went wrong.</string>
+    <string name="toast_action_discarded">Action discarded.</string>
+    <string name="toast_error_invalid_password_id">Something Went Wrong: Invalid ID!!</string>
+
+    <!-- Dialog -->
+    <string name="dialog_update_password_title">Update password?</string>
+    <string name="dialog_delete_password_title">Delete password?</string>
+    <string name="dialog_irreversible_desc">This action cannot be undone.</string>
+    <string name="dialog_confirm_button">Confirm</string>
+    <string name="dialog_cancel_button">Cancel</string>
+    <string name="dialog_apply_button">Apply</string>
+    <string name="dialog_language_title">Select Language</string>
+    <string name="dialog_theme_title">Select Theme</string>
+    <string name="dialog_palette_title">Select Color Palette</string>
+
+    <!-- Theme -->
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_system">System Default</string>
+
+    <!-- Palette -->
+    <string name="palette_default">Default</string>
+
+    <string name="coming_soon">Feature Not Available</string>
     <string name="coming_soon_desc">Stay tuned for the next update</string>
 
-    <string-array name="lang_options">
-        <item>English (en-us)</item>
-        <item>Hindi (hi)</item>
-        <item>Indonesian (in)</item>
-        <item>Korean (ko)</item>
-        <item>Korean Romanized (kr)</item>
-        <item>Japanese (ja)</item>
-        <item>German (de)</item>
-        <item>Spanish (es)</item>
-        <item>Chinese (zh)</item>
-        <item>Vietnamese (vi)</item>
-    </string-array>
+    <!-- Permission -->
+    <string name="permission_granted">Permission granted</string>
+    <string name="permission_denied">Permission denied</string>
 
-    <string-array name="lang_locale_tags">
-        <item>en</item>
-        <item>hi</item>
-        <item>id</item>
-        <item>ko</item>
-        <item>kr</item>
-        <item>ja</item>
-        <item>de</item>
-        <item>es</item>
-        <item>zh</item>
-        <item>vi</item>
-    </string-array>
 </resources>
