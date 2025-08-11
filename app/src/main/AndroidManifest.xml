@@ -17,7 +17,7 @@
 		android:icon="${appIcon}"
 		android:label="${appLabel}"
 		android:requestLegacyExternalStorage="true"
-		android:roundIcon="@mipmap/ic_launcher_round"
+		android:roundIcon="@mipmap/ic_launcher"
 		android:supportsRtl="true"
 		android:theme="@style/PasscodesTheme"
 		android:localeConfig="@xml/locales_config"
