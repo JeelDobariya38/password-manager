@@ -51,6 +51,7 @@
     <string name="text_settings">设置</string>
     <string name="text_about_us">关于我们</string>
     <string name="text_profile_developer">开发者资料</string>
+    <string name="text_view_license">查看许可证</string>
     <string name="text_view_third_party_license">查看第三方许可证</string>
     <string name="text_view_website">查看网站</string>
     <string name="text_view_security_guidelines">安全指南</string>
@@ -111,5 +112,6 @@
     <!-- Permission -->
     <string name="permission_granted">权限已授予</string>
     <string name="permission_denied">权限被拒绝</string>
+    <string name="text_report_bug">报告错误</string>
 
 </resources>
