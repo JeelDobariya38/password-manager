@@ -53,7 +53,7 @@
     <string name="text_profile_developer">Profil Pengembang</string>
     <string name="text_report_bug">Laporkan Bug</string>
     <string name="text_view_license">Lihat Lisensi</string>
-    <string name="text_view_third_party_license">Lihat Lisensi Pihak Ketiga</string>
+    <string name="text_view_third_party_license">Lisensi Pihak Ketiga</string>
     <string name="text_view_website">Lihat Situs Web</string>
     <string name="text_view_security_guidelines">Pedoman Keamanan</string>
     <string name="text_view_changelog">Lihat Log Perubahan</string>
