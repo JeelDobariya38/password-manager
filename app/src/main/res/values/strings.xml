@@ -54,7 +54,7 @@
     <string name="text_profile_developer">Developer Profile</string>
     <string name="text_report_bug">Report Bug</string>
     <string name="text_view_license">View License</string>
-    <string name="text_view_third_party_license">View Third Party License</string>
+    <string name="text_view_third_party_license">Third Party License</string>
     <string name="text_view_website">View Website</string>
     <string name="text_view_security_guidelines">Security Guidelines</string>
     <string name="text_view_changelog">View Changelog</string>
