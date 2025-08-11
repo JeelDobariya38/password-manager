@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Localized App**: add language support for English, Chinese, Hindi, Indonesian, Japanese, Korean, German, Spanish, Vietnamese. Contributed by [@JeelDobariya].
 - **Improved UI/UX**: add confirmation dialogs, support for light & dark theme with additional minor changes. Contributed by [@JeelDobariya].
+- **New Icon**: add new icons to app. Contributed by [@JeelDobariya].
 
 ### Changed
 
