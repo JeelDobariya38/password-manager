@@ -6,7 +6,7 @@ import com.android.build.api.dsl.ApplicationExtension
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
+    id("com.google.devtools.ksp")
     // If you use Kotlin Parcelize, uncomment the next line:
     // id("kotlin-parcelize")
     id("com.google.android.gms.oss-licenses-plugin")
@@ -25,12 +25,6 @@ android {
             versionName = "0.1.0-Alpha"
 
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-            kapt {
-                arguments {
-                    arg("room.schemaLocation", "$projectDir/schemas")
-                }
-            }
         }
 
         signingConfigs {
@@ -110,13 +104,18 @@ android {
             targetCompatibility = JavaVersion.VERSION_11
         }
 
-        kotlinOptions {
-            jvmTarget = "11"
-        }
-
         buildFeatures {
             viewBinding = true
         }
+    }
+
+    ksp {
+        val location = "$projectDir/schemas"
+        arg("room.schemaLocation", location)
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
     }
 }
 
@@ -144,7 +143,7 @@ dependencies {
     // implementation("androidx.databinding:viewbinding:7.4.1")
 
     implementation("androidx.room:room-ktx:$roomVersion")
-    kapt("androidx.room:room-compiler:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
 
     // Kotlin Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
