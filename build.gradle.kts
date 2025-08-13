@@ -3,7 +3,7 @@ plugins {
     // If you need to define shared properties or tasks for all subprojects, you can do it here.
     id("com.android.application") version "8.11.0" apply false
     // id("com.android.library") version "8.11.0" apply false
-    id("org.jetbrains.kotlin.android") version "2.1.20" apply false
+    id("org.jetbrains.kotlin.android") version "2.1.21" apply false
     id("com.google.devtools.ksp") version "2.1.21-2.0.2" apply false
 }
 
