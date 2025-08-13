@@ -29,6 +29,7 @@
         <activity android:name=".ui.UpdatePasswordActivity" />
         <activity android:name=".ui.SettingsActivity" />
         <activity android:name=".ui.AboutUsActivity" />
+        <activity android:name=".ui.LicenseActivity" />
 
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
