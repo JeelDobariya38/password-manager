@@ -1,7 +1,7 @@
 <resources>
 
     <string name="app_name">패스코드</string>
-    <string name="app_version">v0.1.0-Alpha</string>
+    <string name="app_version">v1.0.0-Stable</string>
 
     <!-- Contributor Names -->
     <string name="developer_name">개발자: Jeel Dobariya</string>
