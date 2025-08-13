@@ -13,14 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
-        android:textAlignment="center"
-        android:textSize="14dp" />
+        android:textSize="12sp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/third_party_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Third Party License"
-        android:textSize="14dp" />
+        android:textSize="12sp" />
 
 </LinearLayout>
