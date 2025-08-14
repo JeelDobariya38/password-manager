@@ -83,7 +83,7 @@ It was general, intuitive, short and sweet description, For more detailed descri
 
 ## Support Docs
 
-You can checkout support docs, provided in [docs/](docs/) Or You can even seek help on our [telegram community](https://t.me/passwordmanagercommunity)
+You can checkout support docs, provided in [docs/](docs/) Or You can even seek help on our [telegram community](https://t.me/passcodescommunity)
 
 ## Contribution Are Appreciated!!!
 
