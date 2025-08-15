@@ -1,19 +1,26 @@
 # Passcodes
 
 [![Android CI/CD](https://github.com/JeelDobariya38/Passcodes/actions/workflows/build-apks.yml/badge.svg)](https://github.com/JeelDobariya38/Passcodes/actions/workflows/build-apks.yml)
+![Visitor Counter (@hehuapei/visitor-badge)](https://visitor-badge.laobi.icu/badge?page_id=JeelDobariya38.Passcodes&format=true)
 
 A android app that take down the headache of remembering passwords. It is open source solutions that help you in keeping your passwords safe and secure, in your own local storage without ever needing to push them to cloud.
+
+> What we think of passcodes?
+> Password management is one such thing that is as simple as remember a password yet, it very important topic in term of security. So, we as developer of passcodes think to streamline and securing the process as much as possible. [Read more](docs/project-overview.md)
 
 > [!WARNING]
 > It is just a open source project. An is current under active development.
 > Please, consider using it for fun, and not for real password managment. (untill, we offically release a stable release)
 
-## ScreenShots
+## Screen Shots
 
-<img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/b6407ba3-be7f-4a5b-9e17-8e201ecf2ff3" />
-<img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/930c18aa-7e38-4a56-a8e4-f5f1d2ee6e38" />
-<img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/135f29cb-97ed-4cc3-acd6-4a606e9d8844" />
-<img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/0c84450e-608d-4845-8771-2adba562e48d" />
+<details>
+  <summary>View Here</summary>
+  <img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/b6407ba3-be7f-4a5b-9e17-8e201ecf2ff3" />
+  <img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/930c18aa-7e38-4a56-a8e4-f5f1d2ee6e38" />
+  <img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/135f29cb-97ed-4cc3-acd6-4a606e9d8844" />
+  <img style="width: 40%; height: 100%; padding-right: 10px" src="https://github.com/user-attachments/assets/0c84450e-608d-4845-8771-2adba562e48d" />
+</details>
 
 ## Compatibility
 
@@ -25,9 +32,6 @@ Android 14 [API level 34] (we support offically)
 
 Note: high version can still run, but are not guaranteed offically.
 ```
-
-> What we think of passcodes?
-> Password management is one such thing that is as simple as remember a password yet, it very important topic in term of security. So, we as developer of passcodes think to streamline and securing the process as much as possible. [Read more](docs/project-overview.md)
 
 ## Features
 
@@ -85,17 +89,22 @@ It was general, intuitive, short and sweet description, For more detailed descri
 
 You can checkout support docs, provided in [docs/](docs/) Or You can even seek help on our [telegram community](https://t.me/passcodescommunity)
 
+## Changelog & Release Notes
+
+- Professional ChangeLog: [here](https://github.com/JeelDobariya38/Passcodes/blob/main/changelog.md)
+- Casual Release Notes: [here](https://github.com/JeelDobariya38/Passcodes/blob/main/docs/release-notes.md)
+
 ## Contribution Are Appreciated!!!
 
-> [!important]
+> [!IMPORTANT]
 > Currently the project (more or less also me) is not ready for (code) contributions.
-> This project is currently limited by my expertise. Meaning I don;t want others code in codebase, that I don;t understand, I am learning android and will surely learn basic off by start of 2026.. then i will allow the contibution... but not now as i am beginner in android and might have difficuly understand code not written by me...
+> This project is currently limited by my expertise & I am beginner. Meaning I don;t want others code in my codebase, that I don't understand, I am learning android and will surely learn basic off by start of 2026.. then i will allow the contibution to this repo... But as of now i don't admire code contribution. As I am beginner in android and might have difficuly understand code that not written by me...
 >
-> There are still other ways to contribute to project.. like testing app, documenation and just spreading the word around about the app. but contribution to code is limited.... And i hope you can understand...
+> There are still other ways to contribute to project.. like by testing app, by contributing to documenation or more or less just by spreading the word around.. about the app. but, code contribution is limited from my side.... & I hope you can understand...
 >
-> For more infomation on what kind of contribtuion we approve, please open a issue in repo. that way you avoid wasteing your time...
+> For more, infomation on what kind of contribtuion we approve or allow, please open a issue in our repo. that way you avoid wasteing your time...
 
-By, contributing to project you accept the [CONTRIBUTING.md](CONTRIBUTING.md) & [MIT License](LICENSE.txt).
+By, contributing to project you accept the [CONTRIBUTING.md](https://github.com/JeelDobariya38/Passcodes/blob/main/CONTRIBUTING.md) & [MIT License](https://github.com/JeelDobariya38/Passcodes/blob/main/LICENSE.txt).
 
 ## Licence
 
