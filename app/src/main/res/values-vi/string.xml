@@ -1,7 +1,6 @@
 <resources>
 
     <string name="app_name">Mã Bảo Mật</string>
-    <string name="app_version">v1.0.0-Stable</string>
 
     <!-- Contributor Names -->
     <string name="developer_name">Phát triển bởi: Jeel Dobariya</string>
@@ -37,7 +36,7 @@
     <string name="label_language_setting">Ngôn ngữ: </string>
     <string name="label_contributor">Người đóng góp: </string>
     <string name="label_theme_setting">Giao diện: </string>
-    <string name="report_bug_button_text">Báo cáo lỗi</string>
+    <string name="view_report_bug_text">Báo cáo lỗi</string>
     <string name="about_us_button_text">Giới thiệu</string>
     <string name="view_license_button_text">Xem giấy phép</string>
     <string name="view_security_guidelines_button_text">Hướng dẫn bảo mật</string>

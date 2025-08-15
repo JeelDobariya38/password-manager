@@ -1,7 +1,6 @@
 <resources>
 
     <string name="app_name">Passcodes</string>
-    <string name="app_version">v1.0.0-Stable</string>
 
     <!-- Contributor Names -->
     <string name="developer_name">Dikembangkan oleh: Jeel Dobariya</string>
@@ -37,7 +36,7 @@
     <string name="label_language_setting">Bahasa: </string>
     <string name="label_contributor">Kontributor: </string>
     <string name="label_theme_setting">Tema: </string>
-    <string name="report_bug_button_text">Laporkan Bug</string>
+    <string name="view_report_bug_text">Laporkan Bug</string>
     <string name="about_us_button_text">Tentang Kami</string>
     <string name="view_license_button_text">Lihat Lisensi</string>
     <string name="view_security_guidelines_button_text">Panduan Keamanan</string>
