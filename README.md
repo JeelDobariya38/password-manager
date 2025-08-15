@@ -3,14 +3,18 @@
 [![Android CI/CD](https://github.com/JeelDobariya38/Passcodes/actions/workflows/build-apks.yml/badge.svg)](https://github.com/JeelDobariya38/Passcodes/actions/workflows/build-apks.yml)
 ![Visitor Counter (@hehuapei/visitor-badge)](https://visitor-badge.laobi.icu/badge?page_id=JeelDobariya38.Passcodes&format=true)
 
+> [!WARNING]
+> It is just a open source project. An is current under active development.
+> Please, consider using it for fun, and not for real password managment. (untill, we offically release a stable release)
+
+<p align="center">
+  <img width="512" height="250" alt="passcodes play store banner" src="https://github.com/user-attachments/assets/88e63483-9930-4ce0-a01e-4564e18b3c71" />
+</p>
+
 A android app that take down the headache of remembering passwords. It is open source solutions that help you in keeping your passwords safe and secure, in your own local storage without ever needing to push them to cloud.
 
 > What we think of passcodes?
 > Password management is one such thing that is as simple as remember a password yet, it very important topic in term of security. So, we as developer of passcodes think to streamline and securing the process as much as possible. [Read more](docs/project-overview.md)
-
-> [!WARNING]
-> It is just a open source project. An is current under active development.
-> Please, consider using it for fun, and not for real password managment. (untill, we offically release a stable release)
 
 ## Screen Shots
 
@@ -108,4 +112,4 @@ By, contributing to project you accept the [CONTRIBUTING.md](https://github.com/
 
 ## Licence
 
-Passcodes Project is license under [MIT](LICENSE.txt) License. Downloading the app would mean, you are okay and have accepted the license.
+Passcodes Project is license under [MIT](https://github.com/JeelDobariya38/Passcodes/blob/main/LICENSE.txt) License. Downloading the app would mean, you are okay and have accepted the license.
