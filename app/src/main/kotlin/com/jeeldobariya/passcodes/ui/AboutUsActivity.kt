@@ -45,5 +45,9 @@ class AboutUsActivity : AppCompatActivity() {
     binding.cardReportBug.setOnClickListener {
       openBrowser(Constant.REPORT_BUG_URL)
     }
+
+    binding.cardTelegramCommunity.setOnClickListener {
+      openBrowser(Constant.TELEGRAM_COMMUNITY_URL)
+    }
   }
 }
