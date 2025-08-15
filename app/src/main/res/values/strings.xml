@@ -41,7 +41,7 @@
     <string name="about_us_button_text">About Us</string>
     <string name="view_license_button_text">View License</string>
     <string name="view_security_guidelines_button_text">Security Guidelines</string>
-    <string name="view_change_log_button_text">View Changelog</string>
+    <string name="view_release_notes_button_text">View Release Notes</string>
 
     <!-- Headline of Activity -->
     <string name="textview_passwordmanager_headline">Password Manager</string>
