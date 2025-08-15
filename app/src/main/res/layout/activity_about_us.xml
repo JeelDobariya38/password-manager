@@ -177,6 +177,37 @@
                             android:textAlignment="center"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_telegram_community"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="2"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/ic_user"
+                            app:tint="?attr/colorPrimary" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Telegram Community"
+                            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
             </GridLayout>
 
             <com.google.android.material.textview.MaterialTextView
