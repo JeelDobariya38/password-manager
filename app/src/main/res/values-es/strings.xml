@@ -40,7 +40,7 @@
     <string name="about_us_button_text">Sobre Nosotros</string>
     <string name="view_license_button_text">Ver Licencia</string>
     <string name="view_security_guidelines_button_text">Ver Seguridad</string>
-    <string name="view_change_log_button_text">Ver Cambios</string>
+    <string name="view_release_notes_button_text">Ver Cambios</string>
 
     <!-- Headline of Activity -->
     <string name="textview_passwordmanager_headline">Gestor de Contraseñas</string>

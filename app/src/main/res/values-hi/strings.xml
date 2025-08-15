@@ -41,7 +41,7 @@
     <string name="about_us_button_text">हमारे बारे में</string>
     <string name="view_license_button_text">लाइसेंस देखें</string>
     <string name="view_security_guidelines_button_text">सिक्योरिटी गाइडलाइंस</string>
-    <string name="view_change_log_button_text">चेंजलॉग देखें</string>
+    <string name="view_release_notes_button_text">चेंजलॉग देखें</string>
 
     <!-- Headline of Activity -->
     <string name="textview_passwordmanager_headline">पासवर्ड मैनेजर</string>

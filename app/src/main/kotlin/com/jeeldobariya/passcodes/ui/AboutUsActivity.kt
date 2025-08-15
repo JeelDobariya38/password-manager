@@ -34,8 +34,8 @@ class AboutUsActivity : AppCompatActivity() {
       openBrowser(Constant.SECURITY_GUIDE_URL)
     }
 
-    binding.cardChangeLog.setOnClickListener {
-      openBrowser(Constant.CHANGELOG_URL)
+    binding.cardReleaseNotes.setOnClickListener {
+      openBrowser(Constant.RELEASE_NOTE_URL)
     }
 
     binding.cardLicense.setOnClickListener {

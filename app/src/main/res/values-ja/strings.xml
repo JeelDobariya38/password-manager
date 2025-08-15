@@ -41,7 +41,7 @@
     <string name="about_us_button_text">アプリについて</string>
     <string name="view_license_button_text">ライセンスを見る</string>
     <string name="view_security_guidelines_button_text">セキュリティガイドライン</string>
-    <string name="view_change_log_button_text">更新履歴</string>
+    <string name="view_release_notes_button_text">更新履歴</string>
 
     <!-- Headline -->
     <string name="textview_passwordmanager_headline">パスワードマネージャー</string>
