@@ -2,9 +2,6 @@ package com.jeeldobariya.passcodes.ui
 
 import com.jeeldobariya.passcodes.databinding.ActivityAboutUsBinding
 import com.jeeldobariya.passcodes.utils.Constant
-
-import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
-
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -42,7 +39,7 @@ class AboutUsActivity : AppCompatActivity() {
     }
 
     binding.cardLicense.setOnClickListener {
-      startActivity(Intent(this, OssLicensesMenuActivity::class.java))
+      startActivity(Intent(this, LicenseActivity::class.java))
     }
 
     binding.cardReportBug.setOnClickListener {

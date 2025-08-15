@@ -5,12 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+Release Notes: [docs/release-notes.md](docs/release-notes.md), there you will find short and sweet release notes.
+
 ## [Unreleased]
 
-## Added
+## v1.0.0-Stable
+
+### Added
 
 - **Localized App**: add language support for English, Chinese, Hindi, Indonesian, Japanese, Korean, German, Spanish, Vietnamese. Contributed by [@JeelDobariya].
-- **Improved UI/UX**: add confirmation dialogs, support for light & dark theme with additional minor changes. Contributed by [@JeelDobariya].
+- **Improved UI/UX**: add confirmation dialogs, support for light & dark theme with additional minor changes. Contributed by [@JeelDobariya & @kudanilll].
 - **New Icon**: add new icons to app. Contributed by [@JeelDobariya].
 
 ### Changed

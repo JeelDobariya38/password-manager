@@ -1,7 +1,7 @@
 <resources>
 
     <string name="app_name">Mã Bảo Mật</string>
-    <string name="app_version">v0.1.0-Alpha</string>
+    <string name="app_version">v1.0.0-Stable</string>
 
     <!-- Contributor Names -->
     <string name="developer_name">Phát triển bởi: Jeel Dobariya</string>

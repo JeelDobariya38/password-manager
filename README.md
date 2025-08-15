@@ -83,9 +83,17 @@ It was general, intuitive, short and sweet description, For more detailed descri
 
 ## Support Docs
 
-You can checkout support docs, provided in [docs/](docs/) Or You can even seek help on our [telegram community](https://t.me/passwordmanagercommunity)
+You can checkout support docs, provided in [docs/](docs/) Or You can even seek help on our [telegram community](https://t.me/passcodescommunity)
 
 ## Contribution Are Appreciated!!!
+
+> [!important]
+> Currently the project (more or less also me) is not ready for (code) contributions.
+> This project is currently limited by my expertise. Meaning I don;t want others code in codebase, that I don;t understand, I am learning android and will surely learn basic off by start of 2026.. then i will allow the contibution... but not now as i am beginner in android and might have difficuly understand code not written by me...
+>
+> There are still other ways to contribute to project.. like testing app, documenation and just spreading the word around about the app. but contribution to code is limited.... And i hope you can understand...
+>
+> For more infomation on what kind of contribtuion we approve, please open a issue in repo. that way you avoid wasteing your time...
 
 By, contributing to project you accept the [CONTRIBUTING.md](CONTRIBUTING.md) & [MIT License](LICENSE.txt).
 

@@ -1,55 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools">
 
-	<uses-sdk
-		android:minSdkVersion="26"
-		android:targetSdkVersion="34" />
+    <application
+        android:allowBackup="true"
+        android:icon="${appIcon}"
+        android:label="${appLabel}"
+        android:localeConfig="@xml/locales_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/PasscodesTheme.Default"
+        tools:targetApi="33">
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-	<!-- Storage access permission
-	<uses-permission
-		android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-		android:maxSdkVersion="32"
-		tools:ignore="ScopedStorage" />
-  
-	<uses-permission
-		android:name="android.permission.READ_EXTERNAL_STORAGE"
-		android:maxSdkVersion="32" /> -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-	<application
-		android:allowBackup="true"
-		android:icon="${appIcon}"
-		android:label="${appLabel}"
-		android:requestLegacyExternalStorage="true"
-		android:roundIcon="@mipmap/ic_launcher_round"
-		android:supportsRtl="true"
-		android:theme="@style/PasscodesTheme.Default"
-		android:localeConfig="@xml/locales_config">
-		<activity
-			android:name=".ui.MainActivity"
-			android:exported="true">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
-		</activity>
         <activity android:name=".ui.PasswordManagerActivity" />
-    	<activity android:name=".ui.SavePasswordActivity" />
-    	<activity android:name=".ui.LoadPasswordActivity" />
-    	<activity android:name=".ui.ViewPasswordActivity" />
-    	<activity android:name=".ui.UpdatePasswordActivity" />
-		<activity android:name=".ui.SettingsActivity" />
-		<activity android:name=".ui.AboutUsActivity" />
+        <activity android:name=".ui.SavePasswordActivity" />
+        <activity android:name=".ui.LoadPasswordActivity" />
+        <activity android:name=".ui.ViewPasswordActivity" />
+        <activity android:name=".ui.UpdatePasswordActivity" />
+        <activity android:name=".ui.SettingsActivity" />
+        <activity android:name=".ui.AboutUsActivity" />
+        <activity android:name=".ui.LicenseActivity" />
 
-		<service
-			android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
-			android:enabled="false"
-			android:exported="false">
-			<meta-data
-				android:name="autoStoreLocales"
-				android:value="true" />
-		</service>
-	</application>
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+    </application>
 
 </manifest>
