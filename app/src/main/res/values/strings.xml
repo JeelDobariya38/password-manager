@@ -1,7 +1,7 @@
 <resources>
 
     <string name="app_name">Passcodes</string>
-    <string name="app_version">v1.0.0-Stable</string>
+    <string name="app_version" translatable="false">v1.0.0-Stable</string>
 
     <!-- Contributor Names -->
     <string name="developer_name">Developed by: Dobariya Jeel</string>
@@ -37,11 +37,15 @@
     <string name="label_language_setting">Language: </string>
     <string name="label_contributor">Contributor: </string>
     <string name="label_theme_setting">Themes: </string>
-    <string name="report_bug_button_text">Report Bug</string>
     <string name="about_us_button_text">About Us</string>
-    <string name="view_license_button_text">View License</string>
+
+    <!-- Hyper Text Link Buttons Text -->
+    <string name="view_report_bug_text">Report Bug</string>
     <string name="view_security_guidelines_button_text">Security Guidelines</string>
     <string name="view_release_notes_button_text">View Release Notes</string>
+    <string name="view_license_button_text">View License</string>
+    <string name="view_third_party_license_text" translatable="false">Third Party License</string>
+    <string name="view_telegram_community_text" translatable="false">Passcodes Telegram Community</string>
 
     <!-- Headline of Activity -->
     <string name="textview_passwordmanager_headline">Password Manager</string>
