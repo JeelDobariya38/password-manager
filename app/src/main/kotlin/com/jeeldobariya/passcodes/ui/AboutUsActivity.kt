@@ -34,8 +34,8 @@ class AboutUsActivity : AppCompatActivity() {
       openBrowser(Constant.SECURITY_GUIDE_URL)
     }
 
-    binding.cardChangeLog.setOnClickListener {
-      openBrowser(Constant.CHANGELOG_URL)
+    binding.cardReleaseNotes.setOnClickListener {
+      openBrowser(Constant.RELEASE_NOTE_URL)
     }
 
     binding.cardLicense.setOnClickListener {
@@ -44,6 +44,10 @@ class AboutUsActivity : AppCompatActivity() {
 
     binding.cardReportBug.setOnClickListener {
       openBrowser(Constant.REPORT_BUG_URL)
+    }
+
+    binding.cardTelegramCommunity.setOnClickListener {
+      openBrowser(Constant.TELEGRAM_COMMUNITY_URL)
     }
   }
 }

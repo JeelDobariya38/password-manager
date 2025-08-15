@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Passcodes</string>
-    <string name="app_version">v1.0.0-Stable</string>
 
     <!-- Contributor Names -->
     <string name="developer_name">Jaejak: Dobariya Jeel</string>
@@ -36,11 +35,11 @@
     <string name="label_language_setting">Eon-eo: </string>
     <string name="label_contributor">Gibuja: </string>
     <string name="label_theme_setting">Tema: </string>
-    <string name="report_bug_button_text">Beogeu Singo</string>
+    <string name="view_report_bug_text">Beogeu Singo</string>
     <string name="about_us_button_text">Ulineun Nuguinga</string>
     <string name="view_license_button_text">Laiseonse Bogi</string>
     <string name="view_security_guidelines_button_text">Anjeon Jichim Bogi</string>
-    <string name="view_change_log_button_text">Byeon-gye Nolog Bogi</string>
+    <string name="view_release_notes_button_text">Byeon-gye Nolog Bogi</string>
 
     <!-- Headline of Activity -->
     <string name="textview_passwordmanager_headline">Bimilbeonho Gwanli</string>

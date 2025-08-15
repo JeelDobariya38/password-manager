@@ -3,16 +3,20 @@
 Here, You will find short ad sweet and casual `tldrs` for release notes or changelog.
 For more details and more professional tone, see [changelog.md](/changelog.md).
 
-### v1.0.0-Stable
+### v1.0.0-Stable (Aug 16, 2025)
 
-```
-Pacakage Name = "com.jeeldobariya.passcodes"
-Min Android = 8.0 (API level 26)
-Max Android = 14 (API level 34)
-Version Code = 1
-Version Name = "v1.0.0-Stable"
-Master Database Version = "v1"
-```
+<details>
+  <summary>View Internal Details</summary>
+  
+  ```
+  Pacakage Name = "com.jeeldobariya.passcodes"
+  Min Android = 8.0 (API level 26)
+  Max Android = 14 (API level 34)
+  Version Code = 1
+  Version Name = "v1.0.0-Stable"
+  Master Database Version = "v1"
+  ```
+</details>
 
 `TL;DR`: Our first stable release.. | Not much has change in terms of look and feature.. | Name of project has changed to "Passcodes"..
 
@@ -22,16 +26,20 @@ things have change internally also... like app was first build using java.. but,
 now, you can also switch theme and languages in app..
 also improve UI/UX by providing help text.. especially as you all have question like "what is domain?" "what can i write in domain?" and so on.....
 
-### v0.1.0-Alpha
+### v0.1.0-Alpha (Aug 26, 2024)
 
-```
-Pacakage Name = "com.passwordmanager"
-Min Android = 8.0 (API level 26)
-Max Android = 13 (API level 33)
-Version Code = 1
-Version Name = "0.1.0-Alpha"
-Master Database Version = "v1"
-```
+<details>
+  <summary>View Internal Details</summary>
+  
+  ```
+  Pacakage Name = "com.passwordmanager"
+  Min Android = 8.0 (API level 26)
+  Max Android = 13 (API level 33)
+  Version Code = 1
+  Version Name = "0.1.0-Alpha"
+  Master Database Version = "v1"
+  ```
+</details>
 
 `TL;DR`: Our first initial release.. | Prototype release..
 

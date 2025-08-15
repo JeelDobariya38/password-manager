@@ -1,7 +1,6 @@
 <resources>
 
     <string name="app_name">पासकोड्स</string>
-    <string name="app_version">v1.0.0-Stable</string>
 
     <!-- Contributor Names -->
     <string name="developer_name">डेवलप किया गया: जीत डोबरिया</string>
@@ -37,11 +36,11 @@
     <string name="label_language_setting">भाषा: </string>
     <string name="label_contributor">योगदानकर्ता: </string>
     <string name="label_theme_setting">थीम: </string>
-    <string name="report_bug_button_text">रिपोर्ट बग</string>
+    <string name="view_report_bug_text">रिपोर्ट बग</string>
     <string name="about_us_button_text">हमारे बारे में</string>
     <string name="view_license_button_text">लाइसेंस देखें</string>
     <string name="view_security_guidelines_button_text">सिक्योरिटी गाइडलाइंस</string>
-    <string name="view_change_log_button_text">चेंजलॉग देखें</string>
+    <string name="view_release_notes_button_text">चेंजलॉग देखें</string>
 
     <!-- Headline of Activity -->
     <string name="textview_passwordmanager_headline">पासवर्ड मैनेजर</string>
