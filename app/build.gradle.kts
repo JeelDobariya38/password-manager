@@ -43,6 +43,22 @@ android {
                     // throw GradleException("keystore.properties not found!")
                 }
             }
+
+            create("staging") {
+                val keystorePropertiesFile = rootProject.file("keystore.properties")
+                if (keystorePropertiesFile.exists()) {
+                    val keystoreProperties = Properties()
+                    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+
+                    keyAlias = keystoreProperties.getProperty("stagingKeyAlias")
+                    keyPassword = keystoreProperties.getProperty("stagingKeyPassword")
+                    storeFile = file(keystoreProperties.getProperty("stagingStoreFile"))
+                    storePassword = keystoreProperties.getProperty("stagingStorePassword")
+                } else {
+                    logger.warn("WARNING: keystore.properties not found for release signing config.")
+                    // throw GradleException("keystore.properties not found!")
+                }
+            }
         }
 
         splits {
@@ -86,6 +102,13 @@ android {
             }
 
             create("staging") {
+                if (rootProject.file("keystore.properties").exists()) {
+                    signingConfig = signingConfigs.getByName("staging")
+                } else {
+                    logger.warn("WARNING: Staging build will not be signed as keystore.properties is missing.")
+                    // throw GradleException("Can't Sign Staging Build")
+                }
+
                 applicationIdSuffix = ".staging"
                 versionNameSuffix = "-Staging"
 
