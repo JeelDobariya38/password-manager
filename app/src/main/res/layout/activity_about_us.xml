@@ -196,10 +196,10 @@
                         android:gravity="center">
 
                         <ImageView
-                            android:layout_width="85dp"
-                            android:layout_height="85dp"
+                            android:layout_width="256dp"
+                            android:layout_height="256dp"
                             android:layout_marginBottom="8dp"
-                            android:src="@drawable/ic_user"
+                            android:src="@drawable/ic_send"
                             app:tint="?attr/colorPrimary" />
                         <TextView
                             android:layout_width="wrap_content"
