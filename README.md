@@ -1,15 +1,18 @@
 # Passcodes
 
-[![Android CI/CD](https://github.com/JeelDobariya38/Passcodes/actions/workflows/build-apks.yml/badge.svg)](https://github.com/JeelDobariya38/Passcodes/actions/workflows/build-apks.yml)
-![Visitor Counter (@hehuapei/visitor-badge)](https://visitor-badge.laobi.icu/badge?page_id=JeelDobariya38.Passcodes&format=true)
-
 > [!WARNING]
 > It is just a open source project. An is current under active development.
 > Please, consider using it for fun, and not for real password managment. (untill, we offically release a stable release)
 
-<p align="center">
+<div align="center">
+  
   <img width="512" height="250" alt="passcodes play store banner" src="https://github.com/user-attachments/assets/88e63483-9930-4ce0-a01e-4564e18b3c71" />
-</p>
+  
+![Static Badge](https://img.shields.io/badge/Release-Prototype-blue)
+[![Android CI/CD](https://github.com/JeelDobariya38/Passcodes/actions/workflows/build-apks.yml/badge.svg)](https://github.com/JeelDobariya38/Passcodes/actions/workflows/build-apks.yml)
+![Visitor Counter (@hehuapei/visitor-badge)](https://visitor-badge.laobi.icu/badge?page_id=JeelDobariya38.Passcodes&format=true)
+
+</div>
 
 A android app that take down the headache of remembering passwords. It is open source solutions that help you in keeping your passwords safe and secure, in your own local storage without ever needing to push them to cloud.
 
