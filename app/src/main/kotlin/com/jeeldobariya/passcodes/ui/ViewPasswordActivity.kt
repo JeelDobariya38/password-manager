@@ -1,5 +1,6 @@
 package com.jeeldobariya.passcodes.ui
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -63,7 +64,6 @@ class ViewPasswordActivity : AppCompatActivity() {
                     binding.tvUsername.text = "${getString(R.string.username_prefix)}  ${passwordEntity.username}"
                     binding.tvPassword.text = "${getString(R.string.password_prefix)}  ${passwordEntity.password}"
                     binding.tvNotes.text = "${getString(R.string.notes_prefix)}  ${passwordEntity.notes}"
-                    binding.tvCreatedAt.text = "${getString(R.string.createdat_prefix)}  ${passwordEntity.createdAt}"
                     binding.tvUpdatedAt.text = "${getString(R.string.updatedat_prefix)}  ${passwordEntity.updatedAt}"
                 }
             } catch (e: PasswordNotFoundException) {
