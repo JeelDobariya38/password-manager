@@ -232,4 +232,60 @@
     <color name="md_theme_cute_dark_inverseSurface">#EAE0E1</color>
     <color name="md_theme_cute_dark_inverseOnSurface">#1E1B1C</color>
     <color name="md_theme_cute_dark_inversePrimary">#BC396A</color>
+
+    <!-- Green Safe Light Theme Colors -->
+    <color name="md_theme_green_safe_light_primary">#386A20</color>
+    <color name="md_theme_green_safe_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_green_safe_light_primaryContainer">#B8F397</color>
+    <color name="md_theme_green_safe_light_onPrimaryContainer">#082100</color>
+    <color name="md_theme_green_safe_light_secondary">#55624C</color>
+    <color name="md_theme_green_safe_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_green_safe_light_secondaryContainer">#D9E7CB</color>
+    <color name="md_theme_green_safe_light_onSecondaryContainer">#131F0E</color>
+    <color name="md_theme_green_safe_light_tertiary">#386A20</color>
+    <color name="md_theme_green_safe_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_green_safe_light_tertiaryContainer">#B8F397</color>
+    <color name="md_theme_green_safe_light_onTertiaryContainer">#082100</color>
+    <color name="md_theme_green_safe_light_error">#BA1A1A</color>
+    <color name="md_theme_green_safe_light_onError">#FFFFFF</color>
+    <color name="md_theme_green_safe_light_errorContainer">#FFDAD6</color>
+    <color name="md_theme_green_safe_light_onErrorContainer">#410002</color>
+    <color name="md_theme_green_safe_light_background">#FCFDF6</color>
+    <color name="md_theme_green_safe_light_onBackground">#1A1C19</color>
+    <color name="md_theme_green_safe_light_surface">#FCFDF6</color>
+    <color name="md_theme_green_safe_light_onSurface">#1A1C19</color>
+    <color name="md_theme_green_safe_light_surfaceVariant">#DEE5D8</color>
+    <color name="md_theme_green_safe_light_onSurfaceVariant">#424940</color>
+    <color name="md_theme_green_safe_light_outline">#72796F</color>
+    <color name="md_theme_green_safe_light_inverseSurface">#2F312D</color>
+    <color name="md_theme_green_safe_light_inverseOnSurface">#F0F1EA</color>
+    <color name="md_theme_green_safe_light_inversePrimary">#9CD67D</color>
+
+    <!-- Green Safe Dark Theme Colors -->
+    <color name="md_theme_green_safe_dark_primary">#9CD67D</color>
+    <color name="md_theme_green_safe_dark_onPrimary">#183700</color>
+    <color name="md_theme_green_safe_dark_primaryContainer">#285006</color>
+    <color name="md_theme_green_safe_dark_onPrimaryContainer">#B8F397</color>
+    <color name="md_theme_green_safe_dark_secondary">#BDCBB0</color>
+    <color name="md_theme_green_safe_dark_onSecondary">#283421</color>
+    <color name="md_theme_green_safe_dark_secondaryContainer">#3E4A36</color>
+    <color name="md_theme_green_safe_dark_onSecondaryContainer">#D9E7CB</color>
+    <color name="md_theme_green_safe_dark_tertiary">#9CD67D</color>
+    <color name="md_theme_green_safe_dark_onTertiary">#183700</color>
+    <color name="md_theme_green_safe_dark_tertiaryContainer">#285006</color>
+    <color name="md_theme_green_safe_dark_onTertiaryContainer">#B8F397</color>
+    <color name="md_theme_green_safe_dark_error">#FFB4AB</color>
+    <color name="md_theme_green_safe_dark_onError">#690005</color>
+    <color name="md_theme_green_safe_dark_errorContainer">#93000A</color>
+    <color name="md_theme_green_safe_dark_onErrorContainer">#FFDAD6</color>
+    <color name="md_theme_green_safe_dark_background">#1A1C19</color>
+    <color name="md_theme_green_safe_dark_onBackground">#E2E3DD</color>
+    <color name="md_theme_green_safe_dark_surface">#1A1C19</color>
+    <color name="md_theme_green_safe_dark_onSurface">#E2E3DD</color>
+    <color name="md_theme_green_safe_dark_surfaceVariant">#424940</color>
+    <color name="md_theme_green_safe_dark_onSurfaceVariant">#C2C8BC</color>
+    <color name="md_theme_green_safe_dark_outline">#8C9387</color>
+    <color name="md_theme_green_safe_dark_inverseSurface">#E2E3DD</color>
+    <color name="md_theme_green_safe_dark_inverseOnSurface">#1A1C19</color>
+    <color name="md_theme_green_safe_dark_inversePrimary">#386A20</color>
 </resources>

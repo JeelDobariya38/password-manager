@@ -72,9 +72,5 @@ class MainActivity : AppCompatActivity() {
             val aboutUsIntent = Intent(this, AboutUsActivity::class.java)
             startActivity(aboutUsIntent)
         }
-
-        binding.quitBtn.setOnClickListener {
-            finishAndRemoveTask()
-        }
     }
 }

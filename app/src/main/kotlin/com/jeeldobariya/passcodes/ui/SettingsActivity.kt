@@ -29,7 +29,8 @@ class SettingsActivity : AppCompatActivity() {
         R.style.PasscodesTheme_Default,
         R.style.PasscodesTheme_Trusted,
         R.style.PasscodesTheme_Pink,
-        R.style.PasscodesTheme_Cute
+        R.style.PasscodesTheme_Cute,
+        R.style.PasscodesTheme_GreenSafe
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
