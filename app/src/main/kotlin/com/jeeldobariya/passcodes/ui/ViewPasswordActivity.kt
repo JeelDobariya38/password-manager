@@ -1,6 +1,7 @@
 package com.jeeldobariya.passcodes.ui
 
-import android.annotation.SuppressLint
+import android.content.ClipData;
+import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -27,12 +28,13 @@ class ViewPasswordActivity : AppCompatActivity() {
     private var passwordEntityId: Int = 0
     private lateinit var binding: ActivityViewPasswordBinding
     private lateinit var controller: Controller
+    private lateinit var passwordEntity: Password
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
         val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
         setTheme(savedThemeStyle)
-        
+
         super.onCreate(savedInstanceState)
         binding = ActivityViewPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -58,7 +60,7 @@ class ViewPasswordActivity : AppCompatActivity() {
     private fun fillDataInTextview() {
         lifecycleScope.launch {
             try {
-                val passwordEntity: Password = controller.getPasswordById(passwordEntityId)
+                passwordEntity = controller.getPasswordById(passwordEntityId)
                 withContext(Dispatchers.Main) {
                     binding.tvDomain.text = "${getString(R.string.domain_prefix)}  ${passwordEntity.domain}"
                     binding.tvUsername.text = "${getString(R.string.username_prefix)}  ${passwordEntity.username}"
@@ -90,6 +92,30 @@ class ViewPasswordActivity : AppCompatActivity() {
 
     // Added all the onclick event listeners
     private fun addOnClickListenerOnButton() {
+        binding.copyPasswordBtn.setOnClickListener {
+            val confirmDialog = AlertDialog.Builder(this@ViewPasswordActivity)
+                .setTitle(R.string.copy_password_dialog_title)
+                .setMessage(R.string.danger_copy_to_clipboard_desc)
+                .setPositiveButton(R.string.confirm_dialog_button_text) { dialog, which -> 
+                    val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager
+                    val clip: ClipData = ClipData.newPlainText(passwordEntity.username, passwordEntity.password)
+
+                    // Set the ClipData to the clipboard
+                    if (clipboard != null) {
+                        clipboard.setPrimaryClip(clip)
+                        Toast.makeText(this, getString(R.string.copy_success), Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this, "Clipboard service not available.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                .setNegativeButton(R.string.discard_dialog_button_text) { dialog, which -> 
+                    Toast.makeText(this, getString(R.string.action_discard), Toast.LENGTH_SHORT).show();
+                }
+                .create();
+
+            confirmDialog.show();
+        }
+
         binding.updatePasswordBtn.setOnClickListener {
             val viewPasswordIntent = Intent(this, UpdatePasswordActivity::class.java)
             viewPasswordIntent.putExtra("id", passwordEntityId)
@@ -101,18 +127,18 @@ class ViewPasswordActivity : AppCompatActivity() {
                 .setTitle(R.string.delete_password_dialog_title)
                 .setMessage(R.string.irreversible_dialog_desc)
                 .setPositiveButton(R.string.confirm_dialog_button_text) { dialog, which -> 
-                    performDeletePasswordAction();
+                    performDeletePasswordAction()
                 }
                 .setNegativeButton(R.string.discard_dialog_button_text) { dialog, which -> 
                     Toast.makeText(this, getString(R.string.action_discard), Toast.LENGTH_SHORT).show();
                 }
                 .create();
-        
+
             confirmDialog.show();
         }
     }
 
-    fun performDeletePasswordAction() {
+    private fun performDeletePasswordAction() {
         lifecycleScope.launch {
             try {
                 val rowsDeleted = controller.deletePassword(passwordEntityId)

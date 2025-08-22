@@ -29,6 +29,18 @@ jobs:
           distribution: "temurin"
           java-version: "17"
 
+      - name: Decode Keystore
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 --decode > passcodes-staging.jks
+        env:
+          KEYSTORE_BASE64: ${{ secrets.STAGING_KEYSTORE_BASE64 }}
+
+      - name: Decode Keystore Properties
+        run: |
+          echo "$KEYSTORE_PROPERTIES_BASE64" | base64 --decode > keystore.properties
+        env:
+          KEYSTORE_PROPERTIES_BASE64: ${{ secrets.STAGING_KEYSTORE_PROPERTIES_BASE64 }}
+
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v3
 
