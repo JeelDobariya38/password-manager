@@ -88,30 +88,4 @@
     <string name="irreversible_dialog_desc">This action cannot be undone.</string>
     <string name="confirm_dialog_button_text">Confirm</string>
     <string name="discard_dialog_button_text">Discard</string>
-
-    <string-array name="lang_options">
-        <item>English (en-us)</item>
-        <item>Hindi (hi)</item>
-        <item>Indonesian (in)</item>
-        <item>Korean (ko)</item>
-        <item>Korean Romanized (kr)</item>
-        <item>Japanese (ja)</item>
-        <item>German (de)</item>
-        <item>Spanish (es)</item>
-        <item>Chinese (zh)</item>
-        <item>Vietnamese (vi)</item>
-    </string-array>
-
-    <string-array name="lang_locale_tags">
-        <item>en</item>
-        <item>hi</item>
-        <item>id</item>
-        <item>ko</item>
-        <item>kr</item>
-        <item>ja</item>
-        <item>de</item>
-        <item>es</item>
-        <item>zh</item>
-        <item>vi</item>
-    </string-array>
 </resources>
