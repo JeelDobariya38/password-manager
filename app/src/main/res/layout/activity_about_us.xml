@@ -196,8 +196,8 @@
                         android:gravity="center">
 
                         <ImageView
-                            android:layout_width="256dp"
-                            android:layout_height="256dp"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
                             android:layout_marginBottom="8dp"
                             android:src="@drawable/ic_send"
                             app:tint="?attr/colorPrimary" />

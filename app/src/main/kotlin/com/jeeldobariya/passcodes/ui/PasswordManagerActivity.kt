@@ -1,7 +1,5 @@
 package com.jeeldobariya.passcodes.ui
 
-import android.content.Context
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -13,10 +11,10 @@ import com.jeeldobariya.passcodes.databinding.ActivityPasswordManagerBinding
 
 class PasswordManagerActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityPasswordManagerBinding // Use lateinit for binding
+    private lateinit var binding: ActivityPasswordManagerBinding // Use late init for binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
+        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, MODE_PRIVATE)
         val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
         setTheme(savedThemeStyle)
 
@@ -41,10 +39,6 @@ class PasswordManagerActivity : AppCompatActivity() {
         binding.loadPasswordBtn.setOnClickListener {
             val loadPasswordIntent = Intent(this, LoadPasswordActivity::class.java)
             startActivity(loadPasswordIntent)
-        }
-
-        binding.securityCheckBtn.setOnClickListener {
-            Toast.makeText(this, getString(R.string.future_feat_clause), Toast.LENGTH_SHORT).show()
         }
 
         binding.importPasswordBtn.setOnClickListener {
