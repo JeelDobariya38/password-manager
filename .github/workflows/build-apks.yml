@@ -27,12 +27,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: "temurin"
-          java-version: "17"
-
       - name: Decode Keystore
         run: |
           echo "$KEYSTORE_BASE64" | base64 --decode > passcodes-staging.jks
@@ -41,9 +35,15 @@ jobs:
 
       - name: Decode Keystore Properties
         run: |
-          echo "$KEYSTORE_PROPERTIES_BASE64" | base64 --decode > keystore.properties
+          echo "$KEYSTORE_PROPERTIES_BASE64" | base64 --decode > staging-keystore.properties
         env:
           KEYSTORE_PROPERTIES_BASE64: ${{ secrets.STAGING_KEYSTORE_PROPERTIES_BASE64 }}
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
 
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v4
