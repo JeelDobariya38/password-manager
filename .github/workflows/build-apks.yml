@@ -23,12 +23,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: "temurin"
-          java-version: "17"
-
       - name: Decode Keystore
         run: |
           echo "$KEYSTORE_BASE64" | base64 --decode > passcodes-staging.jks
@@ -37,12 +31,18 @@ jobs:
 
       - name: Decode Keystore Properties
         run: |
-          echo "$KEYSTORE_PROPERTIES_BASE64" | base64 --decode > keystore.properties
+          echo "$KEYSTORE_PROPERTIES_BASE64" | base64 --decode > staging-keystore.properties
         env:
           KEYSTORE_PROPERTIES_BASE64: ${{ secrets.STAGING_KEYSTORE_PROPERTIES_BASE64 }}
 
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v3
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Grant execute permission to gradlew
         run: chmod +x gradlew
@@ -65,7 +65,7 @@ jobs:
             echo "Triggered by push to 'main' branch. Building staging variant."
             BUILD_VARIANT="staging"
             ./gradlew assembleStaging
-            APK_PATH=app/build/outputs/apk/staging/app-universal-staging-unsigned.apk
+            APK_PATH=app/build/outputs/apk/staging/app-universal-staging.apk
           fi
 
           # Set the output variables for the next steps.

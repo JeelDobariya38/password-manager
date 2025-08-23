@@ -45,7 +45,7 @@ android {
             }
 
             create("staging") {
-                val keystorePropertiesFile = rootProject.file("keystore.properties")
+                val keystorePropertiesFile = rootProject.file("staging-keystore.properties")
                 if (keystorePropertiesFile.exists()) {
                     val keystoreProperties = Properties()
                     keystoreProperties.load(FileInputStream(keystorePropertiesFile))
@@ -102,10 +102,10 @@ android {
             }
 
             create("staging") {
-                if (rootProject.file("keystore.properties").exists()) {
+                if (rootProject.file("staging-keystore.properties").exists()) {
                     signingConfig = signingConfigs.getByName("staging")
                 } else {
-                    logger.warn("WARNING: Staging build will not be signed as keystore.properties is missing.")
+                    logger.warn("WARNING: Staging build will not be signed as staging-keystore.properties is missing.")
                     // throw GradleException("Can't Sign Staging Build")
                 }
 
