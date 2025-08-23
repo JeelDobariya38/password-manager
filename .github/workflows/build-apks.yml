@@ -46,7 +46,7 @@ jobs:
           KEYSTORE_PROPERTIES_BASE64: ${{ secrets.STAGING_KEYSTORE_PROPERTIES_BASE64 }}
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v3
+        uses: gradle/gradle-build-action@v4
 
       - name: Grant execute permission to gradlew
         run: chmod +x gradlew
