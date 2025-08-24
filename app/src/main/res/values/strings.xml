@@ -39,6 +39,7 @@
     <string name="label_language_setting">Language: </string>
     <string name="label_contributor">Contributor: </string>
     <string name="label_theme_setting">Themes: </string>
+    <string name="latest_feature" translatable="false">Preview Features: </string>
     <string name="about_us_button_text">About Us</string>
 
     <!-- Hyper Text Link Buttons Text -->

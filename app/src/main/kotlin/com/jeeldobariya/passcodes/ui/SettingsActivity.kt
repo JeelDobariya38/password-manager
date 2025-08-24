@@ -13,6 +13,8 @@ import android.view.LayoutInflater
 
 import com.jeeldobariya.passcodes.R
 import com.jeeldobariya.passcodes.databinding.ActivitySettingsBinding
+import com.jeeldobariya.passcodes.flags.FeatureFlagManager
+import androidx.core.content.edit
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -43,6 +45,8 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setInitialLangSelection()
+
+        binding.switchLatestFeatures.isChecked = FeatureFlagManager.get(this).latestFeaturesEnabled
 
         // Add event onclick listener
         addOnClickListenerOnButton()
@@ -90,10 +94,15 @@ class SettingsActivity : AppCompatActivity() {
             val newThemeStyle = THEMES[nextIndex]
 
             // Save the new theme and restart the application to apply it
-            sharedPrefs.edit().putInt(THEME_KEY, newThemeStyle).apply()
+            sharedPrefs.edit { putInt(THEME_KEY, newThemeStyle) }
             recreate()
 
             Toast.makeText(this@SettingsActivity, getString(R.string.restart_app_require), Toast.LENGTH_SHORT).show()
+        }
+
+        binding.switchLatestFeatures.setOnCheckedChangeListener { _, isChecked ->
+            FeatureFlagManager.get(this).latestFeaturesEnabled = isChecked
+            Toast.makeText(this@SettingsActivity, getString(R.string.future_feat_clause) + isChecked.toString(), Toast.LENGTH_SHORT).show()
         }
     }
 }
