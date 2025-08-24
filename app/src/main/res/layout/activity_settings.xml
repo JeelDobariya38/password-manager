@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/label_language_setting"
                 android:textColor="?attr/colorPrimary"
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:layout_gravity="left|center_vertical"
                 android:layout_margin="8dp" />
 
@@ -58,7 +58,7 @@
         android:id="@+id/theme_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         app:cardCornerRadius="16dp">
 
         <LinearLayout
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/label_theme_setting"
                 android:textColor="?attr/colorPrimary"
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:layout_gravity="left|center_vertical"
                 android:layout_margin="8dp" />
 
@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/toggle_theme_button_text"
-                android:textSize="14dp"
+                android:textSize="12sp"
                 android:layout_gravity="right|center_vertical" />
 
         </LinearLayout>
@@ -92,29 +92,29 @@
         android:id="@+id/latest_features_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         app:cardCornerRadius="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:padding="16dp">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:textColor="?attr/colorPrimary"
                 android:text="@string/latest_feature"
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp" />
 
-            <Switch
+            <com.google.android.material.materialswitch.MaterialSwitch
                 android:id="@+id/switch_latest_features"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 tools:ignore="UseSwitchCompatOrMaterialXml"
-                android:theme="@style/SCBSwitch"
                 android:layout_margin="8dp"/>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
