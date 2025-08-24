@@ -13,6 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import com.jeeldobariya.passcodes.R
 import com.jeeldobariya.passcodes.database.Password
 import com.jeeldobariya.passcodes.databinding.ActivityViewPasswordBinding
+import com.jeeldobariya.passcodes.flags.FeatureFlagManager
 import com.jeeldobariya.passcodes.utils.Controller
 import com.jeeldobariya.passcodes.utils.DatabaseOperationException
 import com.jeeldobariya.passcodes.utils.PasswordNotFoundException
@@ -49,6 +50,8 @@ class ViewPasswordActivity : AppCompatActivity() {
         }
 
         controller = Controller(this)
+
+        binding.copyPasswordBtn.isEnabled = FeatureFlagManager.get(this).latestFeaturesEnabled
 
         // Add event onclick listener
         addOnClickListenerOnButton()
