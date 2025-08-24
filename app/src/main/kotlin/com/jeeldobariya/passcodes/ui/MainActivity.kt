@@ -9,6 +9,8 @@ import android.view.LayoutInflater
 
 import com.jeeldobariya.passcodes.R
 import com.jeeldobariya.passcodes.databinding.ActivityMainBinding
+import com.jeeldobariya.passcodes.utils.CommonUtils
+
 // import com.jeeldobariya.passcodes.utils.Permissions
 
 class MainActivity : AppCompatActivity() {
@@ -18,9 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
-        setTheme(savedThemeStyle)
+        setTheme(CommonUtils.getCurrTheme(this))
         
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)

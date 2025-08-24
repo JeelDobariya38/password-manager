@@ -15,6 +15,7 @@ import com.jeeldobariya.passcodes.R
 import com.jeeldobariya.passcodes.databinding.ActivitySettingsBinding
 import com.jeeldobariya.passcodes.flags.FeatureFlagManager
 import androidx.core.content.edit
+import com.jeeldobariya.passcodes.utils.CommonUtils
 import com.jeeldobariya.passcodes.utils.Constant
 
 class SettingsActivity : AppCompatActivity() {
@@ -32,9 +33,7 @@ class SettingsActivity : AppCompatActivity() {
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(Constant.APP_PREFS_NAME, MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(Constant.THEME_KEY, R.style.PasscodesTheme_Default)
-        setTheme(savedThemeStyle)
+        setTheme(CommonUtils.getCurrTheme(this))
 
         super.onCreate(savedInstanceState)
         binding = ActivitySettingsBinding.inflate(layoutInflater)
