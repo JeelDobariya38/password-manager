@@ -16,6 +16,7 @@ import com.jeeldobariya.passcodes.databinding.ActivityViewPasswordBinding
 import com.jeeldobariya.passcodes.flags.FeatureFlagManager
 import com.jeeldobariya.passcodes.utils.Controller
 import com.jeeldobariya.passcodes.utils.DatabaseOperationException
+import com.jeeldobariya.passcodes.utils.DateTimeUtils
 import com.jeeldobariya.passcodes.utils.PasswordNotFoundException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -65,11 +66,13 @@ class ViewPasswordActivity : AppCompatActivity() {
             try {
                 passwordEntity = controller.getPasswordById(passwordEntityId)
                 withContext(Dispatchers.Main) {
+                    val lastUpdatedAt = DateTimeUtils.getRelativeDays(passwordEntity.updatedAt.orEmpty(), "yyyy-MM-dd HH:mm:ss")
+
                     binding.tvDomain.text = "${getString(R.string.domain_prefix)}  ${passwordEntity.domain}"
                     binding.tvUsername.text = "${getString(R.string.username_prefix)}  ${passwordEntity.username}"
                     binding.tvPassword.text = "${getString(R.string.password_prefix)}  ${passwordEntity.password}"
                     binding.tvNotes.text = "${getString(R.string.notes_prefix)}  ${passwordEntity.notes}"
-                    binding.tvUpdatedAt.text = "${getString(R.string.updatedat_prefix)}  ${passwordEntity.updatedAt}"
+                    binding.tvUpdatedAt.text = "${getString(R.string.updatedat_prefix)}  ${lastUpdatedAt}"
                 }
             } catch (e: PasswordNotFoundException) {
                 withContext(Dispatchers.Main) {

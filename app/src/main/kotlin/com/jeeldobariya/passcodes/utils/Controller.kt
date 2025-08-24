@@ -4,9 +4,6 @@ import android.content.Context
 import com.jeeldobariya.passcodes.database.MasterDatabase
 import com.jeeldobariya.passcodes.database.Password
 import com.jeeldobariya.passcodes.database.PasswordsDao
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 import kotlinx.coroutines.flow.Flow
 
 class InvalidInputException(message: String = "Input parameters cannot be blank.") : Exception(message)
@@ -34,7 +31,7 @@ class Controller(context: Context) {
             throw InvalidInputException()
         }
 
-        val currentTimestamp = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())
+        val currentTimestamp = DateTimeUtils.getCurrDateTime()
         val newPassword = Password(
             domain = domain,
             username = username,
@@ -106,7 +103,7 @@ class Controller(context: Context) {
             val existingPassword = passwordsDao.getPasswordById(id)
                 ?: throw PasswordNotFoundException("Password with ID $id not found for update.")
 
-            val updatedTimestamp = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())
+            val updatedTimestamp = DateTimeUtils.getCurrDateTime()
             val passwordToUpdate = existingPassword.copy(
                 domain = domain,
                 username = username,
