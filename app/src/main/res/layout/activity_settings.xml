@@ -88,4 +88,34 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/latest_features_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:textColor="?attr/colorPrimary"
+                android:text="@string/latest_feature"
+                android:textSize="24sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp" />
+
+            <Switch
+                android:id="@+id/switch_latest_features"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:ignore="UseSwitchCompatOrMaterialXml"
+                android:theme="@style/SCBSwitch"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

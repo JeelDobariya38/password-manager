@@ -95,5 +95,9 @@ class SettingsActivity : AppCompatActivity() {
 
             Toast.makeText(this@SettingsActivity, getString(R.string.restart_app_require), Toast.LENGTH_SHORT).show()
         }
+
+        binding.switchLatestFeatures.setOnCheckedChangeListener { _, isChecked ->
+            Toast.makeText(this@SettingsActivity, getString(R.string.future_feat_clause) + isChecked.toString(), Toast.LENGTH_SHORT).show()
+        }
     }
 }
