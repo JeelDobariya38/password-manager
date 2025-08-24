@@ -33,8 +33,7 @@ class SettingsActivity : AppCompatActivity() {
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(CommonUtils.getCurrTheme(this))
-
+        CommonUtils.updateCurrTheme(this)
         super.onCreate(savedInstanceState)
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)

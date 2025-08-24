@@ -15,8 +15,7 @@ class PasswordManagerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPasswordManagerBinding // Use late init for binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(CommonUtils.getCurrTheme(this))
-
+        CommonUtils.updateCurrTheme(this)
         super.onCreate(savedInstanceState)
         binding = ActivityPasswordManagerBinding.inflate(layoutInflater)
         setContentView(binding.root)

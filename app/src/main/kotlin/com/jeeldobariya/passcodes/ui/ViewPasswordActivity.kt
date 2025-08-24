@@ -34,8 +34,7 @@ class ViewPasswordActivity : AppCompatActivity() {
     private lateinit var passwordEntity: Password
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(CommonUtils.getCurrTheme(this))
-
+        CommonUtils.updateCurrTheme(this)
         super.onCreate(savedInstanceState)
         binding = ActivityViewPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)

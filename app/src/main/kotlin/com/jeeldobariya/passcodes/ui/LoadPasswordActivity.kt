@@ -26,8 +26,7 @@ class LoadPasswordActivity : AppCompatActivity() {
     private lateinit var controller: Controller
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(CommonUtils.getCurrTheme(this))
-        
+        CommonUtils.updateCurrTheme(this)
         super.onCreate(savedInstanceState)
         binding = ActivityLoadPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)

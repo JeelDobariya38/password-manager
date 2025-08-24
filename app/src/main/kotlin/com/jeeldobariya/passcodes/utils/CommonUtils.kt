@@ -11,5 +11,9 @@ class CommonUtils {
             val savedThemeStyle = sharedPrefs.getInt(Constant.THEME_KEY, R.style.PasscodesTheme_Default)
             return savedThemeStyle
         }
+
+        fun updateCurrTheme(context: Context) {
+            context.setTheme(getCurrTheme(context.applicationContext))
+        }
     }
 }

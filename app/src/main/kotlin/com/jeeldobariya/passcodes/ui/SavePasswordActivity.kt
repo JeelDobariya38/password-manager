@@ -21,8 +21,7 @@ class SavePasswordActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySavePasswordBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(CommonUtils.getCurrTheme(this))
-        
+        CommonUtils.updateCurrTheme(this)
         super.onCreate(savedInstanceState)
         binding = ActivitySavePasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
