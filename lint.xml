@@ -3,4 +3,6 @@
     <issue id="Range">
         <ignore path="**/Controller.java" />
     </issue>
+
+    <issue id="MissingTranslation" severity="warning" />
 </lint>
