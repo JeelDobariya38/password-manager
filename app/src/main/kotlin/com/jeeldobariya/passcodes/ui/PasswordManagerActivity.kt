@@ -1,12 +1,15 @@
 package com.jeeldobariya.passcodes.ui
 
 import android.content.Intent
+import android.view.View.GONE
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import com.jeeldobariya.passcodes.R
 import com.jeeldobariya.passcodes.databinding.ActivityPasswordManagerBinding
+import com.jeeldobariya.passcodes.flags.FeatureFlagManager
+import com.jeeldobariya.passcodes.utils.CommonUtils
 
 
 class PasswordManagerActivity : AppCompatActivity() {
@@ -14,13 +17,15 @@ class PasswordManagerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPasswordManagerBinding // Use late init for binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
-        setTheme(savedThemeStyle)
-
+        CommonUtils.updateCurrTheme(this)
         super.onCreate(savedInstanceState)
         binding = ActivityPasswordManagerBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if (!FeatureFlagManager.get(this).latestFeaturesEnabled) {
+            binding.importPasswordBtn.visibility = GONE
+            binding.exportPasswordBtn.visibility = GONE
+        }
 
         // Add event onclick listener
         addOnClickListenerOnButton(binding)

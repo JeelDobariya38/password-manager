@@ -15,15 +15,12 @@ import com.jeeldobariya.passcodes.R
 import com.jeeldobariya.passcodes.databinding.ActivitySettingsBinding
 import com.jeeldobariya.passcodes.flags.FeatureFlagManager
 import androidx.core.content.edit
+import com.jeeldobariya.passcodes.utils.CommonUtils
+import com.jeeldobariya.passcodes.utils.Constant
 
 class SettingsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySettingsBinding
-
-    companion object {
-        const val THEME_PREFS_NAME = "theme_prefs"
-        const val THEME_KEY = "selected_theme"
-    }
     
 
     // List of available themes to cycle through
@@ -36,10 +33,7 @@ class SettingsActivity : AppCompatActivity() {
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
-        setTheme(savedThemeStyle)
-
+        CommonUtils.updateCurrTheme(this)
         super.onCreate(savedInstanceState)
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -86,15 +80,15 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         binding.toggleThemeBtn.setOnClickListener {
-            val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-            val currentThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
+            val sharedPrefs = getSharedPreferences(Constant.APP_PREFS_NAME, Context.MODE_PRIVATE)
+            val currentThemeStyle = sharedPrefs.getInt(Constant.THEME_KEY, R.style.PasscodesTheme_Default)
 
             val currentIndex = THEMES.indexOf(currentThemeStyle)
             val nextIndex = (currentIndex + 1) % THEMES.size
             val newThemeStyle = THEMES[nextIndex]
 
             // Save the new theme and restart the application to apply it
-            sharedPrefs.edit { putInt(THEME_KEY, newThemeStyle) }
+            sharedPrefs.edit { putInt(Constant.THEME_KEY, newThemeStyle) }
             recreate()
 
             Toast.makeText(this@SettingsActivity, getString(R.string.restart_app_require), Toast.LENGTH_SHORT).show()

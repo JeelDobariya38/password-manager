@@ -6,12 +6,14 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
+import com.jeeldobariya.passcodes.utils.CommonUtils
 
 class AboutUsActivity : AppCompatActivity() {
 
   private lateinit var binding: ActivityAboutUsBinding
 
   override fun onCreate(savedInstanceState: Bundle?) {
+    CommonUtils.updateCurrTheme(this)
     super.onCreate(savedInstanceState)
     binding = ActivityAboutUsBinding.inflate(layoutInflater)
     setContentView(binding.root)

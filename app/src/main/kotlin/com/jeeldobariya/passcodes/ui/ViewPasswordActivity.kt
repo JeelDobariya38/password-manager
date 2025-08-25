@@ -14,6 +14,7 @@ import com.jeeldobariya.passcodes.R
 import com.jeeldobariya.passcodes.database.Password
 import com.jeeldobariya.passcodes.databinding.ActivityViewPasswordBinding
 import com.jeeldobariya.passcodes.flags.FeatureFlagManager
+import com.jeeldobariya.passcodes.utils.CommonUtils
 import com.jeeldobariya.passcodes.utils.Controller
 import com.jeeldobariya.passcodes.utils.DatabaseOperationException
 import com.jeeldobariya.passcodes.utils.DateTimeUtils
@@ -33,10 +34,7 @@ class ViewPasswordActivity : AppCompatActivity() {
     private lateinit var passwordEntity: Password
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val sharedPrefs = getSharedPreferences(SettingsActivity.THEME_PREFS_NAME, Context.MODE_PRIVATE)
-        val savedThemeStyle = sharedPrefs.getInt(SettingsActivity.THEME_KEY, R.style.PasscodesTheme_Default)
-        setTheme(savedThemeStyle)
-
+        CommonUtils.updateCurrTheme(this)
         super.onCreate(savedInstanceState)
         binding = ActivityViewPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
